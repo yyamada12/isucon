@@ -27,31 +27,31 @@ Host isucon9-2
 
 ubuntu
 
-```
-sudo apt-get install -y vim tmux htop dstat glances unzip
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install -y vim tmux htop dstat glances unzip
 ```
 
 centOS
 
-```
+```bash
 sudo yum install -y vim tmux htop dstat glances unzip
 ```
 
 * bashrc
 
 ```
-alias vim='sudo vim'
-alias g='sudo git'
-alias ga='sudo git add'
-alias gd='sudo git diff'
-alias gs='sudo git status'
-alias gp='sudo git push'
-alias gb='sudo git branch'
-alias gst='sudo git status'
-alias gco='sudo git checkout'
-alias gf='sudo git fetch'
-alias gci='sudo git commit'
-alias git='sudo git'
+alias g='git'
+alias ga='git add'
+alias gd='git diff'
+alias gs='git status'
+alias gp='git push'
+alias gb='git branch'
+alias gst='git status'
+alias gco='git checkout'
+alias gf='git fetch'
+alias gci='git commit'
 ```
 
 * gitconfig
@@ -65,19 +65,28 @@ alias git='sudo git'
   st = status
   bra = branch
   gr = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[user]
+  name = yyamada12
+  email = 12yacropolisy@gmail.com
 ```
 
 
 
 - [ ] webサーバが何か確認する
 
-  nginx or go
+  nginx or h2o
 
 - [ ] 言語をgoに変更する
 
 
 
-- [ ] app レポジトリ作る
+- [ ] ssh鍵を作成してgitに登録する
+
+```
+ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
+```
+
+- [ ] レポジトリ作る
     - **public など、 go より上のフォルダもレポジトリに含めるようにする**
 
 ```
