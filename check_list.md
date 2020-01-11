@@ -7,15 +7,15 @@
 * ssh/config
 
 ```
-Host isucon9-0
+Host isucon1
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
-Host isucon9-1
+Host isucon2
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
-Host isucon9-2
+Host isucon3
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
@@ -70,6 +70,65 @@ alias gci='git commit'
   email = 12yacropolisy@gmail.com
 ```
 
+- tmux.conf
+
+```
+# マウススクロールをよしなに
+set-option -g mouse on
+bind -T root WheelUpPane   if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
+bind -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
+set -g @plugin 'nhdaly/tmux-better-mouse-mode'
+
+# プリフィックスキー
+set -g prefix C-q
+unbind C-b
+
+# 設定ファイルをリロードする
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# キーストロークのディレイを減らす
+set -sg escape-time 1
+
+# ウィンドウのインデックスを1から始める
+set -g base-index 1
+
+# ペインのインデックスを1から始める
+setw -g pane-base-index 1
+
+# Vimのキーバインドでペインを移動する
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# Vimのキーバインドでペインをリサイズする
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# コピーモードをvimのキーバインドにする
+set-window-option -g mode-keys vi
+
+# アクティブなウィンドウを目立たせる
+setw -g window-status-current-fg white
+setw -g window-status-current-bg red
+setw -g window-status-current-attr bright
+
+# ペインボーダーの色を設定する
+set -g pane-border-fg green
+set -g pane-border-bg black
+
+#デフォルトシェルをbashにする
+set-option -g default-shell /bin/bash
+set-option -g default-command /bin/bash
+
+```
+
+
+
 
 
 - [ ] webサーバが何か確認する
@@ -99,19 +158,25 @@ ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
 
 
 
-- [ ] etc レポジトリ作る
-    - /etcで `git init ` し、gitignoreで使用する設定ファイルのみ残す
+- [ ] etcをレポジトリに追加する
+    - /etcからファイルを移動し、シンボリックリンクをはる
+    - **mysqlはシンボリックリンクだと設定が反映されない** ため、手動でコピーする
+      
 
-```
-/*
-!.gitignore
-!nginx/
-!mysql/
-mysql/debian.cnf
-!sysctl.conf
-!my.cnf
-!my.cnf.d/
-!h2o/
+```bash
+# nginx
+sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.org
+sudo mv /etc/nginx/nginx.conf ${repository_root}/etc/nginx.conf
+sudo ln -s ${repository_root}/etc/nginx.conf /etc/nginx/nginx.conf
+
+# mysql
+sudo cp /etc/mysql/mysql.cnf　${repository_root}/etc/mysql/mysql.cnf
+sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf　${repository_root}/etc/mysql/mysqld.cnf
+
+# sysctl.conf
+sudo cp /etc/sysctl.conf /etc/sysctl.conf.org
+sudo mv /etc/sysctl.conf ${repository_root}/etc/sysctl.conf
+sudo ln -s ${repository_root}/etc/sysctl.conf /etc/sysctl.conf
 ```
 
 
