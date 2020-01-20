@@ -2,9 +2,9 @@
 
 ## 開始直後
 
-- [ ] 環境構築
+### 環境構築
 
-* ssh/config
+- [ ] ssh/config
 
 ```
 Host isucon1
@@ -21,119 +21,17 @@ Host isucon3
   User isucon
 ```
 
-
-
-* 各種インストール
-
-ubuntu
+- [ ] 各種インストール
 
 ```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install -y vim tmux htop dstat glances unzip
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/installer.sh)"
 ```
-
-centOS
-
-```bash
-sudo yum install -y vim tmux htop dstat glances unzip
-```
-
-* bashrc
-
-```
-alias g='git'
-alias ga='git add'
-alias gd='git diff'
-alias gs='git status'
-alias gp='git push'
-alias gb='git branch'
-alias gst='git status'
-alias gco='git checkout'
-alias gf='git fetch'
-alias gci='git commit'
-```
-
-* gitconfig
-
-```
-[color]
-  ui = auto
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  bra = branch
-  gr = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-[user]
-  name = yyamada12
-  email = 12yacropolisy@gmail.com
-```
-
-- tmux.conf
-
-```
-# マウススクロールをよしなに
-set-option -g mouse on
-bind -T root WheelUpPane   if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
-bind -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
-set -g @plugin 'nhdaly/tmux-better-mouse-mode'
-
-# プリフィックスキー
-set -g prefix C-q
-unbind C-b
-
-# 設定ファイルをリロードする
-bind r source-file ~/.tmux.conf \; display "Reloaded!"
-
-# キーストロークのディレイを減らす
-set -sg escape-time 1
-
-# ウィンドウのインデックスを1から始める
-set -g base-index 1
-
-# ペインのインデックスを1から始める
-setw -g pane-base-index 1
-
-# Vimのキーバインドでペインを移動する
-bind h select-pane -L
-bind j select-pane -D
-bind k select-pane -U
-bind l select-pane -R
-bind -r C-h select-window -t :-
-bind -r C-l select-window -t :+
-
-# Vimのキーバインドでペインをリサイズする
-bind -r H resize-pane -L 5
-bind -r J resize-pane -D 5
-bind -r K resize-pane -U 5
-bind -r L resize-pane -R 5
-
-# コピーモードをvimのキーバインドにする
-set-window-option -g mode-keys vi
-
-# アクティブなウィンドウを目立たせる
-setw -g window-status-current-fg white
-setw -g window-status-current-bg red
-setw -g window-status-current-attr bright
-
-# ペインボーダーの色を設定する
-set -g pane-border-fg green
-set -g pane-border-bg black
-
-#デフォルトシェルをbashにする
-set-option -g default-shell /bin/bash
-set-option -g default-command /bin/bash
-
-```
-
-
-
-
 
 - [ ] webサーバが何か確認する
 
-  nginx or h2o
+```bash
+ sudo systemctl list-unit-files
+```
 
 - [ ] 言語をgoに変更する
 
@@ -161,22 +59,25 @@ ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
 - [ ] etcをレポジトリに追加する
     - /etcからファイルを移動し、シンボリックリンクをはる
     - **mysqlはシンボリックリンクだと設定が反映されない** ため、手動でコピーする
-      
 
 ```bash
+mkdir ~/etc
 # nginx
 sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.org
-sudo mv /etc/nginx/nginx.conf ${repository_root}/etc/nginx.conf
-sudo ln -s ${repository_root}/etc/nginx.conf /etc/nginx/nginx.conf
+sudo mv /etc/nginx/nginx.conf ~/etc/
+sudo chmod 666 ~/etc/nginx.conf
+sudo ln -s ~/etc/nginx.conf /etc/nginx/nginx.conf
 
 # mysql
-sudo cp /etc/mysql/mysql.cnf　${repository_root}/etc/mysql/mysql.cnf
-sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf　${repository_root}/etc/mysql/mysqld.cnf
+sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.org
+sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf ~/etc/
+sudo chmod 666 ~/etc/mysqld.cnf
 
 # sysctl.conf
 sudo cp /etc/sysctl.conf /etc/sysctl.conf.org
-sudo mv /etc/sysctl.conf ${repository_root}/etc/sysctl.conf
-sudo ln -s ${repository_root}/etc/sysctl.conf /etc/sysctl.conf
+sudo mv /etc/sysctl.conf ~/etc/sysctl.conf
+sudo chmod 666 ~/etc/sysctl.conf
+sudo ln -s ~/etc/sysctl.conf /etc/sysctl.conf
 ```
 
 
@@ -185,7 +86,7 @@ sudo ln -s ${repository_root}/etc/sysctl.conf /etc/sysctl.conf
 
 deploy.sh
 
-```
+```bash
 #!/bin/sh
 
 set -eux
@@ -208,8 +109,7 @@ echo "Started deploying."
 
 # build go app
 cd ..
-go build app.go
-cd $SCRIPT_DIR
+make
 
 # restart services
 sudo systemctl restart mysql
@@ -222,7 +122,7 @@ echo "Finished deploying."
 
 rotate_log.sh
 
-```
+```bash
 #!/bin/sh
 
 set -eux
@@ -234,27 +134,43 @@ fi
 
 
 
+## VSCode Remote 開発環境構築
+
+- [ ] remote ssh につないだ状態で拡張機能 Goを追加する
+
+- [ ] remote用のsettings.jsonにGOROOT, GOPATHを必要であれば設定する
+
+isucon7の例
+
+```sett
+{
+    "go.goroot": "/home/isucon/local/go",
+    "go.gopath": "/home/isucon/go:/home/isucon/isubata/webapp/go/"
+}
+```
+
+```json
+{
+    "go.goroot": "/home/isucon/local/go",
+    "go.gopath": "/home/isucon/go:/home/isucon/isubata/webapp/go/"
+}
+```
+
+
+
+※ import文で指定したパッケージはGOPATHが通っている箇所であればコンパイラが見つけることができ、go get により外部のパッケージをダウンロード・インストールする場合はGOPATHの１つ目のPATHのみ有効となる
+
+
+
+
+
 ## 計測
 
 ### alp
 
-- [ ] インストール
+- [ ] nginxのログフォーマットを変更する
 
-```
-mkdir -p ~/tmp
-cd ~/tmp
-wget https://github.com/tkuchiki/alp/releases/download/v0.3.1/alp_linux_amd64.zip
-unzip alp_linux_amd64.zip
-sudo install ./alp /usr/local/bin
-```
-
-
-
-- [ ] nginx/h2o のログフォーマットを変更する
-
-* nginxの場合
-
-/etc/nginx/nginx.conf
+* /etc/nginx/nginx.conf
 
 ```
 http {
@@ -276,7 +192,20 @@ http {
    access_log /var/log/nginx/access.log ltsv;
 ```
 
-* h2oの場合
+
+
+- [ ] nginx再起動
+
+デプロイスクリプトを回す
+
+または `sudo systemctl restart nginx` 
+
+
+
+#### h2oの場合
+
+- ログフォーマットを変更する
+- alp.ymlを修正する
 
 /etc/h2o/h2o.conf
 
@@ -288,31 +217,7 @@ access-log:
 
 
 
-- [ ] nginx/h2o 再起動
-
-デプロイスクリプトを回す
-
-または `sudo systemctl restart nginx` 
-
-
-
-- [ ] 計測
-
-nginx
-
-```
-sudo alp -r --sum -f /var/log/nginx/access.log 
-```
-
-h2o
-
-```
-sudo alp -r --sum -f /var/log/h2o/access.log 
-```
-
-
-
-**sudo: alp: command not found** になる場合
+#### **sudo: alp: command not found** になる場合
 
 <https://cha-shu00.hatenablog.com/entry/2017/03/02/123659>
 
@@ -335,15 +240,6 @@ Defaults        env_keep +="PATH"
 
 ### slow log
 
-- [ ] pt-query-digest のinstall
-
-```
-mkdir -p ~/tmp
-cd ~/tmp
-wget percona.com/get/pt-query-digest
-sudo install ./pt-query-digest /usr/local/bin
-```
-
 - [ ] my.cnf でslow log を設定
 
 /etc/my.cnf
@@ -354,20 +250,6 @@ slow_query_log = 1
 slow_query_log_file = /var/log/mysql/slow.log
 long_query_time = 0
 ```
-
-**mariaDBの場合** 
-
-logの場所を `/var/log/mariadb/slow.log` にする
-
-
-
-my.cnfの場所を調べるには
-
-```
-mysql --help | grep my.cnf
-```
-
-一番左から順に読み込まれている
 
 
 
@@ -382,14 +264,36 @@ mysql --help | grep my.cnf
 - [ ] 計測
 
 ```
-sudo pt-query-digest --limit 5 /var/log/mysql/slow.log | less
+sudo pt-query-digest --limit 10 /var/log/mysql/slow.log | less
 ```
+
+
+
+
+
+#### mariaDBの場合
+
+logの場所を `/var/log/mariadb/slow.log` にする
+
+
+
+#### my.cnfの場所を調べるには
+
+```
+mysql --help | grep my.cnf
+```
+
+一番左から順に読み込まれている
 
 
 
 ### netdata
 
-CPUとかブラウザから観れるらしいから入れてみると良い
+```
+bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+```
+
+
 
 
 
@@ -580,14 +484,4 @@ max_connections=10000
 
 - [ ] slowlogを切る
 
-```
-# /etc/mysql/my.cnf を編集
-sudo vim /etc/mysql/my.cnf
-
-[mysqld]
-slow_query_log = 0
-
-# ログを削除
-sudo rm -f /var/log/mysql/slow.log
-```
 - [ ] nginxのアクセスログの出力をオフにする (http > `access_log off;` )
