@@ -14,15 +14,16 @@
 ```nginx
 http {
 		upstream isucon_servers {
-				server 192.168.0.1:8000;
-    		server 192.168.0.2:8000;
-    		server 192.168.0.3:8000;
+				server 192.168.0.1:8000 weight=1;
+    		server 192.168.0.2:8000 weight=8;
+    		server 192.168.0.3:8000 weight=1;
 		}
 
 		server {
       	listen          80;
 
       	location / {
+      			proxy_set_header Host $host;
       			proxy_pass	http://isucon_servers;
       	}
 		}
@@ -88,7 +89,7 @@ http {
 
 ### 静的配信設定方法
 
-* `root` ディレクティブでパスを指定すれば、パスに合致した場合に静的配信される
+* `root` ディレクティブでパスを指定すれば、パスに合致した場合に静的配信される。基本これでいけるはず。
 
 ```nginx
 http {
@@ -98,7 +99,7 @@ http {
 }
 ```
 
-* ファイルを指定したい場合は `location` ディレクティブを併用して指定する
+* ファイルを指定したい場合は `location` ディレクティブを併用して指定する(アンチパターン？)
 
 ```nginx
 location /static/ {
@@ -116,6 +117,10 @@ location ~ ^/(img|css|js|favicon.ico) {
 
 方法1:  `expires` ディレクティブを設定する
 
+→ ファイルが変更されていようがお構いなくキャッシュする
+
+
+
 ```nginx
 http {
 	server {
@@ -125,6 +130,10 @@ http {
   }
 }
 ```
+
+`expires -1` と設定すると、ファイルがアップデートされているかサーバーに問い合わせる。
+
+
 
 方法2: `Cache-Control` ディレクティブを設定する
 
@@ -140,11 +149,29 @@ http {
 
 #### ブラウザキャッシュ確認方法
 
-ブラウザでアクセスし、304が返ってきていることを確認する
+ヘッダに `Expires:` や `Cache-Control: ` が付与されていることを確認する
+
+```bash
+curl -I http://url
+```
+
+
 
 
 
 ### gzip圧縮
+
+基本は gzip_static を on/always にして、publicフォルダの中を `gzip -r *` で圧縮しておけば良い
+
+```nginx
+http {
+	gzip_staic always
+}
+```
+
+
+
+nginxにgzipさせる場合の設定は以下の通り
 
 [参考](https://qiita.com/cubicdaiya/items/2763ba2240476ab1d9dd)
 
@@ -152,7 +179,6 @@ http {
 http {
   gzip on;
   gzip_types text/css text/javascript application/json application/javascript image/gif image/png image/jpeg;
-  gzip_static always;
 }
 ```
 
@@ -169,7 +195,9 @@ http {
 HTTPレスポンスヘッダー内のContent-Encodingで
 gzipが設定されていればgzip圧縮有効。
 
-
+```bash
+curl -I -H 'Accept-Encoding: gzip,deflate' http://url
+```
 
 
 
@@ -309,3 +337,4 @@ http {
 }
 ```
 
+_
