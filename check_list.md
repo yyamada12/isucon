@@ -100,12 +100,7 @@ echo "Started deploying."
 
 # rotate logs
 ./rotate_log.sh /var/log/nginx/access.log
-./rotate_log.sh /var/log/nginx/error.log
-
-./rotate_log.sh /var/log/mysql/mysqld.log
 ./rotate_log.sh /var/log/mysql/slow.log
-
-./rotate_log.sh ../log/cpu.pprof
 
 # build go app
 cd ..
@@ -172,7 +167,7 @@ isucon7の例
 
 * /etc/nginx/nginx.conf
 
-```
+```nginx
 http {
   log_format ltsv "time:$time_local"
     "\thost:$remote_addr"
@@ -189,7 +184,8 @@ http {
     "\truntime:$upstream_http_x_runtime"
     "\tapptime:$upstream_response_time"
     "\tvhost:$host";
-   access_log /var/log/nginx/access.log ltsv;
+  access_log /var/log/nginx/access.log ltsv;
+}
 ```
 
 
