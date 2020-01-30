@@ -101,6 +101,8 @@ echo "Started deploying."
 # rotate logs
 ./rotate_log.sh /var/log/nginx/access.log
 ./rotate_log.sh /var/log/mysql/slow.log
+./rotate_log.sh ~/pprof/pprof.png
+
 
 # build go app
 cd ..
