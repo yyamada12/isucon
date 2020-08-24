@@ -43,7 +43,10 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
 ```
 
--[ ] ssh鍵を `~/.ssh/config` に設定する
+[https://github.com/settings/keys](https://github.com/settings/keys)
+
+
+- [ ] ssh鍵を `~/.ssh/config` に設定する
 ```
 echo '''Host GitHub
     HostName github.com
@@ -510,5 +513,5 @@ max_connections=10000
 
 - [ ] nginxのアクセスログの出力をオフにする (http > `access_log off;` )
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MDg4MjEzM119
+eyJoaXN0b3J5IjpbLTYxMDY2NTg5Nl19
 -->
