@@ -8,7 +8,7 @@ goでprintデバッグしたければ、ここのログを見れば良い。
 
 ## conf
 
-ISUCON9では `/etc/systemd/system/isucari.golang.service` に設定ファイルがあった。
+設定ファイルは`xx.service` というファイル名で  `/etc/systemd/system/` に設配置。
 
 標準出力をファイルに出力するには以下のように設定する。
 
@@ -21,3 +21,6 @@ ISUCON9では `/etc/systemd/system/isucari.golang.service` に設定ファイル
 -f は tail -fと同じオプション。
 
 `sudo journalctl -f -u isucari.golang.service`
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQ3MTU3MTYwMF19
+-->
