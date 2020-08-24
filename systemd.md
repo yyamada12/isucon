@@ -8,7 +8,7 @@ goでprintデバッグしたければ、ここのログを見れば良い。
 
 ## conf
 
-設定ファイルは`xx.service` というファイル名で  `/etc/systemd/system/` に設配置。
+設定ファイルは`xx.service` というファイル名で  `/etc/systemd/system/` に配置される。
 
 標準出力をファイルに出力するには以下のように設定する。
 
@@ -20,7 +20,11 @@ goでprintデバッグしたければ、ここのログを見れば良い。
 
 -f は tail -fと同じオプション。
 
-`sudo journalctl -f -u isucari.golang.service`
+`sudo journalctl -f -u service名`
+
+*例*
+`sudo journalctl -f -u isucari.golang` 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MTU3MTYwMF19
+eyJoaXN0b3J5IjpbOTg5NzExNzIxXX0=
 -->
