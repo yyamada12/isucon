@@ -63,6 +63,8 @@ echo '''Host GitHub
 
 - [ ] レポジトリ作る
     - **public など、 go より上のフォルダもレポジトリに含めるようにする**
+    -  `du -sh *` で大きなファイルが有る場合はgitignoreする
+    - `GOPATH` 配下もgitignoreすべし
 
 ```
 /webapp/nodejs/
@@ -525,6 +527,6 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTM5ODE2MCwzMDk4NDYzOTEsMTI0MT
+eyJoaXN0b3J5IjpbMTk5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MT
 IzODYzNCwtNjEwNjY1ODk2XX0=
 -->
