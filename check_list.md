@@ -86,6 +86,11 @@ sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.or
 sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf ~/etc/
 sudo chmod 666 ~/etc/mysqld.cnf
 
+sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.org
+sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf ~/etc/
+sudo chmod 666 ~/etc/mysqld.cnf
+
+
 # sysctl.conf
 sudo cp /etc/sysctl.conf /etc/sysctl.conf.org
 sudo mv /etc/sysctl.conf ~/etc/sysctl.conf
@@ -513,5 +518,5 @@ max_connections=10000
 
 - [ ] nginxのアクセスログの出力をオフにする (http > `access_log off;` )
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMDY2NTg5Nl19
+eyJoaXN0b3J5IjpbLTE0ODA3MDcyMDAsLTYxMDY2NTg5Nl19
 -->
