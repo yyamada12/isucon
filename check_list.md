@@ -313,6 +313,15 @@ mysql --help | grep my.cnf
 
 一番左から順に読み込まれている
 
+はず、なのだが、、
+
+> In MySQL 5.7, the default cnf is at:
+
+```
+/etc/mysql/mysql.conf.d/mysqld.cnf
+```
+by [stackoverflow](https://stackoverflow.com/questions/38490785/where-is-mysql-5-7-my-cnf-file)
+
 
 
 ### netdata
@@ -532,7 +541,7 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOT
-kxMjU4MDY4LDMwOTg0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4
-OTZdfQ==
+eyJoaXN0b3J5IjpbMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNT
+EwNDI2MTgwLDE5OTEyNTgwNjgsMzA5ODQ2MzkxLDEyNDEyMzg2
+MzQsLTYxMDY2NTg5Nl19
 -->
