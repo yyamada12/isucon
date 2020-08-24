@@ -514,9 +514,12 @@ max_connections=10000
 
 ## 提出前
 
-- [ ] slowlogを切る
+- [ ] slowlog を切る
 
-- [ ] nginxのアクセスログの出力をオフにする (http > `access_log off;` )
+- [ ] nginx のアクセスログの出力をオフにする (http > `access_log off;` )
+- [ ]  netdata を切る
+```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MTIzODYzNCwtNjEwNjY1ODk2XX0=
+eyJoaXN0b3J5IjpbMzA5ODQ2MzkxLDEyNDEyMzg2MzQsLTYxMD
+Y2NTg5Nl19
 -->
