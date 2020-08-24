@@ -1,4 +1,4 @@
-
+# snippets
 
 ## rotate_log.sh
 
@@ -77,3 +77,6 @@ mysql/debian.cnf
 ```
 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTYzNzI5MTMyM119
+-->
