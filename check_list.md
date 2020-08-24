@@ -43,10 +43,15 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
 ```
 
+
 [https://github.com/settings/keys](https://github.com/settings/keys)
 
+ssh できることを確認
+```
+ssh -T git@github.com
+```
 
-- [ ] ssh鍵を `~/.ssh/config` に設定する
+ ssh鍵を `~/.ssh/config` に設定する場合
 ```
 echo '''Host GitHub
     HostName github.com
@@ -520,6 +525,6 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA5ODQ2MzkxLDEyNDEyMzg2MzQsLTYxMD
-Y2NTg5Nl19
+eyJoaXN0b3J5IjpbLTU1OTM5ODE2MCwzMDk4NDYzOTEsMTI0MT
+IzODYzNCwtNjEwNjY1ODk2XX0=
 -->
