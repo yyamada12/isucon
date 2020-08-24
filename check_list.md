@@ -43,6 +43,16 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
 ```
 
+-[ ] ssh鍵を `~/.ssh/config` に設定する
+```
+echo '''Host GitHub
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa
+    TCPKeepAlive yes
+    IdentitiesOnly yes
+    User git''' >> ~/.ssh/config
+```
+
 - [ ] レポジトリ作る
     - **public など、 go より上のフォルダもレポジトリに含めるようにする**
 
@@ -499,3 +509,6 @@ max_connections=10000
 - [ ] slowlogを切る
 
 - [ ] nginxのアクセスログの出力をオフにする (http > `access_log off;` )
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTc3MDg4MjEzM119
+-->
