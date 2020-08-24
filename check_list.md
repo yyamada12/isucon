@@ -283,7 +283,11 @@ long_query_time = 0
 
 または `sudo systemctl restart mysql; sudo sytemctl restart アプリのサービス` 
 
-
+確認方法
+```
+show variables like  'slow_query%';
+show variables like  'long%';
+```
 
 - [ ] 計測
 
@@ -528,6 +532,7 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOT
-g0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOT
+kxMjU4MDY4LDMwOTg0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4
+OTZdfQ==
 -->
