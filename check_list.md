@@ -189,7 +189,8 @@ isucon7の例
 ## 計測
 
 ### alp
-
+- [ ] そもそもnginxをbenchが通っているかどうか確認する
+通っていなければ、nginx をリバプロとして設定する
 - [ ] nginxのログフォーマットを変更する
 
 * /etc/nginx/nginx.conf
@@ -527,6 +528,6 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MT
-IzODYzNCwtNjEwNjY1ODk2XX0=
+eyJoaXN0b3J5IjpbLTUxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOT
+g0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ==
 -->
