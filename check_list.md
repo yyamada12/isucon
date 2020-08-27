@@ -437,6 +437,18 @@ pprof -http=":1234" バイナリ log/cpu.pprof
 
 ## インフラチューニング
 
+### サーバースペック確認
+[Linuxでコマンドラインからマシンスペックを確認する方法](https://qiita.com/DaisukeMiyamoto/items/98ef077ddf44b5727c29)
+
+CPU 
+```
+cat /proc/cpuinfo
+```
+
+メモリ
+```
+
+
 
 ### nginx
 
@@ -541,7 +553,7 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNT
-EwNDI2MTgwLDE5OTEyNTgwNjgsMzA5ODQ2MzkxLDEyNDEyMzg2
-MzQsLTYxMDY2NTg5Nl19
+eyJoaXN0b3J5IjpbMTYyNzI3NjE1NSwxNDcyMDYzNzM4LC0yMT
+IzNDE1Njg1LC01MTA0MjYxODAsMTk5MTI1ODA2OCwzMDk4NDYz
+OTEsMTI0MTIzODYzNCwtNjEwNjY1ODk2XX0=
 -->
