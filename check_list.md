@@ -447,7 +447,8 @@ cat /proc/cpuinfo
 
 メモリ
 ```
-
+cat /proc/meminfo
+```
 
 
 ### nginx
@@ -553,7 +554,7 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzI3NjE1NSwxNDcyMDYzNzM4LC0yMT
-IzNDE1Njg1LC01MTA0MjYxODAsMTk5MTI1ODA2OCwzMDk4NDYz
-OTEsMTI0MTIzODYzNCwtNjEwNjY1ODk2XX0=
+eyJoaXN0b3J5IjpbNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMj
+M0MTU2ODUsLTUxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOTg0NjM5
+MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ==
 -->
