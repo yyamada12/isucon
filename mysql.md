@@ -8,13 +8,14 @@
 
 ### 方法
 #### 新規テーブルを作る場合
-ADD PRIMARY KEY でエラー出るかも？
+*\*ADD PRIMARY KEY でエラー出るかも？*
 
 1. 新規テーブルを作成する
 ```
 CREATE TABLE new_table AS SELECT ...
 ``` 
 [MySQL 5.6 リファレンスマニュアル 13.1.17.1 CREATE TABLE ... SELECT 構文](https://dev.mysql.com/doc/refman/5.6/ja/create-table-select.html)
+
 2. 適宜PRIMARY KEY, INDEXを設定する
 ```
 ALTER TABLE tbl_name 
@@ -46,15 +47,17 @@ WHERE
     t1.id = t2.id
 ```
 [MySQLのupdateでselectした結果を使う方法 サブクエリで自己テーブル更新も可能](https://style.potepan.com/articles/19076.html)
+
 3. 適宜INDEXを貼る
 ```
 ALTER TABLE tbl_name 
 ADD INDEX index_name(col_name, ...)
 ```
-5. アプリケーションコードを修正する
+
+4. アプリケーションコードを修正する
 - `SELECT * FROM ...` を 全て修正する
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MzgwOTEyNCwtMjc2OTQ4MzE4LDEwMT
+eyJoaXN0b3J5IjpbMTM0NDgxMzUyMSwtMjc2OTQ4MzE4LDEwMT
 U0OTE1MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
 -->
