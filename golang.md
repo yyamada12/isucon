@@ -25,11 +25,11 @@ sync.Map を使う
 sync.RWMutexを使う
 sync.Mutexより性能がいいらしい
 
-↓ で古い書き方としてsync.Mutexを使った書き方も紹介されている
+↓ でsync.Mutexを使った書き方も紹介されている
 [go1.9から追加されたsync.Mapを使う](https://qiita.com/meta_closure/items/dd228e49aef8b67e872e)
 
 ISUCON5予選の例
-
+[https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f](https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDc2MTMzOTVdfQ==
+eyJoaXN0b3J5IjpbLTExMDY4MDcyOTVdfQ==
 -->
