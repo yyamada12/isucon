@@ -9,7 +9,13 @@
 - テーブルサイズが小さいこと (必須) 
 - マスタの様な修正が入らないテーブル
 - 修正が入るテーブルの場合、複数台のサーバーから参照されないこと
+→ 複数のサーバーから参照する場合 Redisなどを使う
+
+
+### データを単純な Map で持てる場合
+
+sync.Map を使う
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDczNzUzMjUxXX0=
+eyJoaXN0b3J5IjpbODQzMjI2MDQzXX0=
 -->
