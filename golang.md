@@ -1,13 +1,17 @@
 # Golang
 
-## 
+## *sql.DB のコネプ設定
+
 
 ### 推奨する sql.DB の設定 
-[Re: Configuring sql.DB for Better Performance]([http://dsas.blog.klab.org/archives/2018-02/configure-sql-db.html](http://dsas.blog.klab.org/archives/2018-02/configure-sql-db.html))
+[Re: Configuring sql.DB for Better Performance]([http://dsas.blog.klab.org/archives/2018-02/configure-sql-db.html](http://dsas.blog.klab.org/archives/2018-02/configure-sql-db.html)) より
 
 -   SetMaxOpenConns() は必ず設定する。負荷が高くなってDBの応答が遅くなったとき、新規接続してさらにクエリを投げないようにするため。できれば負荷試験をして最大のスループットを発揮する最低限のコネクション数を設定するのが良いが、負荷試験をできない場合も  `max_connection`  やコア数からある程度妥当な値を判断するべき。
 -   SetMaxIdleConns() は SetMaxOpenConns() 以上に設定する。アイドルな接続の解放は SetConnMaxLifetime に任せる。
 -   SetConnMaxLifetime() は最大接続数 × 1秒 程度に設定する。多くの環境で1秒に1回接続する程度の負荷は問題にならない。1時間以上に設定したい場合はインフラ／ネットワークエンジニアによく相談すること。
+
+### ISUCON 9 予選1位のnilさんの設定
+
 
 ## N + 1 の解消
 
@@ -40,5 +44,5 @@ sync.Mutexより性能がいいらしい
 ISUCON5予選の例
 [https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f](https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjMwMzM5MSwtMTEwNjgwNzI5NV19
+eyJoaXN0b3J5IjpbLTU2NjU2OTE4NiwtMTEwNjgwNzI5NV19
 -->
