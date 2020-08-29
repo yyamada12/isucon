@@ -20,9 +20,10 @@ ADD PRIMARY KEY でエラー出るかも？
 
 #### 既存のテーブルを拡張する場合
 1. カラムを追加する
-
-3. 
+`ALTER TABLE table_name ADD COLUMN col_name col_definition
+[MySQLでカラムを追加する](https://uxmilk.jp/12612)
+. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1OTIyMTEzMCwxMDE1NDkxNTIwLDExMT
+eyJoaXN0b3J5IjpbMTg4MDAwODY4OSwxMDE1NDkxNTIwLDExMT
 czNjk4MCw3NDIxOTU2MDVdfQ==
 -->
