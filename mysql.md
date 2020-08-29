@@ -30,6 +30,7 @@ ADD INDEX index_name(col_name, ...)
 - テーブル名を全て修正
 - `SELECT * FROM ...` を 全て修正する
 - 追加したカラムを利用してJOIN句を無くす
+- INSERT時に追加したカラムへもSETする
 
 
 #### 既存のテーブルを拡張する場合
@@ -58,6 +59,6 @@ ADD INDEX index_name(col_name, ...)
 - `SELECT * FROM ...` を 全て修正する
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDgxMzUyMSwtMjc2OTQ4MzE4LDEwMT
-U0OTE1MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbLTE5NzkyNDIzNTcsLTI3Njk0ODMxOCwxMD
+E1NDkxNTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
 -->
