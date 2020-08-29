@@ -26,11 +26,20 @@ ADD PRIMARY KEY でエラー出るかも？
 `ALTER TABLE table_name ADD COLUMN col_name col_definition
 [MySQLでカラムを追加する](https://uxmilk.jp/12612)
 2. 追加したカラムにデータを入れる
-`UPDATE  
+```
+UPDATE
+    tableA t1,
+    tableB t2
+SET 
+    t1.column_01 = t2.column_01
+WHERE
+    t1.id = t2.id
+```
+[MySQLのupdateでselectした結果を使う方法 サブクエリで自己テーブル更新も可能](https://style.potepan.com/articles/19076.html)
 4. アプリケーションコードを修正する
 - `SELECT * FROM ...` を 全て修正する
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjkxNTQ1NjUsLTI3Njk0ODMxOCwxMD
+eyJoaXN0b3J5IjpbLTE2NTc2MDM2NTQsLTI3Njk0ODMxOCwxMD
 E1NDkxNTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
 -->
