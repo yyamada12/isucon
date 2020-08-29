@@ -10,7 +10,6 @@
 -   SetMaxIdleConns() は SetMaxOpenConns() 以上に設定する。アイドルな接続の解放は SetConnMaxLifetime に任せる。
 -   SetConnMaxLifetime() は最大接続数 × 1秒 程度に設定する。多くの環境で1秒に1回接続する程度の負荷は問題にならない。1時間以上に設定したい場合はインフラ／ネットワークエンジニアによく相談すること。
 
-wait_time
 
 ### ISUCON 9 予選1位のnilさんの設定
 [https://github.com/takonomura/isucon9-qualify/commit/adca81f6ae380ec01847900edbffd84357f3aa05#diff-1657355b63a2aa9f3a7cf547c0c5133aR330](https://github.com/takonomura/isucon9-qualify/commit/adca81f6ae380ec01847900edbffd84357f3aa05#diff-1657355b63a2aa9f3a7cf547c0c5133aR330)
@@ -20,6 +19,11 @@ db.SetConnMaxLifetime(10 * time.Second)
 db.SetMaxIdleConns(512)
 db.SetMaxOpenConns(512)
 ```
+
+### wait_timeout
+SetConnMaxLifetime は mysql の wait_timeout よりも小さくしておく必要がある
+以下のコマンドで設定値をk
+show global variables like '%wait%';
 
 ## N + 1 の解消
 
@@ -52,5 +56,5 @@ sync.Mutexより性能がいいらしい
 ISUCON5予選の例
 [https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f](https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NzQyNzMyMCwtMTEwNjgwNzI5NV19
+eyJoaXN0b3J5IjpbLTE0MjI2NTY3NCwtMTEwNjgwNzI5NV19
 -->
