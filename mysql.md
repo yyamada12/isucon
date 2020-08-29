@@ -11,8 +11,9 @@
 `ALTER TABLE tbl_name ADD PRIMARY KEY (col_name, ...)` 
 `ALTER TABLE tbl_name ADD INDEX index_name(col_name, ...)`
 3. アプリケーションコードを新しいテーブルを用いる用に修正する
-
-
+- `SELECT * FROM ...` を 全て修正する
+- 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNzM2OTgwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMT
+k1NjA1XX0=
 -->
