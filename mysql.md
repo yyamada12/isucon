@@ -36,10 +36,14 @@ WHERE
     t1.id = t2.id
 ```
 [MySQLのupdateでselectした結果を使う方法 サブクエリで自己テーブル更新も可能](https://style.potepan.com/articles/19076.html)
-4. アプリケーションコードを修正する
+3. 適宜INDEXを貼る
+```
+ALTER TABLE tbl_name ADD INDEX index_name(col_name, ...)
+```
+5. アプリケーションコードを修正する
 - `SELECT * FROM ...` を 全て修正する
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTc2MDM2NTQsLTI3Njk0ODMxOCwxMD
+eyJoaXN0b3J5IjpbLTE1NjUxMDk1OTYsLTI3Njk0ODMxOCwxMD
 E1NDkxNTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
 -->
