@@ -4,7 +4,12 @@
 
 
 ## テーブルのオンメモリ化
-アプリを複数台に分けるとなるとなかなか厳しいかもしれないが、特定のエンドポイントを1台に集約すれば
+
+### 使える条件
+- テーブルサイズが小さいこと (必須) 
+そもそもメモリにのらないさ
+- 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0OTcyNTI0OF19
+eyJoaXN0b3J5IjpbLTE0ODI5Njk1NjhdfQ==
 -->
