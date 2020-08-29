@@ -10,11 +10,21 @@
 #### 新規テーブルを作る場合
 ADD PRIMARY KEY でエラー出るかも？
 
-1. `CREATE TABLE new_table AS SELECT ...` 構文を使って新規テーブルを作成する
+1. 新規テーブルを作成する
+```
+CREATE TABLE new_table AS SELECT ...
+``` 
 [MySQL 5.6 リファレンスマニュアル 13.1.17.1 CREATE TABLE ... SELECT 構文](https://dev.mysql.com/doc/refman/5.6/ja/create-table-select.html)
 2. 適宜PRIMARY KEY, INDEXを設定する
-`ALTER TABLE tbl_name ADD PRIMARY KEY (col_name, ...)` 
-`ALTER TABLE tbl_name ADD INDEX index_name(col_name, ...)`
+```
+ALTER TABLE tbl_name 
+ADD PRIMARY KEY (col_name, ...)
+``` 
+```
+ALTER TABLE tbl_name 
+ADD INDEX index_name(col_name, ...)
+```
+
 3. アプリケーションコードを新しいテーブルを用いる用に修正する
 - テーブル名を全て修正
 - `SELECT * FROM ...` を 全て修正する
@@ -38,12 +48,13 @@ WHERE
 [MySQLのupdateでselectした結果を使う方法 サブクエリで自己テーブル更新も可能](https://style.potepan.com/articles/19076.html)
 3. 適宜INDEXを貼る
 ```
-ALTER TABLE tbl_name ADD INDEX index_name(col_name, ...)
+ALTER TABLE tbl_name 
+ADD INDEX index_name(col_name, ...)
 ```
 5. アプリケーションコードを修正する
 - `SELECT * FROM ...` を 全て修正する
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjUxMDk1OTYsLTI3Njk0ODMxOCwxMD
-E1NDkxNTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
+eyJoaXN0b3J5IjpbMTc3MzgwOTEyNCwtMjc2OTQ4MzE4LDEwMT
+U0OTE1MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
 -->
