@@ -29,8 +29,9 @@ ADD INDEX index_name(col_name, ...)
 3. アプリケーションコードを新しいテーブルを用いる用に修正する
 - テーブル名を全て修正
 - `SELECT * FROM ...` を 全て修正する
-- 追加したカラムを利用してJOIN句を無くす
 - INSERT時に追加したカラムへもSETする
+- 追加したカラムを利用してJOIN句を無くす
+
 
 
 #### 既存のテーブルを拡張する場合
@@ -57,8 +58,9 @@ ADD INDEX index_name(col_name, ...)
 
 4. アプリケーションコードを修正する
 - `SELECT * FROM ...` を 全て修正する
+- INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzkyNDIzNTcsLTI3Njk0ODMxOCwxMD
+eyJoaXN0b3J5IjpbLTExNDg1NDcyMjksLTI3Njk0ODMxOCwxMD
 E1NDkxNTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
 -->
