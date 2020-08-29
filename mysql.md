@@ -10,9 +10,9 @@
 2. 適宜PRIMARY KEY, INDEXを設定する
 `ALTER TABLE tbl_name ADD PRIMARY KEY (col_name, ...)` 
 `ALTER TABLE tbl_name ADD INDEX index_name(col_name, ...)`
-4. アプリケーションコードを新しいテーブルを用いる用に修正する
+3. アプリケーションコードを新しいテーブルを用いる用に修正する
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbMTExNzM2OTgwLDc0MjE5NTYwNV19
 -->
