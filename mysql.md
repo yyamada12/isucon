@@ -13,7 +13,12 @@
 3. アプリケーションコードを新しいテーブルを用いる用に修正する
 - `SELECT * FROM ...` を 全て修正する
 - 追加したカラムを利用してJOIN句を無くす
+
+
+または
+1. 既存のテーブルにカラムを追加する
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMT
-k1NjA1XX0=
+eyJoaXN0b3J5IjpbLTkyODE4NjU4NCwxMDE1NDkxNTIwLDExMT
+czNjk4MCw3NDIxOTU2MDVdfQ==
 -->
