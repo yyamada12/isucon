@@ -7,9 +7,9 @@
 
 ### 使える条件
 - テーブルサイズが小さいこと (必須) 
-そもそもメモリにのらないさ
-- 
+- マスタの様な修正が入らないテーブル
+- 修正が入るテーブルの場合、複数台のサーバーから参照されないこと
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODI5Njk1NjhdfQ==
+eyJoaXN0b3J5IjpbNDczNzUzMjUxXX0=
 -->
