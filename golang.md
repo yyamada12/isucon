@@ -1,5 +1,7 @@
 # Golang
 
+## m
+
 ## N + 1 の解消
 
 
@@ -31,5 +33,6 @@ sync.Mutexより性能がいいらしい
 ISUCON5予選の例
 [https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f](https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTEwMTE1Mjk5MDQsLTExMDY4MDcyOTVdfQ
+==
 -->
