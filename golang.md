@@ -23,6 +23,7 @@ db.SetMaxOpenConns(512)
 ### wait_timeout
 SetConnMaxLifetime は mysql の wait_timeout よりも小さくしておく必要がある
 mysql の以下のコマンドで設定値を確認できる
+(デフォルトは8時間らしいのでおそらく問題ない)
 ```
 show global variables like '%wait%';
 ```
@@ -58,5 +59,5 @@ sync.Mutexより性能がいいらしい
 ISUCON5予選の例
 [https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f](https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ2NjcxNDc1LC0xMTA2ODA3Mjk1XX0=
+eyJoaXN0b3J5IjpbLTg5NzQ4ODUxLC0xMTA2ODA3Mjk1XX0=
 -->
