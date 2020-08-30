@@ -9,7 +9,12 @@
 ```
 mysql> select user, host, password from mysql.user;
 ```
-host が
+host が `localhost` だとアウト。
+ip_`%` に設定する。
+```
+GRANT ALL PRIVILEGES 
+ON [db_name].* to [user_name]@"[ip_address]"  identified  by  '[password]'  with  grant  option;
+```
 
 [外部のホストから接続できるようにする方法](https://www.wakuwakubank.com/posts/322-mysql-access-host/)
 
@@ -107,7 +112,7 @@ ADD INDEX index_name(col_name, ...)
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzgzMjAyMjksMTYyOTU1NDY3NSwtOT
-A5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5
-MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbMTg3OTIzNTkxOCwxNjI5NTU0Njc1LC05MD
+k0NTY5OTcsLTExNDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkx
+NTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
 -->
