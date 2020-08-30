@@ -20,12 +20,12 @@ http {
 		}
 
 		server {
-      	listen          80;
+	      	listen          80;
 
-      	location / {
+	      	location / {
       			proxy_set_header Host $host;
       			proxy_pass	http://isucon_servers;
-      	}
+	      	}
 		}
 }
 ```
@@ -344,5 +344,5 @@ http {
 
 _
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NjU2OTM2XX0=
+eyJoaXN0b3J5IjpbLTE3NzYzMzM3NjBdfQ==
 -->
