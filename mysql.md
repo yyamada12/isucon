@@ -37,7 +37,10 @@ ADD INDEX index_name(col_name, ...)
 #### 既存のテーブルを拡張する場合
 *\*初期レコード数が多い場合はかなり時間がかかる*
 1. カラムを追加する
-`ALTER TABLE table_name ADD COLUMN col_name col_definition
+```
+ALTER TABLE table_name 
+ADD COLUMN col_name col_definition
+```
 [MySQLでカラムを追加する](https://uxmilk.jp/12612)
 2. 追加したカラムにデータを入れる
 ```
@@ -62,7 +65,7 @@ ADD INDEX index_name(col_name, ...)
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTQ1Njk5NywtMTE0ODU0NzIyOSwtMj
-c2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OTgwLDc0MjE5NTYw
-NV19
+eyJoaXN0b3J5IjpbMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMT
+Q4NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5
+ODAsNzQyMTk1NjA1XX0=
 -->
