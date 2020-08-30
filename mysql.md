@@ -1,6 +1,48 @@
 # mysql
 
 ## 外部接続
+[外部からMySQLの接続する際のチェックポイント](https://gist.github.com/koudaiii/10696132)
+
+1. mysqldのuserテーブルの設定
+
+以下コマンドでユーザの権限状態を確認。
+
+$ mysql -u root mysql
+
+mysql> select user, host, password from mysql.user;
+
+2.my.cnfのbind-address設定
+
+my.confのbind-addressの設定を確認してみる。
+
+$ vi /etc/mysql/my.cnf
+
+bind-address = 127.0.0.1
+
+bind-address = (接続したいマシンのIPアドレス)
+
+追加したい接続先のIPを書いた「bind-address」を追加していけばOK。
+
+どのIPからも接続許可する場合はbind-addressをコメントアウトすればOK。
+
+3.ポートの確認
+
+デフォルトではMySQLがTCPポート3306番でListenしているので、
+
+ポートが開いているか確認。
+
+$ netstat -tlpn
+
+0.0.0.0:3306 ～ LISTEN xxxx/mysqld の表示があればOK。
+
+4.ファイアーウォール設定を確認
+
+Netfilter/iptables で、接続制限をかけていないか確認。
+
+$ iptables -L
+
+ここでファイアーウォールが有効になっている場合は、iptablesコマンドで制限を無効化するなどしてmysqlの通信を許可する。
+
 my.cnf の `bind-address` が以下の様になっていると外部からアクセスできない。
 
 ```
@@ -74,7 +116,7 @@ ADD INDEX index_name(col_name, ...)
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE0NTA5ODk4LDE2Mjk1NTQ2NzUsLTkwOT
-Q1Njk5NywtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1
-MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbLTUyOTUwNzE1MCwxNjI5NTU0Njc1LC05MD
+k0NTY5OTcsLTExNDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkx
+NTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
 -->
