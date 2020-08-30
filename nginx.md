@@ -14,7 +14,7 @@
 ```nginx
 http {
 		upstream isucon_servers {
-				server 192.168.0.1:8000 weight=1;
+			server 192.168.0.1:8000 weight=1;
     		server 192.168.0.2:8000 weight=8;
     		server 192.168.0.3:8000 weight=1;
 		}
@@ -201,9 +201,14 @@ curl -I -H 'Accept-Encoding: gzip,deflate' http://url
 
 
 
-## 例) isucon9の場合
+## 例) 
 
-### 変更前
+### isucon7
+https://github.com/yyamada12/isucon7_re2/commit/140bc086ad1cb48dd469f7296fd4044bd68f3f35
+
+### isucon9
+
+#### 変更前
 
 ```nginx
 # /etc/nginx/nginx.conf
@@ -263,7 +268,7 @@ server {
 
 
 
-### 変更後
+#### 変更後
 
 ```nginx
 # /etc/nginx/nginx.conf
@@ -338,3 +343,6 @@ http {
 ```
 
 _
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTA5NjU2OTM2XX0=
+-->
