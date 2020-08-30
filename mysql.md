@@ -7,7 +7,7 @@ my.cnf の `bind-address` が以下の様になっていると外部からアク
 bind-address = 127.0.0.1
 ```
 
-よって、外部接続する場合接続したいマシンのIPアドレスに変更する
+よって、外部接続する場合この行をコメントアウトする
 
 ## テーブルのカラム追加
 ### こんな時に使える
@@ -74,7 +74,7 @@ ADD INDEX index_name(col_name, ...)
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MDUxMzEzOCwxNjI5NTU0Njc1LC05MD
-k0NTY5OTcsLTExNDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkx
-NTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
+eyJoaXN0b3J5IjpbOTE0NTA5ODk4LDE2Mjk1NTQ2NzUsLTkwOT
+Q1Njk5NywtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1
+MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
 -->
