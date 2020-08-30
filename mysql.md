@@ -1,5 +1,7 @@
 # mysql
 
+## 外部s
+
 ## テーブルのカラム追加
 ### こんな時に使える
 - JOINが遅い
@@ -65,7 +67,7 @@ ADD INDEX index_name(col_name, ...)
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMT
-Q4NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5
-ODAsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbLTIyMjcwNjgyNCwxNjI5NTU0Njc1LC05MD
+k0NTY5OTcsLTExNDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkx
+NTIwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
 -->
