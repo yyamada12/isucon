@@ -20,6 +20,9 @@ sudo systemctl start redis-server
 sudo systemctl enable redis-server
 ```
 
+## 外部接続
+/etc/redis.conf で bindの設定を変更する
+bind 0.0.0.0
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzcwNzYwNV19
+eyJoaXN0b3J5IjpbMTcyODU1ODAwNCwtMTQzNzA3NjA1XX0=
 -->
