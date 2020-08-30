@@ -9,6 +9,12 @@
 ```
 mysql> select user, host, password from mysql.user;
 ```
+host が
+
+[外部のホストから接続できるようにする方法](https://www.wakuwakubank.com/posts/322-mysql-access-host/)
+
+
+
 ### my.cnfのbind-address設定
 my.cnf の `bind-address` が以下の様になっていると外部からアクセスできない。
 ```
@@ -30,7 +36,7 @@ $ netstat -tlpn
 Netfilter/iptables で、接続制限をかけていないか確認。
 ```
 $ iptables -L
-
+```
 ここでファイアーウォールが有効になっている場合は、iptablesコマンドで制限を無効化するなどしてmysqlの通信を許可する。
 
 
@@ -101,7 +107,7 @@ ADD INDEX index_name(col_name, ...)
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0NTE1Njc0LDE2Mjk1NTQ2NzUsLTkwOT
-Q1Njk5NywtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1
-MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbLTE2NzgzMjAyMjksMTYyOTU1NDY3NSwtOT
+A5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5
+MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
 -->
