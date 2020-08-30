@@ -112,8 +112,15 @@ ADD INDEX index_name(col_name, ...)
 - `SELECT * FROM ...` を 全て修正する
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
+
+
+## MySQL パラメータチューニング
+MySQLTunerをとりあえず動かしてみるのが良さそう
+[MySQLTunerを使ってMySQLを診断しよう！] (https://note.dimage.co.jp/blog_009_mysqltuner.html)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzMxMDczOTIsMTYyOTU1NDY3NSwtOT
-A5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5
-MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMT
+YyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5
+NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX
+0=
 -->
