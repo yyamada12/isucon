@@ -334,6 +334,8 @@ mysql --help | grep my.cnf
 ```
 by [stackoverflow](https://stackoverflow.com/questions/38490785/where-is-mysql-5-7-my-cnf-file)
 
+といいつつ、 /etc/my.cnfに書かないと反映されないこともある
+設定書いてみて反映されるファイルを特定すべし
 
 
 ### netdata
@@ -566,8 +568,8 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0ND
-c1MTIyMjAsMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNTEwNDI2
-MTgwLDE5OTEyNTgwNjgsMzA5ODQ2MzkxLDEyNDEyMzg2MzQsLT
-YxMDY2NTg5Nl19
+eyJoaXN0b3J5IjpbNTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xOD
+EzNjk3OTQsNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2
+ODUsLTUxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOTg0NjM5MSwxMj
+QxMjM4NjM0LC02MTA2NjU4OTZdfQ==
 -->
