@@ -75,6 +75,7 @@ echo '''Host GitHub
 /webapp/rust/
 .*
 !.gitignore
+!.bashrc
 ```
 
 
@@ -565,8 +566,8 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MDkwMjM0NywtMTgxMzY5Nzk0LDQ0Nz
-UxMjIyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC01MTA0MjYx
-ODAsMTk5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MTIzODYzNCwtNj
-EwNjY1ODk2XX0=
+eyJoaXN0b3J5IjpbLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0ND
+c1MTIyMjAsMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNTEwNDI2
+MTgwLDE5OTEyNTgwNjgsMzA5ODQ2MzkxLDEyNDEyMzg2MzQsLT
+YxMDY2NTg5Nl19
 -->
