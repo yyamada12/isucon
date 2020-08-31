@@ -159,6 +159,23 @@ fi
 ## VSCode Remote 開発環境構築
 
 - [ ] remote ssh につないだ状態で拡張機能 Goを追加する
+- [ ] 不要なファイルの追跡を止める
+```
+{
+    "files.watcherExclude": {
+        "**/.*/**": true,
+        "**/webapp/nodejs/**": true,
+        "**/webapp/perl/**": true,
+        "**/webapp/php/**": true,
+        "**/webapp/python/**": true,
+        "**/webapp/ruby/**": true,
+        "**/webapp/rust/**": true,
+        "**/bin/**": true,
+        "**/pkg/**": true,
+        "**/src/**": true,
+    }
+}
+```
 
 - [ ] remote用のsettings.jsonにGOROOT, GOPATHを必要であれば設定する
 
@@ -547,7 +564,7 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDUzMTU5MDcsNDQ3NTEyMjIwLDE0Nz
+eyJoaXN0b3J5IjpbLTIwMzQ3Njk0OTUsNDQ3NTEyMjIwLDE0Nz
 IwNjM3MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOTkxMjU4
 MDY4LDMwOTg0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ
 ==
