@@ -164,13 +164,6 @@ fi
 
 isucon7の例
 
-```sett
-{
-    "go.goroot": "/home/isucon/local/go",
-    "go.gopath": "/home/isucon/go:/home/isucon/isubata/webapp/go/"
-}
-```
-
 ```json
 {
     "go.goroot": "/home/isucon/local/go",
@@ -554,7 +547,8 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMj
-M0MTU2ODUsLTUxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOTg0NjM5
-MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ==
+eyJoaXN0b3J5IjpbLTEwMDUzMTU5MDcsNDQ3NTEyMjIwLDE0Nz
+IwNjM3MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOTkxMjU4
+MDY4LDMwOTg0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ
+==
 -->
