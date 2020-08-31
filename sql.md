@@ -39,6 +39,11 @@ FROM sales
 WHERE sale_date BETWEEN quarter_begin(?) 
                      AND quarter_end(?)
 ```
+
+[https://use-the-index-luke.com/ja/sql/where-clause/obfuscation/dates](https://use-the-index-luke.com/ja/sql/where-clause/obfuscation/dates)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ1Nzk4NTcsLTEzNDM2MTU1MDJdfQ==
+eyJoaXN0b3J5IjpbLTE1Mjc0Mzg1MDAsNzQ1Nzk4NTcsLTEzND
+M2MTU1MDJdfQ==
 -->
