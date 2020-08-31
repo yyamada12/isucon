@@ -73,6 +73,8 @@ echo '''Host GitHub
 /webapp/php/
 /webapp/ruby/
 /webapp/rust/
+.*
+!.gitignore
 ```
 
 
@@ -563,7 +565,8 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTM2OTc5NCw0NDc1MTIyMjAsMTQ3Mj
-A2MzczOCwtMjEyMzQxNTY4NSwtNTEwNDI2MTgwLDE5OTEyNTgw
-NjgsMzA5ODQ2MzkxLDEyNDEyMzg2MzQsLTYxMDY2NTg5Nl19
+eyJoaXN0b3J5IjpbLTM5MDkwMjM0NywtMTgxMzY5Nzk0LDQ0Nz
+UxMjIyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC01MTA0MjYx
+ODAsMTk5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MTIzODYzNCwtNj
+EwNjY1ODk2XX0=
 -->
