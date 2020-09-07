@@ -110,6 +110,14 @@ sudo ln -s ~/etc/sysctl.conf /etc/sysctl.conf
 ```
 
 
+- [ ] レポジトリを他のサーバーにpullする
+```
+git init
+git remote add origin レポジトリURL
+git pull origin master
+```
+-> 競合するファイルが出力されるはずなので、それらのファイルを削除してもう一度 `gi
+
 
 - [ ] デプロイスクリプトの準備
 
@@ -568,8 +576,8 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xOD
-EzNjk3OTQsNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2
-ODUsLTUxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOTg0NjM5MSwxMj
-QxMjM4NjM0LC02MTA2NjU4OTZdfQ==
+eyJoaXN0b3J5IjpbLTEzNjQ2OTAzNTYsNTg3ODc4MzY5LC0yMD
+U3NzgwMTc1LC0xODEzNjk3OTQsNDQ3NTEyMjIwLDE0NzIwNjM3
+MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOTkxMjU4MDY4LD
+MwOTg0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ==
 -->
