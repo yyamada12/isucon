@@ -76,6 +76,7 @@ echo '''Host GitHub
 .*
 !.gitignore
 !.bashrc
+/pprof
 ```
 
 
@@ -578,8 +579,9 @@ max_connections=10000
 - [ ]  netdata を切る
 ```systemctl disable netdata```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MzAwNjA4NCw1ODc4NzgzNjksLTIwNT
-c3ODAxNzUsLTE4MTM2OTc5NCw0NDc1MTIyMjAsMTQ3MjA2Mzcz
-OCwtMjEyMzQxNTY4NSwtNTEwNDI2MTgwLDE5OTEyNTgwNjgsMz
-A5ODQ2MzkxLDEyNDEyMzg2MzQsLTYxMDY2NTg5Nl19
+eyJoaXN0b3J5IjpbLTIxODAxMjE1MiwtNTkzMDA2MDg0LDU4Nz
+g3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMzY5Nzk0LDQ0NzUxMjIy
+MCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC01MTA0MjYxODAsMT
+k5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MTIzODYzNCwtNjEwNjY1
+ODk2XX0=
 -->
