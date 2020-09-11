@@ -63,7 +63,12 @@ ISUCON5予選の例
 ## prepared statement
 mysql で prepare admin が多い場合は、go側でprepareさせてあげられるっぽい
 [http://dsas.blog.klab.org/archives/52191467.html](http://dsas.blog.klab.org/archives/52191467.html)
+
+以下のように `interpolateParams=true` をつけてあげるだけ
+```
+sql.Open("mysql",  "root:password@tcp(localhost:3306)/test?interpolateParams=true&collation=utf8mb4_bin")
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1OTc2Mjg2NSwtODk3NDg4NTEsLTExMD
-Y4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTk3NzE5MjYzNiwtNzU5NzYyODY1LC04OT
+c0ODg1MSwtMTEwNjgwNzI5NV19
 -->
