@@ -33,6 +33,22 @@ show global variables like '%wait%';
 IN句を使ったクエリで1回で取ってくるのが基本。
 
 ```
+qs, params, err := sqlx.In(`SELECT id, name FROM user WHERE id IN (?)`, userIDs)
+if err != nil {
+    log.Fatal(err)
+}
+
+users := []User{}
+if err := db.Select(&users, qs, params...); err != nil {
+    log.Fatal(err)
+}
+
+res := make(map[int64]User)
+for _, user := range users {
+    res[user.ID] = user
+}
+return res
+```
 
 
 [https://github.com/yyamada12/isucon7_re3/commit/405f0770410613486b1e2f312bec4f4f82fca9b4](https://github.com/yyamada12/isucon7_re3/commit/405f0770410613486b1e2f312bec4f4f82fca9b4)
@@ -76,6 +92,6 @@ mysql で prepare admin が多い場合は、go側でprepareさせてあげら�
 sql.Open("mysql",  "root:password@tcp(localhost:3306)/test?interpolateParams=true&collation=utf8mb4_bin")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg2MDM1NjUxLC05NzcxOTI2MzYsLTc1OT
+eyJoaXN0b3J5IjpbNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OT
 c2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
 -->
