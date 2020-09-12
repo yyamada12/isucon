@@ -29,6 +29,13 @@ show global variables like '%wait%';
 ```
 
 ## N + 1 の解消
+毎回恒例の基本問題。
+IN句を使ったクエリで1回で取ってくるのが基本。
+
+```
+
+
+[https://github.com/yyamada12/isucon7_re3/commit/405f0770410613486b1e2f312bec4f4f82fca9b4](https://github.com/yyamada12/isucon7_re3/commit/405f0770410613486b1e2f312bec4f4f82fca9b4)
 
 
 ## テーブルのオンメモリ化
@@ -69,6 +76,6 @@ mysql で prepare admin が多い場合は、go側でprepareさせてあげら�
 sql.Open("mysql",  "root:password@tcp(localhost:3306)/test?interpolateParams=true&collation=utf8mb4_bin")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NzE5MjYzNiwtNzU5NzYyODY1LC04OT
-c0ODg1MSwtMTEwNjgwNzI5NV19
+eyJoaXN0b3J5IjpbNDg2MDM1NjUxLC05NzcxOTI2MzYsLTc1OT
+c2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
 -->
