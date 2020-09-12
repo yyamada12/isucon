@@ -46,6 +46,8 @@ $ iptables -L
 ここでファイアーウォールが有効になっている場合は、iptablesコマンドで制限を無効化するなどしてmysqlの通信を許可する。
 
 
+## 降順INDEX
+ORDER BY の条件に
 
 
 ## テーブルのカラム追加
@@ -119,8 +121,8 @@ MySQLTunerをとりあえず動かしてみるのが良さそう
 [MySQLTunerを使ってMySQLを診断しよう！] (https://note.dimage.co.jp/blog_009_mysqltuner.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMT
-YyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5
-NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX
-0=
+eyJoaXN0b3J5IjpbMzg5NDg2NjY3LC0xMjkyMzQ1MjM5LC0xNT
+MzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0ODU0
+NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OTgwLD
+c0MjE5NTYwNV19
 -->
