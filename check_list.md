@@ -571,7 +571,8 @@ max_connections=10000
 - [ ] （ログに `[warn] ... upstream response is buffered to a temporary file ...` と出た場合） `proxy_buffers` のサイズを増やす
 
 ## 再起動試験
-ベンチ実施全台で `sudo reboot` を実行する
+ベンチ実施後、全台で `sudo reboot` を実行する
+起動後、アプリを操作し、ベンチによる変更が保存されていることを確認する
 
 ## 提出前
 
@@ -583,9 +584,9 @@ max_connections=10000
 
 - [ ] appのログを切る (go の middlewareのコード削除など)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MjI0MTQ4MiwtMjE4MDEyMTUyLC01OT
-MwMDYwODQsNTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xODEzNjk3
-OTQsNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2ODUsLT
-UxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOTg0NjM5MSwxMjQxMjM4
-NjM0LC02MTA2NjU4OTZdfQ==
+eyJoaXN0b3J5IjpbLTIwMjI0OTEzNjksLTIxODAxMjE1MiwtNT
+kzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMzY5
+Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC
+01MTA0MjYxODAsMTk5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MTIz
+ODYzNCwtNjEwNjY1ODk2XX0=
 -->
