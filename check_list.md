@@ -570,6 +570,8 @@ max_connections=10000
 - [ ] （ログに `[warn] ... client request body is buffered to a temporary file ...` と出た場合） `client_body_buffer_size` を増やす
 - [ ] （ログに `[warn] ... upstream response is buffered to a temporary file ...` と出た場合） `proxy_buffers` のサイズを増やす
 
+## 再起動試験
+ベンチ実施全台で `sudo reboot` を実行する
 
 ## 提出前
 
@@ -578,10 +580,12 @@ max_connections=10000
 - [ ] nginx のアクセスログの出力をオフにする (http > `access_log off;` )
 - [ ]  netdata を切る
 ```systemctl disable netdata```
+
+- [ ] appのログを切る (go の middlewareのコード削除など)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODAxMjE1MiwtNTkzMDA2MDg0LDU4Nz
-g3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMzY5Nzk0LDQ0NzUxMjIy
-MCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC01MTA0MjYxODAsMT
-k5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MTIzODYzNCwtNjEwNjY1
-ODk2XX0=
+eyJoaXN0b3J5IjpbMTY4MjI0MTQ4MiwtMjE4MDEyMTUyLC01OT
+MwMDYwODQsNTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xODEzNjk3
+OTQsNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2ODUsLT
+UxMDQyNjE4MCwxOTkxMjU4MDY4LDMwOTg0NjM5MSwxMjQxMjM4
+NjM0LC02MTA2NjU4OTZdfQ==
 -->
