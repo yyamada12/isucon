@@ -1,5 +1,7 @@
 # nginx
 
+## 設定の正しさ確認
+`nginx -t` とすると設定ファイルのミスを指摘してくれる
 
 
 ## ロードバランス
@@ -344,5 +346,5 @@ http {
 
 _
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzYzMzM3NjBdfQ==
+eyJoaXN0b3J5IjpbMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
 -->
