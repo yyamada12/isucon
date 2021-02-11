@@ -214,6 +214,7 @@ fi
 ### alp
 - [ ] そもそもnginxをbenchが通っているかどうか確認する
 通っていなければ、nginx をリバプロとして設定する
+https://github.com/yyamada12/isucon10/commit/76ce0248358e683dc261a694e51472583984e395
 - [ ] nginxのログフォーマットを変更する
 
 * /etc/nginx/nginx.conf
@@ -584,9 +585,9 @@ max_connections=10000
 
 - [ ] appのログを切る (go の middlewareのコード削除など)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzM4NTUzOTEsLTIxODAxMjE1MiwtNT
-kzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMzY5
-Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC
-01MTA0MjYxODAsMTk5MTI1ODA2OCwzMDk4NDYzOTEsMTI0MTIz
-ODYzNCwtNjEwNjY1ODk2XX0=
+eyJoaXN0b3J5IjpbLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEsLT
+IxODAxMjE1MiwtNTkzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4
+MDE3NSwtMTgxMzY5Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4LC
+0yMTIzNDE1Njg1LC01MTA0MjYxODAsMTk5MTI1ODA2OCwzMDk4
+NDYzOTEsMTI0MTIzODYzNCwtNjEwNjY1ODk2XX0=
 -->
