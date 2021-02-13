@@ -51,6 +51,7 @@ ORDER BY の条件にDESCが入っているとINDEXを使ってくれない
 数値のカラムの場合、マイナスかけて generated column すればOK
 
 
+
 ## テーブルのカラム追加
 ### こんな時に使える
 - JOINが遅い
@@ -122,8 +123,8 @@ MySQLTunerをとりあえず動かしてみるのが良さそう
 [MySQLTunerを使ってMySQLを診断しよう！] (https://note.dimage.co.jp/blog_009_mysqltuner.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMT
-UzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1
-NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MC
-w3NDIxOTU2MDVdfQ==
+eyJoaXN0b3J5IjpbMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMj
+kyMzQ1MjM5LC0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1
+Njk5NywtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1Mj
+AsMTExNzM2OTgwLDc0MjE5NTYwNV19
 -->
