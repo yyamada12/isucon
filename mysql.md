@@ -7,7 +7,7 @@
 
 以下コマンドでユーザの権限状態を確認。
 ```
-mysql> select user, host, password from mysql.user;
+mysql> select user, host from mysql.user;
 ```
 host が `localhost` だとアウト。
 ip_address を `%` にして以下のクエリを実行する。
@@ -123,8 +123,8 @@ MySQLTunerをとりあえず動かしてみるのが良さそう
 [MySQLTunerを使ってMySQLを診断しよう！] (https://note.dimage.co.jp/blog_009_mysqltuner.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMj
-kyMzQ1MjM5LC0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1
-Njk5NywtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1Mj
-AsMTExNzM2OTgwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbLTE2NzMzMjgxMzksMTE1NTQ3NTQ2MiwxMD
+E4MjMzNzUyLC0xMjkyMzQ1MjM5LC0xNTMzMTA3MzkyLDE2Mjk1
+NTQ2NzUsLTkwOTQ1Njk5NywtMTE0ODU0NzIyOSwtMjc2OTQ4Mz
+E4LDEwMTU0OTE1MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
 -->
