@@ -51,6 +51,15 @@ ORDER BY の条件にDESCが入っているとINDEXを使ってくれない
 数値のカラムの場合、マイナスかけて generated column すればOK
 
 
+```
+CREATE TABLE isuumo.estate
+(
+	...
+	popularity  INTEGER             NOT NULL,
+	minuspopularity INTEGER AS (-popularity) NOT NULL, 
+	...
+)
+```
 
 ## テーブルのカラム追加
 ### こんな時に使える
@@ -123,8 +132,8 @@ MySQLTunerをとりあえず動かしてみるのが良さそう
 [MySQLTunerを使ってMySQLを診断しよう！] (https://note.dimage.co.jp/blog_009_mysqltuner.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzMzMjgxMzksMTE1NTQ3NTQ2MiwxMD
-E4MjMzNzUyLC0xMjkyMzQ1MjM5LC0xNTMzMTA3MzkyLDE2Mjk1
-NTQ2NzUsLTkwOTQ1Njk5NywtMTE0ODU0NzIyOSwtMjc2OTQ4Mz
-E4LDEwMTU0OTE1MjAsMTExNzM2OTgwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbMTA1ODAyMjE4NSwxMTU1NDc1NDYyLDEwMT
+gyMzM3NTIsLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMTYyOTU1
+NDY3NSwtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMT
+gsMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
 -->
