@@ -539,6 +539,13 @@ sudo /sbin/sysctl -p
 
 ### /etc/mysql/my.cnf
 
+- [ ] 初期値を確認
+```
+SHOW VARIABLES LIKE 'innodb_flush%';
+SHOW VARIABLES LIKE 'innodb_support%';
+
+```
+
 - [ ] /etc/mysql/my.cnf に以下を書き込む
 
 ```
@@ -585,9 +592,10 @@ max_connections=10000
 
 - [ ] appのログを切る (go の middlewareのコード削除など)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEsLT
-IxODAxMjE1MiwtNTkzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4
-MDE3NSwtMTgxMzY5Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4LC
-0yMTIzNDE1Njg1LC01MTA0MjYxODAsMTk5MTI1ODA2OCwzMDk4
-NDYzOTEsMTI0MTIzODYzNCwtNjEwNjY1ODk2XX0=
+eyJoaXN0b3J5IjpbMzI5NDQyMTk5LC0xOTU1MzIxMDU0LC0xMj
+MzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNjA4NCw1ODc4Nzgz
+NjksLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0NDc1MTIyMjAsMT
+Q3MjA2MzczOCwtMjEyMzQxNTY4NSwtNTEwNDI2MTgwLDE5OTEy
+NTgwNjgsMzA5ODQ2MzkxLDEyNDEyMzg2MzQsLTYxMDY2NTg5Nl
+19
 -->
