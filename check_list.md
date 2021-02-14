@@ -589,14 +589,14 @@ max_connections=10000
 
 - [ ] nginx のアクセスログの出力をオフにする (http > `access_log off;` )
 - [ ]  netdata を切る
-```systemctl disable netdata```
+```sudo systemctl disable netdata```
 
 - [ ] appのログを切る (go の middlewareのコード削除など)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDUzNDAyNSwtMTk1NTMyMTA1NCwtMT
-IzMzg1NTM5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQsNTg3ODc4
-MzY5LC0yMDU3NzgwMTc1LC0xODEzNjk3OTQsNDQ3NTEyMjIwLD
-E0NzIwNjM3MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOTkx
-MjU4MDY4LDMwOTg0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4OT
-ZdfQ==
+eyJoaXN0b3J5IjpbLTY4MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOT
+U1MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAw
+NjA4NCw1ODc4NzgzNjksLTIwNTc3ODAxNzUsLTE4MTM2OTc5NC
+w0NDc1MTIyMjAsMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNTEw
+NDI2MTgwLDE5OTEyNTgwNjgsMzA5ODQ2MzkxLDEyNDEyMzg2Mz
+QsLTYxMDY2NTg5Nl19
 -->
