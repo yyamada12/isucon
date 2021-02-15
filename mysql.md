@@ -131,9 +131,14 @@ ADD INDEX index_name(col_name, ...)
 MySQLTunerをとりあえず動かしてみるのが良さそう
 [MySQLTunerを使ってMySQLを診断しよう！] (https://note.dimage.co.jp/blog_009_mysqltuner.html)
 
+```
+wget http://mysqltuner.pl/ -O mysqltuner.pl
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1ODAyMjE4NSwxMTU1NDc1NDYyLDEwMT
-gyMzM3NTIsLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMTYyOTU1
-NDY3NSwtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMT
-gsMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbLTY3OTM3ODY3MSwxMDU4MDIyMTg1LDExNT
+U0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMTUzMzEw
+NzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1NDcyMj
+ksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MCw3NDIx
+OTU2MDVdfQ==
 -->
