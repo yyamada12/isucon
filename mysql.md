@@ -135,10 +135,22 @@ MySQLTunerをとりあえず動かしてみるのが良さそう
 wget http://mysqltuner.pl/ -O mysqltuner.pl
 ```
 
+
+## Query Cache
+
+`query_cache_type=1` は必須。
+sizeとlimitはメモリ容量に合わせて。
+```
+query_cache_type=1
+query_cache_size=512M
+query_cache_limit=8M
+```
+
+https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTM3ODY3MSwxMDU4MDIyMTg1LDExNT
-U0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMTUzMzEw
-NzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1NDcyMj
-ksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MCw3NDIx
-OTU2MDVdfQ==
+eyJoaXN0b3J5IjpbMTg4MzY0MTI4MCwtNjc5Mzc4NjcxLDEwNT
+gwMjIxODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1
+MjM5LC0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5Ny
+wtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTEx
+NzM2OTgwLDc0MjE5NTYwNV19
 -->
