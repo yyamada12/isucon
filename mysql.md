@@ -138,6 +138,7 @@ wget http://mysqltuner.pl/ -O mysqltuner.pl
 
 ## Query Cache
 
+### 設定方法
 `query_cache_type=1` は必須。
 sizeとlimitはメモリ容量に合わせて。
 ```
@@ -146,14 +147,15 @@ query_cache_size=512M
 query_cache_limit=8M
 ```
 
+### クエリーキャッシュメモリが足りているか確認する
 
-`show global status like "%QCache%";` の値を見て、 `Qcache_lowmem_prunes`  ()が小さかったり、
+`show global status like "%QCache%";` の値を見て、 `Qcache_lowmem_prunes`  (メモリーが少ないためクエリーキャッシュから削除されたクエリーの数) が小さかったり、Qcache_free_memory (クエリーキャッシュの使用できるメモリーの残り) が大きければ、メモリの大きさは十分。
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MzA1MjU0NSwtNjc5Mzc4NjcxLDEwNT
-gwMjIxODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1
-MjM5LC0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5Ny
-wtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTEx
-NzM2OTgwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbNjkzNTg3ODY3LC02NzkzNzg2NzEsMTA1OD
+AyMjE4NSwxMTU1NDc1NDYyLDEwMTgyMzM3NTIsLTEyOTIzNDUy
+MzksLTE1MzMxMDczOTIsMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC
+0xMTQ4NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3
+MzY5ODAsNzQyMTk1NjA1XX0=
 -->
