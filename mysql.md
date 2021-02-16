@@ -146,9 +146,12 @@ query_cache_size=512M
 query_cache_limit=8M
 ```
 
+
+`show global status like "%QCache%";` の値を見て、 `Qcache_lowmem_prunes`  ()が小さかったり、
+
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MzY0MTI4MCwtNjc5Mzc4NjcxLDEwNT
+eyJoaXN0b3J5IjpbLTQ0MzA1MjU0NSwtNjc5Mzc4NjcxLDEwNT
 gwMjIxODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1
 MjM5LC0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5Ny
 wtMTE0ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTEx
