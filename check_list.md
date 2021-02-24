@@ -598,11 +598,26 @@ max_connections=10000
 ```sudo systemctl disable netdata```
 
 - [ ] appのログを切る (go の middlewareのコード削除など)
+- [ ]  VSCode Remote SSH のプロセスを切る
+https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
+
+. The command does two things: it kills any running VS Code Server processes and it deletes the folder where the server was installed.
+
+If you want to run these steps manually, or if the command isn't working for you, you can run a script like this:
+
+```
+kill -9 `ps ax | grep "remoteExtensionHostAgent.js" | grep -v grep | awk '{print $1}'`
+kill -9 `ps ax | grep "watcherService" | grep -v grep | awk '{print $1}'`
+rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
+```
+
+The VS Code Server was previously installed under  `~/.vscode-remote`  so you can check that location too.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNT
-M0NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgw
-MTIxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjksLTIwNTc3ODAxNz
-UsLTE4MTM2OTc5NCw0NDc1MTIyMjAsMTQ3MjA2MzczOCwtMjEy
-MzQxNTY4NSwtNTEwNDI2MTgwLDE5OTEyNTgwNjgsMzA5ODQ2Mz
-kxLDEyNDEyMzg2MzQsLTYxMDY2NTg5Nl19
+eyJoaXN0b3J5IjpbLTEyMTM5Mzg2LC0xNTAzOTg4NjcwLC02OD
+EzODg0ODgsLTUzNDUzNDAyNSwtMTk1NTMyMTA1NCwtMTIzMzg1
+NTM5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQsNTg3ODc4MzY5LC
+0yMDU3NzgwMTc1LC0xODEzNjk3OTQsNDQ3NTEyMjIwLDE0NzIw
+NjM3MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOTkxMjU4MD
+Y4LDMwOTg0NjM5MSwxMjQxMjM4NjM0LC02MTA2NjU4OTZdfQ==
+
 -->
