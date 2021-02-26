@@ -205,7 +205,14 @@ curl -I -H 'Accept-Encoding: gzip,deflate' http://url
 
 https://qiita.com/kaikusakari/items/cc5955a57b74d5937fd8
 ```
+location / {
+    root /home/user/app/public/;
+    try_files $uri $uri/ @dinamic;
+}
 
+location @dinamic {
+    proxy_pass http://upstream;
+}
 ```
 
 
@@ -352,6 +359,6 @@ http {
 
 _
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNzcwNTMzLDE4MTE3OTc1NDIsLTE3Nz
-YzMzM3NjBdfQ==
+eyJoaXN0b3J5IjpbLTU0OTk4MTkzNSwxODExNzk3NTQyLC0xNz
+c2MzMzNzYwXX0=
 -->
