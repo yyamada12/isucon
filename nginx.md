@@ -201,6 +201,12 @@ gzipが設定されていればgzip圧縮有効。
 curl -I -H 'Accept-Encoding: gzip,deflate' http://url
 ```
 
+### ファイルがある場合はファイルから、なければアプリサーバに投げる
+
+https://qiita.com/kaikusakari/items/cc5955a57b74d5937fd8
+```
+
+```
 
 
 ## 例) 
@@ -346,5 +352,6 @@ http {
 
 _
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
+eyJoaXN0b3J5IjpbLTQyNzcwNTMzLDE4MTE3OTc1NDIsLTE3Nz
+YzMzM3NjBdfQ==
 -->
