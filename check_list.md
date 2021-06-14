@@ -568,7 +568,9 @@ max_connections=10000
 
 ## 改善
 
-
+### app
+- [ ] ミドルウェアなどのロギングがあれば止める (めっちゃ効く)
+- [ ] GOMAXPROCS の値を確認する
 
 ### mysql
 
@@ -604,7 +606,7 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDUzMTAxNTgsLTE1ODU2NjUwMTAsLT
+eyJoaXN0b3J5IjpbLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLT
 E1MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1
 MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNj
 A4NCw1ODc4NzgzNjksLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0
