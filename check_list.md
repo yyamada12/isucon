@@ -30,7 +30,9 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 - [ ] webサーバが何か確認する
 
 ```bash
- sudo systemctl list-unit-files
+sudo systemctl list-unit-files
+ 
+sudo systemctl list-units --type=service --state=running
 ```
 
 - [ ] 言語をgoに変更する
@@ -606,11 +608,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLT
-E1MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1
-MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNj
-A4NCw1ODc4NzgzNjksLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0
-NDc1MTIyMjAsMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNTEwND
-I2MTgwLDE5OTEyNTgwNjgsMzA5ODQ2MzkxLDEyNDEyMzg2MzQs
-LTYxMDY2NTg5Nl19
+eyJoaXN0b3J5IjpbMTUzMTc5NTcxMiwtMTEwNzc4OTY3OCwtMT
+U4NTY2NTAxMCwtMTUwMzk4ODY3MCwtNjgxMzg4NDg4LC01MzQ1
+MzQwMjUsLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEsLTIxODAxMj
+E1MiwtNTkzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4MDE3NSwt
+MTgxMzY5Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4LC0yMTIzND
+E1Njg1LC01MTA0MjYxODAsMTk5MTI1ODA2OCwzMDk4NDYzOTEs
+MTI0MTIzODYzNF19
 -->
