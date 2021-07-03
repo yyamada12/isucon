@@ -160,18 +160,6 @@ date -R
 echo "Finished deploying."
 ```
 
-rotate_log.sh
-
-```bash
-#!/bin/sh
-
-set -eux
-
-if sudo [ -e $1 ]; then
-  sudo mv $1 ${1%.*}_$(date +"%Y%m%d%H%M%S").${1##*.}
-fi
-```
-
 
 - [ ] レポジトリを他のサーバーにpullする
 2台目、3台目のサーバーで以下の手順を実施
@@ -651,11 +639,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNDEzMTk0OCw1MDU4NDI5NTUsLTE3OD
-gzOTY3MzYsLTgwOTIzODg3LDE4NzU1NTEzNDAsLTE1MTk4NTAz
-NjEsNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIzMDc2MzU0NCwtNT
-QyMjk2OTM3LDE1MzE3OTU3MTIsLTExMDc3ODk2NzgsLTE1ODU2
-NjUwMTAsLTE1MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNTM0NTM0MD
-I1LC0xOTU1MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgwMTIxNTIs
-LTU5MzAwNjA4NF19
+eyJoaXN0b3J5IjpbMTE2NzE2MDcxMSwxNTM0MTMxOTQ4LDUwNT
+g0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3NTU1MTM0
+MCwtMTUxOTg1MDM2MSw0MzA0MTgwMTQsMTI2ODIxMDE5OSwxMj
+MwNzYzNTQ0LC01NDIyOTY5MzcsMTUzMTc5NTcxMiwtMTEwNzc4
+OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4ODY3MCwtNjgxMzg4ND
+g4LC01MzQ1MzQwMjUsLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEs
+LTIxODAxMjE1Ml19
 -->
