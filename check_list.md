@@ -127,7 +127,7 @@ sudo systemctl restart nginx
 - [ ] デプロイスクリプトの準備
 
 ```
-vim deploy.sh
+vim ~/deploy.sh
 :set paste
 ```
 
@@ -667,7 +667,7 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NDc4MDMwOCw2MzExMDEyNzgsLTYyMD
+eyJoaXN0b3J5IjpbLTM0NjI4NTUzOSw2MzExMDEyNzgsLTYyMD
 gxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYw
 NzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC
 04MDkyMzg4NywxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQx
