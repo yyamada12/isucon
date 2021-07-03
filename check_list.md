@@ -87,7 +87,7 @@ ssh -T git@github.com
 
 - [ ] etcをレポジトリに追加する
   - /etcからファイルを移動し、シンボリックリンクをはる
-  -  mysqlはシンボリックリンクだと設定が反映されないため、毎回手動で ~/etc から /etc にコピーする運用とする
+  -  mysqlはシンボリックリンクだと設定が反映されないため、デプロイスクリプトで ~/etc から /etc にコピーする運用とする
 
 ```bash
 mkdir ~/etc
@@ -216,6 +216,8 @@ sudo systemctl daemon-reload
     }
 }
 ```
+
+→ wa
 
 - [ ] remote用のsettings.jsonにGOROOT, GOPATHを必要であれば設定する
 
@@ -654,11 +656,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxMTAxMjc4LC02MjA4MTQ3MDksLTEzNT
-UxODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMx
-OTQ4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMT
-g3NTU1MTM0MCwtMTUxOTg1MDM2MSw0MzA0MTgwMTQsMTI2ODIx
-MDE5OSwxMjMwNzYzNTQ0LC01NDIyOTY5MzcsMTUzMTc5NTcxMi
-wtMTEwNzc4OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4ODY3MCwt
-NjgxMzg4NDg4XX0=
+eyJoaXN0b3J5IjpbMTIxODQ4MzY4LDYzMTEwMTI3OCwtNjIwOD
+E0NzA5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3
+MTEsMTUzNDEzMTk0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLT
+gwOTIzODg3LDE4NzU1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4
+MDE0LDEyNjgyMTAxOTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LD
+E1MzE3OTU3MTIsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1
+MDM5ODg2NzBdfQ==
 -->
