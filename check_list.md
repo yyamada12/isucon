@@ -223,6 +223,13 @@ StartLimitBurst=999
 - [ ] インストール
 `各種インストール` のスクリプトで無事インストールされていれば不要
 ```
+mkdir -p ~/tmp
+cd ~/tmp
+wget https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
+
+unzip alp_linux_amd64.zip
+
+sudo install ./alp /usr/local/bin
 
 ```
 
@@ -614,11 +621,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMT
-A3Nzg5Njc4LC0xNTg1NjY1MDEwLC0xNTAzOTg4NjcwLC02ODEz
-ODg0ODgsLTUzNDUzNDAyNSwtMTk1NTMyMTA1NCwtMTIzMzg1NT
-M5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQsNTg3ODc4MzY5LC0y
-MDU3NzgwMTc1LC0xODEzNjk3OTQsNDQ3NTEyMjIwLDE0NzIwNj
-M3MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4MCwxOTkxMjU4MDY4
-LDMwOTg0NjM5MV19
+eyJoaXN0b3J5IjpbLTE4NTU5NTg4NjAsLTU0MjI5NjkzNywxNT
+MxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1MDEwLC0xNTAz
+OTg4NjcwLC02ODEzODg0ODgsLTUzNDUzNDAyNSwtMTk1NTMyMT
+A1NCwtMTIzMzg1NTM5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQs
+NTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xODEzNjk3OTQsNDQ3NT
+EyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4
+MCwxOTkxMjU4MDY4XX0=
 -->
