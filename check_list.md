@@ -217,7 +217,15 @@ sudo systemctl daemon-reload
 }
 ```
 
-→ wa
+→ watcherExcludeは上手く効かないことも多い
+その場合は、workディレクトリを作成し、VSCodeで編集するファイルだけシンボリックリンク を貼っておく
+```
+mkdir ~/work
+cd ~/work
+ln -s ~/etc
+ln -s ~/.gitignore
+ln -s ~/alp.yml
+```
 
 - [ ] remote用のsettings.jsonにGOROOT, GOPATHを必要であれば設定する
 
@@ -656,7 +664,7 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxODQ4MzY4LDYzMTEwMTI3OCwtNjIwOD
+eyJoaXN0b3J5IjpbMjAzMjk0ODU0LDYzMTEwMTI3OCwtNjIwOD
 E0NzA5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3
 MTEsMTUzNDEzMTk0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLT
 gwOTIzODg3LDE4NzU1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4
