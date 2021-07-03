@@ -223,13 +223,10 @@ StartLimitBurst=999
 - [ ] インストール
 `各種インストール` のスクリプトで無事インストールされていれば不要
 ```
-mkdir -p ~/tmp
-cd ~/tmp
 wget https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 unzip alp_linux_amd64.zip
 sudo install ./alp /usr/local/bin
-cd ~
-rm -rf ~/tmp
+rm alp_linux_amd64.zip alp
 
 curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/alp.yml -o ~/alp.yml
 ```
@@ -380,12 +377,21 @@ by [stackoverflow](https://stackoverflow.com/questions/38490785/where-is-mysql-5
 
 
 ### netdata
+- [ ] インストール
+`各種インストール` のスクリプトで無事インストールされていれば不要
 
 ```
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 ```
 
+- [ ] mysql のメトリクスを追加する
+```
+mysql -u isucon -p
 
+create user 'netdata'@'localhost';
+grant usage on *.* to 'netdata'@'localhost';
+flush privileges;
+```
 
 
 
@@ -629,11 +635,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1Mz
-E3OTU3MTIsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5
-ODg2NzAsLTY4MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1MzIxMD
-U0LC0xMjMzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNjA4NCw1
-ODc4NzgzNjksLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0NDc1MT
-IyMjAsMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNTEwNDI2MTgw
-LDE5OTEyNTgwNjhdfQ==
+eyJoaXN0b3J5IjpbMjAzMDkxNzgxLDEyMzA3NjM1NDQsLTU0Mj
+I5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1
+MDEwLC0xNTAzOTg4NjcwLC02ODEzODg0ODgsLTUzNDUzNDAyNS
+wtMTk1NTMyMTA1NCwtMTIzMzg1NTM5MSwtMjE4MDEyMTUyLC01
+OTMwMDYwODQsNTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xODEzNj
+k3OTQsNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2ODUs
+LTUxMDQyNjE4MF19
 -->
