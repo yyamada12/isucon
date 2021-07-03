@@ -95,6 +95,7 @@ sudo ln -s ~/etc/nginx.conf /etc/nginx/nginx.conf
 sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.org
 sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf ~/etc/
 sudo chmod 666 ~/etc/mysqld.cnf
+sudo  ln -s ~/etc/nginx.conf /etc/nginx/nginx.conf
 
 sudo cp /etc/my.cnf /etc/my.cnf.org
 sudo cp /etc/my.cnf ~/etc/
@@ -633,11 +634,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIzMD
-c2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLTExMDc3ODk2
-NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4MTM4ODQ4OC
-wtNTM0NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzODU1MzkxLC0y
-MTgwMTIxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjksLTIwNTc3OD
-AxNzUsLTE4MTM2OTc5NCw0NDc1MTIyMjAsMTQ3MjA2MzczOCwt
-MjEyMzQxNTY4NV19
+eyJoaXN0b3J5IjpbNzg4Njc3OTQwLDQzMDQxODAxNCwxMjY4Mj
+EwMTk5LDEyMzA3NjM1NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEy
+LC0xMTA3Nzg5Njc4LC0xNTg1NjY1MDEwLC0xNTAzOTg4NjcwLC
+02ODEzODg0ODgsLTUzNDUzNDAyNSwtMTk1NTMyMTA1NCwtMTIz
+Mzg1NTM5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQsNTg3ODc4Mz
+Y5LC0yMDU3NzgwMTc1LC0xODEzNjk3OTQsNDQ3NTEyMjIwLDE0
+NzIwNjM3MzhdfQ==
 -->
