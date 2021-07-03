@@ -39,8 +39,12 @@ sudo systemctl list-units --type=service --state=running
 
 
 
-- [ ] ssh鍵を作成してgitに登録する
+- [ ] gitにsshできるようにする
+・既に存在する鍵を利用する場合
+```
+```
 
+・鍵を1から作る場合
 ```
 ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
 ```
@@ -637,11 +641,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2ODIxMDE5OSwxMjMwNzYzNTQ0LC01ND
-IyOTY5MzcsMTUzMTc5NTcxMiwtMTEwNzc4OTY3OCwtMTU4NTY2
-NTAxMCwtMTUwMzk4ODY3MCwtNjgxMzg4NDg4LC01MzQ1MzQwMj
-UsLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEsLTIxODAxMjE1Miwt
-NTkzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMz
-Y5Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1
-LC01MTA0MjYxODBdfQ==
+eyJoaXN0b3J5IjpbLTE3NTE0NDMxNzgsMTI2ODIxMDE5OSwxMj
+MwNzYzNTQ0LC01NDIyOTY5MzcsMTUzMTc5NTcxMiwtMTEwNzc4
+OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4ODY3MCwtNjgxMzg4ND
+g4LC01MzQ1MzQwMjUsLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEs
+LTIxODAxMjE1MiwtNTkzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nz
+c4MDE3NSwtMTgxMzY5Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4
+LC0yMTIzNDE1Njg1XX0=
 -->
