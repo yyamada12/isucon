@@ -126,7 +126,10 @@ sudo systemctl restart nginx
 
 - [ ] デプロイスクリプトの準備
 
-deploy.sh
+```
+vim deploy.sh
+:set paste
+```
 
 ```bash
 #!/bin/bash
@@ -647,11 +650,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMT
-kyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQy
-OTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC
-0xNTE5ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMTk5LDEyMzA3
-NjM1NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Nj
-c4LC0xNTg1NjY1MDEwLC0xNTAzOTg4NjcwLC02ODEzODg0ODgs
-LTUzNDUzNDAyNV19
+eyJoaXN0b3J5IjpbLTg1MzQwMzczNCwtNjIwODE0NzA5LC0xMz
+U1MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEz
+MTk0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LD
+E4NzU1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNjgy
+MTAxOTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3MT
+IsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2NzAs
+LTY4MTM4ODQ4OF19
 -->
