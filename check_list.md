@@ -81,7 +81,7 @@ ssh -T git@github.com
 
 - [ ] etcをレポジトリに追加する
     - /etcからファイルを移動し、シンボリックリンクをはる
-    - **mysqlはシンボリックリンクだと設定が反映されない** 場合があり、その場合は手動でコピーする
+    - **mysqlはシンボリックリンクだと設定が反映されない** 場合があり、その場合は毎回手動で ~/etc から /etc にコピーする運用とする
 
 ```bash
 mkdir ~/etc
@@ -95,7 +95,7 @@ sudo ln -s ~/etc/nginx.conf /etc/nginx/nginx.conf
 sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.org
 sudo mv /etc/mysql/mysql.conf.d/mysqld.cnf ~/etc/
 sudo chmod 666 ~/etc/mysqld.cnf
-sudo  ln -s ~/etc/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo ln -s ~/etc/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 
 # sysctl.conf
 sudo cp /etc/sysctl.conf /etc/sysctl.conf.org
@@ -105,12 +105,14 @@ sudo ln -s ~/etc/sysctl.conf /etc/sysctl.conf
 ```
 
 - mysql は設定ファイルの場所がまちまちなので気をつける
-以下のディレクトリの場合
+以下のファイルの場合もあり
 ```
 sudo cp /etc/my.cnf /etc/my.cnf.org
 sudo cp /etc/my.cnf ~/etc/
 sudo chmod 666 ~/etc/my.cnf
 ```
+
+シンボリックリンクで動くこt
 
 - [ ] デプロイスクリプトの準備
 
@@ -638,11 +640,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNDEyMjE3MywxODc1NTUxMzQwLC0xNT
-E5ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMTk5LDEyMzA3NjM1
-NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC
-0xNTg1NjY1MDEwLC0xNTAzOTg4NjcwLC02ODEzODg0ODgsLTUz
-NDUzNDAyNSwtMTk1NTMyMTA1NCwtMTIzMzg1NTM5MSwtMjE4MD
-EyMTUyLC01OTMwMDYwODQsNTg3ODc4MzY5LC0yMDU3NzgwMTc1
-LC0xODEzNjk3OTRdfQ==
+eyJoaXN0b3J5IjpbLTU4Mjg3NzA1LDE4NzU1NTEzNDAsLTE1MT
+k4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIzMDc2MzU0
+NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLTExMDc3ODk2NzgsLT
+E1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNTM0
+NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgwMT
+IxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjksLTIwNTc3ODAxNzUs
+LTE4MTM2OTc5NF19
 -->
