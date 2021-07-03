@@ -385,14 +385,16 @@ bash <(curl -Ss https://my-netdata.io/kickstart.sh)
 ```
 
 - [ ] mysql のメトリクスを追加する
+1. 以下のsql を実行 
 ```
-mysql -u isucon -p
-
 create user 'netdata'@'localhost';
 grant usage on *.* to 'netdata'@'localhost';
 flush privileges;
 ```
-
+2. netdataを再起動
+```
+sudo service netdata restart
+```
 
 
 ### pprof
@@ -635,11 +637,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMDkxNzgxLDEyMzA3NjM1NDQsLTU0Mj
-I5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1
-MDEwLC0xNTAzOTg4NjcwLC02ODEzODg0ODgsLTUzNDUzNDAyNS
-wtMTk1NTMyMTA1NCwtMTIzMzg1NTM5MSwtMjE4MDEyMTUyLC01
-OTMwMDYwODQsNTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xODEzNj
-k3OTQsNDQ3NTEyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2ODUs
-LTUxMDQyNjE4MF19
+eyJoaXN0b3J5IjpbMTI2ODIxMDE5OSwxMjMwNzYzNTQ0LC01ND
+IyOTY5MzcsMTUzMTc5NTcxMiwtMTEwNzc4OTY3OCwtMTU4NTY2
+NTAxMCwtMTUwMzk4ODY3MCwtNjgxMzg4NDg4LC01MzQ1MzQwMj
+UsLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEsLTIxODAxMjE1Miwt
+NTkzMDA2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMz
+Y5Nzk0LDQ0NzUxMjIyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1
+LC01MTA0MjYxODBdfQ==
 -->
