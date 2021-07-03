@@ -21,9 +21,12 @@ Host isucon3
   User isucon
 ```
 
-- [ ] 
+- [ ] 必要なツールと設定をインストール 
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_essentials.sh)"
+```
 
-- [ ] 各種インストール
+- [ ] 計測ツールインストール
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/installer.sh)"
@@ -647,11 +650,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwOTIzODg3LDE4NzU1NTEzNDAsLTE1MT
-k4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIzMDc2MzU0
-NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLTExMDc3ODk2NzgsLT
-E1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNTM0
-NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgwMT
-IxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjksLTIwNTc3ODAxNzUs
-LTE4MTM2OTc5NF19
+eyJoaXN0b3J5IjpbLTEyNzI5MjE1NDQsLTgwOTIzODg3LDE4Nz
+U1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAx
+OTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLT
+ExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4
+MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzOD
+U1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjks
+LTIwNTc3ODAxNzVdfQ==
 -->
