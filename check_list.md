@@ -86,7 +86,8 @@ ssh -T git@github.com
 
 
 - [ ] etcをレポジトリに追加する
-    - /etcからファイルを移動し、シンボリックリンクをはる
+  - /etcからファイルを移動し、シンボリックリンクをはる
+  -  mysqlはシンボリックリンクだと設定が反映されないため、毎回手動で ~/etc から /etc にコピーする運用とする
 
 ```bash
 mkdir ~/etc
@@ -108,7 +109,6 @@ sudo chmod 666 ~/etc/sysctl.conf
 sudo ln -s ~/etc/sysctl.conf /etc/sysctl.conf
 ```
 
--  mysqlはシンボリックリンクだと設定が反映されない場合があり、その場合は毎回手動で ~/etc から /etc にコピーする運用とする
 - mysql は設定ファイルの場所がまちまちなので気をつける
 以下のファイルの場合もあり
 ```
@@ -642,11 +642,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTk1OTMyOTAsLTEzNTUxODA3OTEsLT
-E5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMxOTQ4LDUwNTg0
-Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3NTU1MTM0MC
-wtMTUxOTg1MDM2MSw0MzA0MTgwMTQsMTI2ODIxMDE5OSwxMjMw
-NzYzNTQ0LC01NDIyOTY5MzcsMTUzMTc5NTcxMiwtMTEwNzc4OT
-Y3OCwtMTU4NTY2NTAxMCwtMTUwMzk4ODY3MCwtNjgxMzg4NDg4
-LC01MzQ1MzQwMjVdfQ==
+eyJoaXN0b3J5IjpbLTM3ODc2MTI1MCwtMTM1NTE4MDc5MSwtMT
+kyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQy
+OTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC
+0xNTE5ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMTk5LDEyMzA3
+NjM1NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Nj
+c4LC0xNTg1NjY1MDEwLC0xNTAzOTg4NjcwLC02ODEzODg0ODgs
+LTUzNDUzNDAyNV19
 -->
