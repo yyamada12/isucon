@@ -53,7 +53,7 @@ ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
 ```
 で生成し、[https://github.com/settings/keys](https://github.com/settings/keys) から登録
 
-・ssh できることを確認
+- ssh できることを確認
 ```
 ssh -T git@github.com
 ```
@@ -633,11 +633,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NjM3MjI3MiwxMjY4MjEwMTk5LDEyMz
-A3NjM1NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5
-Njc4LC0xNTg1NjY1MDEwLC0xNTAzOTg4NjcwLC02ODEzODg0OD
-gsLTUzNDUzNDAyNSwtMTk1NTMyMTA1NCwtMTIzMzg1NTM5MSwt
-MjE4MDEyMTUyLC01OTMwMDYwODQsNTg3ODc4MzY5LC0yMDU3Nz
-gwMTc1LC0xODEzNjk3OTQsNDQ3NTEyMjIwLDE0NzIwNjM3Mzgs
-LTIxMjM0MTU2ODVdfQ==
+eyJoaXN0b3J5IjpbNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIzMD
+c2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLTExMDc3ODk2
+NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4MTM4ODQ4OC
+wtNTM0NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzODU1MzkxLC0y
+MTgwMTIxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjksLTIwNTc3OD
+AxNzUsLTE4MTM2OTc5NCw0NDc1MTIyMjAsMTQ3MjA2MzczOCwt
+MjEyMzQxNTY4NV19
 -->
