@@ -312,12 +312,9 @@ Defaults        env_keep +="PATH"
 - [ ] インストール
 `各種インストール` のスクリプトで無事インストールされていれば不要
 ```
-mkdir -p ~/tmp
-cd ~/tmp
 wget percona.com/get/pt-query-digest
 sudo install ./pt-query-digest /usr/local/bin
-cd ~
-rm -rf ~/tmp
+rm pt-query-digest 
 ```
 
 - [ ] my.cnf でslow log を設定
@@ -632,11 +629,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1NDI3NjE3LC01NDIyOTY5MzcsMTUzMT
-c5NTcxMiwtMTEwNzc4OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4
-ODY3MCwtNjgxMzg4NDg4LC01MzQ1MzQwMjUsLTE5NTUzMjEwNT
-QsLTEyMzM4NTUzOTEsLTIxODAxMjE1MiwtNTkzMDA2MDg0LDU4
-Nzg3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMzY5Nzk0LDQ0NzUxMj
-IyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC01MTA0MjYxODAs
-MTk5MTI1ODA2OF19
+eyJoaXN0b3J5IjpbMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1Mz
+E3OTU3MTIsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5
+ODg2NzAsLTY4MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1MzIxMD
+U0LC0xMjMzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNjA4NCw1
+ODc4NzgzNjksLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0NDc1MT
+IyMjAsMTQ3MjA2MzczOCwtMjEyMzQxNTY4NSwtNTEwNDI2MTgw
+LDE5OTEyNTgwNjhdfQ==
 -->
