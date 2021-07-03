@@ -112,7 +112,12 @@ sudo cp /etc/my.cnf ~/etc/
 sudo chmod 666 ~/etc/my.cnf
 ```
 
-シンボリックリンクで動くこt
+- シンボリックリンクで動くことを一応確認しておく
+```
+sudo systemctl restart mysql
+sudo systemctl restart nginx
+```
+ベンチ実行して問題なければOK
 
 - [ ] デプロイスクリプトの準備
 
@@ -640,11 +645,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4Mjg3NzA1LDE4NzU1NTEzNDAsLTE1MT
-k4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIzMDc2MzU0
-NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLTExMDc3ODk2NzgsLT
-E1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNTM0
-NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzODU1MzkxLC0yMTgwMT
-IxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjksLTIwNTc3ODAxNzUs
-LTE4MTM2OTc5NF19
+eyJoaXN0b3J5IjpbLTg3Nzc0NzY2NCwxODc1NTUxMzQwLC0xNT
+E5ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMTk5LDEyMzA3NjM1
+NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC
+0xNTg1NjY1MDEwLC0xNTAzOTg4NjcwLC02ODEzODg0ODgsLTUz
+NDUzNDAyNSwtMTk1NTMyMTA1NCwtMTIzMzg1NTM5MSwtMjE4MD
+EyMTUyLC01OTMwMDYwODQsNTg3ODc4MzY5LC0yMDU3NzgwMTc1
+LC0xODEzNjk3OTRdfQ==
 -->
