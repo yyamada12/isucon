@@ -86,7 +86,6 @@ ssh -T git@github.com
 
 - [ ] etcをレポジトリに追加する
     - /etcからファイルを移動し、シンボリックリンクをはる
-    - **mysqlはシンボリックリンクだと設定が反映されない** 場合があり、その場合は毎回手動で ~/etc から /etc にコピーする運用とする
 
 ```bash
 mkdir ~/etc
@@ -109,6 +108,7 @@ sudo chmod 666 ~/etc/sysctl.conf
 sudo ln -s ~/etc/sysctl.conf /etc/sysctl.conf
 ```
 
+-  mysqlはシンボリックリンクだと設定が反映されない場合があり、その場合は毎回手動で ~/etc から /etc にコピーする運用とする
 - mysql は設定ファイルの場所がまちまちなので気をつける
 以下のファイルの場合もあり
 ```
@@ -650,7 +650,7 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzI5MjE1NDQsLTgwOTIzODg3LDE4Nz
+eyJoaXN0b3J5IjpbLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4Nz
 U1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAx
 OTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLT
 ExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4
