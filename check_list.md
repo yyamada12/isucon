@@ -140,6 +140,12 @@ cd $SCRIPT_DIR
 date -R
 echo "Started deploying."
 
+function rotate_log () {
+  if sudo [ -e $1 ]; then
+    sudo mv $1 ${1%.*}_$(date +"%Y%m%d%H%M%S").${1##*.}
+  fi
+}
+
 # rotate logs
 ./rotate_log.sh /var/log/nginx/access.log
 ./rotate_log.sh /var/log/mysql/slow.log
@@ -650,11 +656,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4Nz
-U1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAx
-OTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3MTIsLT
-ExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2NzAsLTY4
-MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1MzIxMDU0LC0xMjMzOD
-U1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNjA4NCw1ODc4NzgzNjks
-LTIwNTc3ODAxNzVdfQ==
+eyJoaXN0b3J5IjpbNjI2MjExODQ4LC0xNzg4Mzk2NzM2LC04MD
+kyMzg4NywxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQxODAx
+NCwxMjY4MjEwMTk5LDEyMzA3NjM1NDQsLTU0MjI5NjkzNywxNT
+MxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1MDEwLC0xNTAz
+OTg4NjcwLC02ODEzODg0ODgsLTUzNDUzNDAyNSwtMTk1NTMyMT
+A1NCwtMTIzMzg1NTM5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQs
+NTg3ODc4MzY5XX0=
 -->
