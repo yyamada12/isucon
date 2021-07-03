@@ -168,6 +168,10 @@ date -R
 echo "Finished deploying."
 ```
 
+```
+chmod +x deploy.sh
+```
+
 
 - [ ] レポジトリを他のサーバーにpullする
 2台目、3台目のサーバーで以下の手順を実施
@@ -650,11 +654,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MzQwMzczNCwtNjIwODE0NzA5LC0xMz
-U1MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEz
-MTk0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LD
-E4NzU1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNjgy
-MTAxOTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3MT
-IsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2NzAs
-LTY4MTM4ODQ4OF19
+eyJoaXN0b3J5IjpbNjMxMTAxMjc4LC02MjA4MTQ3MDksLTEzNT
+UxODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMx
+OTQ4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMT
+g3NTU1MTM0MCwtMTUxOTg1MDM2MSw0MzA0MTgwMTQsMTI2ODIx
+MDE5OSwxMjMwNzYzNTQ0LC01NDIyOTY5MzcsMTUzMTc5NTcxMi
+wtMTEwNzc4OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4ODY3MCwt
+NjgxMzg4NDg4XX0=
 -->
