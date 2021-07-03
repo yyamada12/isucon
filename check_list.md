@@ -110,16 +110,6 @@ sudo ln -s ~/etc/sysctl.conf /etc/sysctl.conf
 ```
 
 
-- [ ] レポジトリを他のサーバーにpullする
-```
-git init
-git remote add origin レポジトリURL
-git pull origin master
-```
--> 競合するファイルが出力されるはずなので、それらのファイルを削除してもう一度 `git pull origin master` 
-
-デプロイしてベンチが通ればOK
-
 
 - [ ] デプロイスクリプトの準備
 
@@ -167,6 +157,19 @@ if sudo [ -e $1 ]; then
   sudo mv $1 ${1%.*}_$(date +"%Y%m%d%H%M%S").${1##*.}
 fi
 ```
+
+
+- [ ] レポジトリを他のサーバーにpullする
+2台目、3台目のサーバーで以下の手順を実施
+```
+git init
+git remote add origin レポジトリURL
+git pull origin main
+```
+-> 競合するファイルが出力されるはずなので、それらのファイルを削除してもう一度 `git pull origin main` 
+
+デプロイしてベンチが通ればOK
+
 
 - [ ] systemdにおまじないを追加する
 
@@ -634,11 +637,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNj
-gyMTAxOTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1MzE3OTU3
-MTIsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1MDM5ODg2Nz
-AsLTY4MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1MzIxMDU0LC0x
-MjMzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNjA4NCw1ODc4Nz
-gzNjksLTIwNTc3ODAxNzUsLTE4MTM2OTc5NCw0NDc1MTIyMjAs
-MTQ3MjA2MzczOF19
+eyJoaXN0b3J5IjpbMTg3NTU1MTM0MCwtMTUxOTg1MDM2MSw0Mz
+A0MTgwMTQsMTI2ODIxMDE5OSwxMjMwNzYzNTQ0LC01NDIyOTY5
+MzcsMTUzMTc5NTcxMiwtMTEwNzc4OTY3OCwtMTU4NTY2NTAxMC
+wtMTUwMzk4ODY3MCwtNjgxMzg4NDg4LC01MzQ1MzQwMjUsLTE5
+NTUzMjEwNTQsLTEyMzM4NTUzOTEsLTIxODAxMjE1MiwtNTkzMD
+A2MDg0LDU4Nzg3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMzY5Nzk0
+LDQ0NzUxMjIyMF19
 -->
