@@ -133,10 +133,6 @@ deploy.sh
 
 set -eux
 
-SCRIPT_DIR=$(dirname "$0")
-
-cd $SCRIPT_DIR
-
 date -R
 echo "Started deploying."
 
@@ -152,7 +148,7 @@ rotate_log ~/pprof/pprof.png
 
 
 # build go app
-cd ..
+cd Makefileのパス
 make
 
 # restart services
@@ -655,11 +651,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTUyODU0OTYsLTE3ODgzOTY3MzYsLT
-gwOTIzODg3LDE4NzU1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4
-MDE0LDEyNjgyMTAxOTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LD
-E1MzE3OTU3MTIsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1
-MDM5ODg2NzAsLTY4MTM4ODQ4OCwtNTM0NTM0MDI1LC0xOTU1Mz
-IxMDU0LC0xMjMzODU1MzkxLC0yMTgwMTIxNTIsLTU5MzAwNjA4
-NCw1ODc4NzgzNjldfQ==
+eyJoaXN0b3J5IjpbNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC04MD
+kyMzg4NywxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQxODAx
+NCwxMjY4MjEwMTk5LDEyMzA3NjM1NDQsLTU0MjI5NjkzNywxNT
+MxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1MDEwLC0xNTAz
+OTg4NjcwLC02ODEzODg0ODgsLTUzNDUzNDAyNSwtMTk1NTMyMT
+A1NCwtMTIzMzg1NTM5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQs
+NTg3ODc4MzY5XX0=
 -->
