@@ -226,11 +226,12 @@ StartLimitBurst=999
 mkdir -p ~/tmp
 cd ~/tmp
 wget https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
-
 unzip alp_linux_amd64.zip
-
 sudo install ./alp /usr/local/bin
+cd ~
+rm -rf ~/tmp
 
+curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/alp.yml -o ~/alp.yml
 ```
 
 - [ ] そもそもnginxをbenchが通っているかどうか確認する
@@ -308,6 +309,16 @@ Defaults        env_keep +="PATH"
 
 
 ### slow log
+- [ ] インストール
+`各種インストール` のスクリプトで無事インストールされていれば不要
+```
+mkdir -p ~/tmp
+cd ~/tmp
+wget percona.com/get/pt-query-digest
+sudo install ./pt-query-digest /usr/local/bin
+cd ~
+rm -rf ~/tmp
+```
 
 - [ ] my.cnf でslow log を設定
 
@@ -621,11 +632,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTU5NTg4NjAsLTU0MjI5NjkzNywxNT
-MxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1MDEwLC0xNTAz
-OTg4NjcwLC02ODEzODg0ODgsLTUzNDUzNDAyNSwtMTk1NTMyMT
-A1NCwtMTIzMzg1NTM5MSwtMjE4MDEyMTUyLC01OTMwMDYwODQs
-NTg3ODc4MzY5LC0yMDU3NzgwMTc1LC0xODEzNjk3OTQsNDQ3NT
-EyMjIwLDE0NzIwNjM3MzgsLTIxMjM0MTU2ODUsLTUxMDQyNjE4
-MCwxOTkxMjU4MDY4XX0=
+eyJoaXN0b3J5IjpbMzU1NDI3NjE3LC01NDIyOTY5MzcsMTUzMT
+c5NTcxMiwtMTEwNzc4OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4
+ODY3MCwtNjgxMzg4NDg4LC01MzQ1MzQwMjUsLTE5NTUzMjEwNT
+QsLTEyMzM4NTUzOTEsLTIxODAxMjE1MiwtNTkzMDA2MDg0LDU4
+Nzg3ODM2OSwtMjA1Nzc4MDE3NSwtMTgxMzY5Nzk0LDQ0NzUxMj
+IyMCwxNDcyMDYzNzM4LC0yMTIzNDE1Njg1LC01MTA0MjYxODAs
+MTk5MTI1ODA2OF19
 -->
