@@ -79,6 +79,7 @@ ssh -T git@github.com
 .*
 !.gitignore
 !.bashrc
+!.alias.bash
 /pprof
 ```
 
@@ -639,11 +640,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NzE2MDcxMSwxNTM0MTMxOTQ4LDUwNT
-g0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3NTU1MTM0
-MCwtMTUxOTg1MDM2MSw0MzA0MTgwMTQsMTI2ODIxMDE5OSwxMj
-MwNzYzNTQ0LC01NDIyOTY5MzcsMTUzMTc5NTcxMiwtMTEwNzc4
-OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4ODY3MCwtNjgxMzg4ND
-g4LC01MzQ1MzQwMjUsLTE5NTUzMjEwNTQsLTEyMzM4NTUzOTEs
-LTIxODAxMjE1Ml19
+eyJoaXN0b3J5IjpbLTE5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNT
+M0MTMxOTQ4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4
+ODcsMTg3NTU1MTM0MCwtMTUxOTg1MDM2MSw0MzA0MTgwMTQsMT
+I2ODIxMDE5OSwxMjMwNzYzNTQ0LC01NDIyOTY5MzcsMTUzMTc5
+NTcxMiwtMTEwNzc4OTY3OCwtMTU4NTY2NTAxMCwtMTUwMzk4OD
+Y3MCwtNjgxMzg4NDg4LC01MzQ1MzQwMjUsLTE5NTUzMjEwNTQs
+LTEyMzM4NTUzOTFdfQ==
 -->
