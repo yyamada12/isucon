@@ -225,6 +225,9 @@ cd ~/work
 ln -s ~/etc
 ln -s ~/.gitignore
 ln -s ~/alp.yml
+ln -s ~/.bashrc
+ln -s ~/.alias.bash
+ln -s ~/deploy.sh
 ```
 
 - [ ] remote用のsettings.jsonにGOROOT, GOPATHを必要であれば設定する
@@ -664,11 +667,11 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMjk0ODU0LDYzMTEwMTI3OCwtNjIwOD
-E0NzA5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3
-MTEsMTUzNDEzMTk0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLT
-gwOTIzODg3LDE4NzU1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4
-MDE0LDEyNjgyMTAxOTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LD
-E1MzE3OTU3MTIsLTExMDc3ODk2NzgsLTE1ODU2NjUwMTAsLTE1
-MDM5ODg2NzBdfQ==
+eyJoaXN0b3J5IjpbLTU0NDc4MDMwOCw2MzExMDEyNzgsLTYyMD
+gxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYw
+NzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC
+04MDkyMzg4NywxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQx
+ODAxNCwxMjY4MjEwMTk5LDEyMzA3NjM1NDQsLTU0MjI5NjkzNy
+wxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1MDEwLC0x
+NTAzOTg4NjcwXX0=
 -->
