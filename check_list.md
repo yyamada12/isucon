@@ -117,7 +117,7 @@ sudo cp /etc/my.cnf ~/etc/
 sudo chmod 666 ~/etc/my.cnf
 ```
 
-- シンボリックリンクで動くことを一応確認しておく
+- benchが動くことを一応確認しておく
 ```
 sudo systemctl restart mysql
 sudo systemctl restart nginx
@@ -150,6 +150,11 @@ rotate_log ~/pprof/pprof.png
 # build go app
 cd Makefileのパス
 make
+
+# update mysqld.cnf
+if [ -e ~/etc/mysqld. ]; then
+  sudo mv $1 ${1%.*}_$(date +"%Y%m%d%H%M%S").${1##*.}
+fi
 
 # restart services
 sudo systemctl restart mysql
@@ -642,7 +647,7 @@ max_connections=10000
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODc2MTI1MCwtMTM1NTE4MDc5MSwtMT
+eyJoaXN0b3J5IjpbLTg4Mzg5NDIxMSwtMTM1NTE4MDc5MSwtMT
 kyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQy
 OTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC
 0xNTE5ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMTk5LDEyMzA3
