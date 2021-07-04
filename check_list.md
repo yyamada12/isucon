@@ -426,6 +426,19 @@ flush privileges;
 sudo service netdata restart
 ```
 
+- [ ] go のメトリクスを追加する
+https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/go_expvar
+```
+package main
+import  (
+  _  "expvar"
+  "net/http"
+)
+
+func  main()  {
+  http.ListenAndServe("127.0.0.1:8080",  nil)
+}
+```
 
 ### pprof
 
@@ -666,12 +679,16 @@ max_connections=10000
 - [ ]  VSCode Remote SSH をサーバーから削除する (**Remote-SSH: Uninstall VS Code Server from Host...**)
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
+```
+rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NjI4NTUzOSw2MzExMDEyNzgsLTYyMD
-gxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYw
-NzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC
-04MDkyMzg4NywxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQx
-ODAxNCwxMjY4MjEwMTk5LDEyMzA3NjM1NDQsLTU0MjI5NjkzNy
-wxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC0xNTg1NjY1MDEwLC0x
-NTAzOTg4NjcwXX0=
+eyJoaXN0b3J5IjpbLTEwMzYwMDE2NzgsLTM0NjI4NTUzOSw2Mz
+ExMDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjky
+MDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC
+0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC0xNTE5
+ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMTk5LDEyMzA3NjM1ND
+QsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC0x
+NTg1NjY1MDEwXX0=
 -->
