@@ -97,10 +97,16 @@ sql.Open("mysql",  "root:password@tcp(localhost:3306)/test?interpolateParams=tru
 ### echoの場合
 ```
 e := echo.New()
-	e.Debug = false
+e.Debug = true
+```
+となっていると debug modeになっているので削除する
+
+ログを完全に止めるには
+```
+Echo#Logger.SetLevel(log.OFF)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI5MzE2MjYzLDU0NjI1NTM2NSwtOTc3MT
-kyNjM2LC03NTk3NjI4NjUsLTg5NzQ4ODUxLC0xMTA2ODA3Mjk1
-XX0=
+eyJoaXN0b3J5IjpbLTEyNTE5OTU3NDYsNTQ2MjU1MzY1LC05Nz
+cxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcy
+OTVdfQ==
 -->
