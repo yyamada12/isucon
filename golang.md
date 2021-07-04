@@ -95,18 +95,20 @@ sql.Open("mysql",  "root:password@tcp(localhost:3306)/test?interpolateParams=tru
 ## Logging
 ログ出力の処理が残っているとかなり重い
 ### echoの場合
+https://echo.labstack.com/guide/customization/
 ```
 e := echo.New()
 e.Debug = true
 ```
 となっていると debug modeになっているので削除する
 
-ログを完全に止めるには
+ログを完全に止めるには以下のように `Logger.SetLevel(log.OFF)` を使う
 ```
-Echo#Logger.SetLevel(log.OFF)
+e := echo.New()
+e.Logger.SetLevel(log.OFF)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTE5OTU3NDYsNTQ2MjU1MzY1LC05Nz
-cxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcy
-OTVdfQ==
+eyJoaXN0b3J5IjpbLTkzODI5MTUxNSw1NDYyNTUzNjUsLTk3Nz
+E5MjYzNiwtNzU5NzYyODY1LC04OTc0ODg1MSwtMTEwNjgwNzI5
+NV19
 -->
