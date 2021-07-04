@@ -679,12 +679,15 @@ max_connections=10000
 - [ ]  VSCode Remote SSH をサーバーから削除する (**Remote-SSH: Uninstall VS Code Server from Host...**)
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
+
 ```
+kill -9 `ps ax | grep "remoteExtensionHostAgent.js" | grep -v grep | awk '{print $1}'`
+kill -9 `ps ax | grep "watcherService" | grep -v grep | awk '{print $1}'`
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzYwMDE2NzgsLTM0NjI4NTUzOSw2Mz
+eyJoaXN0b3J5IjpbLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2Mz
 ExMDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjky
 MDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC
 0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC0xNTE5
