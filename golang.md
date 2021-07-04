@@ -91,7 +91,16 @@ mysql で prepare admin が多い場合は、go側でprepareさせてあげら�
 ```
 sql.Open("mysql",  "root:password@tcp(localhost:3306)/test?interpolateParams=true&collation=utf8mb4_bin")
 ```
+
+## Logging
+ログ出力の処理が残っているとかなり重い
+### echoの場合
+```
+e := echo.New()
+	e.Debug = false
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OT
-c2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbMjI5MzE2MjYzLDU0NjI1NTM2NSwtOTc3MT
+kyNjM2LC03NTk3NjI4NjUsLTg5NzQ4ODUxLC0xMTA2ODA3Mjk1
+XX0=
 -->
