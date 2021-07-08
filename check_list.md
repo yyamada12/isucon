@@ -70,12 +70,12 @@ ssh -T git@github.com
     - `GOPATH` 配下もgitignoreすべし
 
 ```
-/webapp/nodejs/
-/webapp/python/
-/webapp/perl/
-/webapp/php/
-/webapp/ruby/
-/webapp/rust/
+nodejs/
+python/
+perl/
+php/
+ruby/
+rust/
 .*
 !.gitignore
 !.bashrc
@@ -687,11 +687,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTgzMTY1NDMsLTEyODAwODE1MTgsLT
-M0NjI4NTUzOSw2MzExMDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4
-MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5ND
-gsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1
-NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMT
-k5LDEyMzA3NjM1NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0x
-MTA3Nzg5Njc4XX0=
+eyJoaXN0b3J5IjpbMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMT
+I4MDA4MTUxOCwtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0
+NzA5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MT
+EsMTUzNDEzMTk0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLTgw
+OTIzODg3LDE4NzU1NTEzNDAsLTE1MTk4NTAzNjEsNDMwNDE4MD
+E0LDEyNjgyMTAxOTksMTIzMDc2MzU0NCwtNTQyMjk2OTM3LDE1
+MzE3OTU3MTJdfQ==
 -->
