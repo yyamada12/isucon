@@ -29,7 +29,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 - [ ] 計測ツールインストール
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/installer.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
 ```
 
 - [ ] webサーバが何か確認する
@@ -687,11 +687,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2Mz
-ExMDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjky
-MDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC
-0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC0xNTE5
-ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMTk5LDEyMzA3NjM1ND
-QsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0xMTA3Nzg5Njc4LC0x
-NTg1NjY1MDEwXX0=
+eyJoaXN0b3J5IjpbLTE1NTgzMTY1NDMsLTEyODAwODE1MTgsLT
+M0NjI4NTUzOSw2MzExMDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4
+MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5ND
+gsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1
+NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQxODAxNCwxMjY4MjEwMT
+k5LDEyMzA3NjM1NDQsLTU0MjI5NjkzNywxNTMxNzk1NzEyLC0x
+MTA3Nzg5Njc4XX0=
 -->
