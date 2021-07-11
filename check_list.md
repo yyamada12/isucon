@@ -48,7 +48,7 @@ sudo systemctl list-units --type=service --state=running
 - 既に存在する鍵を利用する場合
 ```
 mkdir -p ~/.ssh
-echo '''秘密鍵''' >> ~/.ssh/id_rsa
+echo '''秘密鍵''' > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 ```
 
@@ -694,11 +694,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMzUzMjU3NSwxNjI5MDMzMTIxLC0xNT
-U4MzE2NTQzLC0xMjgwMDgxNTE4LC0zNDYyODU1MzksNjMxMTAx
-Mjc4LC02MjA4MTQ3MDksLTEzNTUxODA3OTEsLTE5MjI5MjAwMT
-AsMTE2NzE2MDcxMSwxNTM0MTMxOTQ4LDUwNTg0Mjk1NSwtMTc4
-ODM5NjczNiwtODA5MjM4ODcsMTg3NTU1MTM0MCwtMTUxOTg1MD
-M2MSw0MzA0MTgwMTQsMTI2ODIxMDE5OSwxMjMwNzYzNTQ0LC01
-NDIyOTY5MzddfQ==
+eyJoaXN0b3J5IjpbNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOT
+AzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1
+NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC
+0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMTk0OCw1MDU4
+NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4NzU1NTEzND
+AsLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIz
+MDc2MzU0NF19
 -->
