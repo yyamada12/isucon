@@ -56,6 +56,8 @@ return res
 
 ## テーブルのオンメモリ化
 
+https://github.com/yyamada12/isucon10_re2/commit/99dbcd579758dcfbf1bf0494f0858032c866fd22
+
 ### 使える条件
 - テーブルサイズが小さいこと (必須) 
 - マスタの様な修正が入らないテーブル
@@ -108,7 +110,7 @@ e := echo.New()
 e.Logger.SetLevel(log.OFF)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzODI5MTUxNSw1NDYyNTUzNjUsLTk3Nz
-E5MjYzNiwtNzU5NzYyODY1LC04OTc0ODg1MSwtMTEwNjgwNzI5
-NV19
+eyJoaXN0b3J5IjpbMTU0MTgzMzA0MCwtOTM4MjkxNTE1LDU0Nj
+I1NTM2NSwtOTc3MTkyNjM2LC03NTk3NjI4NjUsLTg5NzQ4ODUx
+LC0xMTA2ODA3Mjk1XX0=
 -->
