@@ -575,6 +575,8 @@ upstream app {
   server unix:/var/run/isuxi/go.sock;
 }
 ```
+https://kaneshin.hateblo.jp/entry/2016/05/29/020302
+
 
 - [ ] 静的ファイルを nginx から配信 (http > server > location)
 
@@ -694,11 +696,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOT
-AzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1
-NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC
-0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMTk0OCw1MDU4
-NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4NzU1NTEzND
-AsLTE1MTk4NTAzNjEsNDMwNDE4MDE0LDEyNjgyMTAxOTksMTIz
-MDc2MzU0NF19
+eyJoaXN0b3J5IjpbNjk0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNT
+MyNTc1LDE2MjkwMzMxMjEsLTE1NTgzMTY1NDMsLTEyODAwODE1
+MTgsLTM0NjI4NTUzOSw2MzExMDEyNzgsLTYyMDgxNDcwOSwtMT
+M1NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQx
+MzE5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4Ny
+wxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQxODAxNCwxMjY4
+MjEwMTk5XX0=
 -->
