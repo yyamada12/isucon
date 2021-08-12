@@ -109,8 +109,11 @@ e.Debug = true
 e := echo.New()
 e.Logger.SetLevel(log.OFF)
 ```
+
+## API call の並列化
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MTgzMzA0MCwtOTM4MjkxNTE1LDU0Nj
-I1NTM2NSwtOTc3MTkyNjM2LC03NTk3NjI4NjUsLTg5NzQ4ODUx
-LC0xMTA2ODA3Mjk1XX0=
+eyJoaXN0b3J5IjpbNTkwODM0ODIzLDE1NDE4MzMwNDAsLTkzOD
+I5MTUxNSw1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1
+LC04OTc0ODg1MSwtMTEwNjgwNzI5NV19
 -->
