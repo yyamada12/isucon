@@ -112,8 +112,12 @@ e.Logger.SetLevel(log.OFF)
 
 ## API call の並列化
 
+複数のAPI call を直列で呼び出していると遅い
+goroutine を使って並列で投げた後、ch で受け取って結果を使用すれば良い
+
+https://github.com/yyamada12/isucon9_re2/commit/9bca99a6a74801960274bad671d684fcb09a59c8
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwODM0ODIzLDE1NDE4MzMwNDAsLTkzOD
-I5MTUxNSw1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1
-LC04OTc0ODg1MSwtMTEwNjgwNzI5NV19
+eyJoaXN0b3J5IjpbMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05Mz
+gyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2
+NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
 -->
