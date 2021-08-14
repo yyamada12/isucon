@@ -116,8 +116,18 @@ e.Logger.SetLevel(log.OFF)
 goroutine を使って並列で投げた後、ch で受け取って結果を使用すれば良い
 
 https://github.com/yyamada12/isucon9_re2/commit/9bca99a6a74801960274bad671d684fcb09a59c8
+
+
+## DB 内の画像を保存する処理
+dataを []byte で保持できていれば ioutil.WriteFile()で書き出せる
+```
+err := ioutil.WriteFile("/home/isucon/isubata/webapp/public/icons/"+name, data, 0666)
+```
+
+https://github.com/yyamada12/isucon7_re3/commit/0b575b47f11c9baf45b9f8d096aca5a3847938d3#
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05Mz
-gyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2
-NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTEwOTU5NTAyODgsMTY4OTQzMTM5OCwxNT
+QxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2
+MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ
+==
 -->
