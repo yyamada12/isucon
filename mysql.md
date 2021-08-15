@@ -20,6 +20,13 @@ IDENTIFIED BY '[password]' WITH GRANT OPTION;
 [外部のホストから接続できるようにする方法](https://www.wakuwakubank.com/posts/322-mysql-access-host/)
 
 
+#### mysql8 の場合
+CREATE USER と GRANT を同時にできなくなったので、それぞれ実行する
+```
+CREATE USER [user_name]@'%' IDENTIFIED BY '[password]';
+GRANT ALL PRIVILEGES ON [db_name].* TO [user_name]@'%' WITH GRANT OPTION;
+```
+
 
 ### my.cnfのbind-address設定
 my.cnf の `bind-address` が以下の様になっていると外部からアクセスできない。
@@ -153,9 +160,9 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkzNTg3ODY3LC02NzkzNzg2NzEsMTA1OD
-AyMjE4NSwxMTU1NDc1NDYyLDEwMTgyMzM3NTIsLTEyOTIzNDUy
-MzksLTE1MzMxMDczOTIsMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC
-0xMTQ4NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3
-MzY5ODAsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbLTExNTQyNTE3ODQsNjkzNTg3ODY3LC02Nz
+kzNzg2NzEsMTA1ODAyMjE4NSwxMTU1NDc1NDYyLDEwMTgyMzM3
+NTIsLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMTYyOTU1NDY3NS
+wtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMTgsMTAx
+NTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
 -->
