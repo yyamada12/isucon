@@ -85,7 +85,8 @@ ISUCON5予選の例
 [https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f](https://github.com/yyamada12/isucon5/commit/fac50cdd60a19bde0077d21aaf34cf6ff90a444f)
 
 #### thread safe な counter 実装の例
-ISU 
+ISUCON11-prior
+ 
 
 ## prepared statement
 mysql で prepare admin が多い場合は、go側でprepareさせてあげられるっぽい
@@ -128,8 +129,8 @@ err := ioutil.WriteFile("/home/isucon/isubata/webapp/public/icons/"+name, data, 
 
 https://github.com/yyamada12/isucon7_re3/commit/0b575b47f11c9baf45b9f8d096aca5a3847938d3#
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczODg1NTg5NywtMTA5NTk1MDI4OCwxNj
-g5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5MTUxNSw1NDYyNTUz
-NjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1LC04OTc0ODg1MSwtMT
-EwNjgwNzI5NV19
+eyJoaXN0b3J5IjpbLTExMjU2NjcyNDgsLTEwOTU5NTAyODgsMT
+Y4OTQzMTM5OCwxNTQxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1
+MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLT
+ExMDY4MDcyOTVdfQ==
 -->
