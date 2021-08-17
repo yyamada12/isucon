@@ -141,11 +141,17 @@ func (db *DB) Exec(query string, args ...interface{}) (Result, error)
 ```
 → LastInsertedID, affectedRowsが取れる
 ```
+type Result interface {
+	LastInsertId() (int64, error)
+	RowsAffected() (int64, error)
+}
+```
 
+- SELECT: db.QueryRow (1行), db.Query (複数行)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTYzMjExOTYsLTIwNDczODkwNzYsLT
-EwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05Mzgy
-OTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NS
-wtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTc3NjY3NjA4MiwtMjA0NzM4OTA3NiwtMT
+A5NTk1MDI4OCwxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5
+MTUxNSw1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1LC
+04OTc0ODg1MSwtMTEwNjgwNzI5NV19
 -->
