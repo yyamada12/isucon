@@ -148,9 +148,31 @@ type Result interface {
 ```
 
 - SELECT: db.QueryRow (1行), db.Query (複数行)
+row を Sc
+```
+    age := 27
+	rows, err := db.QueryContext(ctx, "SELECT name FROM users WHERE age=?", age)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer rows.Close()
 
+	names := make([]string, 0)
+	for rows.Next() {
+		var name string
+		if err := rows.Scan(&name); err != nil {
+			log.Fatal(err)
+		}
+		names = append(names, name)
+	}
+	// Check for errors from iterating over rows.
+	if err := rows.Err(); err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("%s are %d years old", strings.Join(names, ", "), age)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NjY3NjA4MiwtMjA0NzM4OTA3NiwtMT
+eyJoaXN0b3J5IjpbMTA0MDYwMTY4NiwtMjA0NzM4OTA3NiwtMT
 A5NTk1MDI4OCwxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5
 MTUxNSw1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1LC
 04OTc0ODg1MSwtMTEwNjgwNzI5NV19
