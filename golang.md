@@ -182,14 +182,14 @@ row を Scan して使う
 
 ```
     people := []Person{}
-    db.Select(&people, "SELECT * FROM person ORDER BY first_name ASC")
+    err := db.Select(&people, "SELECT * FROM person ORDER BY first_name ASC")
 
-    jason = Person{}
+    jason := Person{}
     err = db.Get(&jason, "SELECT * FROM person WHERE first_name=$1", "Jason")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg5NzI0OTkwLC0yMDQ3Mzg5MDc2LC0xMD
-k1OTUwMjg4LDE2ODk0MzEzOTgsMTU0MTgzMzA0MCwtOTM4Mjkx
-NTE1LDU0NjI1NTM2NSwtOTc3MTkyNjM2LC03NTk3NjI4NjUsLT
-g5NzQ4ODUxLC0xMTA2ODA3Mjk1XX0=
+eyJoaXN0b3J5IjpbLTE4OTgwOTc1MTgsLTIwNDczODkwNzYsLT
+EwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05Mzgy
+OTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NS
+wtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
 -->
