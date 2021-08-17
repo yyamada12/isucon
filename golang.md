@@ -134,6 +134,10 @@ err := ioutil.WriteFile("/home/isucon/isubata/webapp/public/icons/"+name, data, 
 https://github.com/yyamada12/isucon7_re3/commit/0b575b47f11c9baf45b9f8d096aca5a3847938d3#
 
 ## SQL周り
+
+それぞれのメソッドに対して xxxContext() メソッドが存在する。
+引数の一つ目でcontextを受け取って、キャンセルされた際にクエリをキャンセルするメソッド。
+
 ### database/sql
 - INSERT, UPDATE, DELETE: db.Exec()
 ```
@@ -174,10 +178,11 @@ row を Scan して使う
 
 
 ### github.com/jmoiron/sqlx
-- SELECT: dbx.
+- SELECT: dbx.Get(1行), dbx.Select(複数行)
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDAwMDYyNzUsLTIwNDczODkwNzYsLT
+eyJoaXN0b3J5IjpbLTIwNjkwMjI4MzIsLTIwNDczODkwNzYsLT
 EwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05Mzgy
 OTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NS
 wtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
