@@ -135,12 +135,17 @@ https://github.com/yyamada12/isucon7_re3/commit/0b575b47f11c9baf45b9f8d096aca5a3
 
 ## SQL周り
 ### database/sql
-INSERT, UPDATE, DELETE: db.Exec()
+- INSERT, UPDATE, DELETE: db.Exec()
+```
+func (db *DB) Exec(query string, args ...interface{}) (Result, error)
+```
+→ LastInsertedID, affectedRowsが取れる
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NzcwODg0NCwtMjA0NzM4OTA3NiwtMT
-A5NTk1MDI4OCwxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5
-MTUxNSw1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1LC
-04OTc0ODg1MSwtMTEwNjgwNzI5NV19
+eyJoaXN0b3J5IjpbLTEwNTYzMjExOTYsLTIwNDczODkwNzYsLT
+EwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05Mzgy
+OTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NS
+wtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
 -->
