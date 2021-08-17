@@ -88,7 +88,9 @@ ISUCON5予選の例
 ISUCON11-prior
 https://github.com/yyamada12/isucon11-p_re/commit/5380ce2be09d3c0923acdf9468daa1dbbc0f1d5c 
 
-#### Us
+#### User を オンメモリ化した例
+ISUCON11-prior
+https://github.com/yyamada12/isucon11-p_re/commit/6e0f273b57aa7c60b2a5e7940da4087a4c7ab132
 
 ## prepared statement
 mysql で prepare admin が多い場合は、go側でprepareさせてあげられるっぽい
@@ -131,7 +133,7 @@ err := ioutil.WriteFile("/home/isucon/isubata/webapp/public/icons/"+name, data, 
 
 https://github.com/yyamada12/isucon7_re3/commit/0b575b47f11c9baf45b9f8d096aca5a3847938d3#
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQ5MzIyMjksLTEwOTU5NTAyODgsMT
+eyJoaXN0b3J5IjpbLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMT
 Y4OTQzMTM5OCwxNTQxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1
 MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLT
 ExMDY4MDcyOTVdfQ==
