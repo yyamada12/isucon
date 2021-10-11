@@ -520,7 +520,7 @@ http://localhost:6060/debug/pprof/mutex
 2. CLIで確認
 
 ```
-pprof バイナリ log/cpu.pprof
+go tool pprof バイナリ log/cpu.pprof
 ```
 
 `top` コマンドや `list 関数名` コマンドを使う
@@ -530,7 +530,7 @@ pprof バイナリ log/cpu.pprof
 3. web UIで確認
 
 ```
-pprof -http=":1234" バイナリ log/cpu.pprof
+go tool pprof -http=":1234" バイナリ ~/pprof/xxx.cpu.00x.pb.gz
 ```
 
 [見方](<https://medium.com/eureka-engineering/go%E8%A8%80%E8%AA%9E%E3%81%AE%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%84%E3%83%BC%E3%83%AB-pprof%E3%81%AEweb-ui%E3%81%8C%E3%82%81%E3%81%A1%E3%82%83%E3%81%8F%E3%81%A1%E3%82%83%E4%BE%BF%E5%88%A9%E3%81%AA%E3%81%AE%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B-6a34a489c9ee>)
@@ -696,11 +696,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNT
-MyNTc1LDE2MjkwMzMxMjEsLTE1NTgzMTY1NDMsLTEyODAwODE1
-MTgsLTM0NjI4NTUzOSw2MzExMDEyNzgsLTYyMDgxNDcwOSwtMT
-M1NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQx
-MzE5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4Ny
-wxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQzMDQxODAxNCwxMjY4
-MjEwMTk5XX0=
+eyJoaXN0b3J5IjpbLTExNTY4NzA5NzcsNjk0MTMzMTY5LDY2NT
+Y1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMxMjEsLTE1NTgzMTY1
+NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2MzExMDEyNzgsLT
+YyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3
+MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2Nz
+M2LC04MDkyMzg4NywxODc1NTUxMzQwLC0xNTE5ODUwMzYxLDQz
+MDQxODAxNF19
 -->
