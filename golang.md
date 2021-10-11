@@ -187,9 +187,14 @@ row を Scan して使う
     jason := Person{}
     err = db.Get(&jason, "SELECT * FROM person WHERE first_name=$1", "Jason")
 ```
+
+### bulk insert
+https://github.com/yyamada12/isucon10_re2/commit/586d084ea40519c13a9d02ee8a6d3118672f8955
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTgwOTc1MTgsLTIwNDczODkwNzYsLT
-EwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05Mzgy
-OTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NS
-wtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMD
+Q3Mzg5MDc2LC0xMDk1OTUwMjg4LDE2ODk0MzEzOTgsMTU0MTgz
+MzA0MCwtOTM4MjkxNTE1LDU0NjI1NTM2NSwtOTc3MTkyNjM2LC
+03NTk3NjI4NjUsLTg5NzQ4ODUxLC0xMTA2ODA3Mjk1XX0=
 -->
