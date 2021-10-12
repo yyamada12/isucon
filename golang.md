@@ -97,6 +97,12 @@ https://github.com/yyamada12/isucon11q_re/commit/e835f878bedf8c3739993ec89c0f536
 https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7cd0d14811
 
 
+## responseのcache
+user 関係なしで返す結果が決まっている場合、レスポンスはキャッシュを返して、定期的にキャッシュを更新させれば良い
+
+https://github.com/yyamada12/isucon11q_re/commit/9df5ea0bc472ba9fe327a0196a6312b08bb595fe
+
+
 ## prepared statement
 mysql で prepare admin が多い場合は、go側でprepareさせてあげられるっぽい
 [http://dsas.blog.klab.org/archives/52191467.html](http://dsas.blog.klab.org/archives/52191467.html)
@@ -202,9 +208,9 @@ https://github.com/yyamada12/isucon10_re2/commit/586d084ea40519c13a9d02ee8a6d311
 
 https://github.com/yyamada12/isucon11q_re/commit/c4a8d63c4ae75ddd9694b154c9e6fb9acd451825
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzOTcxNDUwLDIxMDAwMDY0NDQsMTE1Mz
-gxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1MTgsLTIwNDczODkw
-NzYsLTEwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC
-05MzgyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2
-Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTI5MDA5OTA1NiwyMTAwMDA2NDQ0LDExNT
+M4MTEyMjgsNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMDQ3Mzg5
+MDc2LC0xMDk1OTUwMjg4LDE2ODk0MzEzOTgsMTU0MTgzMzA0MC
+wtOTM4MjkxNTE1LDU0NjI1NTM2NSwtOTc3MTkyNjM2LC03NTk3
+NjI4NjUsLTg5NzQ4ODUxLC0xMTA2ODA3Mjk1XX0=
 -->
