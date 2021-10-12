@@ -113,6 +113,14 @@ location ~ ^/(img|css|js|favicon.ico) {
 }
 ```
 
+**※ pathはlocation の手前で指定する必要あり**
+例: 
+path/to/public/assets/xxx.js をNginxで返す場合
+OK: 
+```
+
+```
+
 
 
 ### ブラウザキャッシュ設定方法
@@ -359,6 +367,6 @@ http {
 
 _
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0OTk4MTkzNSwxODExNzk3NTQyLC0xNz
-c2MzMzNzYwXX0=
+eyJoaXN0b3J5IjpbLTEwMTU3OTM4MTMsLTU0OTk4MTkzNSwxOD
+ExNzk3NTQyLC0xNzc2MzMzNzYwXX0=
 -->
