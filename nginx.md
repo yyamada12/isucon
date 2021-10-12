@@ -114,11 +114,20 @@ location ~ ^/(img|css|js|favicon.ico) {
 ```
 
 **※ pathはlocation の手前で指定する必要あり**
-例: 
+例: https://github.com/yyamada12/isucon11q_re/commit/4b822d909286c549669eeff1fae20fbc6248449c
+
 path/to/public/assets/xxx.js をNginxで返す場合
 OK: 
 ```
-
+location /assets {
+  root /home/isucon/webapp/public/;
+}
+```
+NG: 
+```
+location /assets {
+  root /home/isucon/webapp/public/assets;
+}
 ```
 
 
@@ -367,6 +376,6 @@ http {
 
 _
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTU3OTM4MTMsLTU0OTk4MTkzNSwxOD
-ExNzk3NTQyLC0xNzc2MzMzNzYwXX0=
+eyJoaXN0b3J5IjpbMzQ4MzE2MTcwLC0xMDE1NzkzODEzLC01ND
+k5ODE5MzUsMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
 -->
