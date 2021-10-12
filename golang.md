@@ -100,6 +100,10 @@ https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7
 ## responseのcache
 user 関係なしで返す結果が決まっている場合、レスポンスはキャッシュを返して、定期的にキャッシュを更新させれば良い
 
+sync.mutexでキャッシュデータにロックをかけつつ、
+go func() で 無限forループで sleepかけながら更新処理を実行する
+
+### ISUCON11の例
 https://github.com/yyamada12/isucon11q_re/commit/9df5ea0bc472ba9fe327a0196a6312b08bb595fe
 
 
@@ -208,9 +212,9 @@ https://github.com/yyamada12/isucon10_re2/commit/586d084ea40519c13a9d02ee8a6d311
 
 https://github.com/yyamada12/isucon11q_re/commit/c4a8d63c4ae75ddd9694b154c9e6fb9acd451825
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MDA5OTA1NiwyMTAwMDA2NDQ0LDExNT
-M4MTEyMjgsNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMDQ3Mzg5
-MDc2LC0xMDk1OTUwMjg4LDE2ODk0MzEzOTgsMTU0MTgzMzA0MC
-wtOTM4MjkxNTE1LDU0NjI1NTM2NSwtOTc3MTkyNjM2LC03NTk3
-NjI4NjUsLTg5NzQ4ODUxLC0xMTA2ODA3Mjk1XX0=
+eyJoaXN0b3J5IjpbNTk3ODQ2OTMwLDIxMDAwMDY0NDQsMTE1Mz
+gxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1MTgsLTIwNDczODkw
+NzYsLTEwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC
+05MzgyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2
+Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
 -->
