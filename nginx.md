@@ -130,7 +130,21 @@ location /assets {
 }
 ```
 
-
+**※ /の有無でも挙動が変わるので注意**
+OK: 
+```
+location / {
+  root /home/isucon/webapp/public;
+  try_files $uri /index.html;
+}
+```
+NG: 
+```
+location / {
+  root /home/isucon/webapp/public/;
+  try_files $uri index.html;
+}
+```
 
 ### ブラウザキャッシュ設定方法
 
@@ -376,6 +390,6 @@ http {
 
 _
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ4MzE2MTcwLC0xMDE1NzkzODEzLC01ND
-k5ODE5MzUsMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
+eyJoaXN0b3J5IjpbMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNT
+Q5OTgxOTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
 -->
