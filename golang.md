@@ -188,14 +188,18 @@ row を Scan して使う
     err = db.Get(&jason, "SELECT * FROM person WHERE first_name=$1", "Jason")
 ```
 
+### IN句へのバインド
+
+https://github.com/Nagarei/isucon11-qualify-test/commit/a553313dea8d43abb241bf5c570ea96c723ba9c9
+
 ### bulk insert
 https://github.com/yyamada12/isucon10_re2/commit/586d084ea40519c13a9d02ee8a6d3118672f8955
 
 https://github.com/yyamada12/isucon11q_re/commit/c4a8d63c4ae75ddd9694b154c9e6fb9acd451825
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MzgxMTIyOCw2ODQzMDQ0NDQsLTE4OT
-gwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMTY4OTQz
-MTM5OCwxNTQxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1MzY1LC
-05NzcxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLTExMDY4
-MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbMjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4ND
+MwNDQ0NCwtMTg5ODA5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1
+MDI4OCwxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5MTUxNS
+w1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1LC04OTc0
+ODg1MSwtMTEwNjgwNzI5NV19
 -->
