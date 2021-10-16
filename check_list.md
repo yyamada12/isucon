@@ -171,6 +171,8 @@ git init
 git remote add origin レポジトリURL
 git fetch origin main
 git reset --hard origin/main
+git branch -M main
+git branch --set-upstream-to=origin/main main
 ```
 
 2台目、3台目でデプロイしてベンチが通ればOK
@@ -629,11 +631,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NjAwODE3MSwxNzYxMDgxMDAzLC0zOD
-QwMDI0NzMsLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3
-MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMT
-YyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2
-Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNz
-kxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMTk0OCw1
-MDU4NDI5NTVdfQ==
+eyJoaXN0b3J5IjpbLTE2MjkxODE3MjQsLTg4NjAwODE3MSwxNz
+YxMDgxMDAzLC0zODQwMDI0NzMsLTE3ODEzOTc5OSwtMTc2MzY0
+MTIyMCwtMTE1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LD
+E0MTM1MzI1NzUsMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4
+MDA4MTUxOCwtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0Nz
+A5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEs
+MTUzNDEzMTk0OF19
 -->
