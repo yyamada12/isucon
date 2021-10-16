@@ -169,11 +169,11 @@ chmod +x deploy.sh
 ```
 git init
 git remote add origin レポジトリURL
-git pull origin main
+git fetch origin main
+git reset --hard origin/main
 ```
--> 競合するファイルが出力されるはずなので、それらのファイルを削除してもう一度 `git pull origin main` 
 
-デプロイしてベンチが通ればOK
+2台目、3台目でデプロイしてベンチが通ればOK
 
 
 - [ ] systemdにおまじないを追加する
@@ -687,11 +687,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDUwOTU5LC0xNzYzNjQxMjIwLC0xMT
-U2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODksMTQxMzUzMjU3
-NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMjgwMDgxNTE4LC
-0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4MTQ3MDksLTEzNTUx
-ODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMxOT
-Q4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3
-NTU1MTM0MF19
+eyJoaXN0b3J5IjpbLTk5NDI0ODE0NywtMTc2MzY0MTIyMCwtMT
+E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
+NzUsMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOC
+wtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1
+MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMT
+k0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4
+NzU1NTEzNDBdfQ==
 -->
