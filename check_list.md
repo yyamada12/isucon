@@ -219,8 +219,6 @@ ln -s ~/deploy.sh
 }
 ```
 
-
-
 ※ import文で指定したパッケージはGOPATHが通っている箇所であればコンパイラが見つけることができ、go get により外部のパッケージをダウンロード・インストールする場合はGOPATHの１つ目のPATHのみ有効となる
 
 
@@ -268,8 +266,6 @@ http {
   access_log /var/log/nginx/access.log ltsv;
 }
 ```
-
-
 
 - [ ] nginx再起動
 
@@ -653,7 +649,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjUwNzEwMywtMTc2MzY0MTIyMCwtMT
+eyJoaXN0b3J5IjpbLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMT
 E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
 NzUsMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOC
 wtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1
