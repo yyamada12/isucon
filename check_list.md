@@ -376,6 +376,14 @@ func  main()  {
 }
 ```
 
+- [ ] ポートが公開されていない場合はsshにポートフォワーディングの設定を入れる
+```~/.ssh/config
+LocalForward 19999 localhost:19999
+```
+or
+```
+ssh -L 19999:localhost:19999
+
 ### pprof
 
 - [ ] インストール
@@ -644,11 +652,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNz
-YzNjQxMjIwLC0xMTU2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2
-ODksMTQxMzUzMjU3NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC
-0xMjgwMDgxNTE4LC0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4
-MTQ3MDksLTEzNTUxODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MD
-cxMSwxNTM0MTMxOTQ4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwt
-ODA5MjM4ODddfQ==
+eyJoaXN0b3J5IjpbLTM5MTY0NzcyMSwtMzg0MDAyNDczLC0xNz
+gxMzk3OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNjk0MTMz
+MTY5LDY2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMxMjEsLT
+E1NTgzMTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2MzEx
+MDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMD
+AxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC0x
+Nzg4Mzk2NzM2XX0=
 -->
