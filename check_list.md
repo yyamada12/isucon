@@ -21,7 +21,7 @@ Host isucon3
   User isucon
 ```
 
-- [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに入力する
+- [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
 
 - [ ] ツールのインストール
 https://github.com/yyamada12/isucon-settings/tree/yyamada
@@ -48,18 +48,12 @@ sudo systemctl list-units --type=service --state=running
 - [ ] 言語をgoに変更する
 
 - [ ] gitにsshできるようにする
-- 既に存在する鍵を利用する場合
+- 既に存在する鍵を利用する
 ```
 mkdir -p ~/.ssh
 echo '''秘密鍵''' > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 ```
-
-- 鍵を1から作る場合
-```
-ssh-keygen -t rsa -b 4096 -C "12yacropolisy@gmail.com"
-```
-で生成し、[https://github.com/settings/keys](https://github.com/settings/keys) から登録
 
 - ssh できることを確認
 ```
@@ -699,11 +693,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDg3MjA4ODMsLTE3NjM2NDEyMjAsLT
-ExNTY4NzA5NzcsNjk0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNTMy
-NTc1LDE2MjkwMzMxMjEsLTE1NTgzMTY1NDMsLTEyODAwODE1MT
-gsLTM0NjI4NTUzOSw2MzExMDEyNzgsLTYyMDgxNDcwOSwtMTM1
-NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMz
-E5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4Nywx
-ODc1NTUxMzQwXX0=
+eyJoaXN0b3J5IjpbLTQ1MDk2ODE4LC0xNzYzNjQxMjIwLC0xMT
+U2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODksMTQxMzUzMjU3
+NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMjgwMDgxNTE4LC
+0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4MTQ3MDksLTEzNTUx
+ODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMxOT
+Q4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3
+NTU1MTM0MF19
 -->
