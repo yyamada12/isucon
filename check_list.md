@@ -21,6 +21,8 @@ Host isucon3
   User isucon
 ```
 
+- [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに入力する
+
 - [ ] ツールのインストール
 https://github.com/yyamada12/isucon-settings/tree/yyamada
   
@@ -697,11 +699,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNj
-k0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMx
-MjEsLTE1NTgzMTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOS
-w2MzExMDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTky
-MjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOT
-U1LC0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC0x
-NTE5ODUwMzYxXX0=
+eyJoaXN0b3J5IjpbLTE2NDg3MjA4ODMsLTE3NjM2NDEyMjAsLT
+ExNTY4NzA5NzcsNjk0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNTMy
+NTc1LDE2MjkwMzMxMjEsLTE1NTgzMTY1NDMsLTEyODAwODE1MT
+gsLTM0NjI4NTUzOSw2MzExMDEyNzgsLTYyMDgxNDcwOSwtMTM1
+NTE4MDc5MSwtMTkyMjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMz
+E5NDgsNTA1ODQyOTU1LC0xNzg4Mzk2NzM2LC04MDkyMzg4Nywx
+ODc1NTUxMzQwXX0=
 -->
