@@ -22,12 +22,14 @@ Host isucon3
 ```
 
 - [ ] ツールのインストール
-- [ ] 必要なツールと設定をインストール 
+https://github.com/yyamada12/isucon-settings/tree/yyamada
+  
+- 必須ツールと設定 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_essentials.sh)"
 ```
 
-- [ ] 計測ツールインストール
+- 計測ツール
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_tools.sh)"
@@ -42,8 +44,6 @@ sudo systemctl list-units --type=service --state=running
 ```
 
 - [ ] 言語をgoに変更する
-
-
 
 - [ ] gitにsshできるようにする
 - 既に存在する鍵を利用する場合
@@ -697,11 +697,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2ODE4NzU3NCwtMTE1Njg3MDk3Nyw2OT
-QxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEy
-MSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1NTM5LD
-YzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC0xOTIy
-OTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMTk0OCw1MDU4NDI5NT
-UsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4NzU1NTEzNDAsLTE1
-MTk4NTAzNjFdfQ==
+eyJoaXN0b3J5IjpbLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNj
+k0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMx
+MjEsLTE1NTgzMTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOS
+w2MzExMDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTky
+MjkyMDAxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOT
+U1LC0xNzg4Mzk2NzM2LC04MDkyMzg4NywxODc1NTUxMzQwLC0x
+NTE5ODUwMzYxXX0=
 -->
