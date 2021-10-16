@@ -65,7 +65,6 @@ ssh -T git@github.com
     -  `~/` 配下のファイルを含める。
     -  `du -sh *` で大きなファイルが有る場合はgitignoreする
     - `GOPATH` 配下もgitignoreすべし
-    - 
 
 ```.gitignore
 nodejs/
@@ -99,12 +98,6 @@ sudo ln -s ~/etc/nginx.conf /etc/nginx/nginx.conf
 sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.org
 sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf ~/etc/
 sudo chmod 666 ~/etc/mysqld.cnf
-
-# sysctl.conf
-sudo cp /etc/sysctl.conf /etc/sysctl.conf.org
-sudo mv /etc/sysctl.conf ~/etc/sysctl.conf
-sudo chmod 666 ~/etc/sysctl.conf
-sudo ln -s ~/etc/sysctl.conf /etc/sysctl.conf
 ```
 
 - mysql は設定ファイルの場所がまちまちなので気をつける
@@ -694,11 +687,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMzI2MzIyNCwtMTc2MzY0MTIyMCwtMT
-E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
-NzUsMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOC
-wtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1
-MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMT
-k0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4
-NzU1NTEzNDBdfQ==
+eyJoaXN0b3J5IjpbLTcyMDUwOTU5LC0xNzYzNjQxMjIwLC0xMT
+U2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODksMTQxMzUzMjU3
+NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMjgwMDgxNTE4LC
+0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4MTQ3MDksLTEzNTUx
+ODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMxOT
+Q4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3
+NTU1MTM0MF19
 -->
