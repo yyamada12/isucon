@@ -21,15 +21,16 @@ Host isucon3
   User isucon
 ```
 
+- [ ] ツールのインストール
 - [ ] 必要なツールと設定をインストール 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/masteryyamada/install_essentials.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_essentials.sh)"
 ```
 
 - [ ] 計測ツールインストール
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_tools.sh)"
 ```
 
 - [ ] webサーバが何か確認する
@@ -696,11 +697,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc4MDYyMDE1LC0xMTU2ODcwOTc3LDY5ND
-EzMzE2OSw2NjU2NTc2ODksMTQxMzUzMjU3NSwxNjI5MDMzMTIx
-LC0xNTU4MzE2NTQzLC0xMjgwMDgxNTE4LC0zNDYyODU1MzksNj
-MxMTAxMjc4LC02MjA4MTQ3MDksLTEzNTUxODA3OTEsLTE5MjI5
-MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMxOTQ4LDUwNTg0Mjk1NS
-wtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3NTU1MTM0MCwtMTUx
-OTg1MDM2MV19
+eyJoaXN0b3J5IjpbLTU2ODE4NzU3NCwtMTE1Njg3MDk3Nyw2OT
+QxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEy
+MSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1NTM5LD
+YzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC0xOTIy
+OTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMTk0OCw1MDU4NDI5NT
+UsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4NzU1NTEzNDAsLTE1
+MTk4NTAzNjFdfQ==
 -->
