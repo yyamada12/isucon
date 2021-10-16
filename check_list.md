@@ -62,11 +62,12 @@ ssh -T git@github.com
 
 
 - [ ] レポジトリ作る
-    - **public など、 go より上のフォルダもレポジトリに含めるようにする**
+    -  `~/` 配下のファイルを含める。
     -  `du -sh *` で大きなファイルが有る場合はgitignoreする
     - `GOPATH` 配下もgitignoreすべし
+    - 
 
-```
+```.gitignore
 nodejs/
 python/
 perl/
@@ -693,11 +694,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MDk2ODE4LC0xNzYzNjQxMjIwLC0xMT
-U2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODksMTQxMzUzMjU3
-NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMjgwMDgxNTE4LC
-0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4MTQ3MDksLTEzNTUx
-ODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MDcxMSwxNTM0MTMxOT
-Q4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwtODA5MjM4ODcsMTg3
-NTU1MTM0MF19
+eyJoaXN0b3J5IjpbLTcyMzI2MzIyNCwtMTc2MzY0MTIyMCwtMT
+E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
+NzUsMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOC
+wtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1
+MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMT
+k0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4
+NzU1NTEzNDBdfQ==
 -->
