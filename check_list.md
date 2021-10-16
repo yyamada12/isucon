@@ -285,9 +285,7 @@ sudo install ./pt-query-digest /usr/local/bin
 rm pt-query-digest 
 ```
 
-- [ ] my.cnf でslow log を設定
-
-/etc/my.cnf
+- [ ] mysql でslow log を設定
 
 ```
 [mysqld]
@@ -304,7 +302,7 @@ long_query_time = 0
 
 または `sudo systemctl restart mysql; sudo sytemctl restart アプリのサービス` 
 
-確認方法
+- [ ]  mysql で以下のコマンドを実行し、設定が変わっていることを確認
 ```
 show variables like  'slow_query%';
 show variables like  'long%';
@@ -317,12 +315,9 @@ sudo pt-query-digest --limit 10 /var/log/mysql/slow.log | less
 ```
 
 
-
-
-
 #### mariaDBの場合
 
-logの場所を `/var/log/mariadb/slow.log` にする
+logの場所を `/var/log/mariadb/slow.log` にする必要があるかも
 
 
 
@@ -649,11 +644,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMT
-E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
-NzUsMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOC
-wtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1
-MTgwNzkxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMT
-k0OCw1MDU4NDI5NTUsLTE3ODgzOTY3MzYsLTgwOTIzODg3LDE4
-NzU1NTEzNDBdfQ==
+eyJoaXN0b3J5IjpbLTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNz
+YzNjQxMjIwLC0xMTU2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2
+ODksMTQxMzUzMjU3NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC
+0xMjgwMDgxNTE4LC0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4
+MTQ3MDksLTEzNTUxODA3OTEsLTE5MjI5MjAwMTAsMTE2NzE2MD
+cxMSwxNTM0MTMxOTQ4LDUwNTg0Mjk1NSwtMTc4ODM5NjczNiwt
+ODA5MjM4ODddfQ==
 -->
