@@ -176,17 +176,6 @@ git reset --hard origin/main
 2台目、3台目でデプロイしてベンチが通ればOK
 
 
-- [ ] systemdにおまじないを追加する
-
-起動に失敗した時（再起動試験時mysqlサーバーへの接続失敗など）のsystemdによる再起動試行回数を999とする。
-```
-[Service]
-StartLimitBurst=999
-```
-```
-sudo systemctl daemon-reload
-```
-
 ## VSCode Remote 開発環境構築
 
 - [ ] remote ssh につないだ状態で拡張機能 Goを追加する
@@ -287,41 +276,6 @@ http {
 デプロイスクリプトを回す
 
 または `sudo systemctl restart nginx` 
-
-
-
-#### h2oの場合
-
-- ログフォーマットを変更する
-- alp.ymlを修正する
-
-/etc/h2o/h2o.conf
-
-```
-access-log:
-  path: /var/log/h2o/access.log
-  format: "time:%t\thost:%h\tua:\"%{User-agent}i\"\tstatus:%s\treq:%r\turi:%U\treqtime:%{duration}x\tsize:%b\tmethod:%m\t"
-```
-
-
-
-#### **sudo: alp: command not found** になる場合
-
-<https://cha-shu00.hatenablog.com/entry/2017/03/02/123659>
-
-`sudo visudo` で↓を
-
-```
-Defaults       secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-```
-
-↓にする
-
-```
-#Defaults       secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-Defaults        env_keep +="PATH"
-```
-
 
 
 
@@ -667,6 +621,18 @@ innodb_flush_log_at_trx_commit = 0
 - [ ] ベンチ実施後、全台で `sudo reboot` を実行する
 - [ ] 起動後、アプリを操作し、ベンチによる変更が保存されていることを確認する
 
+
+- [ ] systemdにおまじないを追加する
+
+起動に失敗した時（再起動試験時mysqlサーバーへの接続失敗など）のsystemdによる再起動試行回数を999とする。
+```
+[Service]
+StartLimitBurst=999
+```
+```
+sudo systemctl daemon-reload
+```
+
 ## 提出前
 
 - [ ] slowlog を切る
@@ -687,7 +653,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NDI0ODE0NywtMTc2MzY0MTIyMCwtMT
+eyJoaXN0b3J5IjpbLTE5NjUwNzEwMywtMTc2MzY0MTIyMCwtMT
 E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
 NzUsMTYyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOC
 wtMzQ2Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1
