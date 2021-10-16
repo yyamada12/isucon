@@ -549,28 +549,6 @@ server {
 - [ ] (http > `open_file_cache max=100 inactive=60s;` )
 
 
-
-### /etc/sysctl.conf
-
-参考：https://kazeburo.hatenablog.com/entry/2014/10/14/170129 , インフラの基本 p248,  https://qiita.com/sion_cojp/items/c02b5b5586b48eaaa469
-
-- [ ] /etc/sysctl.conf に以下を書き込む
-
-```
-net.ipv4.tcp_max_tw_buckets = 2000000
-net.ipv4.ip_local_port_range = 10000 65000
-net.core.somaxconn = 32768
-net.core.netdev_max_backlog = 8192
-net.ipv4.tcp_tw_reuse = 1
-net.ipv4.tcp_fin_timeout = 10
-```
-
-- [ ] 以下のコマンドで設定反映
-
-```
-sudo /sbin/sysctl -p
-```
-
 ### /etc/mysql/my.cnf
 
 - [ ] 初期値を確認
@@ -604,17 +582,8 @@ innodb_flush_log_at_trx_commit = 0
 ## 改善
 
 ### app
-- [ ] ミドルウェアなどのロギングがあれば止める (めっちゃ効く)
+- [ ] コネクションプールの数を増やしてみる
 - [ ] GOMAXPROCS の値を確認する
-
-### mysql
-
-- [ ] indexを張る
-- [ ] SELECTするカラムを指定する
-- [ ] アプリケーションへキャッシュする
-- [ ] redisへキャッシュする
-- [ ] join句を使ってクエリを減らす
-- [ ] replace句を使ってinsertクエリとupdateクエリをまとめる
 
 ### nginx
 
@@ -660,11 +629,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNz
-gxMzk3OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNjk0MTMz
-MTY5LDY2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMxMjEsLT
-E1NTgzMTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2MzEx
-MDEyNzgsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMD
-AxMCwxMTY3MTYwNzExLDE1MzQxMzE5NDgsNTA1ODQyOTU1LC0x
-Nzg4Mzk2NzM2XX0=
+eyJoaXN0b3J5IjpbLTg4NjAwODE3MSwxNzYxMDgxMDAzLC0zOD
+QwMDI0NzMsLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3
+MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMT
+YyOTAzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2
+Mjg1NTM5LDYzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNz
+kxLC0xOTIyOTIwMDEwLDExNjcxNjA3MTEsMTUzNDEzMTk0OCw1
+MDU4NDI5NTVdfQ==
 -->
