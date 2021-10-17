@@ -230,16 +230,6 @@ ln -s ~/deploy.sh
 ## 計測
 
 ### alp
-- [ ] インストール
-`各種インストール` のスクリプトで無事インストールされていれば不要
-```
-wget https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
-unzip alp_linux_amd64.zip
-sudo install ./alp /usr/local/bin
-rm alp_linux_amd64.zip alp
-
-curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/alp.yml -o ~/alp.yml
-```
 
 - [ ] そもそもnginxをbenchが通っているかどうか確認する
 通っていなければ、nginx をリバプロとして設定する
@@ -625,11 +615,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzk1MDk2NjQsLTE2MjkxODE3MjQsLT
-g4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMDI0NzMsLTE3ODEz
-OTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3Nyw2OTQxMzMxNj
-ksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEyMSwtMTU1
-ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1NTM5LDYzMTEwMT
-I3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEw
-LDExNjcxNjA3MTFdfQ==
+eyJoaXN0b3J5IjpbNjA0MjUzOTIwLC0xNjI5MTgxNzI0LC04OD
+YwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNzgxMzk3
+OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNjk0MTMzMTY5LD
+Y2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMxMjEsLTE1NTgz
+MTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2MzExMDEyNz
+gsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMDAxMCwx
+MTY3MTYwNzExXX0=
 -->
