@@ -328,10 +328,8 @@ func main() {
 - [ ] web UIで確認
 
 ```
-go tool pprof -http=":1234" ~/webapp/go/xxxxx ~/pprof//pprof.xxxxx.samples.cpu.00x.pb.gz
+go tool pprof -http=":1234" ~/webapp/go/xxxxx ~/pprof /pprof.xxxxx.samples.cpu.00x.pb.gz
 ```
-
-[見方](<https://medium.com/eureka-engineering/go%E8%A8%80%E8%AA%9E%E3%81%AE%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%84%E3%83%BC%E3%83%AB-pprof%E3%81%AEweb-ui%E3%81%8C%E3%82%81%E3%81%A1%E3%82%83%E3%81%8F%E3%81%A1%E3%82%83%E4%BE%BF%E5%88%A9%E3%81%AA%E3%81%AE%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B-6a34a489c9ee>)
 
 - [ ] ポートが公開されていない場合はsshにポートフォワーディングの設定を入れる
 ```~/.ssh/config
@@ -482,11 +480,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MD
-A4MTcxLDE3NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4MTM5Nzk5
-LC0xNzYzNjQxMjIwLC0xMTU2ODcwOTc3LDY5NDEzMzE2OSw2Nj
-U2NTc2ODksMTQxMzUzMjU3NSwxNjI5MDMzMTIxLC0xNTU4MzE2
-NTQzLC0xMjgwMDgxNTE4LC0zNDYyODU1MzksNjMxMTAxMjc4LC
-02MjA4MTQ3MDksLTEzNTUxODA3OTEsLTE5MjI5MjAwMTAsMTE2
-NzE2MDcxMV19
+eyJoaXN0b3J5IjpbODI3ODc4NzMzLDU4NTg0ODgsLTE2MjkxOD
+E3MjQsLTg4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMDI0NzMs
+LTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3Nyw2OT
+QxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEy
+MSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1NTM5LD
+YzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC0xOTIy
+OTIwMDEwXX0=
 -->
