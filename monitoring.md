@@ -12,6 +12,7 @@ curl -L https://raw.githubusercontent.com/yyamada12/isucon-settings/master/alp.y
 - [ ] そもそもnginxをbenchが通っているかどうか確認する
 通っていなければ、nginx をリバプロとして設定する
 https://github.com/yyamada12/isucon10/commit/76ce0248358e683dc261a694e51472583984e395
+
 - [ ] nginxのログフォーマットを変更する
 
 * /etc/nginx/nginx.conf
@@ -38,17 +39,14 @@ http {
 ```
 
 - [ ] nginx再起動
-
-デプロイスクリプトを回す
-
-または `sudo systemctl restart nginx` 
+ `sudo systemctl restart nginx` 
 
 
 
 
-### slow log
+# pt-query-digest
 - [ ] インストール
-`各種インストール` のスクリプトで無事インストールされていれば不要
+
 ```
 wget percona.com/get/pt-query-digest
 sudo install ./pt-query-digest /usr/local/bin
@@ -65,12 +63,9 @@ long_query_time = 0
 ```
 
 
-
 - [ ] mysql再起動
 
-デプロイスクリプト回す
-
-または `sudo systemctl restart mysql; sudo sytemctl restart アプリのサービス` 
+ `sudo systemctl restart mysql; sudo sytemctl restart アプリのサービス` 
 
 - [ ]  mysql で以下のコマンドを実行し、設定が変わっていることを確認
 ```
@@ -112,7 +107,7 @@ by [stackoverflow](https://stackoverflow.com/questions/38490785/where-is-mysql-5
 設定書いてみて反映されるファイルを特定すべし
 
 
-### netdata
+# netdata
 - [ ] インストール
 `各種インストール` のスクリプトで無事インストールされていれば不要
 
@@ -251,5 +246,5 @@ ssh -L 1234:localhost:1234
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA3MDM2MDkwXX0=
+eyJoaXN0b3J5IjpbLTE4MjAxOTE5MzZdfQ==
 -->
