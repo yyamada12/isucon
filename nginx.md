@@ -397,8 +397,9 @@ upstream app {
 ```
 https://kaneshin.hateblo.jp/entry/2016/05/29/020302
 
+https://qiita.com/gky360/items/dccb88f4aecd50970915#nginx---go-%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%82%92-tcp-socket-%E3%81%8B%E3%82%89-unix-domain-socket-%E3%81%AB%E5%A4%89%E6%9B%B4
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2OTA3NDk2LDEwMTk4OTEwODUsLTEwMT
-U3OTM4MTMsLTU0OTk4MTkzNSwxODExNzk3NTQyLC0xNzc2MzMz
-NzYwXX0=
+eyJoaXN0b3J5IjpbLTQ5MzI3ODM2NCwxMDE5ODkxMDg1LC0xMD
+E1NzkzODEzLC01NDk5ODE5MzUsMTgxMTc5NzU0MiwtMTc3NjMz
+Mzc2MF19
 -->
