@@ -231,14 +231,13 @@ ln -s ~/deploy.sh
 
 ### alp
 
-- [ ] そもそもnginxをbenchが通っているかどうか確認する
+- [ ] そもそもbenchがnginxを通っているかどうか確認する
 通っていなければ、nginx をリバプロとして設定する
 https://github.com/yyamada12/isucon10/commit/76ce0248358e683dc261a694e51472583984e395
+
 - [ ] nginxのログフォーマットを変更する
 
-* /etc/nginx/nginx.conf
-
-```nginx
+```nginx.conf
 http {
   log_format ltsv "time:$time_local"
     "\thost:$remote_addr"
@@ -260,25 +259,14 @@ http {
 ```
 
 - [ ] nginx再起動
-
 デプロイスクリプトを回す
-
 または `sudo systemctl restart nginx` 
 
 
 
 
 ### slow log
-- [ ] インストール
-`各種インストール` のスクリプトで無事インストールされていれば不要
-```
-wget percona.com/get/pt-query-digest
-sudo install ./pt-query-digest /usr/local/bin
-rm pt-query-digest 
-```
-
 - [ ] mysql でslow log を設定
-
 ```
 [mysqld]
 slow_query_log = 1
@@ -286,12 +274,9 @@ slow_query_log_file = /var/log/mysql/slow.log
 long_query_time = 0
 ```
 
-
-
 - [ ] mysql再起動
 
 デプロイスクリプト回す
-
 または `sudo systemctl restart mysql; sudo sytemctl restart アプリのサービス` 
 
 - [ ]  mysql で以下のコマンドを実行し、設定が変わっていることを確認
@@ -615,11 +600,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA0MjUzOTIwLC0xNjI5MTgxNzI0LC04OD
-YwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNzgxMzk3
-OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNjk0MTMzMTY5LD
-Y2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMxMjEsLTE1NTgz
-MTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2MzExMDEyNz
-gsLTYyMDgxNDcwOSwtMTM1NTE4MDc5MSwtMTkyMjkyMDAxMCwx
-MTY3MTYwNzExXX0=
+eyJoaXN0b3J5IjpbLTE5MDg4MTE2NDcsLTE2MjkxODE3MjQsLT
+g4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMDI0NzMsLTE3ODEz
+OTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3Nyw2OTQxMzMxNj
+ksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEyMSwtMTU1
+ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1NTM5LDYzMTEwMT
+I3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEw
+LDExNjcxNjA3MTFdfQ==
 -->
