@@ -325,62 +325,10 @@ func main() {
 
 デプロイスクリプトを回す
 
-- [ ] 計測
-
-
-
-1. ベンチ実行中にプロファイルを取得
+- [ ] web UIで確認
 
 ```
-curl -s http://localhost:6060/debug/pprof/profile > log/cpu.pprof
-```
-
-
-
-scripts/get_pprof.sh
-
-```
-#!/bin/sh
-
-set -eux
-
-SCRIPT_DIR=$(dirname "$0")
-
-cd $SCRIPT_DIR
-
-cd ..
-mkdir -p log
-curl -s http://localhost:6060/debug/pprof/profile > log/cpu.pprof
-```
-
-
-
-エンドポイントごとに色々ある
-
-```
-http://localhost:6060/debug/pprof/heap
-http://localhost:6060/debug/pprof/block
-http://localhost:6060/debug/pprof/goroutine
-http://localhost:6060/debug/pprof/threadcreate
-http://localhost:6060/debug/pprof/mutex
-```
-
-
-
-2. CLIで確認
-
-```
-go tool pprof バイナリ log/cpu.pprof
-```
-
-`top` コマンドや `list 関数名` コマンドを使う
-
-
-
-3. web UIで確認
-
-```
-go tool pprof -http=":1234" バイナリ ~/pprof/xxx.cpu.00x.pb.gz
+go tool pprof -http=":1234" バイナリ ~/pprof//pprof.xxx.samples.cpu.001.pb.gz
 ```
 
 [見方](<https://medium.com/eureka-engineering/go%E8%A8%80%E8%AA%9E%E3%81%AE%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%84%E3%83%BC%E3%83%AB-pprof%E3%81%AEweb-ui%E3%81%8C%E3%82%81%E3%81%A1%E3%82%83%E3%81%8F%E3%81%A1%E3%82%83%E4%BE%BF%E5%88%A9%E3%81%AA%E3%81%AE%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B-6a34a489c9ee>)
@@ -534,11 +482,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODgzNTA2NDMsLTE2MjkxODE3MjQsLT
-g4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMDI0NzMsLTE3ODEz
-OTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3Nyw2OTQxMzMxNj
-ksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEyMSwtMTU1
-ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1NTM5LDYzMTEwMT
-I3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC0xOTIyOTIwMDEw
-LDExNjcxNjA3MTFdfQ==
+eyJoaXN0b3J5IjpbMTY0MjE5MDU1NywtMTYyOTE4MTcyNCwtOD
+g2MDA4MTcxLDE3NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4MTM5
+Nzk5LC0xNzYzNjQxMjIwLC0xMTU2ODcwOTc3LDY5NDEzMzE2OS
+w2NjU2NTc2ODksMTQxMzUzMjU3NSwxNjI5MDMzMTIxLC0xNTU4
+MzE2NTQzLC0xMjgwMDgxNTE4LC0zNDYyODU1MzksNjMxMTAxMj
+c4LC02MjA4MTQ3MDksLTEzNTUxODA3OTEsLTE5MjI5MjAwMTAs
+MTE2NzE2MDcxMV19
 -->
