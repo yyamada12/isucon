@@ -17,6 +17,10 @@ ON [db_name].* TO [user_name]@"[ip_address]"
 IDENTIFIED BY '[password]' WITH GRANT OPTION;
 ```
 
+```
+GRANT ALL PRIVILEGES ON *.* TO isucon@"%" IDENTIFIED BY 'isucon' WITH GRANT OPTION;
+```
+
 [外部のホストから接続できるようにする方法](https://www.wakuwakubank.com/posts/322-mysql-access-host/)
 
 
@@ -160,9 +164,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQyNTE3ODQsNjkzNTg3ODY3LC02Nz
-kzNzg2NzEsMTA1ODAyMjE4NSwxMTU1NDc1NDYyLDEwMTgyMzM3
-NTIsLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMTYyOTU1NDY3NS
-wtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMTgsMTAx
-NTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbMjAzMTY1MjA1NCwtMTE1NDI1MTc4NCw2OT
+M1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1LDExNTU0NzU0
+NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMTUzMzEwNzM5Mi
+wxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1NDcyMjksLTI3
+Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MCw3NDIxOTU2MD
+VdfQ==
 -->
