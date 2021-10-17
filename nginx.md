@@ -388,8 +388,17 @@ http {
 }
 ```
 
-_
+##  nginx -> go の接続を unix ドメインソケット化
+
+```
+upstream app {
+  server unix:/var/run/isuxi/go.sock;
+}
+```
+https://kaneshin.hateblo.jp/entry/2016/05/29/020302
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNT
-Q5OTgxOTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
+eyJoaXN0b3J5IjpbMTU2OTA3NDk2LDEwMTk4OTEwODUsLTEwMT
+U3OTM4MTMsLTU0OTk4MTkzNSwxODExNzk3NTQyLC0xNzc2MzMz
+NzYwXX0=
 -->
