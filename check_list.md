@@ -263,8 +263,6 @@ http {
 または `sudo systemctl restart nginx` 
 
 
-
-
 ### slow log
 - [ ] mysql でslow log を設定
 ```
@@ -285,47 +283,7 @@ show variables like  'slow_query%';
 show variables like  'long%';
 ```
 
-- [ ] 計測
-
-```
-sudo pt-query-digest --limit 10 /var/log/mysql/slow.log | less
-```
-
-
-#### mariaDBの場合
-
-logの場所を `/var/log/mariadb/slow.log` にする必要があるかも
-
-
-
-#### my.cnfの場所を調べるには
-
-```
-mysql --help | grep my.cnf
-```
-
-一番左から順に読み込まれている
-
-はず、なのだが、、
-
-> In MySQL 5.7, the default cnf is at:
-
-```
-/etc/mysql/mysql.conf.d/mysqld.cnf
-```
-by [stackoverflow](https://stackoverflow.com/questions/38490785/where-is-mysql-5-7-my-cnf-file)
-
-といいつつ、 /etc/my.cnfに書かないと反映されないこともある
-設定書いてみて反映されるファイルを特定すべし
-
-
 ### netdata
-- [ ] インストール
-`各種インストール` のスクリプトで無事インストールされていれば不要
-
-```
-bash <(curl -Ss https://my-netdata.io/kickstart.sh)
-```
 
 - [ ] mysql のメトリクスを追加する
 1. 以下のsql を実行 
@@ -337,20 +295,6 @@ flush privileges;
 2. netdataを再起動
 ```
 sudo service netdata restart
-```
-
-- [ ] go のメトリクスを追加する
-https://learn.netdata.cloud/docs/agent/collectors/python.d.plugin/go_expvar
-```
-package main
-import  (
-  _  "expvar"
-  "net/http"
-)
-
-func  main()  {
-  http.ListenAndServe("127.0.0.1:8080",  nil)
-}
 ```
 
 - [ ] ポートが公開されていない場合はsshにポートフォワーディングの設定を入れる
@@ -382,16 +326,6 @@ func main() {
 デプロイスクリプトを回す
 
 - [ ] 計測
-
-#### tl;dr
-
-```bash
-go tool pprof -png -output pprof.png http://localhost:6060/debug/pprof/profile
-```
-
-
-
-#### ちゃんとやるなら
 
 
 
@@ -600,7 +534,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDg4MTE2NDcsLTE2MjkxODE3MjQsLT
+eyJoaXN0b3J5IjpbLTEwODgzNTA2NDMsLTE2MjkxODE3MjQsLT
 g4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMDI0NzMsLTE3ODEz
 OTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3Nyw2OTQxMzMxNj
 ksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEyMSwtMTU1
