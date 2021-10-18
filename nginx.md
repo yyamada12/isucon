@@ -390,16 +390,15 @@ http {
 
 ##  nginx -> go の接続を unix ドメインソケット化
 
-```
-upstream app {
-  server unix:/var/run/isuxi/go.sock;
-}
-```
+
+https://github.com/yyamada12/isucon10_re3/commit/7659e80cd8d9d0ebe3aaab5afb2e3e6220c8b050
+
+
 https://kaneshin.hateblo.jp/entry/2016/05/29/020302
 
 https://qiita.com/gky360/items/dccb88f4aecd50970915#nginx---go-%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%82%92-tcp-socket-%E3%81%8B%E3%82%89-unix-domain-socket-%E3%81%AB%E5%A4%89%E6%9B%B4
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MzI3ODM2NCwxMDE5ODkxMDg1LC0xMD
-E1NzkzODEzLC01NDk5ODE5MzUsMTgxMTc5NzU0MiwtMTc3NjMz
-Mzc2MF19
+eyJoaXN0b3J5IjpbLTk3NzY4NDk3MSwtNDkzMjc4MzY0LDEwMT
+k4OTEwODUsLTEwMTU3OTM4MTMsLTU0OTk4MTkzNSwxODExNzk3
+NTQyLC0xNzc2MzMzNzYwXX0=
 -->
