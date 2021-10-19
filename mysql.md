@@ -75,12 +75,14 @@ CREATE TABLE isuumo.estate
 
 ## テーブルのカラム追加
 ### こんな時に使える
-
+- 降順INDEXのために、既存のカラムにマイナスをかけたカラムを追加する (5.7以前)
 - JOINが遅い
 - 自テーブルへの参照を持っている
 → カテゴリテーブルに親カテゴリと子カテゴリのレコードが混在している場合など
 
 ### 方法
+
+#### Generated Column
 #### 新規テーブルを作る場合
 *\*ADD PRIMARY KEY でエラー出るかも？*
 
@@ -166,10 +168,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzI0OTI0NDYsMjAzMTY1MjA1NCwtMT
-E1NDI1MTc4NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIy
-MTg1LDExNTU0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOS
-wtMTUzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTEx
-NDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNj
-k4MCw3NDIxOTU2MDVdfQ==
+eyJoaXN0b3J5IjpbMjUxNzY2MDc2LDIwMzE2NTIwNTQsLTExNT
+QyNTE3ODQsNjkzNTg3ODY3LC02NzkzNzg2NzEsMTA1ODAyMjE4
+NSwxMTU1NDc1NDYyLDEwMTgyMzM3NTIsLTEyOTIzNDUyMzksLT
+E1MzMxMDczOTIsMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMTQ4
+NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5OD
+AsNzQyMTk1NjA1XX0=
 -->
