@@ -81,8 +81,12 @@ CREATE TABLE isuumo.estate
 → カテゴリテーブルに親カテゴリと子カテゴリのレコードが混在している場合など
 
 ### 方法
+自テーブルの情報を使う場合、Generated Columnを使うのが一番早くて楽。
+レコード数が多いテーブルの場合updateに
 
-#### Generated Column
+#### Generated Column!!
+
+
 #### 新規テーブルを作る場合
 *\*ADD PRIMARY KEY でエラー出るかも？*
 
@@ -168,10 +172,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUxNzY2MDc2LDIwMzE2NTIwNTQsLTExNT
-QyNTE3ODQsNjkzNTg3ODY3LC02NzkzNzg2NzEsMTA1ODAyMjE4
-NSwxMTU1NDc1NDYyLDEwMTgyMzM3NTIsLTEyOTIzNDUyMzksLT
-E1MzMxMDczOTIsMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMTQ4
-NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5OD
-AsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbNDM5Mzc5MDcsMjAzMTY1MjA1NCwtMTE1ND
+I1MTc4NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1
+LDExNTU0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMT
+UzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1
+NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MC
+w3NDIxOTU2MDVdfQ==
 -->
