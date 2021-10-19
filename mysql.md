@@ -58,21 +58,6 @@ $ iptables -L
 
 ## Generated Column
 
-## 降順INDEX
-ORDER BY の条件にDESCが入っているとINDEXを使ってくれない
-数値のカラムの場合、マイナスかけて generated column すればOK
-
-
-```
-CREATE TABLE isuumo.estate
-(
-	...
-	popularity  INTEGER             NOT NULL,
-	minuspopularity INTEGER AS (-popularity) NOT NULL, 
-	...
-)
-```
-
 ## テーブルのカラム追加
 ### こんな時に使える
 - 降順INDEXのために、既存のカラムにマイナスをかけたカラムを追加する (5.7以前)
@@ -149,6 +134,20 @@ ADD INDEX index_name(col_name, ...)
 ### 例
 降順INDEXのために、既存のカラムに-1をかけたgenerated columnを作成する
 
+MySQL5.7以前はORDER BY の条件にDESCとASCが混在しているとINDEXを使ってくれない (INDEX作成時にちゃんと `(foo DESC, bar ASC)` と書いても無視される)
+数値のカラムの場合、マイナスかけて generated column すればOK
+
+
+```
+CREATE TABLE isuumo.estate
+(
+	...
+	popularity  INTEGER             NOT NULL,
+	minuspopularity INTEGER AS (-popularity) NOT NULL, 
+	...
+)
+```
+
 
 ## MySQL パラメータチューニング
 MySQLTunerをとりあえず動かしてみるのが良さそう
@@ -176,7 +175,7 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyODQ5OTU3NCwyMDMxNjUyMDU0LC0xMT
+eyJoaXN0b3J5IjpbMjEwMzg4MDM1NSwyMDMxNjUyMDU0LC0xMT
 U0MjUxNzg0LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIx
 ODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC
 0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0
