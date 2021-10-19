@@ -58,8 +58,6 @@ $ iptables -L
 
 ## Generated Column
 
-
-
 ## 降順INDEX
 ORDER BY の条件にDESCが入っているとINDEXを使ってくれない
 数値のカラムの場合、マイナスかけて generated column すればOK
@@ -77,6 +75,7 @@ CREATE TABLE isuumo.estate
 
 ## テーブルのカラム追加
 ### こんな時に使える
+
 - JOINが遅い
 - 自テーブルへの参照を持っている
 → カテゴリテーブルに親カテゴリと子カテゴリのレコードが混在している場合など
@@ -167,10 +166,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MjgzODQ3NiwyMDMxNjUyMDU0LC0xMT
-U0MjUxNzg0LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIx
-ODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC
-0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0
-ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OT
-gwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbLTEzNzI0OTI0NDYsMjAzMTY1MjA1NCwtMT
+E1NDI1MTc4NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIy
+MTg1LDExNTU0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOS
+wtMTUzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTEx
+NDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNj
+k4MCw3NDIxOTU2MDVdfQ==
 -->
