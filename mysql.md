@@ -82,7 +82,8 @@ CREATE TABLE isuumo.estate
 
 ### 方法
 自テーブルの情報を使う場合、Generated Columnを使うのが一番早くて楽。
-レコード数が多いテーブルの場合updateに
+レコード数が多いテーブルの場合updateに時間がかかるし、初期データ用のinsertSQLファイルを修正するのも大変。
+
 
 #### Generated Column!!
 
@@ -145,6 +146,9 @@ ADD INDEX index_name(col_name, ...)
 - INSERT時に追加したカラムへもSETする
 - 追加したカラムを利用してJOIN句を無くす
 
+### 例
+降順INDEXのために、既存のカラムに-1をかけたgenerated columnを作成する
+
 
 ## MySQL パラメータチューニング
 MySQLTunerをとりあえず動かしてみるのが良さそう
@@ -172,10 +176,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5Mzc5MDcsMjAzMTY1MjA1NCwtMTE1ND
-I1MTc4NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1
-LDExNTU0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMT
-UzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1
-NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MC
-w3NDIxOTU2MDVdfQ==
+eyJoaXN0b3J5IjpbMTIyODQ5OTU3NCwyMDMxNjUyMDU0LC0xMT
+U0MjUxNzg0LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIx
+ODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC
+0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0
+ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OT
+gwLDc0MjE5NTYwNV19
 -->
