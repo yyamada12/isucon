@@ -10,13 +10,13 @@
 mysql> select user, host from mysql.user;
 ```
 host が `localhost` だとアウト。
-ip_address を `%` にして以下のクエリを実行する。
+以下のSQLを実行する。
 ```
 GRANT ALL PRIVILEGES 
 ON [db_name].* TO [user_name]@"[ip_address]" 
 IDENTIFIED BY '[password]' WITH GRANT OPTION;
 ```
-
+USER/PASS が isucon/isuconであれば以下の通り。
 ```
 GRANT ALL PRIVILEGES ON *.* TO isucon@"%" IDENTIFIED BY 'isucon' WITH GRANT OPTION;
 ```
@@ -164,10 +164,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMTY1MjA1NCwtMTE1NDI1MTc4NCw2OT
-M1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1LDExNTU0NzU0
-NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMTUzMzEwNzM5Mi
-wxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1NDcyMjksLTI3
-Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MCw3NDIxOTU2MD
-VdfQ==
+eyJoaXN0b3J5IjpbNDUwNzM0ODU3LDIwMzE2NTIwNTQsLTExNT
+QyNTE3ODQsNjkzNTg3ODY3LC02NzkzNzg2NzEsMTA1ODAyMjE4
+NSwxMTU1NDc1NDYyLDEwMTgyMzM3NTIsLTEyOTIzNDUyMzksLT
+E1MzMxMDczOTIsMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMTQ4
+NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5OD
+AsNzQyMTk1NjA1XX0=
 -->
