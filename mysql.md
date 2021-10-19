@@ -27,8 +27,8 @@ GRANT ALL PRIVILEGES ON *.* TO isucon@"%" IDENTIFIED BY 'isucon' WITH GRANT OPTI
 #### mysql8 の場合
 CREATE USER と GRANT を同時にできなくなったので、それぞれ実行する
 ```
-CREATE USER [user_name]@'%' IDENTIFIED BY '[password]';
-GRANT ALL PRIVILEGES ON [db_name].* TO [user_name]@'%' WITH GRANT OPTION;
+CREATE USER isucon@'%' IDENTIFIED BY 'isucon';
+GRANT ALL PRIVILEGES ON *.* TO isucon@'%' WITH GRANT OPTION;
 ```
 
 
@@ -37,7 +37,7 @@ my.cnf の `bind-address` が以下の様になっていると外部からアク
 ```
 bind-address = 127.0.0.1
 ```
-よって、外部接続する場合この行をコメントアウトする
+よって、外部接続する場合この行をコメントアウトするか、接続元のIPアドレスを指定する
 
 ### ポートの確認
 
@@ -55,6 +55,9 @@ Netfilter/iptables で、接続制限をかけていないか確認。
 $ iptables -L
 ```
 ここでファイアーウォールが有効になっている場合は、iptablesコマンドで制限を無効化するなどしてmysqlの通信を許可する。
+
+## Generated Column
+
 
 
 ## 降順INDEX
@@ -164,10 +167,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUwNzM0ODU3LDIwMzE2NTIwNTQsLTExNT
-QyNTE3ODQsNjkzNTg3ODY3LC02NzkzNzg2NzEsMTA1ODAyMjE4
-NSwxMTU1NDc1NDYyLDEwMTgyMzM3NTIsLTEyOTIzNDUyMzksLT
-E1MzMxMDczOTIsMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMTQ4
-NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5OD
-AsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbLTI3MjgzODQ3NiwyMDMxNjUyMDU0LC0xMT
+U0MjUxNzg0LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIx
+ODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC
+0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0
+ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OT
+gwLDc0MjE5NTYwNV19
 -->
