@@ -159,9 +159,16 @@ wget http://mysqltuner.pl/ -O mysqltuner.pl
 
 ## Query Cache (5.7以前)
 MySQL8でクエリーキャッシュのサポートは終了している
-5.7でも、おー
+5.7でも、オーバーヘッドになっているだけの可能性もあるので、設定を切ることも視野に入れる。
 
 ### 設定方法
+OFFにする場合は、
+`query_cache_type=0`
+または
+`query_cache_size=0` 
+を設定する
+
+ONにする場合は
 `query_cache_type=1` は必須。
 sizeとlimitはメモリ容量に合わせて。
 ```
@@ -176,10 +183,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NDk2OTMxMiwyMDMxNjUyMDU0LC0xMT
-U0MjUxNzg0LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIx
-ODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC
-0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0
-ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OT
-gwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbNjgxMTM3NzAsMjAzMTY1MjA1NCwtMTE1ND
+I1MTc4NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1
+LDExNTU0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMT
+UzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1
+NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MC
+w3NDIxOTU2MDVdfQ==
 -->
