@@ -137,7 +137,6 @@ ADD INDEX index_name(col_name, ...)
 MySQL5.7以前はORDER BY の条件にDESCとASCが混在しているとINDEXを使ってくれない (INDEX作成時にちゃんと `(foo DESC, bar ASC)` と書いても無視される)
 数値のカラムの場合、マイナスかけて generated column すればOK
 
-
 ```
 CREATE TABLE isuumo.estate
 (
@@ -160,6 +159,7 @@ wget http://mysqltuner.pl/ -O mysqltuner.pl
 
 ## Query Cache
 
+
 ### 設定方法
 `query_cache_type=1` は必須。
 sizeとlimitはメモリ容量に合わせて。
@@ -175,10 +175,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMzg4MDM1NSwyMDMxNjUyMDU0LC0xMT
-U0MjUxNzg0LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIx
-ODUsMTE1NTQ3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC
-0xNTMzMTA3MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0
-ODU0NzIyOSwtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OT
-gwLDc0MjE5NTYwNV19
+eyJoaXN0b3J5IjpbOTM4MjY0MDM1LDIwMzE2NTIwNTQsLTExNT
+QyNTE3ODQsNjkzNTg3ODY3LC02NzkzNzg2NzEsMTA1ODAyMjE4
+NSwxMTU1NDc1NDYyLDEwMTgyMzM3NTIsLTEyOTIzNDUyMzksLT
+E1MzMxMDczOTIsMTYyOTU1NDY3NSwtOTA5NDU2OTk3LC0xMTQ4
+NTQ3MjI5LC0yNzY5NDgzMTgsMTAxNTQ5MTUyMCwxMTE3MzY5OD
+AsNzQyMTk1NjA1XX0=
 -->
