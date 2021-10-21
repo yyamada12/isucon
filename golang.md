@@ -106,6 +106,11 @@ go func() で 無限forループで sleepかけながら更新処理を実行す
 ### ISUCON11の例
 https://github.com/yyamada12/isucon11q_re/commit/9df5ea0bc472ba9fe327a0196a6312b08bb595fe
 
+### ISUCON10の例
+https://github.com/yyamada12/isucon10_re3/commit/c77c3f29712fcfc95c05dc642d72d18237349eea
+
+### responseはjson.Marshalしてからcacheしておくことで、go側の負荷も減らせる
+https://github.com/yyamada12/isucon10_re3/commit/aad2f272a49922ed7bb9b84433a0fd68a89695c6
 
 ## prepared statement
 mysql で prepare admin が多い場合は、go側でprepareさせてあげられるっぽい
@@ -212,9 +217,10 @@ https://github.com/yyamada12/isucon10_re2/commit/586d084ea40519c13a9d02ee8a6d311
 
 https://github.com/yyamada12/isucon11q_re/commit/c4a8d63c4ae75ddd9694b154c9e6fb9acd451825
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk3ODQ2OTMwLDIxMDAwMDY0NDQsMTE1Mz
-gxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1MTgsLTIwNDczODkw
-NzYsLTEwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC
-05MzgyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2
-Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTkyMTUxMjYxMSw1OTc4NDY5MzAsMjEwMD
+AwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0NCwtMTg5ODA5NzUx
+OCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OCwxNjg5NDMxMzk4LD
+E1NDE4MzMwNDAsLTkzODI5MTUxNSw1NDYyNTUzNjUsLTk3NzE5
+MjYzNiwtNzU5NzYyODY1LC04OTc0ODg1MSwtMTEwNjgwNzI5NV
+19
 -->
