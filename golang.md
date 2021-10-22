@@ -216,11 +216,43 @@ https://github.com/Nagarei/isucon11-qualify-test/commit/a553313dea8d43abb241bf5c
 https://github.com/yyamada12/isucon10_re2/commit/586d084ea40519c13a9d02ee8a6d3118672f8955
 
 https://github.com/yyamada12/isucon11q_re/commit/c4a8d63c4ae75ddd9694b154c9e6fb9acd451825
+
+
+## Sort周り
+
+GoではSort.Interface を実装する必要がある
+
+```
+type Interface interface {
+	// Len is the number of elements in the collection.
+	Len() int
+
+	// Less reports whether the element with index i
+	// must sort before the element with index j.
+	//
+	// If both Less(i, j) and Less(j, i) are false,
+	// then the elements at index i and j are considered equal.
+	// Sort may place equal elements in any order in the final result,
+	// while Stable preserves the original input order of equal elements.
+	//
+	// Less must describe a transitive ordering:
+	//  - if both Less(i, j) and Less(j, k) are true, then Less(i, k) must be true as well.
+	//  - if both Less(i, j) and Less(j, k) are false, then Less(i, k) must be false as well.
+	//
+	// Note that floating-point comparison (the < operator on float32 or float64 values)
+	// is not a transitive ordering when not-a-number (NaN) values are involved.
+	// See Float64Slice.Less for a correct implementation for floating-point values.
+	Less(i, j int) bool
+
+	// Swap swaps the elements with indexes i and j.
+	Swap(i, j int)
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTUxMjYxMSw1OTc4NDY5MzAsMjEwMD
-AwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0NCwtMTg5ODA5NzUx
-OCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OCwxNjg5NDMxMzk4LD
-E1NDE4MzMwNDAsLTkzODI5MTUxNSw1NDYyNTUzNjUsLTk3NzE5
-MjYzNiwtNzU5NzYyODY1LC04OTc0ODg1MSwtMTEwNjgwNzI5NV
-19
+eyJoaXN0b3J5IjpbMTgyNjY2NTU0MCwtOTIxNTEyNjExLDU5Nz
+g0NjkzMCwyMTAwMDA2NDQ0LDExNTM4MTEyMjgsNjg0MzA0NDQ0
+LC0xODk4MDk3NTE4LC0yMDQ3Mzg5MDc2LC0xMDk1OTUwMjg4LD
+E2ODk0MzEzOTgsMTU0MTgzMzA0MCwtOTM4MjkxNTE1LDU0NjI1
+NTM2NSwtOTc3MTkyNjM2LC03NTk3NjI4NjUsLTg5NzQ4ODUxLC
+0xMTA2ODA3Mjk1XX0=
 -->
