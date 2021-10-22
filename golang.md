@@ -220,36 +220,40 @@ https://github.com/yyamada12/isucon11q_re/commit/c4a8d63c4ae75ddd9694b154c9e6fb9
 
 ## Sort周り
 
-GoではSort.Interface を実装する必要がある
+Goでは以下のSort.Interface を実装する必要がある
 
 ```
 type Interface interface {
-	// Len is the number of elements in the collection.
 	Len() int
-
-	// Less reports whether the element with index i
-	// must sort before the element with index j.
-	//
-	// If both Less(i, j) and Less(j, i) are false,
-	// then the elements at index i and j are considered equal.
-	// Sort may place equal elements in any order in the final result,
-	// while Stable preserves the original input order of equal elements.
-	//
-	// Less must describe a transitive ordering:
-	//  - if both Less(i, j) and Less(j, k) are true, then Less(i, k) must be true as well.
-	//  - if both Less(i, j) and Less(j, k) are false, then Less(i, k) must be false as well.
-	//
-	// Note that floating-point comparison (the < operator on float32 or float64 values)
-	// is not a transitive ordering when not-a-number (NaN) values are involved.
-	// See Float64Slice.Less for a correct implementation for floating-point values.
 	Less(i, j int) bool
-
-	// Swap swaps the elements with indexes i and j.
 	Swap(i, j int)
 }
 ```
+
+Map の Valueでsortするケース
+
+```
+type Pair struct {
+	key rune
+	val int
+}
+
+type PairList []Pair
+
+func (p PairList) Len() int           { return len(p) }
+func (p PairList) Less(i, j int) bool { return p[i].val < p[j].val }
+func (p PairList) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
+
+func main() {
+	pairs := []Pair{}
+	for key, val := range m {
+		pairs = append(pairs, Pair{key, val})
+	}
+	sort.Sort(sort.Reverse(PairList(pairs)))
+}
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNjY2NTU0MCwtOTIxNTEyNjExLDU5Nz
+eyJoaXN0b3J5IjpbMTE4NjI0NzA2MiwtOTIxNTEyNjExLDU5Nz
 g0NjkzMCwyMTAwMDA2NDQ0LDExNTM4MTEyMjgsNjg0MzA0NDQ0
 LC0xODk4MDk3NTE4LC0yMDQ3Mzg5MDc2LC0xMDk1OTUwMjg4LD
 E2ODk0MzEzOTgsMTU0MTgzMzA0MCwtOTM4MjkxNTE1LDU0NjI1
