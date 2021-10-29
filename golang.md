@@ -230,7 +230,8 @@ type Interface interface {
 }
 ```
 
-Map の Valueでsortするケース
+Map の Value で sort する例
+https://github.com/yyamada12/leetcode/blob/main/go/explore/october2021/day22/sort_characters_by_frequency.go
 
 ```
 type Pair struct {
@@ -251,12 +252,12 @@ func main() {
 	}
 	sort.Sort(sort.Reverse(PairList(pairs)))
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NjI0NzA2MiwtOTIxNTEyNjExLDU5Nz
-g0NjkzMCwyMTAwMDA2NDQ0LDExNTM4MTEyMjgsNjg0MzA0NDQ0
-LC0xODk4MDk3NTE4LC0yMDQ3Mzg5MDc2LC0xMDk1OTUwMjg4LD
-E2ODk0MzEzOTgsMTU0MTgzMzA0MCwtOTM4MjkxNTE1LDU0NjI1
-NTM2NSwtOTc3MTkyNjM2LC03NTk3NjI4NjUsLTg5NzQ4ODUxLC
-0xMTA2ODA3Mjk1XX0=
+eyJoaXN0b3J5IjpbMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3OD
+Q2OTMwLDIxMDAwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQs
+LTE4OTgwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMT
+Y4OTQzMTM5OCwxNTQxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1
+MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLT
+ExMDY4MDcyOTVdfQ==
 -->
