@@ -424,13 +424,21 @@ too many open files が出てしまうと、それ以上 connection を貼れな
 
 ### Nginx のパラメータ
 以下のように設定すればOK
+worker数は woker_processes で決まる。
+auto になっている時は、 
+
+```
+worker_rlimit_nofile {60000 / worker数};
+
+events {
+    worker_connections {worker_rlimit_nofile / 2};
+}
 
 ```
 
-
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NTQ2MzQ0OCwtOTc3Njg0OTcxLC00OT
-MyNzgzNjQsMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNTQ5OTgx
-OTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
+eyJoaXN0b3J5IjpbNDIyMzg0OTcyLC05Nzc2ODQ5NzEsLTQ5Mz
+I3ODM2NCwxMDE5ODkxMDg1LC0xMDE1NzkzODEzLC01NDk5ODE5
+MzUsMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
 -->
