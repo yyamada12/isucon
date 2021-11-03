@@ -408,11 +408,20 @@ too many open files が出てしまうと、それ以上 connection を貼れな
 - Nginx の worker_connections
 - Nginx の worker_rlimit_nofile 
 
+### OS の ulimit -n の値
 
+ /etc/security/limits.conf に
+
+``` /etc/security/limits.conf
+* soft nproc 65535
+* hard nproc 65535
+* hard nofile 65535
+* soft nofile 65535
+```
 
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjM2MDg0MSwtOTc3Njg0OTcxLC00OT
-MyNzgzNjQsMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNTQ5OTgx
-OTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
+eyJoaXN0b3J5IjpbMjAyMjA0ODU0LC05Nzc2ODQ5NzEsLTQ5Mz
+I3ODM2NCwxMDE5ODkxMDg1LC0xMDE1NzkzODEzLC01NDk5ODE5
+MzUsMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
 -->
