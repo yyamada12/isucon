@@ -402,8 +402,17 @@ https://qiita.com/gky360/items/dccb88f4aecd50970915#nginx---go-%E3%81%AE%E6%8E%A
 ## too many open files 対策
 too many open files が出てしまうと、それ以上 connection を貼れなくなってしまう。
 
+変更するべき設定としては以下の3つ。
+
+- OSの ulimit -n の値
+- Nginx の worker_connections
+- Nginx の worker_rlimit_nofile 
+
+
+
+https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTg3OTg1MjIsLTk3NzY4NDk3MSwtND
-kzMjc4MzY0LDEwMTk4OTEwODUsLTEwMTU3OTM4MTMsLTU0OTk4
-MTkzNSwxODExNzk3NTQyLC0xNzc2MzMzNzYwXX0=
+eyJoaXN0b3J5IjpbLTIzNjM2MDg0MSwtOTc3Njg0OTcxLC00OT
+MyNzgzNjQsMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNTQ5OTgx
+OTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
 -->
