@@ -410,7 +410,7 @@ too many open files が出てしまうと、それ以上 connection を貼れな
 
 ### OS の ulimit -n の値
 
- /etc/security/limits.conf に
+ /etc/security/limits.conf に以下を追記して、サーバーを再起動 (`sudo reboot` する)
 
 ``` /etc/security/limits.conf
 * soft nproc 65535
@@ -419,9 +419,18 @@ too many open files が出てしまうと、それ以上 connection を貼れな
 * soft nofile 65535
 ```
 
+`ulimit -n` して値が65535になっていればOK
+
+
+### Nginx のパラメータ
+以下のように設定すればOK
+
+```
+
+
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMjA0ODU0LC05Nzc2ODQ5NzEsLTQ5Mz
-I3ODM2NCwxMDE5ODkxMDg1LC0xMDE1NzkzODEzLC01NDk5ODE5
-MzUsMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
+eyJoaXN0b3J5IjpbMTY4NTQ2MzQ0OCwtOTc3Njg0OTcxLC00OT
+MyNzgzNjQsMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNTQ5OTgx
+OTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
 -->
