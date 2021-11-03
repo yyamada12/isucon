@@ -397,8 +397,13 @@ https://github.com/yyamada12/isucon10_re3/commit/7659e80cd8d9d0ebe3aaab5afb2e3e6
 https://kaneshin.hateblo.jp/entry/2016/05/29/020302
 
 https://qiita.com/gky360/items/dccb88f4aecd50970915#nginx---go-%E3%81%AE%E6%8E%A5%E7%B6%9A%E3%82%92-tcp-socket-%E3%81%8B%E3%82%89-unix-domain-socket-%E3%81%AB%E5%A4%89%E6%9B%B4
+
+
+## too many open files 対策
+too many open files が出てしまうと、それ以上 connection を貼れなくなってしまう。
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NzY4NDk3MSwtNDkzMjc4MzY0LDEwMT
-k4OTEwODUsLTEwMTU3OTM4MTMsLTU0OTk4MTkzNSwxODExNzk3
-NTQyLC0xNzc2MzMzNzYwXX0=
+eyJoaXN0b3J5IjpbLTEyOTg3OTg1MjIsLTk3NzY4NDk3MSwtND
+kzMjc4MzY0LDEwMTk4OTEwODUsLTEwMTU3OTM4MTMsLTU0OTk4
+MTkzNSwxODExNzk3NTQyLC0xNzc2MzMzNzYwXX0=
 -->
