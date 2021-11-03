@@ -425,10 +425,12 @@ too many open files が出てしまうと、それ以上 connection を貼れな
 ### Nginx のパラメータ
 以下のように設定すればOK
 worker数は woker_processes で決まる。
-auto になっている時は、 
+auto になっている時は、 `ps aux | grep nginx` でプロセス数を数えればOK。autoであればCPU のコア数と同じになるはず。
+
+1connection あたり 2つのファイルディスクリプタが必要になるため、 worker_connections は worker_rlimit_nofile の半分になるように設定する
 
 ```
-worker_rlimit_nofile {60000 / worker数};
+worker_rlimit_nofile {65535 / worker数};
 
 events {
     worker_connections {worker_rlimit_nofile / 2};
@@ -438,7 +440,7 @@ events {
 
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIyMzg0OTcyLC05Nzc2ODQ5NzEsLTQ5Mz
-I3ODM2NCwxMDE5ODkxMDg1LC0xMDE1NzkzODEzLC01NDk5ODE5
-MzUsMTgxMTc5NzU0MiwtMTc3NjMzMzc2MF19
+eyJoaXN0b3J5IjpbLTI4MTIzMTc4MSwtOTc3Njg0OTcxLC00OT
+MyNzgzNjQsMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNTQ5OTgx
+OTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
 -->
