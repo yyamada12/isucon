@@ -466,7 +466,10 @@ sudo systemctl daemon-reload
 
 - [ ] nginx のアクセスログの出力をオフにする (http > `access_log off;` )
 - [ ]  netdata を切る
+```sudo systemctl stop netdata```
 ```sudo systemctl disable netdata```
+or
+```/usr/libexec/netdata/netdata-uninstaller.sh --yes --env ```
 
 - [ ] appのログを切る (go の middlewareのコード削除など)
 - [ ]  VSCode Remote SSH をサーバーから削除する (**Remote-SSH: Uninstall VS Code Server from Host...**)
@@ -480,11 +483,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3ODc4NzMzLDU4NTg0ODgsLTE2MjkxOD
-E3MjQsLTg4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMDI0NzMs
-LTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3Nyw2OT
-QxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOTAzMzEy
-MSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1NTM5LD
-YzMTEwMTI3OCwtNjIwODE0NzA5LC0xMzU1MTgwNzkxLC0xOTIy
-OTIwMDEwXX0=
+eyJoaXN0b3J5IjpbMTkzMTk1ODEwMyw4Mjc4Nzg3MzMsNTg1OD
+Q4OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLDE3NjEwODEwMDMs
+LTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYzNjQxMjIwLC0xMT
+U2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODksMTQxMzUzMjU3
+NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMjgwMDgxNTE4LC
+0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4MTQ3MDksLTEzNTUx
+ODA3OTFdfQ==
 -->
