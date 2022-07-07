@@ -11,6 +11,8 @@ Host isucon1
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
+  LocalForward  1234 localhost:11234
+  LocalForward  19999 localhost:19999
 Host isucon2
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
@@ -483,11 +485,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4Nz
-g3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLDE3
-NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYzNj
-QxMjIwLC0xMTU2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODks
-MTQxMzUzMjU3NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMj
-gwMDgxNTE4LC0zNDYyODU1MzksNjMxMTAxMjc4LC02MjA4MTQ3
-MDldfQ==
+eyJoaXN0b3J5IjpbMTE1MjE2OTkzMywxOTAyNzM5NiwxOTMxOT
+U4MTAzLDgyNzg3ODczMyw1ODU4NDg4LC0xNjI5MTgxNzI0LC04
+ODYwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNzgxMz
+k3OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNjk0MTMzMTY5
+LDY2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMxMjEsLTE1NT
+gzMTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2MzExMDEy
+NzhdfQ==
 -->
