@@ -17,10 +17,14 @@ Host isucon2
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
+  LocalForward  1234 localhost:21234
+  LocalForward  19999 localhost:29999
 Host isucon3
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
+  LocalForward  1234 localhost:31234
+  LocalForward  19999 localhost:39999
 ```
 
 - [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
@@ -485,7 +489,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MjE2OTkzMywxOTAyNzM5NiwxOTMxOT
+eyJoaXN0b3J5IjpbMjAzNDIzNDQwMSwxOTAyNzM5NiwxOTMxOT
 U4MTAzLDgyNzg3ODczMyw1ODU4NDg4LC0xNjI5MTgxNzI0LC04
 ODYwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNzgxMz
 k3OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNjk0MTMzMTY5
