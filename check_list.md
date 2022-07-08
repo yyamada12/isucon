@@ -183,7 +183,7 @@ git branch --set-upstream-to=origin/main main
 
 ```
 git init
-git remote add origin https://github.com/yyamada12/r-isucon-2022-summer.git
+git remote add origin git@github.com:yyamada12/r-isucon-2022-summer.git
 git fetch origin main
 git reset --hard origin/main
 git branch -M main
@@ -498,11 +498,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MjA3Mjg0NSwyMDcxODQxNzY3LDIwMz
-QyMzQ0MDEsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4Nzg3MzMs
-NTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLDE3NjEwOD
-EwMDMsLTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYzNjQxMjIw
-LC0xMTU2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODksMTQxMz
-UzMjU3NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMjgwMDgx
-NTE4XX0=
+eyJoaXN0b3J5IjpbLTE0NTQ5MDgwOTUsMTg1MjA3Mjg0NSwyMD
+cxODQxNzY3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMTkzMTk1ODEw
+Myw4Mjc4Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MD
+A4MTcxLDE3NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4MTM5Nzk5
+LC0xNzYzNjQxMjIwLC0xMTU2ODcwOTc3LDY5NDEzMzE2OSw2Nj
+U2NTc2ODksMTQxMzUzMjU3NSwxNjI5MDMzMTIxLC0xNTU4MzE2
+NTQzXX0=
 -->
