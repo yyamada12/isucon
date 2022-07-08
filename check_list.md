@@ -11,20 +11,20 @@ Host isucon1
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
-  LocalForward  1234 localhost:11234
+  LocalForward  11234 localhost:1234
   LocalForward  19999 localhost:19999
 Host isucon2
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
-  LocalForward  1234 localhost:21234
-  LocalForward  19999 localhost:29999
+  LocalForward  21234 localhost:1234
+  LocalForward  29999 localhost:19999
 Host isucon3
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
-  LocalForward  1234 localhost:31234
-  LocalForward  19999 localhost:39999
+  LocalForward  31234 localhost:1234
+  LocalForward  39999 localhost:19999
 ```
 
 - [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
@@ -489,11 +489,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDIzNDQwMSwxOTAyNzM5NiwxOTMxOT
-U4MTAzLDgyNzg3ODczMyw1ODU4NDg4LC0xNjI5MTgxNzI0LC04
-ODYwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNzgxMz
-k3OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNjk0MTMzMTY5
-LDY2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMxMjEsLTE1NT
-gzMTY1NDMsLTEyODAwODE1MTgsLTM0NjI4NTUzOSw2MzExMDEy
-NzhdfQ==
+eyJoaXN0b3J5IjpbMjA3MTg0MTc2NywyMDM0MjM0NDAxLDE5MD
+I3Mzk2LDE5MzE5NTgxMDMsODI3ODc4NzMzLDU4NTg0ODgsLTE2
+MjkxODE3MjQsLTg4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMD
+I0NzMsLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3
+Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOT
+AzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1
+NTM5XX0=
 -->
