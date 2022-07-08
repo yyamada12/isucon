@@ -181,6 +181,15 @@ git branch -M main
 git branch --set-upstream-to=origin/main main
 ```
 
+```
+git init
+git remote add origin https://github.com/yyamada12/r-isucon-2022-summer.git
+git fetch origin main
+git reset --hard origin/main
+git branch -M main
+git branch --set-upstream-to=origin/main main
+```
+
 2台目、3台目でデプロイしてベンチが通ればOK
 
 
@@ -489,11 +498,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MTg0MTc2NywyMDM0MjM0NDAxLDE5MD
-I3Mzk2LDE5MzE5NTgxMDMsODI3ODc4NzMzLDU4NTg0ODgsLTE2
-MjkxODE3MjQsLTg4NjAwODE3MSwxNzYxMDgxMDAzLC0zODQwMD
-I0NzMsLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMTE1Njg3MDk3
-Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1NzUsMTYyOT
-AzMzEyMSwtMTU1ODMxNjU0MywtMTI4MDA4MTUxOCwtMzQ2Mjg1
-NTM5XX0=
+eyJoaXN0b3J5IjpbMTg1MjA3Mjg0NSwyMDcxODQxNzY3LDIwMz
+QyMzQ0MDEsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4Nzg3MzMs
+NTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLDE3NjEwOD
+EwMDMsLTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYzNjQxMjIw
+LC0xMTU2ODcwOTc3LDY5NDEzMzE2OSw2NjU2NTc2ODksMTQxMz
+UzMjU3NSwxNjI5MDMzMTIxLC0xNTU4MzE2NTQzLC0xMjgwMDgx
+NTE4XX0=
 -->
