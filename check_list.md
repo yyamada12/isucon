@@ -37,15 +37,15 @@ https://github.com/yyamada12/isucon-settings/tree/yyamada
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_essentials.sh)"
 ```
 
-- slack API 設定
-```
-echo 'export SLACK_TOKEN=トークン' >> ~/.bashrc
-```
-
-- 計測ツール
+- [ ] 計測ツール
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_tools.sh)"
+```
+
+- [ ] slack API 設定
+```
+echo 'export SLACK_TOKEN=トークン' >> ~/.bashrc
 ```
 
 - [ ] webサーバが何か確認する
@@ -495,11 +495,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTU1MjU3MSwtNTk0NTE5MjM5LC0xND
-U0OTA4MDk1LDE4NTIwNzI4NDUsMjA3MTg0MTc2NywyMDM0MjM0
-NDAxLDE5MDI3Mzk2LDE5MzE5NTgxMDMsODI3ODc4NzMzLDU4NT
-g0ODgsLTE2MjkxODE3MjQsLTg4NjAwODE3MSwxNzYxMDgxMDAz
-LC0zODQwMDI0NzMsLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMT
-E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
-NzVdfQ==
+eyJoaXN0b3J5IjpbLTE4NzUzMDk5MTcsLTU5NDUxOTIzOSwtMT
+Q1NDkwODA5NSwxODUyMDcyODQ1LDIwNzE4NDE3NjcsMjAzNDIz
+NDQwMSwxOTAyNzM5NiwxOTMxOTU4MTAzLDgyNzg3ODczMyw1OD
+U4NDg4LC0xNjI5MTgxNzI0LC04ODYwMDgxNzEsMTc2MTA4MTAw
+MywtMzg0MDAyNDczLC0xNzgxMzk3OTksLTE3NjM2NDEyMjAsLT
+ExNTY4NzA5NzcsNjk0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNTMy
+NTc1XX0=
 -->
