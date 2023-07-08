@@ -32,9 +32,14 @@ Host isucon3
 - [ ] ツールのインストール
 https://github.com/yyamada12/isucon-settings/tree/yyamada
   
-- 必須ツールと設定 
+- [ ] 必須ツールと設定 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_essentials.sh)"
+```
+
+- slack API 設定
+```
+echo 'export SLACK_TOKEN=トークン' >> ~/.bashrc
 ```
 
 - 計測ツール
@@ -490,11 +495,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NDUxOTIzOSwtMTQ1NDkwODA5NSwxOD
-UyMDcyODQ1LDIwNzE4NDE3NjcsMjAzNDIzNDQwMSwxOTAyNzM5
-NiwxOTMxOTU4MTAzLDgyNzg3ODczMyw1ODU4NDg4LC0xNjI5MT
-gxNzI0LC04ODYwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDcz
-LC0xNzgxMzk3OTksLTE3NjM2NDEyMjAsLTExNTY4NzA5NzcsNj
-k0MTMzMTY5LDY2NTY1NzY4OSwxNDEzNTMyNTc1LDE2MjkwMzMx
-MjFdfQ==
+eyJoaXN0b3J5IjpbLTEyOTU1MjU3MSwtNTk0NTE5MjM5LC0xND
+U0OTA4MDk1LDE4NTIwNzI4NDUsMjA3MTg0MTc2NywyMDM0MjM0
+NDAxLDE5MDI3Mzk2LDE5MzE5NTgxMDMsODI3ODc4NzMzLDU4NT
+g0ODgsLTE2MjkxODE3MjQsLTg4NjAwODE3MSwxNzYxMDgxMDAz
+LC0zODQwMDI0NzMsLTE3ODEzOTc5OSwtMTc2MzY0MTIyMCwtMT
+E1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3Njg5LDE0MTM1MzI1
+NzVdfQ==
 -->
