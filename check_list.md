@@ -122,8 +122,7 @@ sudo chmod 666 ~/etc/my.cnf
 
 - benchが動くことを一応確認しておく
 ```
-sudo systemctl restart mysql
-sudo systemctl restart nginx
+:
 ```
 ベンチ実行して問題なければOK
 
@@ -496,11 +495,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMjQ0ODU3MCwtMTg3NTMwOTkxNywtNT
-k0NTE5MjM5LC0xNDU0OTA4MDk1LDE4NTIwNzI4NDUsMjA3MTg0
-MTc2NywyMDM0MjM0NDAxLDE5MDI3Mzk2LDE5MzE5NTgxMDMsOD
-I3ODc4NzMzLDU4NTg0ODgsLTE2MjkxODE3MjQsLTg4NjAwODE3
-MSwxNzYxMDgxMDAzLC0zODQwMDI0NzMsLTE3ODEzOTc5OSwtMT
-c2MzY0MTIyMCwtMTE1Njg3MDk3Nyw2OTQxMzMxNjksNjY1NjU3
-Njg5XX0=
+eyJoaXN0b3J5IjpbMTY3MzcxNjQwMCwyMDAyNDQ4NTcwLC0xOD
+c1MzA5OTE3LC01OTQ1MTkyMzksLTE0NTQ5MDgwOTUsMTg1MjA3
+Mjg0NSwyMDcxODQxNzY3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMT
+kzMTk1ODEwMyw4Mjc4Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcy
+NCwtODg2MDA4MTcxLDE3NjEwODEwMDMsLTM4NDAwMjQ3MywtMT
+c4MTM5Nzk5LC0xNzYzNjQxMjIwLC0xMTU2ODcwOTc3LDY5NDEz
+MzE2OV19
 -->
