@@ -238,7 +238,7 @@ ln -s ~/deploy.sh
 
 go.modの場合、VSCodeで開いたフォルダに go.workを配置しないと、サブディレクトリにあるgoモジュールを認識してくれない
 ```
-go work init ./webapp/gola
+go work init ./webapp/golang
 ```
 https://qiita.com/chanhama/items/a21ca7d5cd43d6f3f90d#comment-55530e230c93991ef5c0
 
@@ -499,7 +499,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjExNjgyODYsMTY3MzcxNjQwMCwyMD
+eyJoaXN0b3J5IjpbLTIxMzIzNzgwMjEsMTY3MzcxNjQwMCwyMD
 AyNDQ4NTcwLC0xODc1MzA5OTE3LC01OTQ1MTkyMzksLTE0NTQ5
 MDgwOTUsMTg1MjA3Mjg0NSwyMDcxODQxNzY3LDIwMzQyMzQ0MD
 EsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4Nzg3MzMsNTg1ODQ4
