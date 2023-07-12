@@ -236,9 +236,11 @@ ln -s ~/deploy.sh
 ※ import文で指定したパッケージはGOPATHが通っている箇所であればコンパイラが見つけることができ、go get により外部のパッケージをダウンロード・インストールする場合はGOPATHの１つ目のPATHのみ有効となる
 
 
-
-
-
+go.modの場合、VSCodeで開いたフォルダに go.workを配置しないと、サブディレクトリにあるgoモジュールを認識してくれない
+```
+go work init ./webapp/gola
+```
+https://qiita.com/chanhama/items/a21ca7d5cd43d6f3f90d#comment-55530e230c93991ef5c0
 
 
 ## 計測
@@ -497,11 +499,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyOTY2NDExNiwxNjczNzE2NDAwLDIwMD
-I0NDg1NzAsLTE4NzUzMDk5MTcsLTU5NDUxOTIzOSwtMTQ1NDkw
-ODA5NSwxODUyMDcyODQ1LDIwNzE4NDE3NjcsMjAzNDIzNDQwMS
-wxOTAyNzM5NiwxOTMxOTU4MTAzLDgyNzg3ODczMyw1ODU4NDg4
-LC0xNjI5MTgxNzI0LC04ODYwMDgxNzEsMTc2MTA4MTAwMywtMz
-g0MDAyNDczLC0xNzgxMzk3OTksLTE3NjM2NDEyMjAsLTExNTY4
-NzA5NzddfQ==
+eyJoaXN0b3J5IjpbLTEyMjExNjgyODYsMTY3MzcxNjQwMCwyMD
+AyNDQ4NTcwLC0xODc1MzA5OTE3LC01OTQ1MTkyMzksLTE0NTQ5
+MDgwOTUsMTg1MjA3Mjg0NSwyMDcxODQxNzY3LDIwMzQyMzQ0MD
+EsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4Nzg3MzMsNTg1ODQ4
+OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLDE3NjEwODEwMDMsLT
+M4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYzNjQxMjIwLC0xMTU2
+ODcwOTc3XX0=
 -->
