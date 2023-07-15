@@ -493,17 +493,16 @@ https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-co
 
 
 ```
-kill -9 `ps ax | grep "remoteExtensionHostAgent.js" | grep -v grep | awk '{print $1}'`
-kill -9 `ps ax | grep "watcherService" | grep -v grep | awk '{print $1}'`
+kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print $2}')
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzIzNzgwMjEsMTY3MzcxNjQwMCwyMD
-AyNDQ4NTcwLC0xODc1MzA5OTE3LC01OTQ1MTkyMzksLTE0NTQ5
-MDgwOTUsMTg1MjA3Mjg0NSwyMDcxODQxNzY3LDIwMzQyMzQ0MD
-EsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4Nzg3MzMsNTg1ODQ4
-OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLDE3NjEwODEwMDMsLT
-M4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYzNjQxMjIwLC0xMTU2
-ODcwOTc3XX0=
+eyJoaXN0b3J5IjpbLTEwMTY4MTAxNTcsLTIxMzIzNzgwMjEsMT
+Y3MzcxNjQwMCwyMDAyNDQ4NTcwLC0xODc1MzA5OTE3LC01OTQ1
+MTkyMzksLTE0NTQ5MDgwOTUsMTg1MjA3Mjg0NSwyMDcxODQxNz
+Y3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4
+Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLD
+E3NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYz
+NjQxMjIwXX0=
 -->
