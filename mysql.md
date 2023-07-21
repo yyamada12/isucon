@@ -68,6 +68,16 @@ $ iptables -L
 ```
 ここでファイアーウォールが有効になっている場合は、iptablesコマンドで制限を無効化するなどしてmysqlの通信を許可する。
 
+### MySQL再起動
+sudo systemctl restart mysql
+他サーバーから以下のコマンドで接続を確認
+```
+mysql -u ユーザー名 -h ホストIPアドレス -p
+```
+
+
+
+
 ## Generated Column
 
 ## テーブルのカラム追加
@@ -197,7 +207,7 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA5NzE1Mzc5LC0xNDI1Mzk4NTIzLDY4MT
+eyJoaXN0b3J5IjpbNjU4MTQzODc4LC0xNDI1Mzk4NTIzLDY4MT
 EzNzcwLDIwMzE2NTIwNTQsLTExNTQyNTE3ODQsNjkzNTg3ODY3
 LC02NzkzNzg2NzEsMTA1ODAyMjE4NSwxMTU1NDc1NDYyLDEwMT
 gyMzM3NTIsLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMTYyOTU1
