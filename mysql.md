@@ -11,6 +11,18 @@ mysql> select user, host from mysql.user;
 ```
 host が `localhost` だとアウト。
 以下のSQLを実行する。
+
+ ```
+ UPDATE mysql.user SET host='%' WHERE user='[user_name]' AND host='localhost';
+ ```
+
+USERがisuconであれば以下の通り。
+ ```
+ UPDATE mysql.user SET host='%' WHERE user='isucon' AND host='localhost';
+ ```
+
+
+#### 旧手順
 ```
 GRANT ALL PRIVILEGES 
 ON [db_name].* TO [user_name]@"[ip_address]" 
@@ -24,7 +36,7 @@ GRANT ALL PRIVILEGES ON *.* TO isucon@"%" IDENTIFIED BY 'isucon' WITH GRANT OPTI
 [外部のホストから接続できるようにする方法](https://www.wakuwakubank.com/posts/322-mysql-access-host/)
 
 
-#### mysql8 の場合
+##### mysql8 の場合
 CREATE USER と GRANT を同時にできなくなったので、それぞれ実行する
 ```
 CREATE USER isucon@'%' IDENTIFIED BY 'isucon';
@@ -185,10 +197,10 @@ query_cache_limit=8M
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjUzOTg1MjMsNjgxMTM3NzAsMjAzMT
-Y1MjA1NCwtMTE1NDI1MTc4NCw2OTM1ODc4NjcsLTY3OTM3ODY3
-MSwxMDU4MDIyMTg1LDExNTU0NzU0NjIsMTAxODIzMzc1MiwtMT
-I5MjM0NTIzOSwtMTUzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0
-NTY5OTcsLTExNDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNT
-IwLDExMTczNjk4MCw3NDIxOTU2MDVdfQ==
+eyJoaXN0b3J5IjpbNTA5NzE1Mzc5LC0xNDI1Mzk4NTIzLDY4MT
+EzNzcwLDIwMzE2NTIwNTQsLTExNTQyNTE3ODQsNjkzNTg3ODY3
+LC02NzkzNzg2NzEsMTA1ODAyMjE4NSwxMTU1NDc1NDYyLDEwMT
+gyMzM3NTIsLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMTYyOTU1
+NDY3NSwtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMT
+gsMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
 -->
