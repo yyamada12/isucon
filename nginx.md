@@ -247,7 +247,7 @@ location @dinamic {
 ```
 
 GET /image/{id}.{ext}  に対する静的配信の例
-ファイルは、 /home/user/private-isu/webapp/static/image/{id}.{ext} で保存す
+ファイルは、 /home/user/private-isu/webapp/static/image/{id}.{ext} で保存
 https://github.com/yyamada12/private-isucon/commit/d22933069832b300fa7a387c370f6fdfe18cc82a
 
 ```
@@ -459,7 +459,7 @@ events {
 
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzY1OTMyODIsLTI4MTIzMTc4MSwtOT
+eyJoaXN0b3J5IjpbLTEzMzA4NDQ1MDUsLTI4MTIzMTc4MSwtOT
 c3Njg0OTcxLC00OTMyNzgzNjQsMTAxOTg5MTA4NSwtMTAxNTc5
 MzgxMywtNTQ5OTgxOTM1LDE4MTE3OTc1NDIsLTE3NzYzMzM3Nj
 BdfQ==
