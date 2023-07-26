@@ -148,6 +148,7 @@ function rotate_log () {
   fi
 }
 rotate_log /var/log/nginx/access.log
+rotate_log  /var/log/nginx/error.log
 rotate_log /var/log/mysql/slow.log
 rotate_log ~/pprof/pprof.png
 
@@ -498,11 +499,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjg1MzY4MTMsLTEwMTY4MTAxNTcsLT
-IxMzIzNzgwMjEsMTY3MzcxNjQwMCwyMDAyNDQ4NTcwLC0xODc1
-MzA5OTE3LC01OTQ1MTkyMzksLTE0NTQ5MDgwOTUsMTg1MjA3Mj
-g0NSwyMDcxODQxNzY3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMTkz
-MTk1ODEwMyw4Mjc4Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNC
-wtODg2MDA4MTcxLDE3NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4
-MTM5Nzk5XX0=
+eyJoaXN0b3J5IjpbMjE0NDI5Mjc2MiwtMTAxNjgxMDE1NywtMj
+EzMjM3ODAyMSwxNjczNzE2NDAwLDIwMDI0NDg1NzAsLTE4NzUz
+MDk5MTcsLTU5NDUxOTIzOSwtMTQ1NDkwODA5NSwxODUyMDcyOD
+Q1LDIwNzE4NDE3NjcsMjAzNDIzNDQwMSwxOTAyNzM5NiwxOTMx
+OTU4MTAzLDgyNzg3ODczMyw1ODU4NDg4LC0xNjI5MTgxNzI0LC
+04ODYwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNzgx
+Mzk3OTldfQ==
 -->
