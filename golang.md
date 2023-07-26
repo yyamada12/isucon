@@ -153,6 +153,10 @@ err := ioutil.WriteFile("/home/isucon/isubata/webapp/public/icons/"+name, data, 
 
 https://github.com/yyamada12/isucon7_re3/commit/0b575b47f11c9baf45b9f8d096aca5a3847938d3#
 
+Nginx の 設定変更も合わせて。
+https://github.com/yyamada12/private-isucon/commit/d22933069832b300fa7a387c370f6fdfe18cc82a
+
+
 ## SQL周り
 
 それぞれのメソッドに対して xxxContext() メソッドが存在する。
@@ -254,10 +258,10 @@ func main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3OD
-Q2OTMwLDIxMDAwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQs
-LTE4OTgwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMT
-Y4OTQzMTM5OCwxNTQxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1
-MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4NTEsLT
-ExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTY5ODY2Njg3NiwyMTMyODMyOTUsLTkyMT
+UxMjYxMSw1OTc4NDY5MzAsMjEwMDAwNjQ0NCwxMTUzODExMjI4
+LDY4NDMwNDQ0NCwtMTg5ODA5NzUxOCwtMjA0NzM4OTA3NiwtMT
+A5NTk1MDI4OCwxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5
+MTUxNSw1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1LC
+04OTc0ODg1MSwtMTEwNjgwNzI5NV19
 -->
