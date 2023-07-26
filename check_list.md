@@ -144,7 +144,7 @@ echo "Started deploying."
 # rotate logs
 function rotate_log () {
   if sudo [ -e $1 ]; then
-    sudo mv $1 ${1%.*}_$(date +"%Y%m%d%H%M%S").${1##*.}
+    sudo mv $1 ${1%.*}_bak.${1##*.}
   fi
 }
 rotate_log /var/log/nginx/access.log
@@ -498,11 +498,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTY4MTAxNTcsLTIxMzIzNzgwMjEsMT
-Y3MzcxNjQwMCwyMDAyNDQ4NTcwLC0xODc1MzA5OTE3LC01OTQ1
-MTkyMzksLTE0NTQ5MDgwOTUsMTg1MjA3Mjg0NSwyMDcxODQxNz
-Y3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4
-Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLD
-E3NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4MTM5Nzk5LC0xNzYz
-NjQxMjIwXX0=
+eyJoaXN0b3J5IjpbLTEyNjg1MzY4MTMsLTEwMTY4MTAxNTcsLT
+IxMzIzNzgwMjEsMTY3MzcxNjQwMCwyMDAyNDQ4NTcwLC0xODc1
+MzA5OTE3LC01OTQ1MTkyMzksLTE0NTQ5MDgwOTUsMTg1MjA3Mj
+g0NSwyMDcxODQxNzY3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMTkz
+MTk1ODEwMyw4Mjc4Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNC
+wtODg2MDA4MTcxLDE3NjEwODEwMDMsLTM4NDAwMjQ3MywtMTc4
+MTM5Nzk5XX0=
 -->
