@@ -34,13 +34,18 @@ https://github.com/yyamada12/isucon-settings/tree/yyamada
   
 - [ ] 必須ツールと設定 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_essentials.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_essentials.sh)"
 ```
 
 - [ ] 計測ツール
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/yyamada/install_tools.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
+```
+
+arm
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools_arm.sh)"
 ```
 
 - [ ] slack API 設定
@@ -499,11 +504,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDI5Mjc2MiwtMTAxNjgxMDE1NywtMj
-EzMjM3ODAyMSwxNjczNzE2NDAwLDIwMDI0NDg1NzAsLTE4NzUz
-MDk5MTcsLTU5NDUxOTIzOSwtMTQ1NDkwODA5NSwxODUyMDcyOD
-Q1LDIwNzE4NDE3NjcsMjAzNDIzNDQwMSwxOTAyNzM5NiwxOTMx
-OTU4MTAzLDgyNzg3ODczMyw1ODU4NDg4LC0xNjI5MTgxNzI0LC
-04ODYwMDgxNzEsMTc2MTA4MTAwMywtMzg0MDAyNDczLC0xNzgx
-Mzk3OTldfQ==
+eyJoaXN0b3J5IjpbLTExMjI0NzQwNzQsMjE0NDI5Mjc2MiwtMT
+AxNjgxMDE1NywtMjEzMjM3ODAyMSwxNjczNzE2NDAwLDIwMDI0
+NDg1NzAsLTE4NzUzMDk5MTcsLTU5NDUxOTIzOSwtMTQ1NDkwOD
+A5NSwxODUyMDcyODQ1LDIwNzE4NDE3NjcsMjAzNDIzNDQwMSwx
+OTAyNzM5NiwxOTMxOTU4MTAzLDgyNzg3ODczMyw1ODU4NDg4LC
+0xNjI5MTgxNzI0LC04ODYwMDgxNzEsMTc2MTA4MTAwMywtMzg0
+MDAyNDczXX0=
 -->
