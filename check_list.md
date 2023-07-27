@@ -84,16 +84,8 @@ ssh -T git@github.com
     - `GOPATH` 配下もgitignoreすべし
 
 ```.gitignore
-nodejs/
-python/
-perl/
-php/
-ruby/
-rust/
 .*
 !.gitignore
-!.bashrc
-!.alias.bash
 /pprof
 ```
 
@@ -504,11 +496,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAyOTI1MTk0LC0xMTIyNDc0MDc0LDIxND
-QyOTI3NjIsLTEwMTY4MTAxNTcsLTIxMzIzNzgwMjEsMTY3Mzcx
-NjQwMCwyMDAyNDQ4NTcwLC0xODc1MzA5OTE3LC01OTQ1MTkyMz
-ksLTE0NTQ5MDgwOTUsMTg1MjA3Mjg0NSwyMDcxODQxNzY3LDIw
-MzQyMzQ0MDEsMTkwMjczOTYsMTkzMTk1ODEwMyw4Mjc4Nzg3Mz
-MsNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2MDA4MTcxLDE3NjEw
-ODEwMDNdfQ==
+eyJoaXN0b3J5IjpbLTExMzg1MjA5ODUsNjAyOTI1MTk0LC0xMT
+IyNDc0MDc0LDIxNDQyOTI3NjIsLTEwMTY4MTAxNTcsLTIxMzIz
+NzgwMjEsMTY3MzcxNjQwMCwyMDAyNDQ4NTcwLC0xODc1MzA5OT
+E3LC01OTQ1MTkyMzksLTE0NTQ5MDgwOTUsMTg1MjA3Mjg0NSwy
+MDcxODQxNzY3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMTkzMTk1OD
+EwMyw4Mjc4Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2
+MDA4MTcxXX0=
 -->
