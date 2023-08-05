@@ -53,6 +53,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 echo 'export SLACK_TOKEN=トークン' >> ~/.bashrc
 ```
 https://api.slack.com/apps/A05GTSY2MKJ
+https://api.slack.com/apps/A05GTSY2MKJ/oauth?
 
 - [ ] webサーバが何か確認する
 
@@ -496,11 +497,11 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzg1MjA5ODUsNjAyOTI1MTk0LC0xMT
-IyNDc0MDc0LDIxNDQyOTI3NjIsLTEwMTY4MTAxNTcsLTIxMzIz
-NzgwMjEsMTY3MzcxNjQwMCwyMDAyNDQ4NTcwLC0xODc1MzA5OT
-E3LC01OTQ1MTkyMzksLTE0NTQ5MDgwOTUsMTg1MjA3Mjg0NSwy
-MDcxODQxNzY3LDIwMzQyMzQ0MDEsMTkwMjczOTYsMTkzMTk1OD
-EwMyw4Mjc4Nzg3MzMsNTg1ODQ4OCwtMTYyOTE4MTcyNCwtODg2
-MDA4MTcxXX0=
+eyJoaXN0b3J5IjpbNzg4MzYyODQ1LC0xMTM4NTIwOTg1LDYwMj
+kyNTE5NCwtMTEyMjQ3NDA3NCwyMTQ0MjkyNzYyLC0xMDE2ODEw
+MTU3LC0yMTMyMzc4MDIxLDE2NzM3MTY0MDAsMjAwMjQ0ODU3MC
+wtMTg3NTMwOTkxNywtNTk0NTE5MjM5LC0xNDU0OTA4MDk1LDE4
+NTIwNzI4NDUsMjA3MTg0MTc2NywyMDM0MjM0NDAxLDE5MDI3Mz
+k2LDE5MzE5NTgxMDMsODI3ODc4NzMzLDU4NTg0ODgsLTE2Mjkx
+ODE3MjRdfQ==
 -->
