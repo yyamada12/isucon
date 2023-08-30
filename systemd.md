@@ -29,7 +29,10 @@ goでprintデバッグしたければ、ここのログを見れば良い。
 ## Dockerはがし
 アプリケーションの実行にdockerが利用されている場合にgoの実行ファイルを利用する
 
-docker 
+docker の build の時間分、deploy のスピードが上がる
+アプリケーションのスピードも上がるはずだが、dockerも結構速いのでスコアはそこまで変わらないかも
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MDQ2MzE1NSw5ODk3MTE3MjFdfQ==
+eyJoaXN0b3J5IjpbOTI4Nzg5NDk2LDk4OTcxMTcyMV19
 -->
