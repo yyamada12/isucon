@@ -32,7 +32,9 @@ goでprintデバッグしたければ、ここのログを見れば良い。
 docker の build の時間分、deploy のスピードが上がる
 アプリケーションのスピードも上がるはずだが、dockerも結構速いのでスコアはそこまで変わらないかも
 
-- ExecStart を
+- ExecStart を実行ファイルに書き換える
+- ExecStop を `/bin/kill -s QUIT $MAINPID` に書き換える
+- EnvironmentFile で環境変数を指定する
 
 ex)
 Before
@@ -84,6 +86,6 @@ ISUCON_DB_NAME=isuports
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYyMDk3ODA1LDkyODc4OTQ5Niw5ODk3MT
-E3MjFdfQ==
+eyJoaXN0b3J5IjpbLTE0Mzg4MTU2MDUsOTI4Nzg5NDk2LDk4OT
+cxMTcyMV19
 -->
