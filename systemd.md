@@ -25,6 +25,11 @@ goでprintデバッグしたければ、ここのログを見れば良い。
 *例*
 `sudo journalctl -f -u isucari.golang` 
 
+
+## Dockerはがし
+アプリケーションの実行にdockerが利用されている場合にgoの実行ファイルを利用する
+
+docker 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5NzExNzIxXX0=
+eyJoaXN0b3J5IjpbMTI3MDQ2MzE1NSw5ODk3MTE3MjFdfQ==
 -->
