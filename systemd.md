@@ -32,7 +32,58 @@ goでprintデバッグしたければ、ここのログを見れば良い。
 docker の build の時間分、deploy のスピードが上がる
 アプリケーションのスピードも上がるはずだが、dockerも結構速いのでスコアはそこまで変わらないかも
 
+- ExecStart を
+
+ex)
+Before
+```
+[Unit]
+Description=isucon12 qualify webapp
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=isucon
+Group=isucon
+WorkingDirectory=/home/isucon/webapp
+ExecStart=docker compose -f docker-compose-go.yml up --build
+ExecStop=docker compose -f docker-compose-go.yml down
+Restart=always
+```
+
+After
+```
+[Unit]
+Description=isucon12 qualify webapp
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=isucon
+Group=isucon
+WorkingDirectory=/home/isucon/webapp/go
+EnvironmentFile=/home/isucon/webapp/env.sh
+ExecStart=/home/isucon/webapp/go/isuports
+ExecStop=/bin/kill -s QUIT $MAINPID
+Restart=always
+```
+
+env.sh
+```
+ISUCON_DB_HOST=127.0.0.1
+ISUCON_DB_PORT=3306
+ISUCON_DB_USER=isucon
+ISUCON_DB_PASSWORD=isucon
+ISUCON_DB_NAME=isuports
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI4Nzg5NDk2LDk4OTcxMTcyMV19
+eyJoaXN0b3J5IjpbNDYyMDk3ODA1LDkyODc4OTQ5Niw5ODk3MT
+E3MjFdfQ==
 -->
