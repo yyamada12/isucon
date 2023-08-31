@@ -88,7 +88,6 @@ ssh -T git@github.com
 .*
 !.gitignore
 /pprof
-.bashrc
 ```
 
 
@@ -498,7 +497,7 @@ rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIxODI3ODU2LDc4ODM2Mjg0NSwtMTEzOD
+eyJoaXN0b3J5IjpbNzg4MzYyODQ1LDc4ODM2Mjg0NSwtMTEzOD
 UyMDk4NSw2MDI5MjUxOTQsLTExMjI0NzQwNzQsMjE0NDI5Mjc2
 MiwtMTAxNjgxMDE1NywtMjEzMjM3ODAyMSwxNjczNzE2NDAwLD
 IwMDI0NDg1NzAsLTE4NzUzMDk5MTcsLTU5NDUxOTIzOSwtMTQ1
