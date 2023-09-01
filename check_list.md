@@ -27,10 +27,12 @@ Host isucon3
   LocalForward  39999 localhost:19999
 ```
 
+- [ ] 初期のsshユーザーがubuntuなどになっている場合は、authorized_keysをisuconユーザーのホームディレクトリにコピーしてisuconユーザーでsshできるようにする
+
 - [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
 
 - [ ] ツールのインストール
-https://github.com/yyamada12/isucon-settings/tree/yyamada
+https://github.com/yyamada12/isucon-settings
   
 - [ ] 必須ツールと設定 
 ```
@@ -58,8 +60,6 @@ https://api.slack.com/apps/A05GTSY2MKJ/oauth?
 - [ ] webサーバが何か確認する
 
 ```bash
-sudo systemctl list-unit-files
- 
 sudo systemctl list-units --type=service --state=running
 ```
 
@@ -121,56 +121,6 @@ sudo chmod 666 ~/etc/my.cnf
 - benchが動くことを一応確認しておく
 
 ベンチ実行して問題なければOK
-
-- [ ] デプロイスクリプトの準備
-
-```
-vim ~/deploy.sh
-:set paste
-```
-
-```bash
-#!/bin/bash
-
-set -eux
-
-date -R
-echo "Started deploying."
-
-# rotate logs
-function rotate_log () {
-  if sudo [ -e $1 ]; then
-    sudo mv $1 ${1%.*}_bak.${1##*.}
-  fi
-}
-rotate_log /var/log/nginx/access.log
-rotate_log /var/log/nginx/error.log
-rotate_log /var/log/mysql/slow.log
-rotate_log ~/pprof/pprof.png
-
-
-# build go app
-cd Makefileのパス
-make
-
-# update mysqld.cnf
-if [ -e ~/etc/mysqld.cnf ]; then
-  sudo cp ~/etc/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
-fi
-
-# restart services
-sudo systemctl restart mysql
-sudo systemctl restart アプリのサービス
-sudo systemctl restart nginx
-
-date -R
-echo "Finished deploying."
-```
-
-```
-chmod +x deploy.sh
-```
-
 
 - [ ] レポジトリを他のサーバーにpullする
 2台目、3台目のサーバーで以下の手順を実施
@@ -288,7 +238,6 @@ long_query_time = 0
 - [ ] mysql再起動
 
 デプロイスクリプト回す
-または `sudo systemctl restart mysql; sudo sytemctl restart アプリのサービス` 
 
 - [ ]  mysql で以下のコマンドを実行し、設定が変わっていることを確認
 ```
@@ -296,28 +245,6 @@ show variables like  'slow_query%';
 show variables like  'long%';
 ```
 
-### netdata
-
-- [ ] mysql のメトリクスを追加する
-1. 以下のsql を実行 
-```
-create user 'netdata'@'localhost';
-grant usage on *.* to 'netdata'@'localhost';
-flush privileges;
-```
-2. netdataを再起動
-```
-sudo service netdata restart
-```
-
-- [ ] ポートが公開されていない場合はsshにポートフォワーディングの設定を入れる
-```~/.ssh/config
-LocalForward 19999 localhost:19999
-```
-or
-```
-ssh -L 19999:localhost:19999
-```
 
 ### pprof
 
@@ -338,102 +265,9 @@ func main() {
 
 デプロイスクリプトを回す
 
-- [ ] web UIで確認
 
-```
-go tool pprof -http=":1234" ~/webapp/go/xxxxx ~/pprof /pprof.xxxxx.samples.cpu.00x.pb.gz
-```
-
-- [ ] ポートが公開されていない場合はsshにポートフォワーディングの設定を入れる
-```~/.ssh/config
-LocalForward 1234 localhost:1234
-```
-or
-```
-ssh -L 1234:localhost:1234
-```
-
-
-
-
-
-## インフラチューニング
-
-### サーバースペック確認
-[Linuxでコマンドラインからマシンスペックを確認する方法](https://qiita.com/DaisukeMiyamoto/items/98ef077ddf44b5727c29)
-
-CPU 
-```
-cat /proc/cpuinfo
-```
-
-メモリ
-```
-cat /proc/meminfo
-```
-
-
-### nginx
-
-参考:
-
-- [ISUCON5 予選 part3](https://qiita.com/gky360/items/dccb88f4aecd50970915)
-- [fix nginx.conf](https://github.com/gky360/isucon5-qual-etc/commit/b20b5fc5f445600db213c374b025bcf901f71118)
-- [ISUCON 5でalpを使ってNginxのログを解析した話](https://papix.hatenablog.com/entry/2015/09/28/094310)
-
-
-- [ ] エラーログの出力先を指定、ログレベルをwarnにする (main > `error_log` )
-
-- [ ] nginx -> go の接続を unix ドメインソケット化
-
-```
-upstream app {
-  server unix:/var/run/isuxi/go.sock;
-}
-```
-https://kaneshin.hateblo.jp/entry/2016/05/29/020302
-
-
-- [ ] 静的ファイルを nginx から配信 (http > server > location)
-
-```
-server {
-  location ~ ^/(img|css|js|favicon.ico) {
-    root /home/isucon/webapp/static;
-  }
-  ...
-```
-
-- [ ] (main > `worker_process auto;` )
-- [ ] MIMEタイプ読み込み (http > `types_hash_max_size 2048;` ), (http > `include       /etc/nginx/mime.types;` )
-- [ ] keepalive 設定 (http > `keepalive_timeout 65;` ), (http > `keepalive_requests 500;` )
-- [ ] (http > `sendfile on;` )
-- [ ] (http > `tcp_nopush  on;` )
-- [ ] (http > `tcp_nodelay on;` )
-- [ ] (http > `open_file_cache max=100 inactive=60s;` )
-
-
+## とりあえずやっとく
 ### /etc/mysql/my.cnf
-
-- [ ] 初期値を確認
-```
-SHOW VARIABLES LIKE 'innodb_buffer_pool_size';
-SHOW VARIABLES LIKE 'innodb_flush%';
-SHOW VARIABLES LIKE 'innodb_support%';
-SHOW VARIABLES LIKE 'max_connections';
-```
-
-- [ ] /etc/mysql/my.cnf に以下を書き込む
-
-```
-[mysqld]
-innodb_buffer_pool_size=1G
-innodb_flush_log_at_trx_commit=0
-innodb_flush_method=O_DIRECT
-innodb_support_xa=OFF
-max_connections=10000
-```
-
 - [ ] mysql8対策
 ```
 disable-log-bin 
@@ -441,51 +275,85 @@ innodb_doublewrite = 0
 innodb_flush_log_at_trx_commit = 0
 ```
 
+### too many open files 対策
+1: ulimit の数を上げる
+/etc/security/limits.conf
+```
+* soft nproc 65535
+* hard nproc 65535
+* hard nofile 65535
+* soft nofile 65535
+```
+
+`sudo reboot`
+
+`ulimit -n` して値が65535になっていればOK
 
 
-## 改善
+2: nginx.conf をいじる
+
+worker数は woker_processes で決まる。
+auto になっている時は、 `ps aux | grep nginx` でプロセス数を数えればOK。autoであればCPU のコア数と同じになるはず。
+
+```
+worker_rlimit_nofile {65535 / worker数};
+
+events {
+    worker_connections {worker_rlimit_nofile / 2};
+}
+
+```
+
+worker数が2の場合
+```
+worker_rlimit_nofile 32768;
+
+events {
+    worker_connections 16384;
+}
+```
+
+worker数が4の場合
+```
+worker_rlimit_nofile 16384;
+
+events {
+    worker_connections 8192;
+}
+```
+
+
+## やることなくなったら
 
 ### app
 - [ ] コネクションプールの数を増やしてみる
 - [ ] GOMAXPROCS の値を確認する
 
 ### nginx
+- [ ] error log を確認して対応する
+- [ ] 秘伝のタレのパラメータ試してみる
 
-- [ ] （ログに `Too many open files` と出た場合） `worker_rlimit_nofile` を増やす
-- [ ] （ログに `worker_connections are not enough` と出た場合） `worker_connections` を増やす
-- [ ] （リクエストサイズが1MBより大きい場合, nginxが 413 Request Entity Too Large を返している場合）`client_max_body_size` を増やす
-- [ ] （ログに `[warn] ... client request body is buffered to a temporary file ...` と出た場合） `client_body_buffer_size` を増やす
-- [ ] （ログに `[warn] ... upstream response is buffered to a temporary file ...` と出た場合） `proxy_buffers` のサイズを増やす
+### mysql
+- [ ] 秘伝のタレのパラメータ試してみる
+- [ ] mysqltuner試してみる
 
 ## 再起動試験
 - [ ] ベンチ実施後、全台で `sudo reboot` を実行する
 - [ ] 起動後、アプリを操作し、ベンチによる変更が保存されていることを確認する
 
 
-- [ ] systemdにおまじないを追加する
-
-起動に失敗した時（再起動試験時mysqlサーバーへの接続失敗など）のsystemdによる再起動試行回数を999とする。
-```
-[Service]
-StartLimitBurst=999
-```
-```
-sudo systemctl daemon-reload
-```
-
 ## 提出前
 
 - [ ] slowlog を切る
-
 - [ ] nginx のアクセスログの出力をオフにする (http > `access_log off;` )
-- [ ]  netdata を切る
+- [ ] netdata を切る
 ```sudo systemctl stop netdata```
 ```sudo systemctl disable netdata```
 or
 ```/usr/libexec/netdata/netdata-uninstaller.sh --yes --env /etc/netdata/.environment```
 
 - [ ] appのログを切る (go の middlewareのコード削除など)
-- [ ]  VSCode Remote SSH をサーバーから削除する (**Remote-SSH: Uninstall VS Code Server from Host...**)
+- [ ] VSCode Remote SSH をサーバーから削除する (**Remote-SSH: Uninstall VS Code Server from Host...**)
 https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 
 
@@ -493,13 +361,3 @@ https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-co
 kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print $2}')
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUzOTM5MTc1LDc4ODM2Mjg0NSwtMTEzOD
-UyMDk4NSw2MDI5MjUxOTQsLTExMjI0NzQwNzQsMjE0NDI5Mjc2
-MiwtMTAxNjgxMDE1NywtMjEzMjM3ODAyMSwxNjczNzE2NDAwLD
-IwMDI0NDg1NzAsLTE4NzUzMDk5MTcsLTU5NDUxOTIzOSwtMTQ1
-NDkwODA5NSwxODUyMDcyODQ1LDIwNzE4NDE3NjcsMjAzNDIzND
-QwMSwxOTAyNzM5NiwxOTMxOTU4MTAzLDgyNzg3ODczMyw1ODU4
-NDg4XX0=
--->
