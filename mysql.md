@@ -207,11 +207,17 @@ query_cache_limit=8M
 `show global status like "%QCache%";` の値を見て、 `Qcache_lowmem_prunes`  (メモリーが少ないためクエリーキャッシュから削除されたクエリーの数) が小さかったり、Qcache_free_memory (クエリーキャッシュの使用できるメモリーの残り) が大きければ、メモリの大きさは十分。
 
 https://qiita.com/ryurock/items/9f561e486bfba4221747
+
+## Unix ドメインソケット
+ほぼ出番はないが、、
+MySQL接続文字列(DSN) を、通常は
+tcp(
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA0NjgxNDY1LC0xNDI1Mzk4NTIzLDY4MT
-EzNzcwLDIwMzE2NTIwNTQsLTExNTQyNTE3ODQsNjkzNTg3ODY3
-LC02NzkzNzg2NzEsMTA1ODAyMjE4NSwxMTU1NDc1NDYyLDEwMT
-gyMzM3NTIsLTEyOTIzNDUyMzksLTE1MzMxMDczOTIsMTYyOTU1
-NDY3NSwtOTA5NDU2OTk3LC0xMTQ4NTQ3MjI5LC0yNzY5NDgzMT
-gsMTAxNTQ5MTUyMCwxMTE3MzY5ODAsNzQyMTk1NjA1XX0=
+eyJoaXN0b3J5IjpbNzcyNTcwNjQyLDMwNDY4MTQ2NSwtMTQyNT
+M5ODUyMyw2ODExMzc3MCwyMDMxNjUyMDU0LC0xMTU0MjUxNzg0
+LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIxODUsMTE1NT
+Q3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC0xNTMzMTA3
+MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0ODU0NzIyOS
+wtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OTgwLDc0MjE5
+NTYwNV19
 -->
