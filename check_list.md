@@ -29,7 +29,7 @@ Host isu3
 
 - [ ] 初期のsshユーザーがubuntuなどになっている場合は、authorized_keysをisuconユーザーのホームディレクトリにコピーしてisuconユーザーでsshできるようにする
 ```
-s
+
 ```
 
 - [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
@@ -379,6 +379,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTQ4NzgxNywtMTQ3NTUwNjA2MiwxOT
+eyJoaXN0b3J5IjpbLTM2OTc3NzU5NiwtMTQ3NTUwNjA2MiwxOT
 I0NzEwMDU5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
 -->
