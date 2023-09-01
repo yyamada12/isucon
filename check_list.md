@@ -79,7 +79,7 @@ ssh -T git@github.com
 
 
 - [ ] レポジトリ作る
-    -  `~/` 配下のファイルを含める。
+    - ホームディレクトリを git root とする
     -  `du -sh *` で大きなファイルが有る場合はgitignoreする
     - `GOPATH` 配下もgitignoreすべし
 
@@ -361,6 +361,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MzQwOTA0MywtMTk2MzI3NDcyMywtMT
-U1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbLTExNjA0OTIxOTYsLTE5NjMyNzQ3MjMsLT
+E1NTk3OTQzODldfQ==
 -->
