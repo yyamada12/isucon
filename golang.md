@@ -97,6 +97,11 @@ https://github.com/yyamada12/isucon11q_re/commit/e835f878bedf8c3739993ec89c0f536
 https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7cd0d14811
 
 
+## 再起動対策
+アプリケーション起動時にインメモリにデータを読み込むことをすると、再起動時にDBの方が
+
+
+
 ## responseのcache
 user 関係なしで返す結果が決まっている場合、レスポンスはキャッシュを返して、定期的にキャッシュを更新させれば良い
 
@@ -258,10 +263,11 @@ func main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkyMDA0ODA0LC02OTg2NjY4NzYsMjEzMj
-gzMjk1LC05MjE1MTI2MTEsNTk3ODQ2OTMwLDIxMDAwMDY0NDQs
-MTE1MzgxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1MTgsLTIwND
-czODkwNzYsLTEwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMz
-MDQwLC05MzgyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLT
-c1OTc2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTkwNzE5OTY5Myw0OTIwMDQ4MDQsLTY5OD
+Y2Njg3NiwyMTMyODMyOTUsLTkyMTUxMjYxMSw1OTc4NDY5MzAs
+MjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0NCwtMTg5OD
+A5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OCwxNjg5NDMx
+Mzk4LDE1NDE4MzMwNDAsLTkzODI5MTUxNSw1NDYyNTUzNjUsLT
+k3NzE5MjYzNiwtNzU5NzYyODY1LC04OTc0ODg1MSwtMTEwNjgw
+NzI5NV19
 -->
