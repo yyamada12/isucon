@@ -10,17 +10,11 @@
 - [ ] エラーログの出力先を指定、ログレベルをwarnにする (main > `error_log` )
 
 - [ ] (main > `worker_process auto;` )
-
 - [ ] MIMEタイプ読み込み (http > `types_hash_max_size 2048;` ), (http > `include /etc/nginx/mime.types;` )
-
 - [ ] keepalive 設定 (http > `keepalive_timeout 65;` ), (http > `keepalive_requests 500;` )
-
 - [ ] (http > `sendfile on;` )
-
 - [ ] (http > `tcp_nopush on;` )
-
 - [ ] (http > `tcp_nodelay on;` )
-
 - [ ] (http > `open_file_cache max=100 inactive=60s;` )
 
 ## 設定の正しさ確認
@@ -501,8 +495,8 @@ events {
 
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0Mjc4MDc3MiwtMjE5NzQxMTg4LC0xMz
-MwODQ0NTA1LC0yODEyMzE3ODEsLTk3NzY4NDk3MSwtNDkzMjc4
-MzY0LDEwMTk4OTEwODUsLTEwMTU3OTM4MTMsLTU0OTk4MTkzNS
-wxODExNzk3NTQyLC0xNzc2MzMzNzYwXX0=
+eyJoaXN0b3J5IjpbMTM0ODMyOTUyLC0yMTk3NDExODgsLTEzMz
+A4NDQ1MDUsLTI4MTIzMTc4MSwtOTc3Njg0OTcxLC00OTMyNzgz
+NjQsMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNTQ5OTgxOTM1LD
+E4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
 -->
