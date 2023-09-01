@@ -51,12 +51,10 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 ```
 
 - [ ] 環境変数設定
-APP_DIR
-APP_BUILD_CMD
-APP_SERVICE_NAME
-SLACK_TOKEN
-https://api.slack.com/apps/A05GTSY2MKJ
-https://api.slack.com/apps/A05GTSY2MKJ/oauth?
+APP_DIR: アプリケーションのディレクトリ
+APP_BUILD_CMD: go build or make or else
+APP_SERVICE_NAME: isucon-go.service 的なやつ
+SLACK_TOKEN: https://api.slack.com/apps/A05GTSY2MKJ/oauth
 
 - [ ] webサーバが何か確認する
 
@@ -363,5 +361,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjQyMjYyNjFdfQ==
+eyJoaXN0b3J5IjpbLTE1NTk3OTQzODldfQ==
 -->
