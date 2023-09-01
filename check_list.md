@@ -99,19 +99,11 @@ ssh -T git@github.com
   - /etcからファイルを移動し、シンボリックリンクをはる
   -  mysqlはシンボリックリンクだと設定が反映されないため、デプロイスクリプトで ~/etc から /etc にコピーする運用とする
 
-```bash
-mkdir ~/etc
-# nginx
-sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.org
-sudo mv /etc/nginx/nginx.conf ~/etc/
-sudo chmod 666 ~/etc/nginx.conf
-sudo ln -s ~/etc/nginx.conf /etc/nginx/nginx.conf
-
-# mysql
-sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.org
-sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf ~/etc/
-sudo chmod 666 ~/etc/mysqld.cnf
 ```
+~/manage_etc_files.sh
+```
+
+
 
 - mysql は設定ファイルの場所がまちまちなので気をつける
 以下のファイルの場合もあり
@@ -380,6 +372,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOT
-I0NzEwMDU5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
+eyJoaXN0b3J5IjpbMTg0Mzg2ODk5MiwxNDEwNTEyNjI3LC0xND
+c1NTA2MDYyLDE5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3
+OTQzODldfQ==
 -->
