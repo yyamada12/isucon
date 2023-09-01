@@ -29,6 +29,7 @@ Host isu3
 
 - [ ] 初期のsshユーザーがubuntuなどになっている場合は、authorized_keysをisuconユーザーのホームディレクトリにコピーしてisuconユーザーでsshできるようにする
 ```
+sudo -u isucon mkdir -p /home/isucon/.ssh
 
 ```
 
@@ -379,6 +380,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2OTc3NzU5NiwtMTQ3NTUwNjA2MiwxOT
-I0NzEwMDU5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
+eyJoaXN0b3J5IjpbNjI4MzUzODA5LC0xNDc1NTA2MDYyLDE5Mj
+Q3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3OTQzODldfQ==
 -->
