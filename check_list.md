@@ -50,10 +50,11 @@ arm
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools_arm.sh)"
 ```
 
-- [ ] slack API 設定
-```
-echo 'export SLACK_TOKEN=トークン' >> ~/.bashrc
-```
+- [ ] 環境変数設定
+APP_DIR
+APP_BUILD_CMD
+APP_SERVICE_NAME
+SLACK_TOKEN
 https://api.slack.com/apps/A05GTSY2MKJ
 https://api.slack.com/apps/A05GTSY2MKJ/oauth?
 
@@ -361,3 +362,6 @@ https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-co
 kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print $2}')
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwMjQyMjYyNjFdfQ==
+-->
