@@ -67,7 +67,7 @@ sudo systemctl list-units --type=service --state=running
 - [ ] gitにsshできるようにする
 - 既に存在する鍵を利用する
 ```
-scp ~/.ssh/id_rsa isu1:.ssh/id_rsa
+scp ~/.ssh/git_rsa isu1:.ssh/id_rsa
 scp ~/.ssh/id_rsa isu2:.ssh/id_rsa
 scp ~/.ssh/id_rsa isu3:.ssh/id_rsa
 ```
@@ -361,6 +361,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjA0OTIxOTYsLTE5NjMyNzQ3MjMsLT
-E1NTk3OTQzODldfQ==
+eyJoaXN0b3J5IjpbNDM1Mzk1MjQzLC0xOTYzMjc0NzIzLC0xNT
+U5Nzk0Mzg5XX0=
 -->
