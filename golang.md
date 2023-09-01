@@ -102,7 +102,7 @@ https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7
 
 sql.Open() はコネクションプールを初期化するだけで、実際に繋ぎに行くのはSQLを実行するタイミングとのこと
 なので、初期実装では起動直後にSQLが走らないのでエラーにならないが、インメモリ戦略を取るとエラーで落ちてしまう
-よって、以下のような周s
+よって、以下のような修正を入れる
 
 ```
 	// db.Open() が成功した直後にこれを入れる.
@@ -280,11 +280,11 @@ func main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDExODIxNDI3LC0yMjAwOTg4NTEsNDkyMD
-A0ODA0LC02OTg2NjY4NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEs
-NTk3ODQ2OTMwLDIxMDAwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMD
-Q0NDQsLTE4OTgwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAy
-ODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05MzgyOTE1MTUsNT
-Q2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4
-NTFdfQ==
+eyJoaXN0b3J5IjpbLTEwNjkxNTY0OTcsLTIyMDA5ODg1MSw0OT
+IwMDQ4MDQsLTY5ODY2Njg3NiwyMTMyODMyOTUsLTkyMTUxMjYx
+MSw1OTc4NDY5MzAsMjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4ND
+MwNDQ0NCwtMTg5ODA5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1
+MDI4OCwxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5MTUxNS
+w1NDYyNTUzNjUsLTk3NzE5MjYzNiwtNzU5NzYyODY1LC04OTc0
+ODg1MV19
 -->
