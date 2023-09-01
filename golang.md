@@ -100,6 +100,10 @@ https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7
 ## 再起動対策
 アプリケーション起動時にインメモリにデータを読み込むことをすると、再起動時にDBが起動していない場合にアプリケーションが立ち上がらないという事態になってしまう
 
+sql.Open() はコネクションプールを初期化するだけで、実際に繋ぎに行くのはSQLを実行するタイミングとのこと
+なので、初期実装では起動直後にSQLが走らないのでエラーにならないが、インメモリ戦略を取るとエラーで落ちてしまう
+よって、以下のような周s
+
 ```
 	// db.Open() が成功した直後にこれを入れる.
 	for {
@@ -276,11 +280,11 @@ func main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMDA5ODg1MSw0OTIwMDQ4MDQsLTY5OD
-Y2Njg3NiwyMTMyODMyOTUsLTkyMTUxMjYxMSw1OTc4NDY5MzAs
-MjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0NCwtMTg5OD
-A5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OCwxNjg5NDMx
-Mzk4LDE1NDE4MzMwNDAsLTkzODI5MTUxNSw1NDYyNTUzNjUsLT
-k3NzE5MjYzNiwtNzU5NzYyODY1LC04OTc0ODg1MSwtMTEwNjgw
-NzI5NV19
+eyJoaXN0b3J5IjpbNDExODIxNDI3LC0yMjAwOTg4NTEsNDkyMD
+A0ODA0LC02OTg2NjY4NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEs
+NTk3ODQ2OTMwLDIxMDAwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMD
+Q0NDQsLTE4OTgwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAy
+ODgsMTY4OTQzMTM5OCwxNTQxODMzMDQwLC05MzgyOTE1MTUsNT
+Q2MjU1MzY1LC05NzcxOTI2MzYsLTc1OTc2Mjg2NSwtODk3NDg4
+NTFdfQ==
 -->
