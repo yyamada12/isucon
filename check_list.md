@@ -7,19 +7,19 @@
 - [ ] ssh/config
 
 ```
-Host isucon1
+Host isu1
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
   LocalForward  11234 localhost:1234
   LocalForward  19999 localhost:19999
-Host isucon2
+Host isu2
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
   LocalForward  21234 localhost:1234
   LocalForward  29999 localhost:19999
-Host isucon3
+Host isu3
   HostName ホスト名
   IdentityFile ~/.ssh/鍵名
   User isucon
@@ -361,5 +361,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTk3OTQzODldfQ==
+eyJoaXN0b3J5IjpbLTE5NjMyNzQ3MjMsLTE1NTk3OTQzODldfQ
+==
 -->
