@@ -21,6 +21,13 @@
 `nginx -t` とすると設定ファイルのミスを指摘してくれる
 
 
+## Error log確認
+- [ ] （ログに `Too many open files` と出た場合） `worker_rlimit_nofile` を増やす
+- [ ] （ログに `worker_connections are not enough` と出た場合） `worker_connections` を増やす
+- [ ] （リクエストサイズが1MBより大きい場合, nginxが 413 Request Entity Too Large を返している場合）`client_max_body_size` を増やす
+- [ ] （ログに `[warn] ... client request body is buffered to a temporary file ...` と出た場合） `client_body_buffer_size` を増やす
+- [ ] （ログに `[warn] ... upstream response is buffered to a temporary file ...` と出た場合） `proxy_buffers` のサイズを増やす
+
 ## ロードバランス
 
 [参考](https://www.nedia.ne.jp/blog/tech/2016/08/04/7938)
@@ -495,8 +502,8 @@ events {
 
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0ODMyOTUyLC0yMTk3NDExODgsLTEzMz
-A4NDQ1MDUsLTI4MTIzMTc4MSwtOTc3Njg0OTcxLC00OTMyNzgz
-NjQsMTAxOTg5MTA4NSwtMTAxNTc5MzgxMywtNTQ5OTgxOTM1LD
-E4MTE3OTc1NDIsLTE3NzYzMzM3NjBdfQ==
+eyJoaXN0b3J5IjpbMTkxNTk4NzQ5MSwtMjE5NzQxMTg4LC0xMz
+MwODQ0NTA1LC0yODEyMzE3ODEsLTk3NzY4NDk3MSwtNDkzMjc4
+MzY0LDEwMTk4OTEwODUsLTEwMTU3OTM4MTMsLTU0OTk4MTkzNS
+wxODExNzk3NTQyLC0xNzc2MzMzNzYwXX0=
 -->
