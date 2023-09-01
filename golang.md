@@ -98,8 +98,21 @@ https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7
 
 
 ## 再起動対策
-アプリケーション起動時にインメモリにデータを読み込むことをすると、再起動時にDBの方が
+アプリケーション起動時にインメモリにデータを読み込むことをすると、再起動時にDBが起動していない場合にアプリケーションが立ち上がらないという事態になってしまう
 
+```
+	// db.Open() が成功した直後にこれを入れる.
+	for {
+		err := db.Ping()
+		if err == nil {
+			break
+		}
+		log.Print(err)
+		time.Sleep(time.Second * 2)
+	}
+	log.Print("DB ready!")
+```
+参考: https://zenn.dev/methane/articles/020f037513cd6b701aee
 
 
 ## responseのcache
@@ -263,7 +276,7 @@ func main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzE5OTY5Myw0OTIwMDQ4MDQsLTY5OD
+eyJoaXN0b3J5IjpbLTIyMDA5ODg1MSw0OTIwMDQ4MDQsLTY5OD
 Y2Njg3NiwyMTMyODMyOTUsLTkyMTUxMjYxMSw1OTc4NDY5MzAs
 MjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0NCwtMTg5OD
 A5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OCwxNjg5NDMx
