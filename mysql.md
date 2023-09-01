@@ -216,8 +216,17 @@ MySQL接続文字列(DSN) を、通常は
 
 ソケットの場所は、 `mysql -u root -p -e "select @@socket"` で確認できる (root user でなくてもOK)
 
+
+```
+mysql -u root -p -S ソケット
+```
+で接続できればOK
+ex)
+```
+mysql -u root -p -S /var/run/mysqld/mysql.sock
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NzkxOTE0MiwzMDQ2ODE0NjUsLTE0Mj
+eyJoaXN0b3J5IjpbMTY4MjUzOTA5MywzMDQ2ODE0NjUsLTE0Mj
 UzOTg1MjMsNjgxMTM3NzAsMjAzMTY1MjA1NCwtMTE1NDI1MTc4
 NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1LDExNT
 U0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMTUzMzEw
