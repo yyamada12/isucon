@@ -211,14 +211,17 @@ https://qiita.com/ryurock/items/9f561e486bfba4221747
 ## Unix ドメインソケット
 ほぼ出番はないが、、
 MySQL接続文字列(DSN) を、通常は
-isucon:isucon@tcp(localhost:3306)/xxx のような形のものを
-isucon:isucon@
+`isucon:isucon@tcp(localhost:3306)/xxx` のような形のものを
+`isucon:isucon@unix(/var/run/mysqld/mysql.sock)` のように修正すれば良い
+
+ソケットの場所は、 `mysql -u root -p -e "select @@socket"` で確認できる (root user でなくてもOK)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY5NzY0ODE1LDMwNDY4MTQ2NSwtMTQyNT
-M5ODUyMyw2ODExMzc3MCwyMDMxNjUyMDU0LC0xMTU0MjUxNzg0
-LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIxODUsMTE1NT
-Q3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC0xNTMzMTA3
-MzkyLDE2Mjk1NTQ2NzUsLTkwOTQ1Njk5NywtMTE0ODU0NzIyOS
-wtMjc2OTQ4MzE4LDEwMTU0OTE1MjAsMTExNzM2OTgwLDc0MjE5
-NTYwNV19
+eyJoaXN0b3J5IjpbLTU1NzkxOTE0MiwzMDQ2ODE0NjUsLTE0Mj
+UzOTg1MjMsNjgxMTM3NzAsMjAzMTY1MjA1NCwtMTE1NDI1MTc4
+NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1LDExNT
+U0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMTUzMzEw
+NzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1NDcyMj
+ksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MCw3NDIx
+OTU2MDVdfQ==
 -->
