@@ -174,6 +174,25 @@ CREATE TABLE isuumo.estate
 
 
 ## MySQL パラメータチューニング
+
+秘伝のタレ
+- [ ] 初期値を確認
+```
+SHOW VARIABLES LIKE 'innodb_buffer_pool_size';
+SHOW VARIABLES LIKE 'innodb_flush%';
+SHOW VARIABLES LIKE 'innodb_support%';
+SHOW VARIABLES LIKE 'max_connections';
+```
+- [ ] /etc/mysql/my.cnf に以下を書き込む
+```
+[mysqld]
+innodb_buffer_pool_size=1G
+innodb_flush_log_at_trx_commit=0
+innodb_flush_method=O_DIRECT
+innodb_support_xa=OFF
+max_connections=10000
+```
+
 MySQLTunerをとりあえず動かしてみるのが良さそう
 [MySQLTunerを使ってMySQLを診断しよう！] (https://note.dimage.co.jp/blog_009_mysqltuner.html)
 
@@ -226,11 +245,11 @@ ex)
 mysql -u root -p -S /var/run/mysqld/mysql.sock
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MjUzOTA5MywzMDQ2ODE0NjUsLTE0Mj
-UzOTg1MjMsNjgxMTM3NzAsMjAzMTY1MjA1NCwtMTE1NDI1MTc4
-NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMDU4MDIyMTg1LDExNT
-U0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0NTIzOSwtMTUzMzEw
-NzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OTcsLTExNDg1NDcyMj
-ksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDExMTczNjk4MCw3NDIx
-OTU2MDVdfQ==
+eyJoaXN0b3J5IjpbLTE4MTc4MDc5MTMsMTY4MjUzOTA5MywzMD
+Q2ODE0NjUsLTE0MjUzOTg1MjMsNjgxMTM3NzAsMjAzMTY1MjA1
+NCwtMTE1NDI1MTc4NCw2OTM1ODc4NjcsLTY3OTM3ODY3MSwxMD
+U4MDIyMTg1LDExNTU0NzU0NjIsMTAxODIzMzc1MiwtMTI5MjM0
+NTIzOSwtMTUzMzEwNzM5MiwxNjI5NTU0Njc1LC05MDk0NTY5OT
+csLTExNDg1NDcyMjksLTI3Njk0ODMxOCwxMDE1NDkxNTIwLDEx
+MTczNjk4MF19
 -->
