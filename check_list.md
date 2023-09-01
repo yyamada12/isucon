@@ -27,13 +27,13 @@ Host isu3
   LocalForward  39999 localhost:19999
 ```
 
+- [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
+
 - [ ] 初期のsshユーザーがubuntuなどになっている場合は、authorized_keysをisuconユーザーのホームディレクトリにコピーしてisuconユーザーでsshできるようにする
 ```
 sudo -u isucon mkdir -p /home/isucon/.ssh
-
+sudo cp /home/ubuntu/.ssh/authorized_keys /home/isucon/.ssh/authorized_keys
 ```
-
-- [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
 
 - [ ] ツールのインストール
 https://github.com/yyamada12/isucon-settings
@@ -380,6 +380,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI4MzUzODA5LC0xNDc1NTA2MDYyLDE5Mj
-Q3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3OTQzODldfQ==
+eyJoaXN0b3J5IjpbMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOT
+I0NzEwMDU5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
 -->
