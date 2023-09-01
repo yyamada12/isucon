@@ -321,6 +321,21 @@ events {
 }
 ```
 
+### 再起動対策
+
+```
+	// db.Open() が成功した直後にこれを入れる.
+	for {
+		err := db.Ping()
+		if err == nil {
+			break
+		}
+		log.Print(err)
+		time.Sleep(time.Second * 2)
+	}
+	log.Print("DB ready!")
+```
+
 
 ## やることなくなったら
 
@@ -361,6 +376,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDcxMDA1OSwtMTk2MzI3NDcyMywtMT
-U1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMT
+k2MzI3NDcyMywtMTU1OTc5NDM4OV19
 -->
