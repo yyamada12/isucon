@@ -1,5 +1,28 @@
 # nginx
 
+## チューニング
+参考:
+
+  - [ISUCON5 予選 part3](https://qiita.com/gky360/items/dccb88f4aecd50970915)
+- [fix nginx.conf](https://github.com/gky360/isucon5-qual-etc/commit/b20b5fc5f445600db213c374b025bcf901f71118)
+- [ISUCON 5でalpを使ってNginxのログを解析した話](https://papix.hatenablog.com/entry/2015/09/28/094310)
+
+- [ ] エラーログの出力先を指定、ログレベルをwarnにする (main > `error_log` )
+
+- [ ] (main > `worker_process auto;` )
+
+- [ ] MIMEタイプ読み込み (http > `types_hash_max_size 2048;` ), (http > `include /etc/nginx/mime.types;` )
+
+- [ ] keepalive 設定 (http > `keepalive_timeout 65;` ), (http > `keepalive_requests 500;` )
+
+- [ ] (http > `sendfile on;` )
+
+- [ ] (http > `tcp_nopush on;` )
+
+- [ ] (http > `tcp_nodelay on;` )
+
+- [ ] (http > `open_file_cache max=100 inactive=60s;` )
+
 ## 設定の正しさ確認
 `nginx -t` とすると設定ファイルのミスを指摘してくれる
 
@@ -478,8 +501,8 @@ events {
 
 https://qiita.com/mikene_koko/items/85fbe6a342f89bf53e89
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxOTc0MTE4OCwtMTMzMDg0NDUwNSwtMj
-gxMjMxNzgxLC05Nzc2ODQ5NzEsLTQ5MzI3ODM2NCwxMDE5ODkx
-MDg1LC0xMDE1NzkzODEzLC01NDk5ODE5MzUsMTgxMTc5NzU0Mi
-wtMTc3NjMzMzc2MF19
+eyJoaXN0b3J5IjpbLTg0Mjc4MDc3MiwtMjE5NzQxMTg4LC0xMz
+MwODQ0NTA1LC0yODEyMzE3ODEsLTk3NzY4NDk3MSwtNDkzMjc4
+MzY0LDEwMTk4OTEwODUsLTEwMTU3OTM4MTMsLTU0OTk4MTkzNS
+wxODExNzk3NTQyLC0xNzc2MzMzNzYwXX0=
 -->
