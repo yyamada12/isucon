@@ -54,7 +54,7 @@ return res
 [https://github.com/yyamada12/isucon7_re3/commit/405f0770410613486b1e2f312bec4f4f82fca9b4](https://github.com/yyamada12/isucon7_re3/commit/405f0770410613486b1e2f312bec4f4f82fca9b4)
 
 
-## テーブルのいメモリ化
+## テーブルのインメモリ化
 
 https://github.com/yyamada12/isucon10_re2/commit/99dbcd579758dcfbf1bf0494f0858032c866fd22
 
@@ -88,7 +88,7 @@ ISUCON5予選の例
 ISUCON11-prior
 https://github.com/yyamada12/isucon11-p_re/commit/5380ce2be09d3c0923acdf9468daa1dbbc0f1d5c 
 
-#### User を オンメモリ化した例
+#### User を インメモリ化した例
 ISUCON11-prior
 https://github.com/yyamada12/isucon11-p_re/commit/6e0f273b57aa7c60b2a5e7940da4087a4c7ab132
 
@@ -258,10 +258,10 @@ func main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MDUzOTM1NSwtNjk4NjY2ODc2LDIxMz
-I4MzI5NSwtOTIxNTEyNjExLDU5Nzg0NjkzMCwyMTAwMDA2NDQ0
-LDExNTM4MTEyMjgsNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMD
-Q3Mzg5MDc2LC0xMDk1OTUwMjg4LDE2ODk0MzEzOTgsMTU0MTgz
-MzA0MCwtOTM4MjkxNTE1LDU0NjI1NTM2NSwtOTc3MTkyNjM2LC
-03NTk3NjI4NjUsLTg5NzQ4ODUxLC0xMTA2ODA3Mjk1XX0=
+eyJoaXN0b3J5IjpbNDkyMDA0ODA0LC02OTg2NjY4NzYsMjEzMj
+gzMjk1LC05MjE1MTI2MTEsNTk3ODQ2OTMwLDIxMDAwMDY0NDQs
+MTE1MzgxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1MTgsLTIwND
+czODkwNzYsLTEwOTU5NTAyODgsMTY4OTQzMTM5OCwxNTQxODMz
+MDQwLC05MzgyOTE1MTUsNTQ2MjU1MzY1LC05NzcxOTI2MzYsLT
+c1OTc2Mjg2NSwtODk3NDg4NTEsLTExMDY4MDcyOTVdfQ==
 -->
