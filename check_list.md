@@ -102,9 +102,6 @@ ssh -T git@github.com
 ```
 ~/manage_etc_files.sh
 ```
-
-
-
 - mysql は設定ファイルの場所がまちまちなので気をつける
 以下のファイルの場合もあり
 ```
@@ -127,7 +124,6 @@ git reset --hard origin/main
 git branch -M main
 git branch --set-upstream-to=origin/main main
 ```
-
 
 2台目、3台目でデプロイしてベンチが通ればOK
 
@@ -372,7 +368,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0Mzg2ODk5MiwxNDEwNTEyNjI3LC0xND
+eyJoaXN0b3J5IjpbMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xND
 c1NTA2MDYyLDE5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3
 OTQzODldfQ==
 -->
