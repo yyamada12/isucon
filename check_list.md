@@ -68,8 +68,8 @@ sudo systemctl list-units --type=service --state=running
 - 既に存在する鍵を利用する
 ```
 scp ~/.ssh/git_rsa isu1:.ssh/id_rsa
-scp ~/.ssh/id_rsa isu2:.ssh/id_rsa
-scp ~/.ssh/id_rsa isu3:.ssh/id_rsa
+scp ~/.ssh/git_rsa isu2:.ssh/id_rsa
+scp ~/.ssh/git_rsa isu3:.ssh/id_rsa
 ```
 
 - ssh できることを確認
@@ -361,6 +361,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM1Mzk1MjQzLC0xOTYzMjc0NzIzLC0xNT
-U5Nzk0Mzg5XX0=
+eyJoaXN0b3J5IjpbMTkyNDcxMDA1OSwtMTk2MzI3NDcyMywtMT
+U1OTc5NDM4OV19
 -->
