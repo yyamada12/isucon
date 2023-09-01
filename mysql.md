@@ -211,9 +211,10 @@ https://qiita.com/ryurock/items/9f561e486bfba4221747
 ## Unix ドメインソケット
 ほぼ出番はないが、、
 MySQL接続文字列(DSN) を、通常は
-tcp(
+isucon:isucon@tcp(localhost:3306)/xxx のような形のものを
+isucon:isucon@
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcyNTcwNjQyLDMwNDY4MTQ2NSwtMTQyNT
+eyJoaXN0b3J5IjpbNTY5NzY0ODE1LDMwNDY4MTQ2NSwtMTQyNT
 M5ODUyMyw2ODExMzc3MCwyMDMxNjUyMDU0LC0xMTU0MjUxNzg0
 LDY5MzU4Nzg2NywtNjc5Mzc4NjcxLDEwNTgwMjIxODUsMTE1NT
 Q3NTQ2MiwxMDE4MjMzNzUyLC0xMjkyMzQ1MjM5LC0xNTMzMTA3
