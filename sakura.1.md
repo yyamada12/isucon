@@ -15,7 +15,9 @@ https://manual.sakura.ad.jp/cloud/payment/coupon.html
 
 https://knowledge.sakura.ad.jp/31520/
 - サーバーの追加から追加したいスペックで追加する
-- cloud-inits
+- cloud-init設定のところで、cloud init の cfg の内容をコピペ
+- ネットワークはデフォルトで100Mbpsとかになるので、スイッチを1つ作成し、アタッチする
+  - まずサーバーをシャットダウンし、編集から
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjIyNTM0OTldfQ==
+eyJoaXN0b3J5IjpbMTczNDYyMzQ4NV19
 -->
