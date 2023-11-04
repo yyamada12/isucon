@@ -17,7 +17,7 @@ https://knowledge.sakura.ad.jp/31520/
 - サーバーの追加から追加したいスペックで追加する
 - cloud-init設定のところで、cloud init の cfg の内容をコピペ
 - ネットワークはデフォルトで100Mbpsとかになるので、スイッチを1つ作成し、アタッチする
-  - まずサーバーをシャットダウンし、編集から
+  - まずサーバーをシャットダウンし、サーバーの詳細からNIC→追加
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNDYyMzQ4NV19
+eyJoaXN0b3J5IjpbLTgxODUzNjQwXX0=
 -->
