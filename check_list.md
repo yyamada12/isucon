@@ -91,8 +91,7 @@ ssh -T git@github.com
 .*
 !.gitignore
 /pprof
-```
-
+``
 
 
 - [ ] etcをレポジトリに追加する
@@ -368,7 +367,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xND
-c1NTA2MDYyLDE5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3
-OTQzODldfQ==
+eyJoaXN0b3J5IjpbLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MT
+A1MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2MzI3
+NDcyMywtMTU1OTc5NDM4OV19
 -->
