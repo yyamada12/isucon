@@ -31,8 +31,9 @@ network:
 
 ## サーバー代
 サーバー、ストレージ、スイッチに対してお金がかかる
-夜間や使わない間はストレージを残したままサーバーだけ削除することによってサーバー代を削減できそう
+夜間や使わない間はストレージを残したままサーバーだけ停止することによってサーバー代を削減できそう
+(削除までしなくても、停止するだけで料金かからなくなりそう)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODk1NDI2MTMsLTE4NjU1OTg5MDBdfQ
-==
+eyJoaXN0b3J5IjpbMjE0MDg0MzIyNSwtMTc4OTU0MjYxMywtMT
+g2NTU5ODkwMF19
 -->
