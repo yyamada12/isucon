@@ -33,6 +33,7 @@ Host isu3
 ```
 sudo -u isucon mkdir -p /home/isucon/.ssh
 sudo cp /home/ubuntu/.ssh/authorized_keys /home/isucon/.ssh/authorized_keys
+sudo chown isucon:isucon /home/isucon/.ssh/authorized_keys
 ```
 
 - [ ] ツールのインストール
@@ -367,7 +368,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MT
-A1MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2MzI3
-NDcyMywtMTU1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2Mz
+k4NjczODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0NzEw
+MDU5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
 -->
