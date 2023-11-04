@@ -30,7 +30,9 @@ network:
 ```
 
 ## サーバー代
-サーバー、ストレー
+サーバー、ストレージ、スイッチに対してお金がかかる
+夜間や使わない間はストレージを残したままサーバーだけ削除することによってサーバー代を削減できそう
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTI1NDM2MywtMTg2NTU5ODkwMF19
+eyJoaXN0b3J5IjpbLTE3ODk1NDI2MTMsLTE4NjU1OTg5MDBdfQ
+==
 -->
