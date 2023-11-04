@@ -18,7 +18,7 @@ https://knowledge.sakura.ad.jp/31520/
 - cloud-init設定のところで、cloud init の cfg の内容をコピペ
 - ネットワークはデフォルトで100Mbpsとかになるので、スイッチを1つ作成し、アタッチする
   - サーバーをシャットダウンし、サーバーの詳細からNIC→追加で作成したスイッチを選択
-  -  次に、ubuntu側で設定する `ip link` コマンドでNICを調べ、
+  -  次に、ubuntu側で設定する `ip link` コマンドでNICを調べ、`/etc/netplan/01-isucon.yaml` に 以下のように入力 (eth1のところをNICに置き換える)、 `sudo netplan apply` を実行する
 ```
 network:
   ethernets:
@@ -28,7 +28,9 @@ network:
       dhcp4: 'no'
       dhcp6: 'no'
 ```
+
+## サーバー代
+サーバー、ストレー
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjY4NzU3MjEsLTE4NjU1OTg5MDBdfQ
-==
+eyJoaXN0b3J5IjpbLTU3NTI1NDM2MywtMTg2NTU5ODkwMF19
 -->
