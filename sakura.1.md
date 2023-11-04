@@ -13,6 +13,9 @@ https://manual.sakura.ad.jp/cloud/payment/coupon.html
 
 ## 構築方法
 
+https://knowledge.sakura.ad.jp/31520/
+- サーバーの追加から追加したいスペックで追加する
+- cloud-inits
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2ODQwMzUyOF19
+eyJoaXN0b3J5IjpbLTExNjIyNTM0OTldfQ==
 -->
