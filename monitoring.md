@@ -245,6 +245,37 @@ or
 ssh -L 1234:localhost:1234
 ```
 
+# new relic
+https://newrelic.com/jp/blog/how-to-relic/isucon-go-agent
+
+
+```
+import (
+  "github.com/newrelic/go-agent/v3/integrations/nrecho-v4"
+  "github.com/newrelic/go-agent/v3/newrelic"
+)
+
+main() {
+  app, err := newrelic.NewApplication(
+  newrelic.ConfigAppName("sample-isucon12q-go"),
+
+newrelic.ConfigLicense("d367910d12ccc0004f05c786bf36ae45FFFFNRAL"),
+
+newrelic.ConfigAppLogEnabled(false),
+
+)
+
+if err != nil {
+
+fmt.Printf("failed to init newrelic NewApplication reason: %v\n", err)
+
+} else {
+
+fmt.Println("newrelic init success")
+
+}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjAxOTE5MzZdfQ==
+eyJoaXN0b3J5IjpbMTg2MTY4ODg3NSwtMTgyMDE5MTkzNl19
 -->
