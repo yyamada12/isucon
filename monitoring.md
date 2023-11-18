@@ -249,7 +249,8 @@ ssh -L 1234:localhost:1234
 https://newrelic.com/jp/blog/how-to-relic/isucon-go-agent
 
 
-new relic の ダッシュボードで、左下の
+new relic の ダッシュボードで、左下のユーザーアカウントのメニューから、API Keyを作成する
+Create 
 
 ```
 import (
@@ -276,5 +277,6 @@ main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM1NzYzMzAwLC0xODIwMTkxOTM2XX0=
+eyJoaXN0b3J5IjpbLTExMjc5NjEyMzUsLTE4MjAxOTE5MzZdfQ
+==
 -->
