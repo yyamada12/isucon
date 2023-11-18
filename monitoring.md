@@ -249,6 +249,8 @@ ssh -L 1234:localhost:1234
 https://newrelic.com/jp/blog/how-to-relic/isucon-go-agent
 
 
+new r
+
 ```
 import (
   "github.com/newrelic/go-agent/v3/integrations/nrecho-v4"
@@ -274,5 +276,6 @@ main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyOTIyMDY4MiwtMTgyMDE5MTkzNl19
+eyJoaXN0b3J5IjpbLTE5MTczNzQxNzAsLTE4MjAxOTE5MzZdfQ
+==
 -->
