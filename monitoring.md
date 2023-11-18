@@ -257,25 +257,22 @@ import (
 
 main() {
   app, err := newrelic.NewApplication(
-  newrelic.ConfigAppName("sample-isucon12q-go"),
+    newrelic.ConfigAppName("アプリ名"),
+    newrelic.ConfigLicense("ライセンスキー"),
+    newrelic.ConfigAppLogEnabled(false),
+  )
+  if err != nil {
+    fmt.Printf("failed to init newrelic NewApplication reason: %v\n", err)
+  } else {
+    fmt.Println("newrelic init success")
+  }
 
-newrelic.ConfigLicense("d367910d12ccc0004f05c786bf36ae45FFFFNRAL"),
+  ...
+  // echo の middleware に追加
+  e.Use(nrecho.Middleware(app))
 
-newrelic.ConfigAppLogEnabled(false),
-
-)
-
-if err != nil {
-
-fmt.Printf("failed to init newrelic NewApplication reason: %v\n", err)
-
-} else {
-
-fmt.Println("newrelic init success")
-
-}
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MTY4ODg3NSwtMTgyMDE5MTkzNl19
+eyJoaXN0b3J5IjpbMTMyOTIyMDY4MiwtMTgyMDE5MTkzNl19
 -->
