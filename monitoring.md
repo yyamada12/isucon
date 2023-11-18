@@ -250,7 +250,8 @@ https://newrelic.com/jp/blog/how-to-relic/isucon-go-agent
 
 
 new relic の ダッシュボードで、左下のユーザーアカウントのメニューから、API Keyを作成する
-Create key から Key Type を Ingest - License にして適当な名前で登録
+Create key から Key Type を Ingest - License にして適当な名前で登録 ( ConfigAppNameのアプリ名とは別で良い)
+作成した ライセンスキーを、 ConfigLicense に指定する
 
 ```
 import (
@@ -277,5 +278,6 @@ main() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMjQwMjk1MywtMTgyMDE5MTkzNl19
+eyJoaXN0b3J5IjpbLTExODgyMzIxMjcsLTE4MjAxOTE5MzZdfQ
+==
 -->
