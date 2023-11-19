@@ -281,7 +281,19 @@ main() {
 ## transaction, segment
 1リクエストのトレースをtransaction, その中の一部を segmentと呼ぶ模様
 datadog みたいに、 flame graph 風に表示してくれたりはしない、、
-forぶん
+for文の場合のまとめ方も癖があり、あまり見やすくはない
+
+とりあえず、 handlerの最初に以下を追加しておく
+```
+txn := nrecho.FromContext(c)
+defer txn.End()
+```
+
+測りたいところで、segmentを追加する
+```
+segment := txn.StartSegment("mySegmentName")
+// ... code you want to time here ...
+segment.End()
 
 
 ## mysql
@@ -290,6 +302,6 @@ https://pkg.go.dev/github.com/newrelic/go-agent/v3/integrations/nrmysql
 sql driver を new relic 提供のものに差し替えて、 SQL実行時にcontextを渡すようにすれば良いらしいが、 mysql.MySQLError とかを使っていると、new relic が提供してくれていないので使えない、、
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEwNzA5MTE4LC0xMTg4MjMyMTI3LC0xOD
-IwMTkxOTM2XX0=
+eyJoaXN0b3J5IjpbMzA2NjU2NzAsLTExODgyMzIxMjcsLTE4Mj
+AxOTE5MzZdfQ==
 -->
