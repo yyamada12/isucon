@@ -320,7 +320,8 @@ func createDBSegment(query, table, operation string, params []interface{}) newre
 }
 ```
 
-以下のように、 
+以下のように、 txn.StartSegmentNow()　した上で、 seg.End()すれば良い
+
 ```
 query := "INSERT IGNORE INTO visit_history (player_id, tenant_id, competition_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
 	params := []interface{}{v.playerID, tenant.ID, competitionID, now, now}
@@ -346,6 +347,6 @@ https://pkg.go.dev/github.com/newrelic/go-agent/v3/integrations/nrmysql
 sql driver を new relic 提供のものに差し替えて、 SQL実行時にcontextを渡すようにすれば良いらしいが、 mysql.MySQLError とかを使っていると、new relic が提供してくれていないので使えない、、
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTAxNjY1MjIsLTE5NjQ2OTE3MTYsLT
-ExODgyMzIxMjcsLTE4MjAxOTE5MzZdfQ==
+eyJoaXN0b3J5IjpbMTc2OTM0NDM5MywtMTk2NDY5MTcxNiwtMT
+E4ODIzMjEyNywtMTgyMDE5MTkzNl19
 -->
