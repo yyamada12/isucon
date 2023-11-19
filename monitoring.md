@@ -304,6 +304,8 @@ defer txn.StartSegment("mySegmentName").End()
 ## database 
 
 後述の通りmysql拡張が使える場合は限られるので、カスタムで設定する必要ありそう
+```
+
 
 ### mysql
 https://pkg.go.dev/github.com/newrelic/go-agent/v3/integrations/nrmysql
@@ -311,6 +313,6 @@ https://pkg.go.dev/github.com/newrelic/go-agent/v3/integrations/nrmysql
 sql driver を new relic 提供のものに差し替えて、 SQL実行時にcontextを渡すようにすれば良いらしいが、 mysql.MySQLError とかを使っていると、new relic が提供してくれていないので使えない、、
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1NTI3MDEyLC0xMTg4MjMyMTI3LC0xOD
-IwMTkxOTM2XX0=
+eyJoaXN0b3J5IjpbLTE5NjQ2OTE3MTYsLTExODgyMzIxMjcsLT
+E4MjAxOTE5MzZdfQ==
 -->
