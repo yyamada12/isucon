@@ -100,28 +100,19 @@ https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7
 #### 汎用的な構造体を作った
 ジェネリクスで、key(string) で 構造体をキャッシュする
 ```
-type  SyncMap[T any] struct {
-
-m map[string]*T
-
-mu sync.RWMutex
-
+type SyncMap[T any] struct {
+  m map[string]*T
+  mu sync.RWMutex
 }
-
-  
 
 func NewSyncMap[T any]() *SyncMap[T] {
-
-return  &SyncMap[T]{m: map[string]*T{}}
-
+  return  &SyncMap[T]{m: map[string]*T{}}
 }
 
-  
-
 func (sm *SyncMap[T]) Add(key string, value *T) {
-sm.mu.Lock()
-defer sm.mu.Unlock()
-sm.m[key] = value
+  sm.mu.Lock()
+  defer sm.mu.Unlock()
+  sm.m[key] = value
 }
 
 func (sm *SyncMap[T]) Get(key string) *T {
@@ -330,7 +321,7 @@ import (
 id := uuid.NewString()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTU5MTQ0OSwxNTI1MTIwNzI1LC0xMD
+eyJoaXN0b3J5IjpbMTA5NDc2NzM2MSwxNTI1MTIwNzI1LC0xMD
 Y5MTU2NDk3LC0yMjAwOTg4NTEsNDkyMDA0ODA0LC02OTg2NjY4
 NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3ODQ2OTMwLDIxMD
 AwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1
