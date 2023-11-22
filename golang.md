@@ -97,6 +97,46 @@ https://github.com/yyamada12/isucon11q_re/commit/e835f878bedf8c3739993ec89c0f536
 https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7cd0d14811
 
 
+#### 汎用的な構造体を作った
+ジェネリクスで、key(string) で 構造体をキャッシュする
+```
+type  SyncMap[T any] struct {
+
+m map[string]*T
+
+mu sync.RWMutex
+
+}
+
+  
+
+func NewSyncMap[T any]() *SyncMap[T] {
+
+return  &SyncMap[T]{m: map[string]*T{}}
+
+}
+
+  
+
+func (sm *SyncMap[T]) Add(key string, value *T) {
+sm.mu.Lock()
+defer sm.mu.Unlock()
+sm.m[key] = value
+}
+
+func (sm *SyncMap[T]) Get(key string) *T {
+  sm.mu.RLock()
+  defer sm.mu.RUnlock()
+  return sm.m[key]
+}
+
+func (sm *SyncMap[T]) Clear() {
+  sm.mu.Lock()
+  defer sm.mu.Unlock()
+  sm.m =  map[string]*T{}
+}
+```
+
 ## 再起動対策
 アプリケーション起動時にインメモリにデータを読み込むことをすると、再起動時にDBが起動していない場合にアプリケーションが立ち上がらないという事態になってしまう
 
@@ -290,11 +330,11 @@ import (
 id := uuid.NewString()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNTEyMDcyNSwtMTA2OTE1NjQ5NywtMj
-IwMDk4ODUxLDQ5MjAwNDgwNCwtNjk4NjY2ODc2LDIxMzI4MzI5
-NSwtOTIxNTEyNjExLDU5Nzg0NjkzMCwyMTAwMDA2NDQ0LDExNT
-M4MTEyMjgsNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMDQ3Mzg5
-MDc2LC0xMDk1OTUwMjg4LDE2ODk0MzEzOTgsMTU0MTgzMzA0MC
-wtOTM4MjkxNTE1LDU0NjI1NTM2NSwtOTc3MTkyNjM2LC03NTk3
-NjI4NjVdfQ==
+eyJoaXN0b3J5IjpbLTgyMTU5MTQ0OSwxNTI1MTIwNzI1LC0xMD
+Y5MTU2NDk3LC0yMjAwOTg4NTEsNDkyMDA0ODA0LC02OTg2NjY4
+NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3ODQ2OTMwLDIxMD
+AwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1
+MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMTY4OTQzMTM5OC
+wxNTQxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1MzY1LC05Nzcx
+OTI2MzZdfQ==
 -->
