@@ -17,10 +17,18 @@ https://manual.sakura.ad.jp/cloud/payment/coupon.html
 2. サーバーをシャットダウン
 3. サーバの詳細画面からNICを追加
 4. 追加したNICにスイッチをアタッチ
-5. 
+5. ip addr コマンドで、追加sれたNICを確認 (ubuntu 22.04だとens4になるはず)
 6. sudo vim /etc/netplan/01-isucon.yaml を作成し、以下の内容を記載
 ```
+network:
+  ethernets:
+    ens4:
+      addresses:
+        - 192.168.0.1/16
+dhcp4: 'no'
 
+dhcp6: 'no'
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3MTMxNjUzLDE4OTQ0Mjk2MTZdfQ==
+eyJoaXN0b3J5IjpbMTAyMzkzNjI1NiwxODk0NDI5NjE2XX0=
 -->
