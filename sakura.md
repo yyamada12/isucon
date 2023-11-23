@@ -13,6 +13,14 @@ https://manual.sakura.ad.jp/cloud/payment/coupon.html
 
 ## ブリッジ作成
 
+1. ブリッジ作成
+2. サーバーをシャットダウン
+3. サーバの詳細画面からNICを追加
+4. 追加したNICにスイッチをアタッチ
+5. 
+6. sudo vim /etc/netplan/01-isucon.yaml を作成し、以下の内容を記載
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MTM1MjQ0MSwxODk0NDI5NjE2XX0=
+eyJoaXN0b3J5IjpbNDU3MTMxNjUzLDE4OTQ0Mjk2MTZdfQ==
 -->
