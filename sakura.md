@@ -10,6 +10,9 @@ https://manual.sakura.ad.jp/cloud/payment/coupon.html
 → [オプション]をクリック
 → 左メニューの[クーポン]をクリックします。  
 右上の[追加]をクリックします。
+
+## ブリッジ作成
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NDQyOTYxNl19
+eyJoaXN0b3J5IjpbMjA4MTM1MjQ0MSwxODk0NDI5NjE2XX0=
 -->
