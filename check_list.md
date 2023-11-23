@@ -341,6 +341,8 @@ events {
 ```
 
 
+### DBへのCRUDのかしか
+
 ## やることなくなったら
 
 ### app
@@ -380,8 +382,8 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1Nzc1MDY1NCwtNTUzNTU3ODMwLDEyMD
-A2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MTA1MTI2
-MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2MzI3NDcyMy
-wtMTU1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbLTE0MTkzODY0MjYsLTg1Nzc1MDY1NCwtNT
+UzNTU3ODMwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3
+Mzg0LDE0MTA1MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OS
+wtMTk2MzI3NDcyMywtMTU1OTc5NDM4OV19
 -->
