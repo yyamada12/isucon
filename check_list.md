@@ -341,7 +341,13 @@ events {
 ```
 
 
-### DBへのCRUDのかしか
+### DBへのCRUDの可視化
+https://github.com/mazrean/isucrud/
+```
+go install github.com/mazrean/isucrud@latest
+```
+isucrud ./...
+
 
 ## やることなくなったら
 
@@ -382,8 +388,8 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTkzODY0MjYsLTg1Nzc1MDY1NCwtNT
-UzNTU3ODMwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3
-Mzg0LDE0MTA1MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OS
-wtMTk2MzI3NDcyMywtMTU1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbMTMwNTk5OTk2MiwtODU3NzUwNjU0LC01NT
+M1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2Mzk4Njcz
+ODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0NzEwMDU5LC
+0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
 -->
