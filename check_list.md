@@ -145,6 +145,18 @@ git branch --set-upstream-to=origin/main main
         "**/bin/**": true,
         "**/pkg/**": true,
         "**/src/**": true,
+    },
+    "files.exclude": {
+        "**/.*/**": true,
+        "**/webapp/nodejs/**": true,
+        "**/webapp/perl/**": true,
+        "**/webapp/php/**": true,
+        "**/webapp/python/**": true,
+        "**/webapp/ruby/**": true,
+        "**/webapp/rust/**": true,
+        "**/bin/**": true,
+        "**/pkg/**": true,
+        "**/src/**": true,
     }
 }
 ```
@@ -368,8 +380,8 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC02Nz
-QyMTM1MDYsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xNDc1NTA2
-MDYyLDE5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3OTQzOD
-ldfQ==
+eyJoaXN0b3J5IjpbLTg1Nzc1MDY1NCwtNTUzNTU3ODMwLDEyMD
+A2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MTA1MTI2
+MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2MzI3NDcyMy
+wtMTU1OTc5NDM4OV19
 -->
