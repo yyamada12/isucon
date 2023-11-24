@@ -41,13 +41,13 @@ https://github.com/yyamada12/isucon-settings
   
 - [ ] 必須ツールと設定 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_essentials.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/mster/install_essentials.sh)"
 ```
 
 - [ ] 計測ツール
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/mster/install_tools.sh)"
 ```
 
 arm
@@ -59,7 +59,11 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 APP_DIR: アプリケーションのディレクトリ
 APP_BUILD_CMD: go build or make or else
 APP_SERVICE_NAME: isucon-go.service 的なやつ
-SLACK_TOKEN: https://api.slack.com/apps/A05GTSY2MKJ/oauth
+SLAa
+```
+c r SL /.bsrc
+```
+https://api.slack.com/apps/A05GTSY2MKJ/oauth
 
 - [ ] webサーバが何か確認する
 
@@ -72,9 +76,10 @@ sudo systemctl list-units --type=service --state=running
 - [ ] gitにsshできるようにする
 - 既に存在する鍵を利用する
 ```
-scp ~/.ssh/git_rsa isu1:.ssh/id_rsa
+scp ~/.ssha isu1:.ssh/id_rsa
 scp ~/.ssh/git_rsa isu2:.ssh/id_rsa
-scp ~/.ssh/git_rsa isu3:.ssh/id_rsa
+scp ~/.ssh/git_rsa isu3:
+echo '''.ssh/id_rsa
 ```
 
 - ssh できることを確認
@@ -91,7 +96,8 @@ ssh -T git@github.com
 ```.gitignore
 .*
 !.gitignore
-/pprof
+.*
+!.gitignore/pprof
 ```
 
 
@@ -247,6 +253,8 @@ long_query_time = 0
 show variables like  'slow_query%';
 show variables like  'long%';
 ```
+nf
+```
 
 
 ### pprof
@@ -280,82 +288,14 @@ innodb_flush_log_at_trx_commit = 0
 
 ### too many open files 対策
 1: ulimit の数を上げる
-/etc/security/limits.conf
-```
-* soft nproc 65535
-* hard nproc 65535
-* hard nofile 65535
-* soft nofile 65535
-```
-
-`sudo reboot`
-
-`ulimit -n` して値が65535になっていればOK
-
-
-2: nginx.conf をいじる
-
-worker数は woker_processes で決まる。
-auto になっている時は、 `ps aux | grep nginx` でプロセス数を数えればOK。autoであればCPU のコア数と同じになるはず。
-
-```
-worker_rlimit_nofile {65535 / worker数};
-
-events {
-    worker_connections {worker_rlimit_nofile / 2};
-}
-
-```
-
-worker数が2の場合
-```
-worker_rlimit_nofile 32768;
-
-events {
-    worker_connections 16384;
-}
-```
-
-worker数が4の場合
-```
-worker_rlimit_nofile 16384;
-
-events {
-    worker_connections 8192;
-}
-```
-
-### 再起動対策
-
-```
-	// db.Open() が成功した直後にこれを入れる.
-	for {
-		err := db.Ping()
-		if err == nil {
-			break
-		}
-		log.Print(err)
-		time.Sleep(time.Second * 2)
-	}
-	log.Print("DB ready!")
-```
-
-
-### DBへのCRUDの可視化
-https://github.com/mazrean/isucrud/
-```
-go install github.com/mazrean/isucrud@latest
-```
-isucrud ./...
-
-
-## やることなくなったら
+/etc/security/limits.co
 
 ### app
 - [ ] コネクションプールの数を増やしてみる
 - [ ] GOMAXPROCS の値を確認する
 
 ### nginx
+
 - [ ] error log を確認して対応する
 - [ ] 秘伝のタレのパラメータ試してみる
 
@@ -365,8 +305,7 @@ isucrud ./...
 
 ## 再起動試験
 - [ ] ベンチ実施後、全台で `sudo reboot` を実行する
-- [ ] 起動後、アプリを操作し、ベンチによる変更が保存されていることを確認する
-
+- [ ] 起動後、アプリを操作し、ベンチによる変更が保存されていることを確認する（
 
 ## 提出前
 
@@ -388,8 +327,9 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNTk5OTk2MiwtODU3NzUwNjU0LC01NT
-M1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2Mzk4Njcz
-ODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0NzEwMDU5LC
-0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
+eyJoaXN0b3J5IjpbMTQ1ODkzODY0NiwxMzA1OTk5OTYyLC04NT
+c3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC02NzQyMTM1
+MDYsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xNDc1NTA2MDYyLD
+E5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3OTQzODldfQ==
+
 -->
