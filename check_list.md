@@ -252,8 +252,7 @@ long_query_time = 0
 show variables like  'slow_query%';
 show variables like  'long%';
 ```
-nf
-```
+
 
 
 ### pprof
@@ -326,9 +325,9 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMz
-A1OTk5OTYyLC04NTc3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5
-NTk0LC02NzQyMTM1MDYsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC
-0xNDc1NTA2MDYyLDE5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1
-NTk3OTQzODldfQ==
+eyJoaXN0b3J5IjpbMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxND
+U4OTM4NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3
+ODMwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LD
+E0MTA1MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2
+MzI3NDcyMywtMTU1OTc5NDM4OV19
 -->
