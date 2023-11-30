@@ -59,11 +59,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 APP_DIR: アプリケーションのディレクトリ
 APP_BUILD_CMD: go build or make or else
 APP_SERVICE_NAME: isucon-go.service 的なやつ
-SLAa
-```
-c r SL /.bsrc
-```
-https://api.slack.com/apps/A05GTSY2MKJ/oauth
+SLACK_TOKEN: https://api.slack.com/apps/A05GTSY2MKJ/oauth
 
 - [ ] webサーバが何か確認する
 
@@ -325,9 +321,9 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxND
-U4OTM4NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3
-ODMwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LD
-E0MTA1MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2
-MzI3NDcyMywtMTU1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbLTE1ODAwNjMxMSwyMTM1ODI3MTIzLC0xOD
+kxOTc1NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUw
+NjU0LC01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LD
+E2Mzk4NjczODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0
+NzEwMDU5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
 -->
