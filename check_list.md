@@ -1,5 +1,16 @@
 # ISUCON チェックリスト
 
+## 前日までにやること
+
+- [ ] レギュレーションを読み込んでおく
+- [ ] 前年のマニュアルを読み込んでおく
+- [ ] github リポジトリを作っておく
+
+## 開始直前にやること
+
+- [ ] Cloud
+
+
 ## 開始直後
 
 ### 環境構築
@@ -385,10 +396,10 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LDIxMz
-U4MjcxMjMsLTE4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1OTk5
-OTYyLC04NTc3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC
-02NzQyMTM1MDYsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xNDc1
-NTA2MDYyLDE5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3OT
-QzODldfQ==
+eyJoaXN0b3J5IjpbMTQxNjU4MDc3MSwtMTQyNzkwMzA4LC03Nz
+g5MDM1NjYsMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4OTM4
+NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3ODMwLD
+EyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MTA1
+MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2MzI3ND
+cyMywtMTU1OTc5NDM4OV19
 -->
