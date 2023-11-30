@@ -5,7 +5,7 @@
 - [ ] レギュレーションを読み込んでおく
 - [ ] 前年のマニュアルを読み込んでおく
 - [ ] github リポジトリを作っておく
-- [ ] 
+  - [ ] 2台目、3台目用のgitコマンドを作っておく
 
 ## 開始直前にやること
 
@@ -13,6 +13,7 @@
 - [ ] 前回のマニュアルを開いておき、VSCodeで差分を比較できるようにしておく
 - [ ] ssh/configを開いておき、編集できる状態にしておく
 - [ ] local で go の sandbox を開いておき、簡単な実装の動作確認が手元でできるようにしておく
+- [ ] slackのAPI Token 画面を用意しておく
 
 ## 開始直後
 
@@ -399,7 +400,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1ODUwOTk5NywxMTM4MTYyMzM2LC0xND
+eyJoaXN0b3J5IjpbMjEwNzM3NzAwMCwxMTM4MTYyMzM2LC0xND
 I3OTAzMDgsLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xODkxOTc1
 NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUwNjU0LC
 01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2Mzk4
