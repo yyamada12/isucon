@@ -5,6 +5,7 @@
 - [ ] レギュレーションを読み込んでおく
 - [ ] 前年のマニュアルを読み込んでおく
 - [ ] github リポジトリを作っておく
+- [ ] 
 
 ## 開始直前にやること
 
@@ -398,10 +399,10 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzODE2MjMzNiwtMTQyNzkwMzA4LC03Nz
-g5MDM1NjYsMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4OTM4
-NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3ODMwLD
-EyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MTA1
-MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2MzI3ND
-cyMywtMTU1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbLTM1ODUwOTk5NywxMTM4MTYyMzM2LC0xND
+I3OTAzMDgsLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xODkxOTc1
+NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUwNjU0LC
+01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2Mzk4
+NjczODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0NzEwMD
+U5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
 -->
