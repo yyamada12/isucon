@@ -43,6 +43,11 @@ http {
 
 
 
+alpより細かい粒度でログを解析したい場合
+trdsql というツールが使えるらしい
+https://qiita.com/noborus/items/f253961cca6f4465f20c
+https://qiita.com/noborus/items/f253961cca6f4465f20c
+
 
 # pt-query-digest
 - [ ] インストール
@@ -347,6 +352,6 @@ https://pkg.go.dev/github.com/newrelic/go-agent/v3/integrations/nrmysql
 sql driver を new relic 提供のものに差し替えて、 SQL実行時にcontextを渡すようにすれば良いらしいが、 mysql.MySQLError とかを使っていると、new relic が提供してくれていないので使えない、、
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2OTM0NDM5MywtMTk2NDY5MTcxNiwtMT
-E4ODIzMjEyNywtMTgyMDE5MTkzNl19
+eyJoaXN0b3J5IjpbODE0NzQ5NzAxLDE3NjkzNDQzOTMsLTE5Nj
+Q2OTE3MTYsLTExODgyMzIxMjcsLTE4MjAxOTE5MzZdfQ==
 -->
