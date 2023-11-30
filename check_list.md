@@ -363,7 +363,7 @@ isucrud ./...
 
 ## 再起動試験
 - [ ] ベンチ実施後、全台で `sudo reboot` を実行する
-- [ ] 起動後、アプリを操作し、ベンチによる変更が保存されていることを確認する（
+- [ ] 起動後、アプリを操作し、ベンチによる変更が保存されていることを確認する
 
 ## 提出前
 
@@ -385,9 +385,10 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xOD
-kxOTc1NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUw
-NjU0LC01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LD
-E2Mzk4NjczODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0
-NzEwMDU5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
+eyJoaXN0b3J5IjpbLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LDIxMz
+U4MjcxMjMsLTE4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1OTk5
+OTYyLC04NTc3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC
+02NzQyMTM1MDYsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xNDc1
+NTA2MDYyLDE5MjQ3MTAwNTksLTE5NjMyNzQ3MjMsLTE1NTk3OT
+QzODldfQ==
 -->
