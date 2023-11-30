@@ -8,7 +8,9 @@
 
 ## 開始直前にやること
 
-- [ ] Cloud
+- [ ] CloudFormation による構築準備 (前年度のマニュアル読んで手順確認&AWS マネコンを開いておく)
+- [ ] 前回のマニュアルを開いておき、VSCodeで差分を比較できるようにしておく
+- [ ] ssh/configを開いておき、編集
 
 
 ## 開始直後
@@ -396,10 +398,10 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNjU4MDc3MSwtMTQyNzkwMzA4LC03Nz
-g5MDM1NjYsMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4OTM4
-NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3ODMwLD
-EyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MTA1
-MTI2MjcsLTE0NzU1MDYwNjIsMTkyNDcxMDA1OSwtMTk2MzI3ND
-cyMywtMTU1OTc5NDM4OV19
+eyJoaXN0b3J5IjpbMjM0NjQzMjI4LC0xNDI3OTAzMDgsLTc3OD
+kwMzU2NiwyMTM1ODI3MTIzLC0xODkxOTc1NDc3LDE0NTg5Mzg2
+NDYsMTMwNTk5OTk2MiwtODU3NzUwNjU0LC01NTM1NTc4MzAsMT
+IwMDY3OTU5NCwtNjc0MjEzNTA2LDE2Mzk4NjczODQsMTQxMDUx
+MjYyNywtMTQ3NTUwNjA2MiwxOTI0NzEwMDU5LC0xOTYzMjc0Nz
+IzLC0xNTU5Nzk0Mzg5XX0=
 -->
