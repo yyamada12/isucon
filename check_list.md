@@ -91,8 +91,7 @@ ssh -T git@github.com
 ```.gitignore
 .*
 !.gitignore
-.*
-!.gitignore/pprof
+/pprof
 ```
 
 
@@ -282,7 +281,72 @@ innodb_flush_log_at_trx_commit = 0
 
 ### too many open files 対策
 1: ulimit の数を上げる
-/etc/security/limits.co
+/etc/security/limits.conf
+```
+* soft nproc 65535
+* hard nproc 65535
+* hard nofile 65535
+* soft nofile 65535
+```
+
+`sudo reboot`
+
+`ulimit -n` して値が65535になっていればOK
+
+
+2: nginx.conf をいじる
+
+worker数は woker_processes で決まる。
+auto になっている時は、 `ps aux | grep nginx` でプロセス数を数えればOK。autoであればCPU のコア数と同じになるはず。
+
+```
+worker_rlimit_nofile {65535 / worker数};
+events {
+    worker_connections {worker_rlimit_nofile / 2};
+}
+```
+
+worker数が2の場合
+```
+worker_rlimit_nofile 32768;
+events {
+    worker_connections 16384;
+}
+```
+
+worker数が4の場合
+```
+worker_rlimit_nofile 16384;
+events {
+    worker_connections 8192;
+}
+```
+
+### 再起動対策
+
+```
+	// db.Open() が成功した直後にこれを入れる.
+	for {
+		err := db.Ping()
+		if err == nil {
+			break
+		}
+		log.Print(err)
+		time.Sleep(time.Second * 2)
+	}
+	log.Print("DB ready!")
+```
+
+
+### DBへのCRUDの可視化
+https://github.com/mazrean/isucrud/
+```
+go install github.com/mazrean/isucrud@latest
+```
+isucrud ./...
+
+
+## やることなくなったら
 
 ### app
 - [ ] コネクションプールの数を増やしてみる
@@ -321,7 +385,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODAwNjMxMSwyMTM1ODI3MTIzLC0xOD
+eyJoaXN0b3J5IjpbLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xOD
 kxOTc1NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUw
 NjU0LC01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LD
 E2Mzk4NjczODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0
