@@ -109,10 +109,10 @@ func NewSyncMap[T any]() *SyncMap[T] {
   return  &SyncMap[T]{m: map[string]*T{}}
 }
 
-func (sm *SyncMap[T]) Add(key string, value *T) {
+func (sm *SyncMap[T]) Add(key string, value T) {
   sm.mu.Lock()
   defer sm.mu.Unlock()
-  sm.m[key] = value
+  sm.m[key] = &value
 }
 
 func (sm *SyncMap[T]) Get(key string) *T {
@@ -321,11 +321,11 @@ import (
 id := uuid.NewString()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NDc2NzM2MSwxNTI1MTIwNzI1LC0xMD
-Y5MTU2NDk3LC0yMjAwOTg4NTEsNDkyMDA0ODA0LC02OTg2NjY4
-NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3ODQ2OTMwLDIxMD
-AwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQsLTE4OTgwOTc1
-MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMTY4OTQzMTM5OC
-wxNTQxODMzMDQwLC05MzgyOTE1MTUsNTQ2MjU1MzY1LC05Nzcx
-OTI2MzZdfQ==
+eyJoaXN0b3J5IjpbLTI3MzUyNzQ1MSwxMDk0NzY3MzYxLDE1Mj
+UxMjA3MjUsLTEwNjkxNTY0OTcsLTIyMDA5ODg1MSw0OTIwMDQ4
+MDQsLTY5ODY2Njg3NiwyMTMyODMyOTUsLTkyMTUxMjYxMSw1OT
+c4NDY5MzAsMjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0
+NCwtMTg5ODA5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OC
+wxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkzODI5MTUxNSw1NDYy
+NTUzNjVdfQ==
 -->
