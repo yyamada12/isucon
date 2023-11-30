@@ -56,13 +56,13 @@ https://github.com/yyamada12/isucon-settings
   
 - [ ] 必須ツールと設定 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/mster/install_essentials.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_essentials.sh)"
 ```
 
 - [ ] 計測ツール
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/mster/install_tools.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
 ```
 
 arm
@@ -400,10 +400,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNzM3NzAwMCwxMTM4MTYyMzM2LC0xND
-I3OTAzMDgsLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xODkxOTc1
-NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUwNjU0LC
-01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2Mzk4
-NjczODQsMTQxMDUxMjYyNywtMTQ3NTUwNjA2MiwxOTI0NzEwMD
-U5LC0xOTYzMjc0NzIzLC0xNTU5Nzk0Mzg5XX0=
+eyJoaXN0b3J5IjpbNTczMTU3MTQwLDIxMDczNzcwMDAsMTEzOD
+E2MjMzNiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMjEzNTgyNzEy
+MywtMTg5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5OTk5NjIsLT
+g1Nzc1MDY1NCwtNTUzNTU3ODMwLDEyMDA2Nzk1OTQsLTY3NDIx
+MzUwNiwxNjM5ODY3Mzg0LDE0MTA1MTI2MjcsLTE0NzU1MDYwNj
+IsMTkyNDcxMDA1OSwtMTk2MzI3NDcyMywtMTU1OTc5NDM4OV19
+
 -->
