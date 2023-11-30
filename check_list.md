@@ -253,6 +253,13 @@ slow_query_log_file = /var/log/mysql/slow.log
 long_query_time = 0
 ```
 
+```
+set global slow_query_log=1;
+set global slow_query_log_file='/var/log/mysql/slow.log';
+set global long_query_time=0;
+```
+
+
 - [ ] mysql再起動
 
 デプロイスクリプト回す
@@ -400,11 +407,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczMTU3MTQwLDIxMDczNzcwMDAsMTEzOD
-E2MjMzNiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMjEzNTgyNzEy
-MywtMTg5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5OTk5NjIsLT
-g1Nzc1MDY1NCwtNTUzNTU3ODMwLDEyMDA2Nzk1OTQsLTY3NDIx
-MzUwNiwxNjM5ODY3Mzg0LDE0MTA1MTI2MjcsLTE0NzU1MDYwNj
-IsMTkyNDcxMDA1OSwtMTk2MzI3NDcyMywtMTU1OTc5NDM4OV19
-
+eyJoaXN0b3J5IjpbMTk1ODgxNjU5Miw1NzMxNTcxNDAsMjEwNz
+M3NzAwMCwxMTM4MTYyMzM2LC0xNDI3OTAzMDgsLTc3ODkwMzU2
+NiwyMTM1ODI3MTIzLC0xODkxOTc1NDc3LDE0NTg5Mzg2NDYsMT
+MwNTk5OTk2MiwtODU3NzUwNjU0LC01NTM1NTc4MzAsMTIwMDY3
+OTU5NCwtNjc0MjEzNTA2LDE2Mzk4NjczODQsMTQxMDUxMjYyNy
+wtMTQ3NTUwNjA2MiwxOTI0NzEwMDU5LC0xOTYzMjc0NzIzLC0x
+NTU5Nzk0Mzg5XX0=
 -->
