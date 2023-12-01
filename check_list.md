@@ -277,9 +277,22 @@ import (
 
 func main() {
     go func() {
-        log.Println(http.ListenAndServe("localhost:6060", nil))
+        fmt.Println(http.ListenAndServe("localhost:6060", nil))
     }()
 ```
+
+- [ ] initializeに仕込む
+```
+go  func() {
+  if out, err := exec.Command("go", "tool", "pprof", "-seconds=30", "-proto", "-output", "/home/isucon/pprof/pprof.pb.gz", "localhost:6060/debug/pprof/profile").CombinedOutput(); err != nil {
+    fmt.Printf("pprof failed with err=%s, %s", string(out), err)
+  } else {
+    fmt.Printf("pprof.pb.gz created: %s", string(out))
+  }
+}()
+```
+
+go の パスが通っていない場合はPATHを
 
 - [ ] ビルド
 
@@ -401,11 +414,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MzYwOTQzNCwxOTU4ODE2NTkyLDU3Mz
-E1NzE0MCwyMTA3Mzc3MDAwLDExMzgxNjIzMzYsLTE0Mjc5MDMw
-OCwtNzc4OTAzNTY2LDIxMzU4MjcxMjMsLTE4OTE5NzU0NzcsMT
-Q1ODkzODY0NiwxMzA1OTk5OTYyLC04NTc3NTA2NTQsLTU1MzU1
-NzgzMCwxMjAwNjc5NTk0LC02NzQyMTM1MDYsMTYzOTg2NzM4NC
-wxNDEwNTEyNjI3LC0xNDc1NTA2MDYyLDE5MjQ3MTAwNTksLTE5
-NjMyNzQ3MjNdfQ==
+eyJoaXN0b3J5IjpbMTk1MTMzODY2MywtODkzNjA5NDM0LDE5NT
+g4MTY1OTIsNTczMTU3MTQwLDIxMDczNzcwMDAsMTEzODE2MjMz
+NiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMjEzNTgyNzEyMywtMT
+g5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1
+MDY1NCwtNTUzNTU3ODMwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNi
+wxNjM5ODY3Mzg0LDE0MTA1MTI2MjcsLTE0NzU1MDYwNjIsMTky
+NDcxMDA1OV19
 -->
