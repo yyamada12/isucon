@@ -292,7 +292,7 @@ go  func() {
 }()
 ```
 
-go の パスが通っていない場合はPATHを
+go の パスが通っていない場合はenv.shでPATHを指定するか、goの絶対パスを指定する
 
 - [ ] ビルド
 
@@ -414,11 +414,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MTMzODY2MywtODkzNjA5NDM0LDE5NT
-g4MTY1OTIsNTczMTU3MTQwLDIxMDczNzcwMDAsMTEzODE2MjMz
-NiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMjEzNTgyNzEyMywtMT
-g5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1
-MDY1NCwtNTUzNTU3ODMwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNi
-wxNjM5ODY3Mzg0LDE0MTA1MTI2MjcsLTE0NzU1MDYwNjIsMTky
-NDcxMDA1OV19
+eyJoaXN0b3J5IjpbLTEwMzcyODA2OTIsLTg5MzYwOTQzNCwxOT
+U4ODE2NTkyLDU3MzE1NzE0MCwyMTA3Mzc3MDAwLDExMzgxNjIz
+MzYsLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LDIxMzU4MjcxMjMsLT
+E4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1OTk5OTYyLC04NTc3
+NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC02NzQyMTM1MD
+YsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xNDc1NTA2MDYyLDE5
+MjQ3MTAwNTldfQ==
 -->
