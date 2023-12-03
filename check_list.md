@@ -273,9 +273,11 @@ show variables like  'long%';
 ```
 import (
         _ "net/http/pprof"
+        "github.com/felixge/fgprof"
 )
 
 func main() {
+    http.DefaultServeMux.Handle("/debug/fgprof", fgprof.Handler())
     go func() {
         fmt.Println(http.ListenAndServe("localhost:6060", nil))
     }()
@@ -285,6 +287,13 @@ func main() {
 ```
 go  func() {
   if out, err := exec.Command("go", "tool", "pprof", "-seconds=30", "-proto", "-output", "/home/isucon/pprof/pprof.pb.gz", "localhost:6060/debug/pprof/profile").CombinedOutput(); err != nil {
+    fmt.Printf("pprof failed with err=%s, %s", string(out), err)
+  } else {
+    fmt.Printf("pprof.pb.gz created: %s", string(out))
+  }
+}()
+go  func() {
+  if out, err := exec.Command("go", "tool", "pprof", "-seconds=30", "-proto", "-output", "/home/isucon/pprof/fgprof.pb.gz", "localhost:6060/debug/fgprof").CombinedOutput(); err != nil {
     fmt.Printf("pprof failed with err=%s, %s", string(out), err)
   } else {
     fmt.Printf("pprof.pb.gz created: %s", string(out))
@@ -414,11 +423,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzcyODA2OTIsLTg5MzYwOTQzNCwxOT
-U4ODE2NTkyLDU3MzE1NzE0MCwyMTA3Mzc3MDAwLDExMzgxNjIz
-MzYsLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LDIxMzU4MjcxMjMsLT
-E4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1OTk5OTYyLC04NTc3
-NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC02NzQyMTM1MD
-YsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0xNDc1NTA2MDYyLDE5
-MjQ3MTAwNTldfQ==
+eyJoaXN0b3J5IjpbLTExMzg3OTA4OTEsLTEwMzcyODA2OTIsLT
+g5MzYwOTQzNCwxOTU4ODE2NTkyLDU3MzE1NzE0MCwyMTA3Mzc3
+MDAwLDExMzgxNjIzMzYsLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LD
+IxMzU4MjcxMjMsLTE4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1
+OTk5OTYyLC04NTc3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NT
+k0LC02NzQyMTM1MDYsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0x
+NDc1NTA2MDYyXX0=
 -->
