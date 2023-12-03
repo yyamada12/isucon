@@ -294,9 +294,9 @@ go  func() {
 }()
 go  func() {
   if out, err := exec.Command("go", "tool", "pprof", "-seconds=30", "-proto", "-output", "/home/isucon/pprof/fgprof.pb.gz", "localhost:6060/debug/fgprof").CombinedOutput(); err != nil {
-    fmt.Printf("pprof failed with err=%s, %s", string(out), err)
+    fmt.Printf("fgprof failed with err=%s, %s", string(out), err)
   } else {
-    fmt.Printf("pprof.pb.gz created: %s", string(out))
+    fmt.Printf("fgprof.pb.gz created: %s", string(out))
   }
 }()
 ```
@@ -423,11 +423,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzg3OTA4OTEsLTEwMzcyODA2OTIsLT
-g5MzYwOTQzNCwxOTU4ODE2NTkyLDU3MzE1NzE0MCwyMTA3Mzc3
-MDAwLDExMzgxNjIzMzYsLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LD
-IxMzU4MjcxMjMsLTE4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1
-OTk5OTYyLC04NTc3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NT
-k0LC02NzQyMTM1MDYsMTYzOTg2NzM4NCwxNDEwNTEyNjI3LC0x
-NDc1NTA2MDYyXX0=
+eyJoaXN0b3J5IjpbLTk3NDI3MDA1NywtMTAzNzI4MDY5MiwtOD
+kzNjA5NDM0LDE5NTg4MTY1OTIsNTczMTU3MTQwLDIxMDczNzcw
+MDAsMTEzODE2MjMzNiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMj
+EzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5
+OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3ODMwLDEyMDA2Nzk1OT
+QsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MTA1MTI2MjcsLTE0
+NzU1MDYwNjJdfQ==
 -->
