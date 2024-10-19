@@ -251,6 +251,11 @@ http {
 デプロイスクリプトを回す
 または `sudo systemctl restart nginx` 
 
+/xxx/:id
+/xxx/:id
+
+- [ ] alp.yml の設定で path parameter のあるAPIをまとめる
+
 
 ### slow log
 - [ ] mysql でslow log を設定
@@ -431,11 +436,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE0NDc4NTczLDQxMzQyMTU1NywtMzkwNj
-A3NTE5LC04NTQxMjM2NjMsLTE1NzgxNDc3MDUsLTk3NDI3MDA1
-NywtMTAzNzI4MDY5MiwtODkzNjA5NDM0LDE5NTg4MTY1OTIsNT
-czMTU3MTQwLDIxMDczNzcwMDAsMTEzODE2MjMzNiwtMTQyNzkw
-MzA4LC03Nzg5MDM1NjYsMjEzNTgyNzEyMywtMTg5MTk3NTQ3Ny
-wxNDU4OTM4NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUz
-NTU3ODMwXX0=
+eyJoaXN0b3J5IjpbLTE3NDAyMDE2MDgsNDE0NDc4NTczLDQxMz
+QyMTU1NywtMzkwNjA3NTE5LC04NTQxMjM2NjMsLTE1NzgxNDc3
+MDUsLTk3NDI3MDA1NywtMTAzNzI4MDY5MiwtODkzNjA5NDM0LD
+E5NTg4MTY1OTIsNTczMTU3MTQwLDIxMDczNzcwMDAsMTEzODE2
+MjMzNiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMjEzNTgyNzEyMy
+wtMTg5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5OTk5NjIsLTg1
+Nzc1MDY1NF19
 -->
