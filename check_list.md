@@ -194,6 +194,8 @@ ln -s ~/.alias.bash
 ln -s ~/deploy.sh
 ```
 
+- [ ] remote に golang, GitHub Copilot の拡張を追加する
+
 - [ ] remote用のsettings.jsonにGOROOT, GOPATHを必要であれば設定する
 
 ```json
@@ -428,11 +430,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzNDIxNTU3LC0zOTA2MDc1MTksLTg1ND
-EyMzY2MywtMTU3ODE0NzcwNSwtOTc0MjcwMDU3LC0xMDM3Mjgw
-NjkyLC04OTM2MDk0MzQsMTk1ODgxNjU5Miw1NzMxNTcxNDAsMj
-EwNzM3NzAwMCwxMTM4MTYyMzM2LC0xNDI3OTAzMDgsLTc3ODkw
-MzU2NiwyMTM1ODI3MTIzLC0xODkxOTc1NDc3LDE0NTg5Mzg2ND
-YsMTMwNTk5OTk2MiwtODU3NzUwNjU0LC01NTM1NTc4MzAsMTIw
-MDY3OTU5NF19
+eyJoaXN0b3J5IjpbLTk5ODU0NzAyMyw0MTM0MjE1NTcsLTM5MD
+YwNzUxOSwtODU0MTIzNjYzLC0xNTc4MTQ3NzA1LC05NzQyNzAw
+NTcsLTEwMzcyODA2OTIsLTg5MzYwOTQzNCwxOTU4ODE2NTkyLD
+U3MzE1NzE0MCwyMTA3Mzc3MDAwLDExMzgxNjIzMzYsLTE0Mjc5
+MDMwOCwtNzc4OTAzNTY2LDIxMzU4MjcxMjMsLTE4OTE5NzU0Nz
+csMTQ1ODkzODY0NiwxMzA1OTk5OTYyLC04NTc3NTA2NTQsLTU1
+MzU1NzgzMF19
 -->
