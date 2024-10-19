@@ -72,14 +72,14 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 
 - [ ] 環境変数設定
 ↑の計測ツールのinstallの最後で設定する
-|  |  |
-|--|--|
-|  |  |
 
-APP_DIR: アプリケーションのディレクトリ
-APP_BUILD_CMD: go build or make or else
-APP_SERVICE_NAME: isucon-go.service 的なやつ
-SLACK_TOKEN: https://api.slack.com/apps/A05GTSY2MKJ/oauth
+| 環境変数 | 設定内容 |
+|--|--|
+| APP_DIR | アプリケーションのディレクトリ |
+| APP_BUILD_CMD | go build or make or else |
+| APP_SERVICE_NAME | isucon-go.service 的なやつ |
+| SLACK_TOKEN | https://api.slack.com/apps/A05GTSY2MKJ/oauth |
+
 
 - [ ] webサーバが何か確認する
 
@@ -428,7 +428,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjgyMTk0OTQsLTk3NDI3MDA1NywtMT
+eyJoaXN0b3J5IjpbLTE1NzgxNDc3MDUsLTk3NDI3MDA1NywtMT
 AzNzI4MDY5MiwtODkzNjA5NDM0LDE5NTg4MTY1OTIsNTczMTU3
 MTQwLDIxMDczNzcwMDAsMTEzODE2MjMzNiwtMTQyNzkwMzA4LC
 03Nzg5MDM1NjYsMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4
