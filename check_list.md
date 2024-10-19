@@ -78,7 +78,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 | APP_DIR | アプリケーションのディレクトリ |
 | APP_BUILD_CMD | go build or make or else |
 | APP_SERVICE_NAME | isucon-go.service 的なやつ |
-| SLACK_TOKEN | https://api.slack.com/apps/A05GTSY2MKJ/oauth |
+| SLACK_TOKEN | https://api.slack.com/apps/A05GTSY2MKJ/oauth の User OAuth Token|
 
 
 - [ ] webサーバが何か確認する
@@ -428,11 +428,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzgxNDc3MDUsLTk3NDI3MDA1NywtMT
-AzNzI4MDY5MiwtODkzNjA5NDM0LDE5NTg4MTY1OTIsNTczMTU3
-MTQwLDIxMDczNzcwMDAsMTEzODE2MjMzNiwtMTQyNzkwMzA4LC
-03Nzg5MDM1NjYsMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4
-OTM4NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3OD
-MwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0
-MTA1MTI2MjddfQ==
+eyJoaXN0b3J5IjpbLTk1MTMyNjgyMiwtMTU3ODE0NzcwNSwtOT
+c0MjcwMDU3LC0xMDM3MjgwNjkyLC04OTM2MDk0MzQsMTk1ODgx
+NjU5Miw1NzMxNTcxNDAsMjEwNzM3NzAwMCwxMTM4MTYyMzM2LC
+0xNDI3OTAzMDgsLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xODkx
+OTc1NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUwNj
+U0LC01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2
+Mzk4NjczODRdfQ==
 -->
