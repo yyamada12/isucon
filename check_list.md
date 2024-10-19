@@ -80,6 +80,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 | APP_SERVICE_NAME | isucon-go.service 的なやつ |
 | SLACK_TOKEN | https://api.slack.com/apps/A05GTSY2MKJ/oauth の User OAuth Token|
 
+指定した環境変数は ~/.bash_profile で管理される
+( ~/set_env.sh 参照)
 
 - [ ] webサーバが何か確認する
 
@@ -428,7 +430,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MTMyNjgyMiwtMTU3ODE0NzcwNSwtOT
+eyJoaXN0b3J5IjpbLTg1NDEyMzY2MywtMTU3ODE0NzcwNSwtOT
 c0MjcwMDU3LC0xMDM3MjgwNjkyLC04OTM2MDk0MzQsMTk1ODgx
 NjU5Miw1NzMxNTcxNDAsMjEwNzM3NzAwMCwxMTM4MTYyMzM2LC
 0xNDI3OTAzMDgsLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xODkx
