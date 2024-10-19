@@ -71,6 +71,11 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 ```
 
 - [ ] 環境変数設定
+↑の計測ツールのinstallの最後で設定する
+|  |  |
+|--|--|
+|  |  |
+
 APP_DIR: アプリケーションのディレクトリ
 APP_BUILD_CMD: go build or make or else
 APP_SERVICE_NAME: isucon-go.service 的なやつ
@@ -423,11 +428,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NDI3MDA1NywtMTAzNzI4MDY5MiwtOD
-kzNjA5NDM0LDE5NTg4MTY1OTIsNTczMTU3MTQwLDIxMDczNzcw
-MDAsMTEzODE2MjMzNiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMj
-EzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5
-OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3ODMwLDEyMDA2Nzk1OT
-QsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0MTA1MTI2MjcsLTE0
-NzU1MDYwNjJdfQ==
+eyJoaXN0b3J5IjpbLTIxMjgyMTk0OTQsLTk3NDI3MDA1NywtMT
+AzNzI4MDY5MiwtODkzNjA5NDM0LDE5NTg4MTY1OTIsNTczMTU3
+MTQwLDIxMDczNzcwMDAsMTEzODE2MjMzNiwtMTQyNzkwMzA4LC
+03Nzg5MDM1NjYsMjEzNTgyNzEyMywtMTg5MTk3NTQ3NywxNDU4
+OTM4NjQ2LDEzMDU5OTk5NjIsLTg1Nzc1MDY1NCwtNTUzNTU3OD
+MwLDEyMDA2Nzk1OTQsLTY3NDIxMzUwNiwxNjM5ODY3Mzg0LDE0
+MTA1MTI2MjddfQ==
 -->
