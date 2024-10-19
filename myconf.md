@@ -14,12 +14,12 @@ alp, pt-query-digest, netdata のinstallなどを行う
 ~/.alias.bash に配置
  
  - alp
-   - `al`: ~/alp.yml の設定でalpを実行。
-   - `al_bak` sudl alp ltsv -c ~/alp
-   - `als` 
+   - `al`: ~/alp.yml の設定でalpを実行。対象は /var/log/nginx/access.log
+   - `al_bak` 対象を /var/log/nginx/access_bak.log で実行
+   - `als`  実行した上でslack
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwODAyMDYwMiwtMTM5MDQyNjIxMl19
+eyJoaXN0b3J5IjpbNjE1NzU1NzkyLC0xMzkwNDI2MjEyXX0=
 -->
