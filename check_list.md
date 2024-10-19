@@ -289,7 +289,7 @@ show variables like  'long%';
 
 
 ### pprof
-benchを回した時に initializeが呼ばれるときに30sでprofileをいかに出力するように設定
+benchを回した時に initializeが呼ばれるときに30sでprofileを以下の場所に出力するように設定する
 ```
 /home/isucon/pprof/pprof.pb.gz
 /home/isucon/pprof/fgprof.pb.gz
@@ -455,7 +455,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxODgxNDM2NCwtMTUzNzc2ODQ3Myw0MT
+eyJoaXN0b3J5IjpbLTY5NjYyODg0NywtMTUzNzc2ODQ3Myw0MT
 Q0Nzg1NzMsNDEzNDIxNTU3LC0zOTA2MDc1MTksLTg1NDEyMzY2
 MywtMTU3ODE0NzcwNSwtOTc0MjcwMDU3LC0xMDM3MjgwNjkyLC
 04OTM2MDk0MzQsMTk1ODgxNjU5Miw1NzMxNTcxNDAsMjEwNzM3
