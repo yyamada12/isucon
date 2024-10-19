@@ -13,9 +13,13 @@ alp, pt-query-digest, netdata のinstallなどを行う
 ### alias
 ~/.alias.bash に配置
  
+ - alp
+   - `al`: ~/alp.yml の設定でalpを実行。
+   - `al_bak` sudl alp ltsv -c ~/alp
+   - `als` 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTA0MjYyMTJdfQ==
+eyJoaXN0b3J5IjpbLTYwODAyMDYwMiwtMTM5MDQyNjIxMl19
 -->
