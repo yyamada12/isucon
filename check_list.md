@@ -251,10 +251,19 @@ http {
 デプロイスクリプトを回す
 または `sudo systemctl restart nginx` 
 
-/xxx/:id
-/xxx/:id
 
 - [ ] alp.yml の設定で path parameter のあるAPIをまとめる
+/xxx/:id
+/xxx/:id/yyy
+のような場合は、 /xxx/:id を最後に記載するとうまくいく
+
+(ex)
+```
+- '/api/user/.+/theme'
+- '/api/user/.+/statistics'
+- '/api/user/.+/icon'
+- '/api/user/.+'
+```
 
 
 ### slow log
@@ -436,7 +445,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDAyMDE2MDgsNDE0NDc4NTczLDQxMz
+eyJoaXN0b3J5IjpbLTE1Mzc3Njg0NzMsNDE0NDc4NTczLDQxMz
 QyMTU1NywtMzkwNjA3NTE5LC04NTQxMjM2NjMsLTE1NzgxNDc3
 MDUsLTk3NDI3MDA1NywtMTAzNzI4MDY5MiwtODkzNjA5NDM0LD
 E5NTg4MTY1OTIsNTczMTU3MTQwLDIxMDczNzcwMDAsMTEzODE2
