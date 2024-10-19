@@ -65,7 +65,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
 ```
 
-arm
+arm ( mac 上の multipass で素振りする時はこっち)
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools_arm.sh)"
 ```
@@ -428,11 +428,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MDYwNzUxOSwtODU0MTIzNjYzLC0xNT
-c4MTQ3NzA1LC05NzQyNzAwNTcsLTEwMzcyODA2OTIsLTg5MzYw
-OTQzNCwxOTU4ODE2NTkyLDU3MzE1NzE0MCwyMTA3Mzc3MDAwLD
-ExMzgxNjIzMzYsLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LDIxMzU4
-MjcxMjMsLTE4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1OTk5OT
-YyLC04NTc3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC02
-NzQyMTM1MDZdfQ==
+eyJoaXN0b3J5IjpbNDEzNDIxNTU3LC0zOTA2MDc1MTksLTg1ND
+EyMzY2MywtMTU3ODE0NzcwNSwtOTc0MjcwMDU3LC0xMDM3Mjgw
+NjkyLC04OTM2MDk0MzQsMTk1ODgxNjU5Miw1NzMxNTcxNDAsMj
+EwNzM3NzAwMCwxMTM4MTYyMzM2LC0xNDI3OTAzMDgsLTc3ODkw
+MzU2NiwyMTM1ODI3MTIzLC0xODkxOTc1NDc3LDE0NTg5Mzg2ND
+YsMTMwNTk5OTk2MiwtODU3NzUwNjU0LC01NTM1NTc4MzAsMTIw
+MDY3OTU5NF19
 -->
