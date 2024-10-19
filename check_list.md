@@ -289,6 +289,8 @@ show variables like  'long%';
 
 
 ### pprof
+benchを回した時に initializeが呼ばれるときに30sでprofileを出力するように設定
+
 
 - [ ] コードに埋め込む
 
@@ -303,6 +305,11 @@ func main() {
     go func() {
         fmt.Println(http.ListenAndServe("localhost:6060", nil))
     }()
+```
+
+- [ ] fgprof を go mod に追加
+```
+go mod tidy
 ```
 
 - [ ] initializeに仕込む
@@ -445,11 +452,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzc3Njg0NzMsNDE0NDc4NTczLDQxMz
-QyMTU1NywtMzkwNjA3NTE5LC04NTQxMjM2NjMsLTE1NzgxNDc3
-MDUsLTk3NDI3MDA1NywtMTAzNzI4MDY5MiwtODkzNjA5NDM0LD
-E5NTg4MTY1OTIsNTczMTU3MTQwLDIxMDczNzcwMDAsMTEzODE2
-MjMzNiwtMTQyNzkwMzA4LC03Nzg5MDM1NjYsMjEzNTgyNzEyMy
-wtMTg5MTk3NTQ3NywxNDU4OTM4NjQ2LDEzMDU5OTk5NjIsLTg1
-Nzc1MDY1NF19
+eyJoaXN0b3J5IjpbLTE2NjQ2MTA1MywtMTUzNzc2ODQ3Myw0MT
+Q0Nzg1NzMsNDEzNDIxNTU3LC0zOTA2MDc1MTksLTg1NDEyMzY2
+MywtMTU3ODE0NzcwNSwtOTc0MjcwMDU3LC0xMDM3MjgwNjkyLC
+04OTM2MDk0MzQsMTk1ODgxNjU5Miw1NzMxNTcxNDAsMjEwNzM3
+NzAwMCwxMTM4MTYyMzM2LC0xNDI3OTAzMDgsLTc3ODkwMzU2Ni
+wyMTM1ODI3MTIzLC0xODkxOTc1NDc3LDE0NTg5Mzg2NDYsMTMw
+NTk5OTk2Ml19
 -->
