@@ -157,7 +157,6 @@ git branch --set-upstream-to=origin/main main
 ```
 {
     "files.watcherExclude": {
-        "**/.*/**": true,
         "**/webapp/nodejs/**": true,
         "**/webapp/perl/**": true,
         "**/webapp/php/**": true,
@@ -169,7 +168,6 @@ git branch --set-upstream-to=origin/main main
         "**/src/**": true,
     },
     "files.exclude": {
-        "**/.*/**": true,
         "**/webapp/nodejs/**": true,
         "**/webapp/perl/**": true,
         "**/webapp/php/**": true,
@@ -430,11 +428,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NDEyMzY2MywtMTU3ODE0NzcwNSwtOT
-c0MjcwMDU3LC0xMDM3MjgwNjkyLC04OTM2MDk0MzQsMTk1ODgx
-NjU5Miw1NzMxNTcxNDAsMjEwNzM3NzAwMCwxMTM4MTYyMzM2LC
-0xNDI3OTAzMDgsLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xODkx
-OTc1NDc3LDE0NTg5Mzg2NDYsMTMwNTk5OTk2MiwtODU3NzUwNj
-U0LC01NTM1NTc4MzAsMTIwMDY3OTU5NCwtNjc0MjEzNTA2LDE2
-Mzk4NjczODRdfQ==
+eyJoaXN0b3J5IjpbLTM5MDYwNzUxOSwtODU0MTIzNjYzLC0xNT
+c4MTQ3NzA1LC05NzQyNzAwNTcsLTEwMzcyODA2OTIsLTg5MzYw
+OTQzNCwxOTU4ODE2NTkyLDU3MzE1NzE0MCwyMTA3Mzc3MDAwLD
+ExMzgxNjIzMzYsLTE0Mjc5MDMwOCwtNzc4OTAzNTY2LDIxMzU4
+MjcxMjMsLTE4OTE5NzU0NzcsMTQ1ODkzODY0NiwxMzA1OTk5OT
+YyLC04NTc3NTA2NTQsLTU1MzU1NzgzMCwxMjAwNjc5NTk0LC02
+NzQyMTM1MDZdfQ==
 -->
