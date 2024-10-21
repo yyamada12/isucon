@@ -15,7 +15,7 @@ alp, pt-query-digest, netdata のinstallなどを行う
  
 #### alp
 nginx の log format を変更し、 /var/log/nginx/access.log に出力している前提
-deploy 時に /var/log/
+deploy script で deploy 時に access.log -> access_bak.log に mv する
    - `al`: ~/alp.yml の設定でalpを実行。対象は /var/log/nginx/access.log
    - `al_bak` 対象を /var/log/nginx/access_bak.log で実行
    - `als`  実行した上でslackに送信
@@ -23,13 +23,16 @@ deploy 時に /var/log/
 
 
 
--  pt-query-digest
+#### pt-query-digest
+mysql の slow log を設定し、 /var/log/mysql/slow.log に出力している前提
+deploy script で deploy 時に slow.log -> slow_bak.log に mv する
   - `pt`  pt-query-digest を --limit 10 -format profile,query_report で実行し、 less に流す。対象は /var/log/mysql/slow.log
   - `pt_bak` 対象を/var/log/mysql/slow_bak.log にして実行
   - `pts` 実行した上でslackに送信
   - `pts_bak` slow_bak.log の結果をslackに送信
 
-- pprof
+#### pprof
+main.go に pprof + fgprof を設定し、 /initialize をk
   - `pp` ~/pprof/pprof.pb.gz に対して pprof を実行し、  localhost:1234 で結果をhosting
   - `pp_bak` 対象を ~/pprof/pprof_bak.pb.gz にして実行
   - `pps` png にoutput してslackに送信
@@ -43,6 +46,6 @@ deploy 時に /var/log/
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgwNzE0OTI4LDYxNTc1NTc5MiwtMTM5MD
-QyNjIxMl19
+eyJoaXN0b3J5IjpbLTExNjc1MTU0MjIsNjE1NzU1NzkyLC0xMz
+kwNDI2MjEyXX0=
 -->
