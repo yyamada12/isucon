@@ -32,21 +32,22 @@ deploy script で deploy 時に slow.log -> slow_bak.log に mv する
   - `pts_bak` slow_bak.log の結果をslackに送信
 
 #### pprof
-main.go に pprof + fgprof を設定し、 /initialize を契機に ~/pprof/pprof.pb.gz, ~/pprof/fgprof.pb.gz に出力している前提
-deploy script で deploy 時に pprof.pb.gz -> pprof_bak.pb.gz, fgprof.pb.gz -> fgprof_bak.pb.gz に mv する
+main.go に pprof + fgprof を設定し、 /initialize を契機に ~/pprof/pprof.pb.gz, ~/pprof/fgprof.pb.gz に出力している前提  
+deploy script で deploy 時に pprof.pb.gz -> pprof_bak.pb.gz, fgprof.pb.gz -> fgprof_bak.pb.gz に mv する  
+ssh config で
   - `pp` ~/pprof/pprof.pb.gz に対して pprof を実行し、  localhost:1234 で結果をhosting
   - `pp_bak` 対象を ~/pprof/pprof_bak.pb.gz にして実行
   - `pps` png にoutput してslackに送信
   - `pps_bak` pprof_bak.pb.gz の結果をslackに送信
 
 - fgprof
-  - `fgp` ~/pprof/
+  - `fgp` ~/pprof/fgprof.pb.gz に対してpprofを実行し、localhost:1235で結果をhosting
 
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDEwNzMsNjE1NzU1NzkyLC0xMzkwND
-I2MjEyXX0=
+eyJoaXN0b3J5IjpbLTk2NzE3MzUyLC00MjQxMDczLDYxNTc1NT
+c5MiwtMTM5MDQyNjIxMl19
 -->
