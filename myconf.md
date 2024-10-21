@@ -67,7 +67,8 @@ alias scrs='sudo systemctl restart $APP_SERVICE_NAME'
 ```
 
 ### deploy script
-https://github.com/yyamada12/isucon-settings/blob/master/deploy.sh で管理
+https://github.com/yyamada12/isucon-settings/blob/master/deploy.sh で管理している  
+b環境変数
 
 - 以下のlog ファイルを _bak に mv
 ```
@@ -78,8 +79,11 @@ rotate_log ~/pprof/pprof.pb.gz
 rotate_log ~/pprof/fgprof.pb.gz
 ```
 - go の app を build
-- 
+- /etc/mysql/mysqld.conf, /etc/nginx/nginx.conf, /etc/nginx/sites-enabled, /etc/security/limits.conf を ~/etc のファイルで置き換える
+- systemctl で mysql, go app, nginx を restart
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTAwMTAwMzIsLTQyNDEwNzMsNjE1Nz
-U1NzkyLC0xMzkwNDI2MjEyXX0=
+eyJoaXN0b3J5IjpbMTQyMDU1MjgyOCwtNDI0MTA3Myw2MTU3NT
+U3OTIsLTEzOTA0MjYyMTJdfQ==
 -->
