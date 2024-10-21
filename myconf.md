@@ -19,11 +19,13 @@ alp, pt-query-digest, netdata のinstallなどを行う
    - `als`  実行した上でslackに通知
    - `als_bak` access_bak.log の結果をslackに通知
 
-- 
+-  pt-query-digest
+  - `pt`  pt-query-digest を --limit 10 -format profile,query_report で実行し、 less に流す。対象は /var/log/mysql/slow.log
+  - `pt_bak` 対象を/var/log/mysql/slow_
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDk2MDMyNiw2MTU3NTU3OTIsLTEzOT
-A0MjYyMTJdfQ==
+eyJoaXN0b3J5IjpbMTQzNzYyOTQxLDYxNTc1NTc5MiwtMTM5MD
+QyNjIxMl19
 -->
