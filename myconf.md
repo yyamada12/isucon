@@ -51,11 +51,35 @@ ssh config で、ssh時に localhost:1234, localhost:1235 を port forward さ�
   - sudo journalctl で app の log を表示する
   - applog -f で垂れ流しにさせる想定
 
-- S
+- systemctl系
+```
+alias sc='sudo systemctl'
+alias scl='sudo systemctl list-unit-files --type=service'
+alias scla='sudo systemctl list-units --type=service --state=running'
+alias scs='sudo systemctl status'
+alias scr='sudo systemctl restart'
+alias scsn='sudo systemctl status nginx'
+alias scrn='sudo systemctl restart nginx'
+alias scsm='sudo systemctl status mysql'
+alias scrm='sudo systemctl restart mysql'
+alias scss='sudo systemctl status $APP_SERVICE_NAME'
+alias scrs='sudo systemctl restart $APP_SERVICE_NAME'
+```
 
+### deploy script
+https://github.com/yyamada12/isucon-settings/blob/master/deploy.sh で管理
 
-> Written with [StackEdit](https://stackedit.io/).
+- 以下のlog ファイルを _bak に mv
+```
+rotate_log /var/log/nginx/access.log
+rotate_log /var/log/nginx/error.log
+rotate_log /var/log/mysql/slow.log
+rotate_log ~/pprof/pprof.pb.gz
+rotate_log ~/pprof/fgprof.pb.gz
+```
+- go の app を build
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMzM5NzcwMiwtNDI0MTA3Myw2MTU3NT
-U3OTIsLTEzOTA0MjYyMTJdfQ==
+eyJoaXN0b3J5IjpbLTE2OTAwMTAwMzIsLTQyNDEwNzMsNjE1Nz
+U1NzkyLC0xMzkwNDI2MjEyXX0=
 -->
