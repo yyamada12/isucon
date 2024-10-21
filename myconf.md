@@ -16,8 +16,8 @@ alp, pt-query-digest, netdata のinstallなどを行う
  - alp
    - `al`: ~/alp.yml の設定でalpを実行。対象は /var/log/nginx/access.log
    - `al_bak` 対象を /var/log/nginx/access_bak.log で実行
-   - `als`  実行した上でslackに通知
-   - `als_bak` access_bak.log の結果をslackに通知
+   - `als`  実行した上でslackに送信
+   - `als_bak` access_bak.log の結果をslackに送信
 
 -  pt-query-digest
   - `pt`  pt-query-digest を --limit 10 -format profile,query_report で実行し、 less に流す。対象は /var/log/mysql/slow.log
@@ -27,10 +27,13 @@ alp, pt-query-digest, netdata のinstallなどを行う
 
 - pprof
   - `pp` ~/pprof/pprof.pb.gz に対して pprof を実行し、  localhost:1234 で結果をhosting
+  - `pp_bak` 対象を ~/pprof/pprof_bak.pb.gz にして実行
+  - `pps` png にoutput してslackに送信
+  - `pps_bak` pprof_bak.pb.gz の結果をslackに送信
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjI0ODQzNyw2MTU3NTU3OTIsLTEzOT
-A0MjYyMTJdfQ==
+eyJoaXN0b3J5IjpbMTEwNTM1NzgxLDYxNTc1NTc5MiwtMTM5MD
+QyNjIxMl19
 -->
