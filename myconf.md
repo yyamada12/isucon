@@ -47,11 +47,15 @@ ssh config で、ssh時に localhost:1234, localhost:1235 を port forward さ�
 
 - `deploy`
 	- ~/deploy.sh を実行する
-	- deploy scri
+- `applog`
+  - sudo journalctl で app の log を表示する
+  - applog -f で垂れ流しにさせる想定
+
+- S
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NjQ2ODkyMiwtNDI0MTA3Myw2MTU3NT
+eyJoaXN0b3J5IjpbLTYwMzM5NzcwMiwtNDI0MTA3Myw2MTU3NT
 U3OTIsLTEzOTA0MjYyMTJdfQ==
 -->
