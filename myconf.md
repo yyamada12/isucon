@@ -67,9 +67,10 @@ alias scrs='sudo systemctl restart $APP_SERVICE_NAME'
 ```
 
 ### deploy script
-https://github.com/yyamada12/isucon-settings/blob/master/deploy.sh で管理している  
-b環境変数
+[deploy.sh](https://github.com/yyamada12/isucon-settings/blob/master/deploy.sh) で管理している  
+build コマンドやgo app の service 名などは環境変数から取得するようにしており、  [set_env.sh](https://github.com/yyamada12/isucon-settings/blob/master/set_env.sh) で必要な環境変数を設定する
 
+#### 処理内容
 - 以下のlog ファイルを _bak に mv
 ```
 rotate_log /var/log/nginx/access.log
@@ -84,6 +85,6 @@ rotate_log ~/pprof/fgprof.pb.gz
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMDU1MjgyOCwtNDI0MTA3Myw2MTU3NT
+eyJoaXN0b3J5IjpbLTI5OTE2MzM4NSwtNDI0MTA3Myw2MTU3NT
 U3OTIsLTEzOTA0MjYyMTJdfQ==
 -->
