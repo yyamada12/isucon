@@ -84,7 +84,13 @@ rotate_log ~/pprof/fgprof.pb.gz
 - systemctl で mysql, go app, nginx を restart
 
 
+
+### slack への送信
+元々 slackcat というツールを使っていたが、 oauth token の連携がうまくいかなくなり、自前でappを立てて API を直叩きする方式に変更した
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5OTE2MzM4NSwtNDI0MTA3Myw2MTU3NT
-U3OTIsLTEzOTA0MjYyMTJdfQ==
+eyJoaXN0b3J5IjpbLTE0NTU3MjE1NjgsLTI5OTE2MzM4NSwtND
+I0MTA3Myw2MTU3NTU3OTIsLTEzOTA0MjYyMTJdfQ==
 -->
