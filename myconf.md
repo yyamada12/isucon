@@ -89,8 +89,11 @@ rotate_log ~/pprof/fgprof.pb.gz
 元々 slackcat というツールを使っていたが、 oauth token の連携がうまくいかなくなり、自前でappを立てて API を直叩きする方式に変更した
 
 
+[upload_file_slack.sh](https://github.com/yyamada12/isucon-settings/blob/master/upload_file_slack.sh) というスクリプトを作成しており、 これにファイル名とチャンネルを指定する形で実行する
 
+#### Bot User OAuth Token で実行する方法
+基本的には 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTU3MjE1NjgsLTI5OTE2MzM4NSwtND
+eyJoaXN0b3J5IjpbLTE2NzE0NjIzOTksLTI5OTE2MzM4NSwtND
 I0MTA3Myw2MTU3NTU3OTIsLTEzOTA0MjYyMTJdfQ==
 -->
