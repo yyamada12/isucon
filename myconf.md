@@ -98,8 +98,10 @@ Bot User OAuth Token  を使ってチャンネルにメッセージを送信し�
 ```
 以下の手順で自作のslack appをチャンネルに追加すればよい
 
-slack チャンネルの右上のから、
+1. slack チャンネルの右上のメニューから「設定を編集する」をクリック
+2. 「インテグレーション」タブに切り替える
+3.  「アプリを追加する」をクリック
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQzNTkyMSwtMjk5MTYzMzg1LC00MjQxMD
-czLDYxNTc1NTc5MiwtMTM5MDQyNjIxMl19
+eyJoaXN0b3J5IjpbNzk5NzIxMjQ0LC0yOTkxNjMzODUsLTQyND
+EwNzMsNjE1NzU1NzkyLC0xMzkwNDI2MjEyXX0=
 -->
