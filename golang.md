@@ -201,7 +201,7 @@ https://github.com/yyamada12/isucon9_re2/commit/9bca99a6a74801960274bad671d684fc
 ## DB 内の画像を保存する処理
 dataを []byte で保持できていれば ioutil.WriteFile()で書き出せる
 ```
-err := ioutil.WriteFile("/home/isucon/isubata/webapp/public/icons/"+name, data, 0666)
+err := os.WriteFile("/home/isucon/isubata/webapp/public/icons/"+name, data, 0666)
 ```
 
 https://github.com/yyamada12/isucon7_re3/commit/0b575b47f11c9baf45b9f8d096aca5a3847938d3#
@@ -326,11 +326,11 @@ id := uuid.NewString()
 
 [https://github.com/goccy/go-json](https://github.com/goccy/go-json)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTgyNjU4MTMsLTI3MzUyNzQ1MSwxMD
-k0NzY3MzYxLDE1MjUxMjA3MjUsLTEwNjkxNTY0OTcsLTIyMDA5
-ODg1MSw0OTIwMDQ4MDQsLTY5ODY2Njg3NiwyMTMyODMyOTUsLT
-kyMTUxMjYxMSw1OTc4NDY5MzAsMjEwMDAwNjQ0NCwxMTUzODEx
-MjI4LDY4NDMwNDQ0NCwtMTg5ODA5NzUxOCwtMjA0NzM4OTA3Ni
-wtMTA5NTk1MDI4OCwxNjg5NDMxMzk4LDE1NDE4MzMwNDAsLTkz
-ODI5MTUxNV19
+eyJoaXN0b3J5IjpbMTU5MDEzNTkxMSwtMTI5ODI2NTgxMywtMj
+czNTI3NDUxLDEwOTQ3NjczNjEsMTUyNTEyMDcyNSwtMTA2OTE1
+NjQ5NywtMjIwMDk4ODUxLDQ5MjAwNDgwNCwtNjk4NjY2ODc2LD
+IxMzI4MzI5NSwtOTIxNTEyNjExLDU5Nzg0NjkzMCwyMTAwMDA2
+NDQ0LDExNTM4MTEyMjgsNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC
+0yMDQ3Mzg5MDc2LC0xMDk1OTUwMjg4LDE2ODk0MzEzOTgsMTU0
+MTgzMzA0MF19
 -->
