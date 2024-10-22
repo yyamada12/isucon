@@ -96,8 +96,10 @@ Bot User OAuth Token  を使ってチャンネルにメッセージを送信し�
 ```
 {"ok":false,"error":"not_in_channel"}
 ```
-以下の手順で自作のslack appをチャンネルに追加すれば良い
+以下の手順で自作のslack appをチャンネルに追加すればよい
+
+slack チャンネルの右上のから、
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc4Mzg1NzUxLC0yOTkxNjMzODUsLTQyND
-EwNzMsNjE1NzU1NzkyLC0xMzkwNDI2MjEyXX0=
+eyJoaXN0b3J5IjpbNDQzNTkyMSwtMjk5MTYzMzg1LC00MjQxMD
+czLDYxNTc1NTc5MiwtMTM5MDQyNjIxMl19
 -->
