@@ -12,6 +12,7 @@
 - [ ] CloudFormation による構築準備 (前年度のマニュアル読んで手順確認&AWS マネコンを開いておく)
 - [ ] 前回のマニュアルを開いておき、VSCodeで差分を比較できるようにしておく
 - [ ] ssh/configを開いておき、編集できる状態にしておく
+  - [ ]  ssh/config のIdentityFileを、github に登録している鍵のパスに設定しておく
 - [ ] local で go の sandbox を開いておき、簡単な実装の動作確認が手元でできるようにしておく
 - [ ] slackのAPI Token 画面を用意しておく
 
@@ -455,11 +456,11 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNzIyNjgxNiwtMTUzNzc2ODQ3Myw0MT
-Q0Nzg1NzMsNDEzNDIxNTU3LC0zOTA2MDc1MTksLTg1NDEyMzY2
-MywtMTU3ODE0NzcwNSwtOTc0MjcwMDU3LC0xMDM3MjgwNjkyLC
-04OTM2MDk0MzQsMTk1ODgxNjU5Miw1NzMxNTcxNDAsMjEwNzM3
-NzAwMCwxMTM4MTYyMzM2LC0xNDI3OTAzMDgsLTc3ODkwMzU2Ni
-wyMTM1ODI3MTIzLC0xODkxOTc1NDc3LDE0NTg5Mzg2NDYsMTMw
-NTk5OTk2Ml19
+eyJoaXN0b3J5IjpbLTIwNDgyOTE0MjEsMTcyNzIyNjgxNiwtMT
+UzNzc2ODQ3Myw0MTQ0Nzg1NzMsNDEzNDIxNTU3LC0zOTA2MDc1
+MTksLTg1NDEyMzY2MywtMTU3ODE0NzcwNSwtOTc0MjcwMDU3LC
+0xMDM3MjgwNjkyLC04OTM2MDk0MzQsMTk1ODgxNjU5Miw1NzMx
+NTcxNDAsMjEwNzM3NzAwMCwxMTM4MTYyMzM2LC0xNDI3OTAzMD
+gsLTc3ODkwMzU2NiwyMTM1ODI3MTIzLC0xODkxOTc1NDc3LDE0
+NTg5Mzg2NDZdfQ==
 -->
