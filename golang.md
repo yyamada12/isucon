@@ -336,14 +336,60 @@ func initializeHandler(c echo.Context) error {
   
 }
 
+func initializeHandlerForAllServer(c echo.Context) error {
+  wg := sync.WaitGroup{}
+
+wg.Add(1)
+
+go  func() {
+
+defer wg.Done()
+
+client := &http.Client{}
+
+req, err := http.NewRequest("POST", "http://192.168.64.6/api/initialize", nil)
+
+if err != nil {
+
+c.Logger().Errorf("Failed to create request: %v", err)
+
+return
+
+}
+
+  
+
+resp, err := client.Do(req)
+
+if err != nil {
+
+c.Logger().Errorf("Failed to send request: %v", err)
+
+return
+
+}
+
+defer resp.Body.Close()
+
+  
+
+if resp.StatusCode != http.StatusOK {
+
+c.Logger().Errorf("Received non-200 response: %d", resp.StatusCode)
+
+}
+
+}()
+}
+
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTc5MTUyNTcsMTU5MDEzNTkxMSwtMT
-I5ODI2NTgxMywtMjczNTI3NDUxLDEwOTQ3NjczNjEsMTUyNTEy
-MDcyNSwtMTA2OTE1NjQ5NywtMjIwMDk4ODUxLDQ5MjAwNDgwNC
-wtNjk4NjY2ODc2LDIxMzI4MzI5NSwtOTIxNTEyNjExLDU5Nzg0
-NjkzMCwyMTAwMDA2NDQ0LDExNTM4MTEyMjgsNjg0MzA0NDQ0LC
-0xODk4MDk3NTE4LC0yMDQ3Mzg5MDc2LC0xMDk1OTUwMjg4LDE2
-ODk0MzEzOThdfQ==
+eyJoaXN0b3J5IjpbMjExMjQwOTgxNCwxNTkwMTM1OTExLC0xMj
+k4MjY1ODEzLC0yNzM1Mjc0NTEsMTA5NDc2NzM2MSwxNTI1MTIw
+NzI1LC0xMDY5MTU2NDk3LC0yMjAwOTg4NTEsNDkyMDA0ODA0LC
+02OTg2NjY4NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3ODQ2
+OTMwLDIxMDAwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQsLT
+E4OTgwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMTY4
+OTQzMTM5OF19
 -->
