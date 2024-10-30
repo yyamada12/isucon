@@ -334,57 +334,13 @@ id := uuid.NewString()
 - 元々の initializeHandler を originalInitializeHandler にrename して、pathを /original_initialize に変更する
 - initializeHandler を追加して、 他のサーバーの/original_initialize を呼び出しつつ、自サーバーのoriginalInitializeHandler を呼び出すようにする
 
-```
-func initializeHandler(c echo.Context) error {
-  
-}
 
-func initializeHandlerForAllServer(c echo.Context) error {
-  wg := sync.WaitGroup{}
-  wg.Add(1)
-  go func() {
-    defer wg.Done()
-    client := &http.Client{}
-    req, err := http.NewRequest("POST", "http://192.168.64.6/api/initialize", nil)
-    if err != nil {
-       c.Logger().Errorf("Failed to create request: %v", err)
-return
-
-}
-
-  
-
-resp, err := client.Do(req)
-
-if err != nil {
-
-c.Logger().Errorf("Failed to send request: %v", err)
-
-return
-
-}
-
-defer resp.Body.Close()
-
-  
-
-if resp.StatusCode != http.StatusOK {
-
-c.Logger().Errorf("Received non-200 response: %d", resp.StatusCode)
-
-}
-
-}()
-}
-
-
-```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ4NTQwNDUsMTU5MDEzNTkxMSwtMTI5OD
-I2NTgxMywtMjczNTI3NDUxLDEwOTQ3NjczNjEsMTUyNTEyMDcy
-NSwtMTA2OTE1NjQ5NywtMjIwMDk4ODUxLDQ5MjAwNDgwNCwtNj
-k4NjY2ODc2LDIxMzI4MzI5NSwtOTIxNTEyNjExLDU5Nzg0Njkz
-MCwyMTAwMDA2NDQ0LDExNTM4MTEyMjgsNjg0MzA0NDQ0LC0xOD
-k4MDk3NTE4LC0yMDQ3Mzg5MDc2LC0xMDk1OTUwMjg4LDE2ODk0
-MzEzOThdfQ==
+eyJoaXN0b3J5IjpbLTg5MzcyNjU5OCwxNTkwMTM1OTExLC0xMj
+k4MjY1ODEzLC0yNzM1Mjc0NTEsMTA5NDc2NzM2MSwxNTI1MTIw
+NzI1LC0xMDY5MTU2NDk3LC0yMjAwOTg4NTEsNDkyMDA0ODA0LC
+02OTg2NjY4NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3ODQ2
+OTMwLDIxMDAwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQsLT
+E4OTgwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMTY4
+OTQzMTM5OF19
 -->
