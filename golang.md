@@ -329,9 +329,16 @@ id := uuid.NewString()
 
 ## 初期化リクエストの複数台呼び出し
 
-アプリケーションサーバーを複数台構成にした場合、POST /initialize を各サーバーに対してよ
+アプリケーションサーバーを複数台構成にした場合、POST /initialize を各サーバーに対して呼び出す必要がある
+
+```
+func initializeHandler2(c echo.Context) error {
+}
+
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NDM2NzA2MiwxNTkwMTM1OTExLC0xMj
+eyJoaXN0b3J5IjpbLTcwMTc1MTE5MSwxNTkwMTM1OTExLC0xMj
 k4MjY1ODEzLC0yNzM1Mjc0NTEsMTA5NDc2NzM2MSwxNTI1MTIw
 NzI1LC0xMDY5MTU2NDk3LC0yMjAwOTg4NTEsNDkyMDA0ODA0LC
 02OTg2NjY4NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3ODQ2
