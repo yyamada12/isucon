@@ -331,9 +331,8 @@ id := uuid.NewString()
 
 アプリケーションサーバーを複数台構成にした場合、POST /initialize を各サーバーに対して呼び出す必要がある
 
-
-initializeHandler とエンドポイントをもう一つ用意して、
-benchから受けた場合は他のサーバーの
+- 元々の initializeHandler を originalInitializeHandler にrename して、pathを /original_initialize に変更する
+- initializeHandler を追加して、 他のサーバーの/original_initialize を呼び出しつつ、自サーバーのoriginalInitializeHandler を呼び出すようにする
 
 ```
 func initializeHandler(c echo.Context) error {
@@ -381,11 +380,11 @@ c.Logger().Errorf("Received non-200 response: %d", resp.StatusCode)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgwMjk2NzAyLDE1OTAxMzU5MTEsLTEyOT
-gyNjU4MTMsLTI3MzUyNzQ1MSwxMDk0NzY3MzYxLDE1MjUxMjA3
-MjUsLTEwNjkxNTY0OTcsLTIyMDA5ODg1MSw0OTIwMDQ4MDQsLT
-Y5ODY2Njg3NiwyMTMyODMyOTUsLTkyMTUxMjYxMSw1OTc4NDY5
-MzAsMjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0NCwtMT
-g5ODA5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OCwxNjg5
-NDMxMzk4XX0=
+eyJoaXN0b3J5IjpbODQ4NTQwNDUsMTU5MDEzNTkxMSwtMTI5OD
+I2NTgxMywtMjczNTI3NDUxLDEwOTQ3NjczNjEsMTUyNTEyMDcy
+NSwtMTA2OTE1NjQ5NywtMjIwMDk4ODUxLDQ5MjAwNDgwNCwtNj
+k4NjY2ODc2LDIxMzI4MzI5NSwtOTIxNTEyNjExLDU5Nzg0Njkz
+MCwyMTAwMDA2NDQ0LDExNTM4MTEyMjgsNjg0MzA0NDQ0LC0xOD
+k4MDk3NTE4LC0yMDQ3Mzg5MDc2LC0xMDk1OTUwMjg4LDE2ODk0
+MzEzOThdfQ==
 -->
