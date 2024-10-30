@@ -331,6 +331,10 @@ id := uuid.NewString()
 
 アプリケーションサーバーを複数台構成にした場合、POST /initialize を各サーバーに対して呼び出す必要がある
 
+
+initializeHandler とエンドポイントをもう一つ用意して、
+benchから受けた場合は他のサーバーの
+
 ```
 func initializeHandler(c echo.Context) error {
   
@@ -338,21 +342,13 @@ func initializeHandler(c echo.Context) error {
 
 func initializeHandlerForAllServer(c echo.Context) error {
   wg := sync.WaitGroup{}
-
-wg.Add(1)
-
-go  func() {
-
-defer wg.Done()
-
-client := &http.Client{}
-
-req, err := http.NewRequest("POST", "http://192.168.64.6/api/initialize", nil)
-
-if err != nil {
-
-c.Logger().Errorf("Failed to create request: %v", err)
-
+  wg.Add(1)
+  go func() {
+    defer wg.Done()
+    client := &http.Client{}
+    req, err := http.NewRequest("POST", "http://192.168.64.6/api/initialize", nil)
+    if err != nil {
+       c.Logger().Errorf("Failed to create request: %v", err)
 return
 
 }
@@ -385,11 +381,11 @@ c.Logger().Errorf("Received non-200 response: %d", resp.StatusCode)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMjQwOTgxNCwxNTkwMTM1OTExLC0xMj
-k4MjY1ODEzLC0yNzM1Mjc0NTEsMTA5NDc2NzM2MSwxNTI1MTIw
-NzI1LC0xMDY5MTU2NDk3LC0yMjAwOTg4NTEsNDkyMDA0ODA0LC
-02OTg2NjY4NzYsMjEzMjgzMjk1LC05MjE1MTI2MTEsNTk3ODQ2
-OTMwLDIxMDAwMDY0NDQsMTE1MzgxMTIyOCw2ODQzMDQ0NDQsLT
-E4OTgwOTc1MTgsLTIwNDczODkwNzYsLTEwOTU5NTAyODgsMTY4
-OTQzMTM5OF19
+eyJoaXN0b3J5IjpbNzgwMjk2NzAyLDE1OTAxMzU5MTEsLTEyOT
+gyNjU4MTMsLTI3MzUyNzQ1MSwxMDk0NzY3MzYxLDE1MjUxMjA3
+MjUsLTEwNjkxNTY0OTcsLTIyMDA5ODg1MSw0OTIwMDQ4MDQsLT
+Y5ODY2Njg3NiwyMTMyODMyOTUsLTkyMTUxMjYxMSw1OTc4NDY5
+MzAsMjEwMDAwNjQ0NCwxMTUzODExMjI4LDY4NDMwNDQ0NCwtMT
+g5ODA5NzUxOCwtMjA0NzM4OTA3NiwtMTA5NTk1MDI4OCwxNjg5
+NDMxMzk4XX0=
 -->
