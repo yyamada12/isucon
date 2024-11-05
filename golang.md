@@ -196,6 +196,7 @@ func (sm *SyncListMap[K, V]) Clear() {
 }
 ```
 
+DBから読み込んで、 sync map に詰めるためのスニペット
 ```
 func LoadHogeFromDB() {
 	// clear sync map
@@ -214,6 +215,8 @@ func LoadHogeFromDB() {
 
 	}
 } 
+```
+
 
 
 ## 再起動対策
@@ -416,6 +419,29 @@ id := uuid.NewString()
 
 https://github.com/fujiwara/isucon11-f/pull/9/files
 
+```
+json "github.com/goccy/go-json"
+
+type JSONSerializer struct{}
+
+func (j *JSONSerializer) Serialize(c echo.Context, i interface{}, indent string) error {
+	enc := json.NewEncoder(c.Response())
+	return enc.Encode(i)
+}
+
+func (j *JSONSerializer) Deserialize(c echo.Context, i interface{}) error {
+	err := json.NewDecoder(c.Request().Body).Decode(i)
+	if ute, ok := err.(*json.UnmarshalTypeError); ok {
+		return echo.NewHTTPError(http.StatusBadRequest, fmt.Sprintf("Unmarshal type error: expected=%v, got=%v, field=%v, offset=%v", ute.Type, ute.Value, ute.Field, ute.Offset)).SetInternal(err)
+	} else if se, ok := err.(*json.SyntaxError); ok {
+		return echo.NewHTTPError(http.StatusBadRequest, fmt.Sprintf("Syntax error: offset=%v, error=%v", se.Offset, se.Error())).SetInternal(err)
+	}
+	return err
+}
+
+e.JSONSerializer = &JSONSerializer{}
+```
+
 ## 初期化リクエストの複数台呼び出し
 
 アプリケーションサーバーを複数台構成にした場合、POST /initialize を各サーバーに対して呼び出す必要がある
@@ -425,11 +451,11 @@ https://github.com/fujiwara/isucon11-f/pull/9/files
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzcxNjA2NjAsMTU3MjE1MzgyLC04OT
-M3MjY1OTgsMTU5MDEzNTkxMSwtMTI5ODI2NTgxMywtMjczNTI3
-NDUxLDEwOTQ3NjczNjEsMTUyNTEyMDcyNSwtMTA2OTE1NjQ5Ny
-wtMjIwMDk4ODUxLDQ5MjAwNDgwNCwtNjk4NjY2ODc2LDIxMzI4
-MzI5NSwtOTIxNTEyNjExLDU5Nzg0NjkzMCwyMTAwMDA2NDQ0LD
-ExNTM4MTEyMjgsNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMDQ3
-Mzg5MDc2XX0=
+eyJoaXN0b3J5IjpbLTkxNTI5MjgwLDE1NzIxNTM4MiwtODkzNz
+I2NTk4LDE1OTAxMzU5MTEsLTEyOTgyNjU4MTMsLTI3MzUyNzQ1
+MSwxMDk0NzY3MzYxLDE1MjUxMjA3MjUsLTEwNjkxNTY0OTcsLT
+IyMDA5ODg1MSw0OTIwMDQ4MDQsLTY5ODY2Njg3NiwyMTMyODMy
+OTUsLTkyMTUxMjYxMSw1OTc4NDY5MzAsMjEwMDAwNjQ0NCwxMT
+UzODExMjI4LDY4NDMwNDQ0NCwtMTg5ODA5NzUxOCwtMjA0NzM4
+OTA3Nl19
 -->
