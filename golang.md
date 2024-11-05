@@ -99,32 +99,34 @@ https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7
 
 #### 汎用的な構造体を作った
 ジェネリクスで、key(string) で 構造体をキャッシュする
+
+- key で 
 ```
-type SyncMap[T any] struct {
-  m map[string]*T
-  mu sync.RWMutex
+type SyncMap[K comparable, V any] struct {
+	m  map[K]*V
+	mu sync.RWMutex
 }
 
-func NewSyncMap[T any]() *SyncMap[T] {
-  return  &SyncMap[T]{m: map[string]*T{}}
+func NewSyncMap[K comparable, V any]() *SyncMap[K, V] {
+	return &SyncMap[K, V]{m: map[K]*V{}}
 }
 
-func (sm *SyncMap[T]) Add(key string, value T) {
-  sm.mu.Lock()
-  defer sm.mu.Unlock()
-  sm.m[key] = &value
+func (sm *SyncMap[K, V]) Add(key K, value V) {
+	sm.mu.Lock()
+	defer sm.mu.Unlock()
+	sm.m[key] = &value
 }
 
-func (sm *SyncMap[T]) Get(key string) *T {
-  sm.mu.RLock()
-  defer sm.mu.RUnlock()
-  return sm.m[key]
+func (sm *SyncMap[K, V]) Get(key K) *V {
+	sm.mu.RLock()
+	defer sm.mu.RUnlock()
+	return sm.m[key]
 }
 
-func (sm *SyncMap[T]) Clear() {
-  sm.mu.Lock()
-  defer sm.mu.Unlock()
-  sm.m =  map[string]*T{}
+func (sm *SyncMap[K, V]) Clear() {
+	sm.mu.Lock()
+	defer sm.mu.Unlock()
+	sm.m = map[K]*V{}
 }
 ```
 
@@ -337,11 +339,11 @@ https://github.com/fujiwara/isucon11-f/pull/9/files
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MjE1MzgyLC04OTM3MjY1OTgsMTU5MD
-EzNTkxMSwtMTI5ODI2NTgxMywtMjczNTI3NDUxLDEwOTQ3Njcz
-NjEsMTUyNTEyMDcyNSwtMTA2OTE1NjQ5NywtMjIwMDk4ODUxLD
-Q5MjAwNDgwNCwtNjk4NjY2ODc2LDIxMzI4MzI5NSwtOTIxNTEy
-NjExLDU5Nzg0NjkzMCwyMTAwMDA2NDQ0LDExNTM4MTEyMjgsNj
-g0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMDQ3Mzg5MDc2LC0xMDk1
-OTUwMjg4XX0=
+eyJoaXN0b3J5IjpbMzk0NzkwMDYwLDE1NzIxNTM4MiwtODkzNz
+I2NTk4LDE1OTAxMzU5MTEsLTEyOTgyNjU4MTMsLTI3MzUyNzQ1
+MSwxMDk0NzY3MzYxLDE1MjUxMjA3MjUsLTEwNjkxNTY0OTcsLT
+IyMDA5ODg1MSw0OTIwMDQ4MDQsLTY5ODY2Njg3NiwyMTMyODMy
+OTUsLTkyMTUxMjYxMSw1OTc4NDY5MzAsMjEwMDAwNjQ0NCwxMT
+UzODExMjI4LDY4NDMwNDQ0NCwtMTg5ODA5NzUxOCwtMjA0NzM4
+OTA3Nl19
 -->
