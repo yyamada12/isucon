@@ -100,7 +100,7 @@ https://github.com/yyamada12/isucon11q_re/commit/852cda6998a2267b823c66414db8fc7
 #### 汎用的な構造体を作った
 ジェネリクスで、key(string) で 構造体をキャッシュする
 
-- key で 
+- key で struct をもつmap
 ```
 type SyncMap[K comparable, V any] struct {
 	m  map[K]*V
@@ -129,6 +129,92 @@ func (sm *SyncMap[K, V]) Clear() {
 	sm.m = map[K]*V{}
 }
 ```
+
+- key で counter をもつ
+```
+type SyncCounterMap[K comparable, V constraints.Integer] struct {
+	m  map[K]V
+	mu sync.RWMutex
+}
+
+func NewSyncCounterMap[K comparable, V constraints.Integer]() *SyncCounterMap[K, V] {
+	return &SyncCounterMap[K, V]{m: map[K]V{}}
+}
+
+func (sm *SyncCounterMap[K, V]) Add(key K, value V) {
+	sm.mu.Lock()
+	defer sm.mu.Unlock()
+	sm.m[key] += value
+}
+
+func (sm *SyncCounterMap[K, V]) Get(key K) V {
+	sm.mu.RLock()
+	defer sm.mu.RUnlock()
+	return sm.m[key]
+}
+
+func (sm *SyncCounterMap[K, V]) Delete(key K) {
+	sm.mu.RLock()
+	defer sm.mu.RUnlock()
+	delete(sm.m, key)
+}
+
+func (sm *SyncCounterMap[K, V]) Clear() {
+	sm.mu.Lock()
+	defer sm.mu.Unlock()
+	sm.m = map[K]V{}
+}
+```
+
+- key で list を持つ
+```
+type SyncListMap[K comparable, V any] struct {
+	m  map[K][]V
+	mu sync.RWMutex
+}
+
+func NewSyncListMap[K comparable, V any]() *SyncListMap[K, V] {
+	return &SyncListMap[K, V]{m: map[K][]V{}}
+}
+
+func (sm *SyncListMap[K, V]) Add(key K, value V) {
+	sm.mu.Lock()
+	defer sm.mu.Unlock()
+	sm.m[key] = append(sm.m[key], value)
+}
+
+func (sm *SyncListMap[K, V]) Get(key K) []V {
+	sm.mu.RLock()
+	defer sm.mu.RUnlock()
+	return sm.m[key]
+}
+
+func (sm *SyncListMap[K, V]) Clear() {
+	sm.mu.Lock()
+	defer sm.mu.Unlock()
+	sm.m = map[K][]V{}
+}
+```
+
+```
+func LoadHogeFromDB() {
+	// clear sync map
+
+	type Hoge struct {
+		ID int64 `db:"id"`
+	}
+
+	var rows []*Hoge
+	if err := dbConn.Select(&rows, `SELECT * FROM `); err != nil {
+		log.Fatalf("failed to load : %+v", err)
+		return
+	}
+	for _, row := range rows {
+		// add to sync map
+
+	}
+} 
+
 
 ## 再起動対策
 アプリケーション起動時にインメモリにデータを読み込むことをすると、再起動時にDBが起動していない場合にアプリケーションが立ち上がらないという事態になってしまう
@@ -339,11 +425,11 @@ https://github.com/fujiwara/isucon11-f/pull/9/files
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk0NzkwMDYwLDE1NzIxNTM4MiwtODkzNz
-I2NTk4LDE1OTAxMzU5MTEsLTEyOTgyNjU4MTMsLTI3MzUyNzQ1
-MSwxMDk0NzY3MzYxLDE1MjUxMjA3MjUsLTEwNjkxNTY0OTcsLT
-IyMDA5ODg1MSw0OTIwMDQ4MDQsLTY5ODY2Njg3NiwyMTMyODMy
-OTUsLTkyMTUxMjYxMSw1OTc4NDY5MzAsMjEwMDAwNjQ0NCwxMT
-UzODExMjI4LDY4NDMwNDQ0NCwtMTg5ODA5NzUxOCwtMjA0NzM4
-OTA3Nl19
+eyJoaXN0b3J5IjpbLTEwNzcxNjA2NjAsMTU3MjE1MzgyLC04OT
+M3MjY1OTgsMTU5MDEzNTkxMSwtMTI5ODI2NTgxMywtMjczNTI3
+NDUxLDEwOTQ3NjczNjEsMTUyNTEyMDcyNSwtMTA2OTE1NjQ5Ny
+wtMjIwMDk4ODUxLDQ5MjAwNDgwNCwtNjk4NjY2ODc2LDIxMzI4
+MzI5NSwtOTIxNTEyNjExLDU5Nzg0NjkzMCwyMTAwMDA2NDQ0LD
+ExNTM4MTEyMjgsNjg0MzA0NDQ0LC0xODk4MDk3NTE4LC0yMDQ3
+Mzg5MDc2XX0=
 -->
