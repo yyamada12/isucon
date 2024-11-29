@@ -23,7 +23,7 @@
 ↓ 
 稲垣にできたら伝える
 ↓
-
+git の鍵だけ、山田がやる
 
 ### 稲垣
 
@@ -34,7 +34,7 @@ cloud formationできたら環境構築に進む
 
 ### 環境構築
 
-- [ ] ssh/config
+- [ ] ssh/config (山田・稲垣)
 
 ```
 Host isu1
@@ -57,24 +57,24 @@ Host isu3
   LocalForward  39999 localhost:19999
 ```
 
-- [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする
+- [ ]  itermの1つのタブを3分割し、3つのサーバーに入って Cmd + Opt + i で全サーバーに同一コマンドを実行できるようにする (稲垣)
 
-- [ ] 初期のsshユーザーがubuntuなどになっている場合は、authorized_keysをisuconユーザーのホームディレクトリにコピーしてisuconユーザーでsshできるようにする
+- [ ] 初期のsshユーザーがubuntuなどになっている場合は、authorized_keysをisuconユーザーのホームディレクトリにコピーしてisuconユーザーでsshできるようにする (稲垣)
 ```
 sudo -u isucon mkdir -p /home/isucon/.ssh
 sudo cp /home/ubuntu/.ssh/authorized_keys /home/isucon/.ssh/authorized_keys
 sudo chown isucon:isucon /home/isucon/.ssh/authorized_keys
 ```
 
-- [ ] ツールのインストール
+- [ ] ツールのインストール (稲垣)
 https://github.com/yyamada12/isucon-settings
   
-- [ ] 必須ツールと設定 
+- [ ] 必須ツールと設定  (稲垣)
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_essentials.sh)"
 ```
 
-- [ ] 計測ツール
+- [ ] 計測ツール (稲垣)
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools.sh)"
@@ -470,5 +470,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3NTQwMzUxXX0=
+eyJoaXN0b3J5IjpbLTE4ODgxNjQzNjhdfQ==
 -->
