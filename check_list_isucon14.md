@@ -18,6 +18,18 @@
 
 ## 開始直後
 
+### 山田
+- [ ] CloudFormation で構築する
+↓ 
+- [ ] ssh/config
+
+### 稲垣
+
+- [ ] マニュアル読む
+- [ ] ssh/config
+↓
+
+
 ### 環境構築
 
 - [ ] ssh/config
@@ -456,5 +468,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDgyOTE0MjFdfQ==
+eyJoaXN0b3J5IjpbMTc2NTUzNzM5Nl19
 -->
