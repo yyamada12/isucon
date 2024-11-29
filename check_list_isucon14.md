@@ -21,14 +21,16 @@
 ### 山田
 - [ ] CloudFormation で構築する
 ↓ 
-- [ ] ssh/config
+稲垣にできたら伝える
+↓
+
 
 ### 稲垣
 
 - [ ] マニュアル読む
-- [ ] ssh/config
 ↓
-
+cloud formationできたら環境構築に進む
+- [ ] 環境構築
 
 ### 環境構築
 
@@ -468,5 +470,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NTUzNzM5Nl19
+eyJoaXN0b3J5IjpbNDU3NTQwMzUxXX0=
 -->
