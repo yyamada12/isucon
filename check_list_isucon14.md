@@ -172,7 +172,7 @@ sudo chmod 666 ~/etc/my.cnf
 2台目、3台目のサーバーで以下の手順を実施
 ```
 git init
-git remote add origin レポジトリURL
+git remote add origin git@github.com:yyamada12/isucon14_main.git
 git fetch origin main
 git reset --hard origin/main
 git branch -M main
@@ -487,5 +487,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NDY4NjAzNl19
+eyJoaXN0b3J5IjpbLTE3MDU0NzY2NTAsLTU5NDY4NjAzNl19
 -->
