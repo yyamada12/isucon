@@ -19,18 +19,22 @@
 ## 開始直後
 
 ### 山田
-- [ ] CloudFormation で構築する
+CloudFormation で構築する
 ↓ 
 稲垣にできたら伝える
 ↓
 git の鍵だけ、山田がやる
-
+↓
+VSCode Remote 開発環境構築
 ### 稲垣
 
-- [ ] マニュアル読む
+マニュアル読む
 ↓
 cloud formationできたら環境構築に進む
-- [ ] 環境構築
+↓
+VSCode Remote 開発環境構築
+↓
+計測ツールのセットアップ (alp, slow query, pprof)
 
 ### 環境構築
 
@@ -231,7 +235,7 @@ go work init ./webapp/golang
 https://qiita.com/chanhama/items/a21ca7d5cd43d6f3f90d#comment-55530e230c93991ef5c0
 
 
-## 計測
+## 計測 (稲垣)
 
 ### alp
 
@@ -470,5 +474,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzg5MDYyOF19
+eyJoaXN0b3J5IjpbMjA4MTI0MDI1Nl19
 -->
