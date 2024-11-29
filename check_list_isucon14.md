@@ -46,7 +46,8 @@ VSCode Remote 開発環境構築
 DBへのCRUDの可視化 (isucrud)
 ↓
 DBのINDEX貼る系, DNSとか、bot 対策とか、 spatial indexみたいな、普段使わない技術系
-あとは、マニュアル
+あとは、マニュアル読まないとわからない系のチューニングポイント
+
 
 ### 環境構築
 
@@ -486,5 +487,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNzYwNTk5MV19
+eyJoaXN0b3J5IjpbLTU5NDY4NjAzNl19
 -->
