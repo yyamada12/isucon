@@ -26,6 +26,11 @@ CloudFormation で構築する
 git の鍵だけ、山田がやる
 ↓
 VSCode Remote 開発環境構築
+↓
+マニュアル読む
+↓
+ボトルネックをひたすら潰す
+
 ### 稲垣
 
 マニュアル読む
@@ -38,7 +43,9 @@ VSCode Remote 開発環境構築
 ↓
 秘伝のタレ ( /etc/mysql/my.cnf, too many open files, 再起動対策 )
 ↓
-
+DBへのCRUDの可視化 (isucrud)
+↓
+DBのINDEX貼る 
 
 ### 環境構築
 
@@ -478,5 +485,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1ODI3NzI0MF19
+eyJoaXN0b3J5IjpbMTA4NDYyNjA4M119
 -->
