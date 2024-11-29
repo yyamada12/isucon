@@ -85,7 +85,7 @@ arm ( mac 上の multipass で素振りする時はこっち)
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-settings/master/install_tools_arm.sh)"
 ```
 
-- [ ] 環境変数設定
+- [ ] 環境変数設定 (稲垣)
 ↑の計測ツールのinstallの最後で設定する
 
 | 環境変数 | 設定内容 |
@@ -98,15 +98,15 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/yyamada12/isucon-setting
 指定した環境変数は ~/.bash_profile で管理される
 ( ~/set_env.sh 参照)
 
-- [ ] webサーバが何か確認する
+- [ ] webサーバが何か確認する (稲垣)
 
 ```bash
 sudo systemctl list-units --type=service --state=running
 ```
 
-- [ ] 言語をgoに変更する
+- [ ] 言語をgoに変更する (稲垣)
 
-- [ ] gitにsshできるようにする
+- [ ] gitにsshできるようにする (山田)
 - 既に存在する鍵を利用する
 ```
 scp ~/.ssh/git_rsa isu1:.ssh/id_rsa
@@ -120,7 +120,7 @@ ssh -T git@github.com
 ```
 
 
-- [ ] レポジトリ作る
+- [ ] git init する (稲垣)
     - ホームディレクトリを git root とする
     -  `du -sh *` で大きなファイルが有る場合はgitignoreする
     - `GOPATH` 配下もgitignoreすべし
@@ -132,7 +132,7 @@ ssh -T git@github.com
 ```
 
 
-- [ ] etcをレポジトリに追加する
+- [ ] etcをレポジトリに追加する (稲垣)
   - /etcからファイルを移動し、シンボリックリンクをはる
   -  mysqlはシンボリックリンクだと設定が反映されないため、デプロイスクリプトで ~/etc から /etc にコピーする運用とする
 
@@ -147,11 +147,11 @@ sudo cp /etc/my.cnf ~/etc/
 sudo chmod 666 ~/etc/my.cnf
 ```
 
-- benchが動くことを一応確認しておく
+- benchが動くことを一応確認しておく 
 
 ベンチ実行して問題なければOK
 
-- [ ] レポジトリを他のサーバーにpullする
+- [ ] レポジトリを他のサーバーにpullする (稲垣)
 2台目、3台目のサーバーで以下の手順を実施
 ```
 git init
@@ -470,5 +470,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODgxNjQzNjhdfQ==
+eyJoaXN0b3J5IjpbLTIxNzg5MDYyOF19
 -->
