@@ -35,6 +35,10 @@ cloud formationできたら環境構築に進む
 VSCode Remote 開発環境構築
 ↓
 計測ツールのセットアップ (alp, slow query, pprof)
+↓
+秘伝のタレ ( /etc/mysql/my.cnf, too many open files, 再起動対策 )
+↓
+
 
 ### 環境構築
 
@@ -474,5 +478,5 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MTI0MDI1Nl19
+eyJoaXN0b3J5IjpbMTc1ODI3NzI0MF19
 -->
