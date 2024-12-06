@@ -4,8 +4,8 @@
 
 - [ ] レギュレーションを読み込んでおく
 - [ ] 前年のマニュアルを読み込んでおく
-- [ ] github リポジトリを作っておく
-  - [ ] 2台目、3台目用のgitコマンドを作っておく
+- [x] github リポジトリを作っておく
+  - [x] 2台目、3台目用のgitコマンドを作っておく
 
 ## 開始直前にやること
 
@@ -511,6 +511,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY1MTQ2MTEwLC0xNzA1NDc2NjUwLC01OT
-Q2ODYwMzZdfQ==
+eyJoaXN0b3J5IjpbLTEzOTU2ODM0MTAsMjY1MTQ2MTEwLC0xNz
+A1NDc2NjUwLC01OTQ2ODYwMzZdfQ==
 -->
