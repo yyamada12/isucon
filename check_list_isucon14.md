@@ -448,6 +448,30 @@ go install github.com/mazrean/isucrud@latest
 isucrud ./...
 
 
+### JSON高速化
+```
+json "github.com/goccy/go-json"
+
+type JSONSerializer struct{}
+
+func (j *JSONSerializer) Serialize(c echo.Context, i interface{}, indent string) error {
+	enc := json.NewEncoder(c.Response())
+	return enc.Encode(i)
+}
+
+func (j *JSONSerializer) Deserialize(c echo.Context, i interface{}) error {
+	err := json.NewDecoder(c.Request().Body).Decode(i)
+	if ute, ok := err.(*json.UnmarshalTypeError); ok {
+		return echo.NewHTTPError(http.StatusBadRequest, fmt.Sprintf("Unmarshal type error: expected=%v, got=%v, field=%v, offset=%v", ute.Type, ute.Value, ute.Field, ute.Offset)).SetInternal(err)
+	} else if se, ok := err.(*json.SyntaxError); ok {
+		return echo.NewHTTPError(http.StatusBadRequest, fmt.Sprintf("Syntax error: offset=%v, error=%v", se.Offset, se.Error())).SetInternal(err)
+	}
+	return err
+}
+
+e.JSONSerializer = &JSONSerializer{}
+```
+
 ## やることなくなったら
 
 ### app
@@ -487,5 +511,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDU0NzY2NTAsLTU5NDY4NjAzNl19
+eyJoaXN0b3J5IjpbMjY1MTQ2MTEwLC0xNzA1NDc2NjUwLC01OT
+Q2ODYwMzZdfQ==
 -->
