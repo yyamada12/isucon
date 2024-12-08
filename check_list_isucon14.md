@@ -13,8 +13,8 @@
 - [x] 前回のマニュアルを開いておき、VSCodeで差分を比較できるようにしておく
 - [x] ssh/configを開いておき、編集できる状態にしておく
   - [x]  ssh/config のIdentityFileを、github に登録している鍵のパスに設定しておく
-- [ ] local で go の sandbox を開いておき、簡単な実装の動作確認が手元でできるようにしておく
-- [ ] slackのAPI Token 画面を用意しておく
+- [x] local で go の sandbox を開いておき、簡単な実装の動作確認が手元でできるようにしておく
+- [x] slackのAPI Token 画面を用意しておく
 
 ## 開始直後
 
@@ -511,6 +511,7 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY5NTAwMTc0LC0xMzk1NjgzNDEwLDI2NT
-E0NjExMCwtMTcwNTQ3NjY1MCwtNTk0Njg2MDM2XX0=
+eyJoaXN0b3J5IjpbLTE0NTIzMTQ5NDYsOTY5NTAwMTc0LC0xMz
+k1NjgzNDEwLDI2NTE0NjExMCwtMTcwNTQ3NjY1MCwtNTk0Njg2
+MDM2XX0=
 -->
