@@ -2,16 +2,16 @@
 
 ## 前日までにやること
 
-- [ ] レギュレーションを読み込んでおく
-- [ ] 前年のマニュアルを読み込んでおく
+- [x] レギュレーションを読み込んでおく
+- [x] 前年のマニュアルを読み込んでおく
 - [x] github リポジトリを作っておく
   - [x] 2台目、3台目用のgitコマンドを作っておく
 
 ## 開始直前にやること
 
-- [ ] CloudFormation による構築準備 (前年度のマニュアル読んで手順確認&AWS マネコンを開いておく)
-- [ ] 前回のマニュアルを開いておき、VSCodeで差分を比較できるようにしておく
-- [ ] ssh/configを開いておき、編集できる状態にしておく
+- [x] CloudFormation による構築準備 (前年度のマニュアル読んで手順確認&AWS マネコンを開いておく)
+- [x] 前回のマニュアルを開いておき、VSCodeで差分を比較できるようにしておく
+- [x] ssh/configを開いておき、編集できる状態にしておく
   - [ ]  ssh/config のIdentityFileを、github に登録している鍵のパスに設定しておく
 - [ ] local で go の sandbox を開いておき、簡単な実装の動作確認が手元でできるようにしておく
 - [ ] slackのAPI Token 画面を用意しておく
@@ -511,6 +511,6 @@ kill -9 $(ps aux | grep vscode-server | grep $USER | grep -v grep | awk '{print 
 rm -rf ~/.vscode-server # Or ~/.vscode-server-insiders
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTU2ODM0MTAsMjY1MTQ2MTEwLC0xNz
-A1NDc2NjUwLC01OTQ2ODYwMzZdfQ==
+eyJoaXN0b3J5IjpbLTE5Njg3NTg4NTgsLTEzOTU2ODM0MTAsMj
+Y1MTQ2MTEwLC0xNzA1NDc2NjUwLC01OTQ2ODYwMzZdfQ==
 -->
